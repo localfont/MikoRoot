@@ -7,7 +7,7 @@ class TestAcl(infra.basetest.BRTest):
     # Note: this test requires a Kernel with a filesystem on /tmp
     # supporting ACLs. This is the case for the basetest reference
     # config. Kernel has CONFIG_TMPFS_POSIX_ACL=y, and /tmp is tmpfs
-    # in the default Buildroot config.
+    # in the default MikoOS config.
     config = infra.basetest.BASIC_TOOLCHAIN_CONFIG + \
         """
         BR2_PACKAGE_ACL=y
@@ -28,7 +28,7 @@ class TestAcl(infra.basetest.BRTest):
 
         # Constants used in this test.
         test_user = "acltest"
-        test_data = "Hello Buildroot!"
+        test_data = "Hello MikoOS!"
         test_file = "/tmp/file.txt"
 
         # Create a test user:

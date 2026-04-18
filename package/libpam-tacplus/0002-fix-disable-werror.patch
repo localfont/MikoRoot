@@ -7,18 +7,18 @@ Subject: [PATCH] fix --disable-werror
 https://github.com/kravietz/pam_tacplus/commit/649e6f2efb2f3278c55d4c9704bb48cb9f74cb73
 resulting in the following build failure:
 
-In file included from /home/thomas/autobuild/instance-0/output-1/host/mips-buildroot-linux-gnu/sysroot/usr/include/bits/libc-header-start.h:33,
-                 from /home/thomas/autobuild/instance-0/output-1/host/mips-buildroot-linux-gnu/sysroot/usr/include/stdlib.h:26,
+In file included from /home/thomas/autobuild/instance-0/output-1/host/mips-mikoos-linux-gnu/sysroot/usr/include/bits/libc-header-start.h:33,
+                 from /home/thomas/autobuild/instance-0/output-1/host/mips-mikoos-linux-gnu/sysroot/usr/include/stdlib.h:26,
                  from ./lib/stdlib.h:36,
                  from ./libtac/include/libtac.h:35,
                  from support.h:25,
                  from support.c:28:
-/home/thomas/autobuild/instance-0/output-1/host/mips-buildroot-linux-gnu/sysroot/usr/include/features.h:413:4: error: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Werror=cpp]
+/home/thomas/autobuild/instance-0/output-1/host/mips-mikoos-linux-gnu/sysroot/usr/include/features.h:413:4: error: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Werror=cpp]
   413 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
       |    ^~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/9b5ece5d01eac8a760ed9ca331a902d1c47387a7
+ - http://autobuild.mikoos.org/results/9b5ece5d01eac8a760ed9ca331a902d1c47387a7
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/kravietz/pam_tacplus/pull/204

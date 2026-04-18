@@ -12,7 +12,7 @@ receivedata.c:17:1: note: 'ptrdiff_t' is defined in header '<stddef.h>'; did you
    17 | 
 
 Fixes:
- - http://autobuild.buildroot.org/results/30208c6f175967fed6de690447a09e0c86547b24
+ - http://autobuild.mikoos.org/results/30208c6f175967fed6de690447a09e0c86547b24
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://udpcast.linux.lu/mailman3/hyperkitty/list/udpcast@udpcast.linux.lu/thread/4MBES2CPUSUNIZTC7NXCQYS2GAE4DQSG/

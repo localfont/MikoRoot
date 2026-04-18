@@ -14,7 +14,7 @@ Use log2 from the C header, without the namespace [3].
 [3] https://stackoverflow.com/questions/26733413/error-log2-is-not-a-member-of-std
 
 Fixes:
-https://gitlab.com/buildroot.org/toolchains-builder/-/jobs/4202276589
+https://gitlab.com/mikoos.org/toolchains-builder/-/jobs/4202276589
 
 gcc/ChangeLog:
 	* config/riscv/genrvv-type-indexer.cc: Use log2 from the C header, without

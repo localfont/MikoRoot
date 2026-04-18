@@ -17,7 +17,7 @@ the sysroot.
 So, let's simply have a whitelist of paths that should be prefixed:
 g_ir_scanner, g_ir_compiler, g_ir_generate, includedir, libdir, mapdir,
 pkgdatadir and sdkdir. This list of variables was collected over years of
-Buildroot development. All other paths are not prefixed by the sysroot.
+MikoOS development. All other paths are not prefixed by the sysroot.
 
 Signed-off-by: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
 [Updated to include gobject-introspection paths]

@@ -20,7 +20,7 @@ WARNING: 'makeinfo' is missing on your system.
          <http://www.gnu.org/software/make/>
 
 Fixes:
- - http://autobuild.buildroot.org/results/9605aac6f760bfff190d0ab95fa50f65486ffe90
+ - http://autobuild.mikoos.org/results/9605aac6f760bfff190d0ab95fa50f65486ffe90
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: sent to bug-guile@gnu.org]

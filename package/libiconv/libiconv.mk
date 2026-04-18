@@ -32,5 +32,5 @@ $(eval $(autotools-package))
 # package is enabled are incorrect, because the toolchain already
 # provides libiconv functionality, and having both confuses packages.
 ifeq ($(BR2_PACKAGE_LIBICONV)$(BR2_ENABLE_LOCALE),yy)
-$(error Libiconv should never be enabled when the toolchain supports locales. Report this failure to Buildroot developers)
+$(error Libiconv should never be enabled when the toolchain supports locales. Report this failure to MikoOS developers)
 endif

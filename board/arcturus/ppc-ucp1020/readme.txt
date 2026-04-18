@@ -1,7 +1,7 @@
 Arcturus uCP1020 SoM
 ====================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the Arcturus uCP1020 SoM platform.
 
 Additional information about this module can be found at
@@ -28,7 +28,7 @@ After building, you should obtain this tree:
 Flashing
 --------
 
-You'll need to program the files created by buildroot into the NOR flash.
+You'll need to program the files created by mikoos into the NOR flash.
 
 1. Program the new U-Boot binary (optional)
     If you don't feel confident upgrading your bootloader then don't do it,

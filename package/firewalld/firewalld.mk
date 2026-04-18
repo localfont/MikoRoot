@@ -26,7 +26,7 @@ FIREWALLD_DEPENDENCIES = \
 FIREWALLD_SELINUX_MODULES = firewalld
 
 # Firewalld hard codes the python shebangs to the full path of the
-# python-interpreter. IE: #!/home/buildroot/output/host/bin/python.
+# python-interpreter. IE: #!/home/mikoos/output/host/bin/python.
 # Force the proper python path.
 FIREWALLD_CONF_ENV += PYTHON="/usr/bin/env python3"
 
@@ -66,7 +66,7 @@ define FIREWALLD_INSTALL_INIT_SYSTEMD
 endef
 
 # The bundled sysvinit file requires /etc/init.d/functions which is not
-# provided by buildroot. As such, we provide our own firewalld init file.
+# provided by mikoos. As such, we provide our own firewalld init file.
 define FIREWALLD_INSTALL_INIT_SYSV
 	$(INSTALL) -D -m 0755 $(FIREWALLD_PKGDIR)/S46firewalld \
 		$(TARGET_DIR)/etc/init.d/S46firewalld

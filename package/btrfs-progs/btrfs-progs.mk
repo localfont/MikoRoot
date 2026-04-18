@@ -24,7 +24,7 @@ BTRFS_PROGS_INSTALL_STAGING_OPTS = DESTDIR=$(STAGING_DIR) install-static
 endif
 
 # convert also supports conversion from reiserfs, which needs some
-# reiserfs libraries, but we have no package for them in Buildroot, so
+# reiserfs libraries, but we have no package for them in MikoOS, so
 # we keep things simple and only handle ext2.
 ifeq ($(BR2_PACKAGE_E2FSPROGS),y)
 BTRFS_PROGS_CONF_OPTS += --enable-convert --with-convert=ext2

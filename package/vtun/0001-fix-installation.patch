@@ -3,7 +3,7 @@ Makefile.in: fix installation steps
 Not sure what the reason for that patch is, but originally added by Ulf
 Samuelsson <ulf.samuelsson@atmel.com>, when upgrading from 2.6.x to 3.0.2.
 
-yann.morin.1998@free.fr: the initial commit in the Buildroot tree had the
+yann.morin.1998@free.fr: the initial commit in the MikoOS tree had the
 SoB by Ulf, but it was not explicitly reproduced here in the patch; so I
 added it here directly in the patch.
 

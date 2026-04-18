@@ -1,7 +1,7 @@
 STM32F469 Discovery
 ===================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the STM32F469 Discovery evaluation platform.
 
 Internal flash memory stores simple afboot-stm32 bootloader, device tree and

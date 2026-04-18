@@ -41,7 +41,7 @@ class TestGstreamer1(infra.basetest.BRTest):
 
         video_file = "videotest.ogg"
         num_frames = 10
-        msg_prefix = "Hello Buildroot:"
+        msg_prefix = "Hello MikoOS:"
 
         # We check the main program can execute.
         self.assertRunOk("gst-launch-1.0 --version")

@@ -126,7 +126,7 @@ Note: QEMU hosts a GDB service listening to TCP port 1234, as set through
 qemu-system-arm command line option -S.
 
 Note: To build the GDB server, the following extra options have to be added to
-the Buildroot configuration:
+the MikoOS configuration:
 
     BR2_ENABLE_DEBUG=y
     BR2_PACKAGE_GDB=y

@@ -16,10 +16,10 @@ kernel image, or any other custom action required for your project.
 To enable this feature, specify a space-separated list of post-image
 scripts in config option +BR2_ROOTFS_POST_IMAGE_SCRIPT+ (in the +System
 configuration+ menu). If you specify a relative path, it will be
-relative to the root of the Buildroot tree.
+relative to the root of the MikoOS tree.
 
 Just like post-build scripts, post-image scripts are run with the main
-Buildroot tree as current working directory. The path to the +images+
+MikoOS tree as current working directory. The path to the +images+
 output directory is passed as the first argument to each script. If the
 config option +BR2_ROOTFS_POST_SCRIPT_ARGS+ is not empty, these
 arguments will be passed to the script too. All the scripts will be
@@ -37,7 +37,7 @@ the environment variables +BR2_CONFIG+, +HOST_DIR+, +STAGING_DIR+,
 and +PARALLEL_JOBS+.
 
 The post-image scripts will be executed as the user that executes
-Buildroot, which should normally _not_ be the root user. Therefore, any
+MikoOS, which should normally _not_ be the root user. Therefore, any
 action requiring root permissions in one of these scripts will require
 special handling (usage of fakeroot or sudo), which is left to the
 script developer.

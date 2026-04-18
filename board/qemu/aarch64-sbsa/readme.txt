@@ -26,7 +26,7 @@ Run the emulation with:
     -hda output/images/disk.img # qemu_aarch64_sbsa_defconfig
 
 Note that if you want to run sbsa-ref emulation with QEMU provided by
-your distro (i.e., not host-qemu by Buildroot) then you may need to
+your distro (i.e., not host-qemu by MikoOS) then you may need to
 install the SeaBIOS package for some required drivers. On Debian:
 
   # apt install seabios

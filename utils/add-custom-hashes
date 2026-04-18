@@ -4,7 +4,7 @@ set -e
 # Add hash files for packages with custom versions for
 # BR2_DOWNLOAD_FORCE_CHECK_HASHES=y
 #
-# Run in a configured Buildroot directory, E.G.
+# Run in a configured MikoOS directory, E.G.
 # make foo_defconfig; ./utils/add-custom-hashes
 
 # print BR-style message
@@ -46,7 +46,7 @@ gen_hash() {
 command -v jq >/dev/null || die 'Script needs jq'
 
 [ -e .config ] || \
-  die "No .config found, please run this in a configured Buildroot (O=) directory"
+  die "No .config found, please run this in a configured MikoOS (O=) directory"
 
 message Collecting data
 

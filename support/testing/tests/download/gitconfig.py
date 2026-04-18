@@ -32,7 +32,7 @@ def generate_gitconfig(builddir, logtofile, gitremotedir):
     gitconfigdir = os.path.join(builddir, GIT_CONFIG_DIR)
     os.makedirs(gitconfigdir, exist_ok=True)
 
-    # We are using the git repository from the Buildroot git tree
+    # We are using the git repository from the MikoOS git tree
     # (gitremotedir). This repository is safe to use using "file://"
     # protocol with git submodules.
     cmd = ["git", "config", "--file", localgitconfig,
@@ -42,7 +42,7 @@ def generate_gitconfig(builddir, logtofile, gitremotedir):
 
     # Disable ownership check of the git tree for Gitlab-CI
     # environment.
-    # See: https://gitlab.com/buildroot.org/buildroot/-/commit/a016b693f7830f3c8ae815851d3204b8b6e99821
+    # See: https://gitlab.com/mikoos.org/mikoos/-/commit/a016b693f7830f3c8ae815851d3204b8b6e99821
     for git_repo in os.scandir(gitremotedir):
 
         cmd = ["git", "config", "--file", localgitconfig,

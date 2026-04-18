@@ -4,9 +4,9 @@
 [[requirement]]
 == System requirements
 
-Buildroot is designed to run on Linux systems.
+MikoOS is designed to run on Linux systems.
 
-While Buildroot itself will build most host packages it needs for the
+While MikoOS itself will build most host packages it needs for the
 compilation, certain standard Linux utilities are expected to be
 already installed on the host system. Below you will find an overview of
 the mandatory and optional packages (note that package names may vary
@@ -49,7 +49,7 @@ between distributions).
 
 * Recommended dependencies:
 +
-Some features or utilities in Buildroot, like the legal-info, or the
+Some features or utilities in MikoOS, like the legal-info, or the
 graph generation tools, have additional dependencies. Although they
 are not mandatory for a simple build, they are still highly recommended:
 +
@@ -69,7 +69,7 @@ development packages typically have a _-dev_ or _-devel_ suffix.
 +
 In the official tree, most of the package sources are retrieved using
 +wget+ from _ftp_, _http_ or _https_ locations. A few packages are only
-available through a version control system. Moreover, Buildroot is
+available through a version control system. Moreover, MikoOS is
 capable of downloading sources via other tools, like +git+ or +scp+
 (refer to xref:download-infra[] for more details). If you enable
 packages using any of these methods, you will need to install the

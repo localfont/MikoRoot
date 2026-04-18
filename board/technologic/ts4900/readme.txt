@@ -1,7 +1,7 @@
 Technologic Systems TS-4900
 ===========================
 
-This document explains how to set up a basic Buildroot system for the
+This document explains how to set up a basic MikoOS system for the
 Technologic Systems TS-4900 System on Module.
 
 The TS-4900 is a TS-SOCKET macrocontroller board based on the
@@ -47,6 +47,6 @@ connector etc.
 
 The bootloader comes pre-flashed on the board on an SPI flash. Since
 updating the bootloader is risky and not trivial, it is not included
-in the Buildroot defconfig. Refer to
+in the MikoOS defconfig. Refer to
 https://docs.embeddedTS.com/TS-4900#U-Boot for details on which
 U-Boot config to use and how to flash it.

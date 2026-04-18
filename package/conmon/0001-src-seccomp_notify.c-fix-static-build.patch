@@ -11,7 +11,7 @@ src/seccomp_notify.c:10:10: fatal error: dlfcn.h: No such file or directory
       |          ^~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/71b4f35b3150183c7b44bc3897f01b0019e10ebe
+ - http://autobuild.mikoos.org/results/71b4f35b3150183c7b44bc3897f01b0019e10ebe
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/containers/conmon/issues/462

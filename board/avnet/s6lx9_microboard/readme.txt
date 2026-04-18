@@ -1,4 +1,4 @@
-This is the buildroot board support for the Avnet Spartan6 LX9 MicroBoard.
+This is the mikoos board support for the Avnet Spartan6 LX9 MicroBoard.
 
 The Avnet S6LX9 Microboard is a small USB-Stick sized module containing
 a Spartan6 FPGA capable of running the Microblaze softcore processor
@@ -7,7 +7,7 @@ together with RAM and FLASH memory.
 The board can be bought from Avnet (avnet.com) or from Trenz Electronic
 (www.trenz-electronic.de) for a low price.
 
-To run the Linux built with buildroot you have to install the FPGA bitfile
+To run the Linux built with mikoos you have to install the FPGA bitfile
 and u-boot as described in the tutorial AvtS6LX9MicroBoard_SW302_PetaLinux
 available on http://www.em.avnet.com/s6microboard
 
@@ -66,5 +66,5 @@ OK
 Early console on uartlite at 0x40600000
 ..... boot log skipped
 
-Welcome to Microblaze Buildroot
+Welcome to Microblaze MikoOS
 Microblaze login:

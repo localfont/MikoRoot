@@ -48,7 +48,7 @@ class TestUnbound(infra.basetest.BRTest):
         self.assertRunOk("unbound-control list_local_zones")
 
         # We check we see our test IPv4 address record.
-        cmd = "nslookup -type=A somehost.buildroot.test."
+        cmd = "nslookup -type=A somehost.mikoos.test."
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
         self.assertIn("Address: 10.20.30.40", out)
@@ -57,23 +57,23 @@ class TestUnbound(infra.basetest.BRTest):
         cmd = "nslookup 10.20.30.40"
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
-        expected = "40.30.20.10.in-addr.arpa\tname = somehost.buildroot.test"
+        expected = "40.30.20.10.in-addr.arpa\tname = somehost.mikoos.test"
         self.assertIn(expected, out)
 
         # We check we see our test text record.
-        cmd = "nslookup -type=TXT sometext.buildroot.test."
+        cmd = "nslookup -type=TXT sometext.mikoos.test."
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
-        expected = "sometext.buildroot.test\ttext = \"Hello Buildroot TXT\""
+        expected = "sometext.mikoos.test\ttext = \"Hello MikoOS TXT\""
         self.assertIn(expected, out)
 
         # We add a new record with unbound-control.
-        record_data = "someotherhost.buildroot.test. IN A 10.99.99.99"
+        record_data = "someotherhost.mikoos.test. IN A 10.99.99.99"
         cmd = f"unbound-control local_data \"{record_data}\""
         self.assertRunOk(cmd)
 
         # We check we see our new IPv4 address record.
-        cmd = "nslookup -type=A someotherhost.buildroot.test."
+        cmd = "nslookup -type=A someotherhost.mikoos.test."
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
         self.assertIn("Address: 10.99.99.99", out)

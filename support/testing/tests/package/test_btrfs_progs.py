@@ -57,7 +57,7 @@ class TestBtrfsProgs(infra.basetest.BRTest):
         label = "BR_TEST"
         mnt_pt = "/tmp/btrfs"
         data_file = f"{mnt_pt}/data.bin"
-        txt = "Hello Buildroot!"
+        txt = "Hello MikoOS!"
         subvol = f"{mnt_pt}/my-subvolume"
         snapshot = f"{mnt_pt}/my-snapshot"
 

@@ -9,8 +9,8 @@ Content-Transfer-Encoding: 8bit
 
 Fixes:
 
-/home/thomas/projets/buildroot/output/build/host-android-tools-4.2.2+git20130218/extras/ext4_utils/contents.c: In function ‘make_directory’:
-/home/thomas/projets/buildroot/output/build/host-android-tools-4.2.2+git20130218/extras/ext4_utils/contents.c:102:29: error: too many arguments to function ‘allocate_inode’; expected 0, have 1
+/home/thomas/projets/mikoos/output/build/host-android-tools-4.2.2+git20130218/extras/ext4_utils/contents.c: In function ‘make_directory’:
+/home/thomas/projets/mikoos/output/build/host-android-tools-4.2.2+git20130218/extras/ext4_utils/contents.c:102:29: error: too many arguments to function ‘allocate_inode’; expected 0, have 1
   102 |                 inode_num = allocate_inode(info);
 
 and similar build failures that occur with GCC 15.x.

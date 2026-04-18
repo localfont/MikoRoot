@@ -1,13 +1,13 @@
 NXP i.MX93 EVK
 ==============
 
-This is a Buildroot target for building an image for the imx93-evk
+This is a MikoOS target for building an image for the imx93-evk
 board using upstream components: TF-A, U-Boot and kernel.
 
 How to build it
 ===============
 
-Configure Buildroot and build it:
+Configure MikoOS and build it:
 
   $ make imx93-evk_defconfig
   $ make

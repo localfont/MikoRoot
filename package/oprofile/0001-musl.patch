@@ -13,7 +13,7 @@ Removed unneeded patch for libop/op_events.c.
 
 Because openwrt removed the oprofile package from their repo last week
 https://github.com/openwrt-mirror/openwrt/commit/aaf46a8524e138e1673a398e8d2dd9357405b313#diff-fe14456f94abf436d997e2c01c10f3bd
-I decided to put this patch into the buildroot repo instead of adding
+I decided to put this patch into the mikoos repo instead of adding
 _PATCH to oprofile.mk
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>

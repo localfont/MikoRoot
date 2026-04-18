@@ -7,12 +7,12 @@ Introduction
 
 The 'ci20_defconfig' will create a root filesystem and a kernel image
 under the 'output/images/' directory. This document will try to explain how
-to use them in order to run Buildroot in the MIPS Creator CI20 board.
+to use them in order to run MikoOS in the MIPS Creator CI20 board.
 
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
   $ make ci20_defconfig
@@ -20,7 +20,7 @@ Configure Buildroot
 Build the rootfs
 ----------------
 
-Note: you will need to have access to the network, since Buildroot will
+Note: you will need to have access to the network, since MikoOS will
 download the packages' sources.
 
 You may now build your rootfs with:

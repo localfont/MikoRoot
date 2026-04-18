@@ -6,10 +6,10 @@ Subject: [PATCH] Source/WebCore/page/csp/ContentSecurityPolicy.cpp: fix build
 
 Fixes:
 
-/home/thomas/buildroot/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/WebCore/page/csp/ContentSecurityPolicy.cpp:235:56:   required from here
+/home/thomas/mikoos/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/WebCore/page/csp/ContentSecurityPolicy.cpp:235:56:   required from here
   235 |             if ((policy.get()->*allowed)(std::make_pair(algorithm, digest)))
       |                                          ~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
-/home/thomas/buildroot/br/output-all/host/opt/ext-toolchain/aarch64-buildroot-linux-gnu/include/c++/14.3.0/type_traits:1246:52: error: non-constant
+/home/thomas/mikoos/br/output-all/host/opt/ext-toolchain/aarch64-mikoos-linux-gnu/include/c++/14.3.0/type_traits:1246:52: error: non-constant
 condition for static assertion
  1246 |       static_assert(std::__is_complete_or_unbounded(__type_identity<_Tp>{}),
       |                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~

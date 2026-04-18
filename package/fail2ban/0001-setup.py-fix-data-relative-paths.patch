@@ -22,7 +22,7 @@ site-packages folder when the wheel is installed.
 
 This patch cannot be sent upstream because it breaks the legacy way of
 installing the package with *python setup.py install* and it is needed only to
-comply with the pep517 buildroot compatibility layer.
+comply with the pep517 mikoos compatibility layer.
 
 [1] https://docs.python.org/3.10/distutils/setupscript.html#installing-additional-files
 Signed-off-by: Angelo Compagnucci <angelo.compagnucci@gmail.com>

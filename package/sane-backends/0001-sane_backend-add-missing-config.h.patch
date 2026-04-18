@@ -25,7 +25,7 @@ config.log:#define HAVE_SIGPROCMASK 1
 So, include config.h to avoid to redefine sigset_t.
 
 Fixes:
-http://autobuild.buildroot.net/results/9f1/9f1f1cb727b5c5407e69172280a3dee880e55cdf
+http://autobuild.mikoos.net/results/9f1/9f1f1cb727b5c5407e69172280a3dee880e55cdf
 
 Signed-off-by: Romain Naour <romain.naour@gmail.com>
 [Dario: make the patch to be applied with fuzz factor 0]

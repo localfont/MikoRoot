@@ -42,7 +42,7 @@ KVM_UNIT_TESTS_CONF_OPTS =\
 
 # For all architectures but x86-64, we use the target
 # compiler. However, for x86-64, we use the host compiler, as
-# kvm-unit-tests builds 32 bit code, which Buildroot toolchains for
+# kvm-unit-tests builds 32 bit code, which MikoOS toolchains for
 # x86-64 cannot do.
 ifeq ($(BR2_x86_64),)
 KVM_UNIT_TESTS_CONF_OPTS += --cross-prefix="$(TARGET_CROSS)"

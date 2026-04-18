@@ -18,8 +18,8 @@ class TestScreen(infra.basetest.BRTest):
                            options=["-initrd", cpio_file])
         self.emulator.login()
 
-        session_name = "BuildrootSession"
-        message = "HelloBuildroot"
+        session_name = "MikoOSSession"
+        message = "HelloMikoOS"
         screen_dump = "screen.dump.txt"
 
         # Check the program can execute

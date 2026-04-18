@@ -35,7 +35,7 @@ class TestEd(infra.basetest.BRTest):
             "Embedded Linux is Hard."
         ]
         output_expected_text = [
-            "Hello Buildroot",
+            "Hello MikoOS",
             "---------------",
             "Making Embedded Linux Easy."
         ]
@@ -54,7 +54,7 @@ class TestEd(infra.basetest.BRTest):
         edit_file = [
             f"r {test_fname}",
             "1",
-            "s/World/Buildroot/",
+            "s/World/MikoOS/",
             "2",
             "s/is Hard/Easy/",
             "s/^/Making /",

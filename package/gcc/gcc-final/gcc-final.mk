@@ -46,7 +46,7 @@ HOST_GCC_FINAL_PRE_CONFIGURE_HOOKS += HOST_GCC_CONFIGURE_SYMLINK
 # To do so, we can not just pass --enable-static to override the generic
 # --disable-static flag, otherwise gcc fails to build some of those
 # libraries, see;
-#   http://lists.busybox.net/pipermail/buildroot/2013-October/080412.html
+#   http://lists.busybox.net/pipermail/mikoos/2013-October/080412.html
 #
 # So we must completely override the generic commands and provide our own.
 #

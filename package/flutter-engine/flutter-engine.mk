@@ -8,7 +8,7 @@
 # only for Google. Its intended purpose is for the gclient tool provided by
 # Google in their depot-tools package. To use the source code, we must use
 # gclient to download the flutter-engine source code along with several other
-# projects. Unfortunately, the Buildroot download system does not have the
+# projects. Unfortunately, the MikoOS download system does not have the
 # capability of using gclient, and considering this package is the only
 # package that uses gclient, we side-step the entire download process and
 # perform the following steps if a tarball does not exist already:
@@ -24,7 +24,7 @@
 # reproducible tarball is not possible.
 FLUTTER_ENGINE_VERSION = 3.29.2
 
-# There is nothing for Buildroot to download. This is handled by gclient.
+# There is nothing for MikoOS to download. This is handled by gclient.
 FLUTTER_ENGINE_SITE =
 FLUTTER_ENGINE_SOURCE =
 FLUTTER_ENGINE_LICENSE = BSD-3-Clause

@@ -5,9 +5,9 @@
 === Configurable packages
 
 Some foundational packages like Busybox and uClibc can be configured
-with or without certain features. When writing Buildroot code that
+with or without certain features. When writing MikoOS code that
 uses such packages, contributors may assume that the options enabled
-in the Buildroot-provided configurations are enabled. For example,
+in the MikoOS-provided configurations are enabled. For example,
 +package/busybox/busybox.config+ sets
 +CONFIG_FEATURE_START_STOP_DAEMON_LONG_OPTIONS=y+, so init scripts
 meant for use with Busybox init may use +start-stop-daemon+ with long

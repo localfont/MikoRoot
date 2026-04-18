@@ -2,13 +2,13 @@
 Freescale i.MX8DXL WEVK board
 ******************************
 
-This file documents the Buildroot support for the Freescale i.MX8DXL WEVK
+This file documents the MikoOS support for the Freescale i.MX8DXL WEVK
 board.
 
 Build
 =====
 
-First, configure Buildroot for the i.MX8DXL WEVK board:
+First, configure MikoOS for the i.MX8DXL WEVK board:
 
   make freescale_imx8dxlevk_defconfig
 
@@ -44,7 +44,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

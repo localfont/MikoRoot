@@ -90,7 +90,7 @@ SOX_IGNORE_CVES += CVE-2022-31651
 SOX_IGNORE_CVES += CVE-2023-32627
 
 SOX_CONF_OPTS = \
-	--with-distro="Buildroot" \
+	--with-distro="MikoOS" \
 	--disable-stack-protector
 
 SOX_CFLAGS = $(TARGET_CFLAGS)

@@ -9,7 +9,7 @@ with autoconf >= 2.72:
 checking for stack setup via makecontext... ./configure: line 15863: syntax error near unexpected token `;;'
 
 Fixes:
- - http://autobuild.buildroot.org/results/013e0d3f72582ce3675f65786c014518682d703b
+ - http://autobuild.mikoos.org/results/013e0d3f72582ce3675f65786c014518682d703b
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/linknx/pthsem/pull/1

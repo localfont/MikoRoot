@@ -41,7 +41,7 @@ class TestMtools(infra.basetest.BRTest):
         self.assertRunOk(f"mlabel {mtools_opts} -N 12345678 ::BUILDROOT")
 
         # Create a reference file on our Linux filesystem
-        self.assertRunOk("echo 'Hello Buildroot!' > file1.txt")
+        self.assertRunOk("echo 'Hello MikoOS!' > file1.txt")
 
         # Copy the reference file into the DOS image, then perform
         # various file manipulations

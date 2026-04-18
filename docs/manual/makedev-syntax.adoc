@@ -4,7 +4,7 @@
 [[makedev-syntax]]
 == Makedev syntax documentation
 
-The makedev syntax is used in several places in Buildroot to
+The makedev syntax is used in several places in MikoOS to
 define changes to be made for permissions, or which device files to
 create and how to create them, in order to avoid calls to mknod.
 

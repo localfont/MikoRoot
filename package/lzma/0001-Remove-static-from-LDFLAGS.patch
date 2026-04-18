@@ -6,7 +6,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Buildroot does not enable static libraries by default for host builds. Having
+MikoOS does not enable static libraries by default for host builds. Having
 -static hardcoded in the LDFLAGS breaks the build, so remove it.
 
 Signed-off-by: Vincent Stehlé <vincent.stehle@laposte.net>

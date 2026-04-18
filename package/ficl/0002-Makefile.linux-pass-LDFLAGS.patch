@@ -5,11 +5,11 @@ Subject: [PATCH] Makefile.linux: pass LDFLAGS
 
 Pass LDFLAGS to avoid the following musl static build failure:
 
-/home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/sh4eb-buildroot-linux-musl/11.3.0/../../../../sh4eb-buildroot-linux-musl/bin/ld: /home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/sh4eb-buildroot-linux-musl/11.3.0/libgcc.a(unwind-dw2.o): in function `size_of_encoded_value':
-/home/autobuild/autobuild/instance-5/output-1/build/host-gcc-final-11.3.0/build/sh4eb-buildroot-linux-musl/libgcc/../../../libgcc/unwind-pe.h:89: undefined reference to `abort'
+/home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/sh4eb-mikoos-linux-musl/11.3.0/../../../../sh4eb-mikoos-linux-musl/bin/ld: /home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/sh4eb-mikoos-linux-musl/11.3.0/libgcc.a(unwind-dw2.o): in function `size_of_encoded_value':
+/home/autobuild/autobuild/instance-5/output-1/build/host-gcc-final-11.3.0/build/sh4eb-mikoos-linux-musl/libgcc/../../../libgcc/unwind-pe.h:89: undefined reference to `abort'
 
 Fixes:
- - http://autobuild.buildroot.org/results/bf041723ed813746c61892262630a3ac2bc43b14
+ - http://autobuild.mikoos.org/results/bf041723ed813746c61892262630a3ac2bc43b14
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: upstream is dead

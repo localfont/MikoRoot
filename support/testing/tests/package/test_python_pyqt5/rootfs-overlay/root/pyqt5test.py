@@ -45,7 +45,7 @@ class TestApp(QWidget):
 
 
 if __name__ == "__main__":
-    print("PyQt5 test for Buildroot")
+    print("PyQt5 test for MikoOS")
     print(f"Qt version {QT_VERSION_STR}")
     print(f"PyQt version {PYQT_VERSION_STR}")
 

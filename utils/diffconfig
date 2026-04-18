@@ -5,7 +5,7 @@
 # originally written in 2006 by Matt Mackall
 #  (at least, this was in his bloatwatch source code)
 # last worked on 2008 by Tim Bird for the Linux kernel
-# Adapted to Buildroot 2017 by Marcus Folkesson
+# Adapted to MikoOS 2017 by Marcus Folkesson
 #
 
 import sys, os
@@ -33,8 +33,8 @@ Example usage:
  BR2_LINUX_KERNEL_USE_INTREE_DTS y -> n
  BR2_PACKAGE_DFU_UTIL n -> y
  BR2_PACKAGE_LIBUSB n -> y
- BR2_TARGET_GENERIC_HOSTNAME "buildroot" -> "Tuxie"
- BR2_TARGET_GENERIC_ISSUE "Welcome to Buildroot" -> "Welcome to CustomBoard"
+ BR2_TARGET_GENERIC_HOSTNAME "mikoos" -> "Tuxie"
+ BR2_TARGET_GENERIC_ISSUE "Welcome to MikoOS" -> "Welcome to CustomBoard"
 +BR2_PACKAGE_LIBUSB_COMPAT n
 
 """)

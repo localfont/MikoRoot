@@ -25,7 +25,7 @@ WAYLAND_POST_INSTALL_TARGET_HOOKS += WAYLAND_TARGET_CLEANUP
 
 # The wayland-scanner.pc installed by the target wayland package is
 # used to find the wayland-scanner tool, which in a cross-compilation
-# context is compiled for the host (and in Buildroot, compiled by
+# context is compiled for the host (and in MikoOS, compiled by
 # host-wayland). Below, we tweak the target wayland-scanner.pc so that
 # when the wayland_scanner variable is requested through pkg-config,
 # it points to the host wayland_scanner tool.

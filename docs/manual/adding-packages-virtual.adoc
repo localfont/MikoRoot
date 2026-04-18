@@ -5,7 +5,7 @@
 
 [[virtual-package-tutorial]]
 
-In Buildroot, a virtual package is a package whose functionalities are
+In MikoOS, a virtual package is a package whose functionalities are
 provided by one or more packages, referred to as 'providers'. The virtual
 package management is an extensible mechanism allowing the user to choose
 the provider used in the rootfs.

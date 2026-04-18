@@ -4,7 +4,7 @@ Date: Mon, 27 Nov 2023 18:09:57 +0200
 Subject: [PATCH] socat: disable documentation build/installation
 
 The documentation generation process requires a special yold2man
-program, for which we don't have a package in Buildroot. Since we
+program, for which we don't have a package in MikoOS. Since we
 generally don't care much about documentation of packages, just adjust
 the package Makefile.in to not build/install its documentation.
 

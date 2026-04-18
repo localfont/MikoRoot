@@ -35,7 +35,7 @@ APITRACE_CFLAGS += -O0
 # CMakeLists.txt sets CMAKE_CXX_FLAGS_<BUILD_TYPE> depending on
 # BUILD_TYPE, and this comes after the generic CMAKE_CXX_FLAGS.
 # Override CMAKE_BUILD_TYPE so no overrides are applied.
-APITRACE_CONF_OPTS += -DCMAKE_BUILD_TYPE=Buildroot
+APITRACE_CONF_OPTS += -DCMAKE_BUILD_TYPE=MikoOS
 endif
 
 ifeq ($(BR2_TOOLCHAIN_HAS_GCC_BUG_85180),y)

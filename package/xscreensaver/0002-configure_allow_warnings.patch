@@ -13,7 +13,7 @@ https://sources.debian.org/src/xscreensaver/6.09%2Bdfsg1-1/debian/patches/100_co
 
 Upstream: not applicable
 
-[Bernd: s/Debian/buildroot]
+[Bernd: s/Debian/mikoos]
 Signed-off-by: Bernd Kuhls <bernd@kuhls.net>
 
 Index: xscreensaver-git/configure
@@ -27,7 +27,7 @@ Index: xscreensaver-git/configure
 -exit $CONF_STATUS
 +if test "$CONF_STATUS" != 0; then
 +	echo ""
-+	echo "Warning: Buildroot build will proceed regardless of above warnings"
++	echo "Warning: MikoOS build will proceed regardless of above warnings"
 +	echo ""
 +fi
 +

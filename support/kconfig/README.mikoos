@@ -1,5 +1,5 @@
 This is a copy of the kconfig code in the kernel (currently 4.17-rc2) tweaked
-to suit Buildroot.
+to suit MikoOS.
 
 To update:
 	cp -r /usr/src/linux/scripts/kconfig support/kconfig.new
@@ -8,7 +8,7 @@ To update:
 	mv zconf.lex.c zconf.lex.c_shipped
 	mv zconf.tab.c zconf.tab.c_shipped
 	rm -rf tests/
-	cp -a ../kconfig/patches ../kconfig/README.buildroot ../kconfig/.gitignore .
+	cp -a ../kconfig/patches ../kconfig/README.mikoos ../kconfig/.gitignore .
 	quilt push -a
 	# Fix any conflict
 	cd ..

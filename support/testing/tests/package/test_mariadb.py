@@ -143,7 +143,7 @@ class TestMariaDB(infra.basetest.BRTest):
 
         # Create a new database.
         sql_query = f"CREATE DATABASE {self.db_name}"
-        sql_query += " COMMENT = 'Test Database for Buildroot Test';"
+        sql_query += " COMMENT = 'Test Database for MikoOS Test';"
         self.run_admin_sql_query(sql_query)
 
         # Grant all permission on this new database to our test user.

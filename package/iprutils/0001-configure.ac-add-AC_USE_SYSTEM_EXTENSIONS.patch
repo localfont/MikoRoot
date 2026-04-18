@@ -20,7 +20,7 @@ iprlib.c:1999:48: error: 'alphasort' undeclared (first use in this function)
 Fix them by adding AC_USE_SYSTEM_EXTENSIONS in configure.ac
 
 Fixes:
- - http://autobuild.buildroot.org/results/41fde4aa06f7c025bb05aa594716643b9010358f
+ - http://autobuild.mikoos.org/results/41fde4aa06f7c025bb05aa594716643b9010358f
 
 [Upstream status: https://github.com/bjking1/iprutils/pull/4]
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>

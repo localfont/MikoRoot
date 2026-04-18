@@ -18,7 +18,7 @@ To customize the configuration choosed type:
 
 $ make menuconfig
 
-When you are ready to start building Buildroot type:
+When you are ready to start building MikoOS type:
 
 $ make
 

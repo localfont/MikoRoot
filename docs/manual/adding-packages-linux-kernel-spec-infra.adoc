@@ -10,7 +10,7 @@ hooks for building Linux kernel tools or/and building Linux kernel extensions.
 [[linux-kernel-tools]]
 ==== linux-kernel-tools
 
-Buildroot offers a helper infrastructure to build some userspace tools
+MikoOS offers a helper infrastructure to build some userspace tools
 for the target available within the Linux kernel sources. Since their
 source code is part of the kernel source code, a special package,
 +linux-tools+, exists and re-uses the sources of the Linux kernel that
@@ -95,7 +95,7 @@ they are part of the +linux-tools+ package.
 Some packages provide new features that require the Linux kernel tree
 to be modified. This can be in the form of patches to be applied on
 the kernel tree, or in the form of new files to be added to the
-tree. The Buildroot's Linux kernel extensions infrastructure provides
+tree. The MikoOS's Linux kernel extensions infrastructure provides
 a simple solution to automatically do this, just after the kernel
 sources are extracted and before the kernel patches are
 applied. Examples of extensions packaged using this mechanism are the

@@ -5,7 +5,7 @@
 # package .mk files for CMake packages. It should be used for all
 # packages that use CMake as their build system.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this CMake infrastructure requires
@@ -59,7 +59,7 @@ $(3)_CMAKE_BACKEND ?= make
 ifeq ($$($(3)_SUPPORTS_IN_SOURCE_BUILD),YES)
 $(2)_BUILDDIR			= $$($(2)_SRCDIR)
 else
-$(2)_BUILDDIR			= $$($(2)_SRCDIR)/buildroot-build
+$(2)_BUILDDIR			= $$($(2)_SRCDIR)/mikoos-build
 endif
 
 ifeq ($$($(3)_CMAKE_BACKEND),make)
@@ -106,7 +106,7 @@ define $(2)_CONFIGURE_CMDS
 	$$($$(PKG)_CONF_ENV) $$(BR2_CMAKE) $$($$(PKG)_SRCDIR) \
 		-G$$($$(PKG)_GENERATOR) \
 		-DCMAKE_MAKE_PROGRAM="$$($$(PKG)_GENERATOR_PROGRAM)" \
-		-DCMAKE_TOOLCHAIN_FILE="$$(HOST_DIR)/share/buildroot/toolchainfile.cmake" \
+		-DCMAKE_TOOLCHAIN_FILE="$$(HOST_DIR)/share/mikoos/toolchainfile.cmake" \
 		-DCMAKE_INSTALL_PREFIX="/usr" \
 		-DCMAKE_INSTALL_RUNSTATEDIR="/run" \
 		-DCMAKE_COLOR_MAKEFILE=OFF \
@@ -265,11 +265,11 @@ CMAKE_SYSTEM_PROCESSOR = $(BR2_ARCH)
 endif
 
 # In order to allow the toolchain to be relocated, we calculate the HOST_DIR
-# based on the toolchainfile.cmake file's location: $(HOST_DIR)/share/buildroot
+# based on the toolchainfile.cmake file's location: $(HOST_DIR)/share/mikoos
 # In all the other variables, HOST_DIR will be replaced by RELOCATED_HOST_DIR,
 # so we have to strip "$(HOST_DIR)/" from the paths that contain it.
 define TOOLCHAIN_CMAKE_INSTALL_FILES
-	@mkdir -p $(HOST_DIR)/share/buildroot
+	@mkdir -p $(HOST_DIR)/share/mikoos
 	sed \
 		-e 's#@@STAGING_SUBDIR@@#$(call qstrip,$(STAGING_SUBDIR))#' \
 		-e 's#@@TARGET_CFLAGS@@#$(call qstrip,$(TARGET_CFLAGS))#' \
@@ -284,11 +284,11 @@ define TOOLCHAIN_CMAKE_INSTALL_FILES
 		-e 's#@@TOOLCHAIN_HAS_FORTRAN@@#$(if $(BR2_TOOLCHAIN_HAS_FORTRAN),1,0)#' \
 		-e 's#@@CMAKE_BUILD_TYPE@@#$(if $(BR2_ENABLE_RUNTIME_DEBUG),Debug,Release)#' \
 		$(TOPDIR)/support/misc/toolchainfile.cmake.in \
-		> $(HOST_DIR)/share/buildroot/toolchainfile.cmake
-	$(Q)$(INSTALL) -D -m 0644 support/misc/Buildroot.cmake \
-		$(HOST_DIR)/share/buildroot/Platform/Buildroot.cmake
-	$(Q)$(INSTALL) -D -m 0644 support/misc/Buildroot-Initialize.cmake \
-		$(HOST_DIR)/share/buildroot/Platform/Buildroot-Initialize.cmake
+		> $(HOST_DIR)/share/mikoos/toolchainfile.cmake
+	$(Q)$(INSTALL) -D -m 0644 support/misc/MikoOS.cmake \
+		$(HOST_DIR)/share/mikoos/Platform/MikoOS.cmake
+	$(Q)$(INSTALL) -D -m 0644 support/misc/MikoOS-Initialize.cmake \
+		$(HOST_DIR)/share/mikoos/Platform/MikoOS-Initialize.cmake
 endef
 
 TOOLCHAIN_POST_INSTALL_STAGING_HOOKS += TOOLCHAIN_CMAKE_INSTALL_FILES

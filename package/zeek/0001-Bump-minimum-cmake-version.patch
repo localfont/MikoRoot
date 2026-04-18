@@ -3,7 +3,7 @@ From: Bernd Kuhls <bernd@kuhls.net>
 Date: Sun, 4 Jan 2026 13:24:31 +0100
 Subject: [PATCH] Bump minimum cmake version
 
-This commit fixes buildroot errors after cmake was bumped to 4.x.
+This commit fixes mikoos errors after cmake was bumped to 4.x.
 
 This upstream commit removed CMP0063:
 https://github.com/zeek/libkqueue/commit/34cc1fea01e2f1d49238e1c58997c09bfa241568

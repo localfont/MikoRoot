@@ -13,7 +13,7 @@ PYTHON_FROZENLIST_LICENSE_FILES = LICENSE
 PYTHON_FROZENLIST_DEPENDENCIES = \
 	host-python-expandvars \
 	host-python-setuptools
-# C code generation required Cython 3 which we don't have in Buildroot yet.
+# C code generation required Cython 3 which we don't have in MikoOS yet.
 PYTHON_FROZENLIST_BUILD_OPTS = -C=pure-python=true
 
 $(eval $(python-package))

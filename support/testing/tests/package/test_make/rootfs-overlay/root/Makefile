@@ -1,4 +1,4 @@
-MESSAGE ?= "Hello Buildroot!"
+MESSAGE ?= "Hello MikoOS!"
 COUNT ?= 10
 
 LIST = $(shell seq $(COUNT))

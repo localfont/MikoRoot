@@ -3,7 +3,7 @@ From: Bernd Kuhls <bernd@kuhls.net>
 Date: Sat, 18 Oct 2025 18:54:36 +0200
 Subject: [PATCH] output_viewer: fix build with gcc >= 14
 
-Fixes build error found by buildroot autobuilders:
+Fixes build error found by mikoos autobuilders:
 
 output_viewer.c:125:32: error: assignment to 'boolean (*)(struct jpeg_decompress_struct *)'
 from incompatible pointer type 'int (*)(struct jpeg_decompress_struct *)'

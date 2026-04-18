@@ -32,7 +32,7 @@ class TestRustBin(TestRustBase):
 
     def test_run(self):
         self.login()
-        self.assertRunOk("rg Buildroot /etc/issue")
+        self.assertRunOk("rg MikoOS /etc/issue")
 
 
 class TestRust(TestRustBase):
@@ -54,7 +54,7 @@ class TestRust(TestRustBase):
 
     def test_run(self):
         self.login()
-        self.assertRunOk("rg Buildroot /etc/issue")
+        self.assertRunOk("rg MikoOS /etc/issue")
 
 
 class TestRustVendoring(infra.basetest.BRConfigTest):

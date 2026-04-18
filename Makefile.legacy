@@ -2,7 +2,7 @@
 # Makefile.legacy - support for backward compatibility
 #
 # This file contains placeholders to detect backward-compatibility problems.
-# When a buildroot "API" feature is being deprecated, a rule should be added
+# When a mikoos "API" feature is being deprecated, a rule should be added
 # here that issues an error when the old feature is used.
 
 ifeq ($(BR2_LEGACY),y)

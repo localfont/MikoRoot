@@ -11,7 +11,7 @@ ocsp.c:112:20: error: 'SERVICE_OPTIONS' {aka 'struct service_options_struct'} ha
       |                    ^~
 
 Fixes:
- - http://autobuild.buildroot.org/results/1707beea413a8da8713ad2dc59db947329da45d2
+ - http://autobuild.mikoos.org/results/1707beea413a8da8713ad2dc59db947329da45d2
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/mtrojnar/stunnel/pull/18

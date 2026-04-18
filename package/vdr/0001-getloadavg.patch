@@ -1,7 +1,7 @@
 Fix compilation with uClibc
 
 Ported from
-https://github.com/stschake/buildroot-grasshopper/blob/master/package/torsmo/torsmo-0.18-uclibc-getloadavg.patch
+https://github.com/stschake/mikoos-grasshopper/blob/master/package/torsmo/torsmo-0.18-uclibc-getloadavg.patch
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>
 

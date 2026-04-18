@@ -92,7 +92,7 @@ else
 IPUTILS_CONF_OPTS += -DUSE_GETTEXT=false
 endif
 
-# XSL Stylesheets for DocBook 5 not packaged for buildroot
+# XSL Stylesheets for DocBook 5 not packaged for mikoos
 IPUTILS_CONF_OPTS += -DBUILD_MANS=false -DBUILD_HTML_MANS=false
 
 # handle permissions ourselves

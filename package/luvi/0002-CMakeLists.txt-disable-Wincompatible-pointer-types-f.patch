@@ -18,7 +18,7 @@ clang."
 Latest lua-openssl version (0.9.1-0) also disable this warning [2].
 
 Fixes:
-https://gitlab.com/buildroot.org/buildroot/-/jobs/11271124430 (TestLuvi)
+https://gitlab.com/mikoos.org/mikoos/-/jobs/11271124430 (TestLuvi)
 
 [1] https://github.com/luvit/luvi/commit/85d7d7bf51bc523159ad579d846cbefbbff38fdb
 [2] https://github.com/zhaozg/lua-openssl/commit/bfeedbe8c06d8b4400fa670edecd452a433ddac4

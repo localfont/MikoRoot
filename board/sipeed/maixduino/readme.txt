@@ -28,10 +28,10 @@ $ sudo usermod -a -G dialout $(whoami)
 
 To enable the above, it is sometimes necessary to logout and login again.
 
-Buildroot Configuration
+MikoOS Configuration
 -----------------------
 
-Two buildroot configurations are provided:
+Two mikoos configurations are provided:
 
 (1) Direct Linux Kernel Boot
 
@@ -80,7 +80,7 @@ not reboot automatically).
 The output will be similar to the following.
 
 ```
-[    0.000000] Linux version 5.18.0 (foo@bar.com) (riscv64-buildroot-linux-uclibc-gcc.br_real (Buildroot 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #2 SMP Thu Apr 21 15:16:00 JST 2022
+[    0.000000] Linux version 5.18.0 (foo@bar.com) (riscv64-mikoos-linux-uclibc-gcc.br_real (MikoOS 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #2 SMP Thu Apr 21 15:16:00 JST 2022
 [    0.000000] Machine model: SiPeed MAIXDUINO
 [    0.000000] earlycon: sifive0 at MMIO 0x0000000038000000 (options '115200n8')
 [    0.000000] printk: bootconsole [sifive0] enabled
@@ -202,7 +202,7 @@ newly programmed environment by pressing the board reset button.
 The output will be similar to the following.
 
 ```
-[    0.000000] Linux version 5.18.0 (foo@bar.com) (riscv64-buildroot-linux-uclibc-gcc.br_real (Buildroot 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #1 SMP Thu Apr 21 15:30:18 JST 2022
+[    0.000000] Linux version 5.18.0 (foo@bar.com) (riscv64-mikoos-linux-uclibc-gcc.br_real (MikoOS 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #1 SMP Thu Apr 21 15:30:18 JST 2022
 [    0.000000] Machine model: SiPeed MAIXDUINO
 [    0.000000] earlycon: sifive0 at MMIO 0x0000000038000000 (options '115200n8')
 [    0.000000] printk: bootconsole [sifive0] enabled

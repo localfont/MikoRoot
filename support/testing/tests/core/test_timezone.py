@@ -13,7 +13,7 @@ def boot_armv5_cpio(emulator, builddir):
     # date. In general, this is desirable (for correct SSL certificate
     # behaviors, for example).
     #
-    # This timezone runtime test checks that a Buildroot configuration
+    # This timezone runtime test checks that a MikoOS configuration
     # is reflected in the generated system at runtime, using the
     # standard "date" command. To make sure this test is stable in
     # time (i.e. output is independent to the date/time the test is

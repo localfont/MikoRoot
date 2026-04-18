@@ -842,9 +842,9 @@ choice
 	  The default is 4KB, and you should probably keep this unless
 	  you know what you are doing. In particular, the kernel
 	  configuration must match this choice. If your kernel is
-	  built by Buildroot, the kernel configuration is
+	  built by MikoOS, the kernel configuration is
 	  automatically adjusted, but not if you built your kernel
-	  outside of Buildroot.
+	  outside of MikoOS.
 
 config BR2_ARM64_PAGE_SIZE_4K
 	bool "4KB"

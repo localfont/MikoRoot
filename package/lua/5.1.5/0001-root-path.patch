@@ -1,6 +1,6 @@
 Adjust installation location to /usr.
 
-Upstream: N/A specific for Buildroot build
+Upstream: N/A specific for MikoOS build
 Signed-off-by: Francois Perrad <francois.perrad@gadz.org>
 
 Index: b/etc/lua.pc

@@ -1,9 +1,9 @@
 From 6133c87299bce32c13dcf1692842ea5f2890c5ad Mon Sep 17 00:00:00 2001
 From: Sergey Bobrenok <bobrofon@gmail.com>
 Date: Wed, 28 Feb 2024 16:29:17 +0300
-Subject: [PATCH] meson.build: Disable stack protection for Buildroot packaging
+Subject: [PATCH] meson.build: Disable stack protection for MikoOS packaging
 
-In Buildroot, the SSP flags are passed via the wrapper, and only flags
+In MikoOS, the SSP flags are passed via the wrapper, and only flags
 supported by the toolchain will be used. So the SSP flags can be
 safely removed from the build files.
 
@@ -11,7 +11,7 @@ Fixes:
   src/basic/libbasic.a.p/log.c.o: in function `write_to_console.isra.0':
   log.c:(.text.write_to_console.isra.0+0x154): undefined reference to `__stack_chk_fail_local'
 
-Upstream: N/A [Buildroot specific]
+Upstream: N/A [MikoOS specific]
 
 Signed-off-by: Sergey Bobrenok <bobrofon@gmail.com>
 ---

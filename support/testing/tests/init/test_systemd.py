@@ -37,7 +37,7 @@ class InitSystemSystemdBase(InitSystemBase):
         try:
             # 'support-ended' tainted flag is only set based on the
             # SUPPORT_END variable in /etc/os-release; as we don't set
-            # it in Buildroot, we can't get that flag in the runtime
+            # it in MikoOS, we can't get that flag in the runtime
             # tests, even on our maintenance branches, so we don't need
             # to filter it out.
             tainted_flags = [
@@ -325,7 +325,7 @@ class InitSystemSystemdBaseOverlayfs():
 
         # /var/foo/bar is from the pre-populated /var, so it should
         # not be present in the upper of the overlay
-        _, exit_code = self.emulator.run("test -e /run/buildroot/mounts/var/upper/foo/bar")
+        _, exit_code = self.emulator.run("test -e /run/mikoos/mounts/var/upper/foo/bar")
         self.assertNotEqual(exit_code, 0)
 
         # We can write in /var/foo/bar
@@ -336,14 +336,14 @@ class InitSystemSystemdBaseOverlayfs():
         self.assertEqual(exit_code, 0)
         self.assertEqual(out[0], "barfoo")
         # ... and it to appears in the upper
-        _, exit_code = self.emulator.run("test -e /run/buildroot/mounts/var/upper/foo/bar")
+        _, exit_code = self.emulator.run("test -e /run/mikoos/mounts/var/upper/foo/bar")
         self.assertEqual(exit_code, 0)
         # ... with the new content
-        out, exit_code = self.emulator.run("cat /run/buildroot/mounts/var/upper/foo/bar")
+        out, exit_code = self.emulator.run("cat /run/mikoos/mounts/var/upper/foo/bar")
         self.assertEqual(exit_code, 0)
         self.assertEqual(out[0], "barfoo")
         # ... while the lower still has the oldcontent
-        out, exit_code = self.emulator.run("cat /run/buildroot/mounts/var/lower/foo/bar")
+        out, exit_code = self.emulator.run("cat /run/mikoos/mounts/var/lower/foo/bar")
         self.assertEqual(exit_code, 0)
         self.assertEqual(out[0], "foobar")
 
@@ -399,7 +399,7 @@ class InitSystemSystemdBaseOverlayfsVarBacking(InitSystemBase):
         )
 
     def check_var_mounted(self):
-        self.assertRunOk("grep '^other-var-backing-store /run/buildroot/mounts/var tmpfs' /proc/mounts")
+        self.assertRunOk("grep '^other-var-backing-store /run/mikoos/mounts/var tmpfs' /proc/mounts")
 
 
 class TestInitSystemSystemdRoFullOverlayfsVarBackingMountUnit(

@@ -48,7 +48,7 @@ endif
 
 # On 64bit targets, OP-TEE OS can be built in 32bit mode, or
 # can be built in 64bit mode and support 32bit and 64bit
-# trusted applications. Since buildroot currently references
+# trusted applications. Since mikoos currently references
 # a single cross compiler, build exclusively in 32bit
 # or 64bit mode.
 OPTEE_OS_MAKE_OPTS = \

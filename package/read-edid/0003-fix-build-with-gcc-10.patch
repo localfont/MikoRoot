@@ -3,10 +3,10 @@ fix build with gcc 10
 Define quiet as static to avoid the following build failure with gcc 10
 (which defaults to -fno-common):
 
-/home/naourr/work/instance-2/output-1/host/lib/gcc/arm-buildroot-linux-gnueabihf/10.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: CMakeFiles/get-edid.dir/i2c.c.o:(.bss+0x0): multiple definition of `quiet'; CMakeFiles/get-edid.dir/get-edid.c.o:(.bss+0x0): first defined here
+/home/naourr/work/instance-2/output-1/host/lib/gcc/arm-mikoos-linux-gnueabihf/10.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: CMakeFiles/get-edid.dir/i2c.c.o:(.bss+0x0): multiple definition of `quiet'; CMakeFiles/get-edid.dir/get-edid.c.o:(.bss+0x0): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/28bde8049b6610273bceae26eca407c819a37dcd
+ - http://autobuild.mikoos.org/results/28bde8049b6610273bceae26eca407c819a37dcd
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: sent to pyrophobicman@gmail.com]

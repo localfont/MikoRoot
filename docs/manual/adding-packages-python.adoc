@@ -37,14 +37,14 @@ with an example :
 On line 7, we declare the version of the package.
 
 On line 8 and 9, we declare the name of the tarball (xz-ed tarball
-recommended) and the location of the tarball on the Web. Buildroot
+recommended) and the location of the tarball on the Web. MikoOS
 will automatically download the tarball from this location.
 
 On line 10 and 11, we give licensing details about the package (its
 license on line 10, and the file containing the license text on line
 11).
 
-On line 12, we tell Buildroot to pass custom options to the Python
+On line 12, we tell MikoOS to pass custom options to the Python
 +setup.py+ script when it is configuring the package.
 
 On line 13, we declare our dependencies, so that they are built
@@ -64,9 +64,9 @@ built.
 ==== +python-package+ reference
 
 As a policy, packages that merely provide Python modules should all be
-named +python-<something>+ in Buildroot. Other packages that use the
+named +python-<something>+ in MikoOS. Other packages that use the
 Python build system, but are not Python modules, can freely choose
-their name (existing examples in Buildroot are +scons+ and
+their name (existing examples in MikoOS are +scons+ and
 +supervisor+).
 
 The main macro of the Python package infrastructure is
@@ -157,7 +157,7 @@ possible to customize what is done in any particular step:
 
 ==== Generating a +python-package+ from a PyPI repository
 
-If the Python package for which you would like to create a Buildroot
+If the Python package for which you would like to create a MikoOS
 package is available on PyPI, you may want to use the +scanpypi+ tool
 located in +utils/+ to automate the process.
 
@@ -167,7 +167,7 @@ https://pypi.python.org[here].
 +scanpypi+ requires Python's +setuptools+ package to be installed on
 your host.
 
-When at the root of your buildroot directory just do :
+When at the root of your mikoos directory just do :
 
 ----
 utils/scanpypi foo bar -o package
@@ -186,7 +186,7 @@ such as BR2_PACKAGE_PYTHON_ZLIB).  Also, please take note that the
 license and license files are guessed and must be checked. You also
 need to manually add the package to the +package/Config.in+ file.
 
-If your Buildroot package is not in the official Buildroot tree but in
+If your MikoOS package is not in the official MikoOS tree but in
 a br2-external tree, use the -o flag as follows:
 
 ----

@@ -26,7 +26,7 @@ class TestDos2Unix(infra.basetest.BRTest):
         self.assertRunOk("dos2unix --version")
 
         # Create a text file with UNIX new-lines
-        self.assertRunOk("echo -e 'Hello\\nBuildroot' > original.txt")
+        self.assertRunOk("echo -e 'Hello\\nMikoOS' > original.txt")
 
         # Convert the original UNIX file to DOS
         self.assertRunOk("unix2dos -n original.txt dos.txt")

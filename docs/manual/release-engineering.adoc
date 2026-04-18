@@ -5,7 +5,7 @@
 == Release Engineering
 === Releases
 
-The Buildroot project makes quarterly releases with monthly bugfix
+The MikoOS project makes quarterly releases with monthly bugfix
 releases.  The first release of each year is a long term support
 release, LTS.
 

@@ -69,7 +69,7 @@ class TestPythonPyQt5(infra.basetest.BRTest):
         # The Qt debug can also be enabled with the command:
         #     export QT_LOGGING_RULES=*=true
         # Then, run the /root/pyqt5test.py application.
-        msg = "Hello Buildroot."
+        msg = "Hello MikoOS."
         cmd = f'/root/pyqt5test.py "{msg}"'
         self.assertRunOk(cmd, timeout=30)
 

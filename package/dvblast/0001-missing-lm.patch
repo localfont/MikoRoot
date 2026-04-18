@@ -9,7 +9,7 @@ pulled in because libev as a DT_NEEDED ELF tag on libm.so.
 But when lnking to the static libev.a, since there is no way to express
 such dependencies in static libraries, libm is not pulled in, which
 leads to build failures such as;
-    http://autobuild.buildroot.org/results/1f0/1f02f84fb926839a1adbe3af457bb909fdc44433/build-end.log
+    http://autobuild.mikoos.org/results/1f0/1f02f84fb926839a1adbe3af457bb909fdc44433/build-end.log
 
 Fix that by always linking to -lm (which must come *after* -lev).
 

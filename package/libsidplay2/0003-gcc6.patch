@@ -14,7 +14,7 @@ xsid.cpp:101:1: error: narrowing conversion of ''\362'' from 'char' to 'int8_t {
 
 To fix the problem change the array type from int8_t to char as proposed
 by Khem Raj:
-http://lists.busybox.net/pipermail/buildroot/2016-August/169540.html
+http://lists.busybox.net/pipermail/mikoos/2016-August/169540.html
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>
 

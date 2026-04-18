@@ -21,7 +21,7 @@ task.c:428:13: note: 'ret' was declared here
       |             ^~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/bc1b40de22e563b704ad7f20b6bf4d1f73a6ed8a
+ - http://autobuild.mikoos.org/results/bc1b40de22e563b704ad7f20b6bf4d1f73a6ed8a
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://lore.kernel.org/xenomai/20231203144307.1940139-1-fontaine.fabrice@gmail.com/T/#u

@@ -15,7 +15,7 @@ DROPBEAR_CPE_ID_VENDOR = dropbear_ssh_project
 DROPBEAR_CPE_ID_PRODUCT = dropbear_ssh
 
 # Disable hardening flags added by dropbear configure.ac, and let
-# Buildroot add them when the relevant options are enabled. This
+# MikoOS add them when the relevant options are enabled. This
 # prevents dropbear from using SSP support when not available.
 DROPBEAR_CONF_OPTS = --disable-harden
 

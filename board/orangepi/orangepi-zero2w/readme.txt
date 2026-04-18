@@ -2,7 +2,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the OrangePi Zero2W. Current configuration will
+mikoos environment for the OrangePi Zero2W. Current configuration will
 bring-up the board and allow access through the serial console.
 
 Orangepi Zero 2W links:

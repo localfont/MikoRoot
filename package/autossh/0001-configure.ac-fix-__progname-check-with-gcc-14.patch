@@ -9,7 +9,7 @@ the function is unavailable with gcc >= 14 which enables
 (https://gcc.gnu.org/gcc-14/porting_to.html):
 
 configure:5231: checking if libc defines __progname
-configure:5249: /home/autobuild/autobuild/instance-7/output-1/host/bin/sh4-buildroot-linux-musl-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -static -Wall -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c  >&5
+configure:5249: /home/autobuild/autobuild/instance-7/output-1/host/bin/sh4-mikoos-linux-musl-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -static -Wall -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c  >&5
 conftest.c: In function 'main':
 conftest.c:73:27: error: implicit declaration of function 'printf' [-Wimplicit-function-declaration]
    73 |  extern char *__progname; printf("%s", __progname);
@@ -23,10 +23,10 @@ conftest.c:73:27: note: include '<stdio.h>' or provide a declaration of 'printf'
 
 resulting in the following static build failure:
 
-/home/autobuild/autobuild/instance-7/output-1/host/lib/gcc/sh4-buildroot-linux-musl/14.1.0/../../../../sh4-buildroot-linux-musl/bin/ld: /home/autobuild/autobuild/instance-7/output-1/host/sh4-buildroot-linux-musl/sysroot/lib/libc.a(libc.o):(.bss.__progname+0x0): multiple definition of `__progname'; autossh.o:(.bss+0x120): first defined here
+/home/autobuild/autobuild/instance-7/output-1/host/lib/gcc/sh4-mikoos-linux-musl/14.1.0/../../../../sh4-mikoos-linux-musl/bin/ld: /home/autobuild/autobuild/instance-7/output-1/host/sh4-mikoos-linux-musl/sysroot/lib/libc.a(libc.o):(.bss.__progname+0x0): multiple definition of `__progname'; autossh.o:(.bss+0x120): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/5d80a8096d0f5529cbd86903a74f3bab3d230f4a
+ - http://autobuild.mikoos.org/results/5d80a8096d0f5529cbd86903a74f3bab3d230f4a
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/Autossh/autossh/pull/9

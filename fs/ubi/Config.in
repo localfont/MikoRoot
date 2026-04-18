@@ -33,7 +33,7 @@ config BR2_TARGET_ROOTFS_UBI_USE_CUSTOM_CONFIG
 	  Passing a custom ubinize configuration file allows you to
 	  create several volumes, specify volume types, etc.
 
-	  As a convenience, buildroot replaces the string
+	  As a convenience, mikoos replaces the string
 	  "BR2_ROOTFS_UBIFS_PATH" with the path to the built ubifs file.
 	  So the volume defined for the root filesystem can specify the
 	  image path as:  image=BR2_ROOTFS_UBIFS_PATH

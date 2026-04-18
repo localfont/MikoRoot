@@ -2,12 +2,12 @@
 Technexion i.MX7D Pico board
 ****************************
 
-This file documents the Buildroot support for the Technexion i.MX7D Pico board.
+This file documents the MikoOS support for the Technexion i.MX7D Pico board.
 
 Build
 =====
 
-First, configure Buildroot for the i.MX7D Pico board:
+First, configure MikoOS for the i.MX7D Pico board:
 
   make imx7dpico_defconfig
 
@@ -91,7 +91,7 @@ To determine the device associated to the eMMC card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on the eMMC card. Launch the following
 command as root:
 
@@ -119,6 +119,6 @@ Using Wifi
 (enter the wifi password and press enter)
 # wpa_supplicant -Dwext -iwlan0 -c /etc/wpa.conf &
 # udhcpc -i wlan0
-# ping buildroot.org
+# ping mikoos.org
 
 Enjoy!

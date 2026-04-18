@@ -6,14 +6,14 @@ Subject: [PATCH] ibrcommon/ssl/gcm: fix static build with openssl
 gf_mul is already defined in libcrypto (openssl) so rename it into
 ibrdtn_gf_mul to fix following build failure:
 
-/home/buildroot/autobuild/instance-3/output/host/bin/../arm-buildroot-uclinux-uclibcgnueabi/sysroot/usr/lib/libcrypto.a(f_impl.o): In function `gf_mul':
+/home/mikoos/autobuild/instance-3/output/host/bin/../arm-mikoos-uclinux-uclibcgnueabi/sysroot/usr/lib/libcrypto.a(f_impl.o): In function `gf_mul':
 f_impl.c:(.text+0x0): multiple definition of `gf_mul'
-/home/buildroot/autobuild/instance-3/output/host/arm-buildroot-uclinux-uclibcgnueabi/sysroot/usr/lib/libibrcommon.a(gf128mul.o):gf128mul.cpp:(.text+0x30): first defined here
+/home/mikoos/autobuild/instance-3/output/host/arm-mikoos-uclinux-uclibcgnueabi/sysroot/usr/lib/libibrcommon.a(gf128mul.o):gf128mul.cpp:(.text+0x30): first defined here
 collect2: error: ld returned 1 exit status
 Makefile:560: recipe for target 'dtnd' failed
 
 Fixes:
- - http://autobuild.buildroot.org/results/1d3b4b6cf043a3e185ce758b617a0a18c3d36cdb
+ - http://autobuild.mikoos.org/results/1d3b4b6cf043a3e185ce758b617a0a18c3d36cdb
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/ibrdtn/ibrdtn/pull/269]

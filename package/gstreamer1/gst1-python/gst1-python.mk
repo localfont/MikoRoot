@@ -30,7 +30,7 @@ GST1_PYTHON_CONF_ENV += \
 # into the resulting .so file as /usr/lib/python3.$(PYTHON3_VERSION_MAJOR).so.
 # Because we provide PYTHONPATH=$(PYTHON3_PATH) above, the logic in the meson
 # file uses the above python path to determine if /usr/lib/ has the proper .so
-# file. Because Buildroot provides the appropriate paths, the meson file finds
+# file. Because MikoOS provides the appropriate paths, the meson file finds
 # the correct .so file, and the resulting compiled library has the appropriate
 # path of /usr/lib/python3.$(PYTHON3_VERSION_MAJOR).so
 GST1_PYTHON_CONF_OPTS += \

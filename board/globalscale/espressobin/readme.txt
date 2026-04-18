@@ -52,7 +52,7 @@ start guide for each board revision for details:
 - ftp://downloads.globalscaletechnologies.com/Downloads/Espressobin/ESPRESSObin%20V7/
 
 Note: the v5, and earlier, cannot boot from sdcard, so you have to set
-up the factory U-Boot to boot into Buildroot:
+up the factory U-Boot to boot into MikoOS:
 
 1. Flash rootfs image to sdcard drive, your `of=` device may differ:
 

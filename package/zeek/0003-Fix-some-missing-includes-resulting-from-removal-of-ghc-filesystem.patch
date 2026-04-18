@@ -13,9 +13,9 @@ Upstream: https://github.com/zeek/zeek/commit/1f87382302896876df0838d83f0d107aae
   https://github.com/zeek/zeek/commit/72c79006ac028558004a259081fa8e02de3ebe85
   to fix build error:
 
-  /home/bernd/buildroot/output/build/zeek-4.1.1/src/script_opt/CPP/GenFunc.cc:
+  /home/bernd/mikoos/output/build/zeek-4.1.1/src/script_opt/CPP/GenFunc.cc:
    In member function ‘std::string zeek::detail::CPPCompile::BodyName(const zeek::detail::FuncInfo&)’:
-  /home/bernd/buildroot/output/build/zeek-4.1.1/src/script_opt/CPP/GenFunc.cc:214:17:
+  /home/bernd/mikoos/output/build/zeek-4.1.1/src/script_opt/CPP/GenFunc.cc:214:17:
    error: ‘transform’ was not declared in this scope
     214 |                 transform(fns.begin(), fns.end(), fns.begin(), canonicalize);]
 Signed-off-by: Bernd Kuhls <bernd@kuhls.net>

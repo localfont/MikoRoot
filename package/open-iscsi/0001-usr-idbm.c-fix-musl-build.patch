@@ -12,7 +12,7 @@ https://github.com/open-iscsi/open-iscsi/commit/7b571d76d6937a78c141630fc38c3c57
       |                           ^~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/14fc1c139f055b5b1eaa6e04e327863c06176a7b
+ - http://autobuild.mikoos.org/results/14fc1c139f055b5b1eaa6e04e327863c06176a7b
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/open-iscsi/open-iscsi/commit/11bdc17938ba648c81a853355a6bbddad69a9fc7

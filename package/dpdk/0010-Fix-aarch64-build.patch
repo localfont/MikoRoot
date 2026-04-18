@@ -9,7 +9,7 @@ to better match the comment (that the options are decided in
 config/arm/meson.build). It actually test for the architecture name.
 
 While this patch might need some discussion with DPDK maintainers to
-cover all situations, it can still be useful here in Buildroot, as it
+cover all situations, it can still be useful here in MikoOS, as it
 fixes the Aarch64 cross compilation.
 
 Signed-off-by: Julien Olivain <ju.o@free.fr>

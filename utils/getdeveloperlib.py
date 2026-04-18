@@ -39,7 +39,7 @@ FIND_INFRA_IN_MK = re.compile(r"^\$\(eval \$\((host-)?([^-]*)-package\)\)$")
 
 
 def fname_get_package_infra(fname):
-    """Checks whether the file name passed as argument is a Buildroot .mk
+    """Checks whether the file name passed as argument is a MikoOS .mk
     file describing a package, and find the infrastructure it's using."""
     if not fname.endswith(".mk"):
         return None
@@ -141,7 +141,7 @@ class Developer:
 
 
 def parse_developer_packages(fnames):
-    """Given a list of file patterns, travel through the Buildroot source
+    """Given a list of file patterns, travel through the MikoOS source
     tree to find which packages are implemented by those file
     patterns, and return a list of those packages."""
     packages = set()
@@ -275,7 +275,7 @@ def parse_developers(filename=None):
 
 
 def check_developers(developers, basepath=None):
-    """Look at the list of files versioned in Buildroot, and returns the
+    """Look at the list of files versioned in MikoOS, and returns the
     list of files that are not handled by any developer"""
     if basepath is None:
         basepath = os.getcwd()

@@ -29,7 +29,7 @@ Run the emulation with:
 
 Note: for information, qemu version >= 8.0.0 is needed for this UEFI
 Linux demo. It introduced the two pflash memories (previous versions
-had only one). The host-qemu package in Buildroot (enabled in this
+had only one). The host-qemu package in MikoOS (enabled in this
 defconfig) is sufficient to run this demo. In case another qemu is
 used (for example, from the host OS), make sure to check the version
 requirement.

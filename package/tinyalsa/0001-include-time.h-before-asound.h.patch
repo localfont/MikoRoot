@@ -9,12 +9,12 @@ https://github.com/tinyalsa/tinyalsa/commit/c8333f8c7a4e4b9549abeef7530b2cd20a18
 but reappeared on version 2.0.0:
 
 In file included from ../src/pcm_hw.c:42:
-/home/peko/autobuild/instance-1/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/sound/asound.h:444:18: error: field 'trigger_tstamp' has incomplete type
+/home/peko/autobuild/instance-1/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/sound/asound.h:444:18: error: field 'trigger_tstamp' has incomplete type
   444 |  struct timespec trigger_tstamp; /* time when stream was started/stopped/paused */
       |                  ^~~~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/a75e23dc585bd071f4d65face5489ed6ac22edbe
+ - http://autobuild.mikoos.org/results/a75e23dc585bd071f4d65face5489ed6ac22edbe
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

@@ -2,7 +2,7 @@
 # To build it for arm64 and amd64 (YYYYMMDD.HHMM is the current date and time in UTC):
 #   docker buildx create --use
 #   docker buildx build --platform linux/amd64,linux/arm64/v8 \
-#       -t registry.gitlab.com/buildroot.org/buildroot/base:YYYYMMDD.HHMM \
+#       -t registry.gitlab.com/mikoos.org/mikoos/base:YYYYMMDD.HHMM \
 #       --push support/docker
 
 # We use a specific tag for the base image *and* the corresponding date
@@ -10,9 +10,9 @@
 # file that is shipped next to this Dockerfile.
 FROM debian:bookworm-20250203
 
-LABEL maintainer="Buildroot mailing list <buildroot@buildroot.org>" \
-      vendor="Buildroot" \
-description="Container with everything needed to run Buildroot"
+LABEL maintainer="MikoOS mailing list <mikoos@mikoos.org>" \
+      vendor="MikoOS" \
+description="Container with everything needed to run MikoOS"
 
 # Architecture to build for
 ARG TARGETPLATFORM

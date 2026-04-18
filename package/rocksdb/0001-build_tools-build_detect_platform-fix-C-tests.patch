@@ -7,11 +7,11 @@ Replace -o /dev/null by -o test.o when testing for C++ features such as
 -faligned-new otherwise tests will fail with some bugged binutils
 (https://sourceware.org/bugzilla/show_bug.cgi?id=19526):
 
-output/host/bin/xtensa-buildroot-linux-uclibc-g++ -faligned-new -x c++ - -o /dev/null <<EOF
+output/host/bin/xtensa-mikoos-linux-uclibc-g++ -faligned-new -x c++ - -o /dev/null <<EOF
             struct alignas(1024) t {int a;};
             int main() {}
 EOF
-/home/fabrice/buildroot/output/host/lib/gcc/xtensa-buildroot-linux-uclibc/8.3.0/../../../../xtensa-buildroot-linux-uclibc/bin/ld: final link failed: file truncated
+/home/fabrice/mikoos/output/host/lib/gcc/xtensa-mikoos-linux-uclibc/8.3.0/../../../../xtensa-mikoos-linux-uclibc/bin/ld: final link failed: file truncated
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/facebook/rocksdb/pull/6479]

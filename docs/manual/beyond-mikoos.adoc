@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Beyond Buildroot
+== Beyond MikoOS
 
 === Boot the generated images
 
@@ -26,7 +26,7 @@ Then, you can execute a NFS-boot from your target.
 To build a live CD image, enable the _iso image_ option in the
 _Filesystem images_ menu. Note that this option is only available on
 the x86 and x86-64 architectures, and if you are building your kernel
-with Buildroot.
+with MikoOS.
 
 You can build a live CD image with either IsoLinux, Grub or Grub 2 as
 a bootloader, but only Isolinux supports making this image usable both
@@ -62,5 +62,5 @@ you should be aware of:
   within the +binfmt+ properties to be able to run the binaries built
   for the target on your host machine;
 
-* Buildroot does not currently provide +host-qemu+ and +binfmt+
+* MikoOS does not currently provide +host-qemu+ and +binfmt+
   correctly built and set for that kind of use.

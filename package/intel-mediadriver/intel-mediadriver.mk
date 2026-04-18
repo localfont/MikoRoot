@@ -28,7 +28,7 @@ endif
 
 INTEL_MEDIADRIVER_SUPPORTS_IN_SOURCE_BUILD = NO
 
-# hardening is disabled here, so that the top-level Buildroot options
+# hardening is disabled here, so that the top-level MikoOS options
 # control which hardening features are enabled
 INTEL_MEDIADRIVER_CONF_OPTS = \
 	-DINSTALL_DRIVER_SYSCONF=OFF \

@@ -3,7 +3,7 @@
 # This is a simple reimplementation of the "nft" user-space tool in
 # Python, in order to test language bindings. It does not support any
 # command line argument supported by the nftables "nft" tool, but
-# supports all nftables commands used in the Buildroot runtime test.
+# supports all nftables commands used in the MikoOS runtime test.
 
 import sys
 

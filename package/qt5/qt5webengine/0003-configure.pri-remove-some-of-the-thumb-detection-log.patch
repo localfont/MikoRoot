@@ -10,7 +10,7 @@ architecture version is used. That test doesn't work if GCC is
 configured for a default target architecture and no -march is passed on
 the command line.
 
-In Buildroot, we don't pass any -mthumb, -marm or -march in CFLAGS
+In MikoOS, we don't pass any -mthumb, -marm or -march in CFLAGS
 because all of that is included in the toolchain wrapper. Therefore, the
 logic has nothing to determine the target ARM ISA version and returns
 false.
@@ -36,7 +36,7 @@ the architectures supported by JSCore have thumb.
 
 Therefore, remove the logic for detecting if the CPU architecture
 supports thumb. Do keep the -marm and -mthumb logic, even though in
-Buildroot it doesn't do anything, and the warning gets ignored.
+MikoOS it doesn't do anything, and the warning gets ignored.
 
 Signed-off-by: Arnout Vandecappelle <arnout@rnout.be>
 Upstream: It's not clear if the same logic about JSCore applies in

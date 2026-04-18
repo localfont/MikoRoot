@@ -1,10 +1,10 @@
 buildsystem: fix for cross-compilation
 
 Avoid running the openssl binary, since it would break for
-cross-compilation. Buildroot has a supported version, anyway.
+cross-compilation. MikoOS has a supported version, anyway.
 
 Also, avoid adding hard-coded includes and libraries search
-paths, since they are missing the destdir; Buildroot compilers
+paths, since they are missing the destdir; MikoOS compilers
 and linkers already know where to search, anyway.
 
 Signed-off-by: "Yann E. MORIN" <yann.morin.1998@free.fr>
@@ -20,14 +20,14 @@ diff -durN perl-net-ssleay-1.64.orig/inc/Module/Install/PRIVATE/Net/SSLeay.pm pe
  
 -    check_openssl_version($prefix, $exec);
 +# Does not work for cross-compilation.
-+# In Buildroot, we do have a supported version.
++# In MikoOS, we do have a supported version.
 +#    check_openssl_version($prefix, $exec);
      my %args = (
          CCCDLFLAGS => $opts->{cccdlflags},
          OPTIMIZE => $opts->{optimize},
 -        INC => qq{-I"$opts->{inc_path}"},
 -        LIBS => join(' ', (map '-L'.maybe_quote($_), @{$opts->{lib_paths}}), (map {"-l$_"} @{$opts->{lib_links}})),
-+# Buildroot already has the correct include and library search paths.
++# MikoOS already has the correct include and library search paths.
 +#        INC => qq{-I"$opts->{inc_path}"},
 +#        LIBS => join(' ', (map '-L'.maybe_quote($_), @{$opts->{lib_paths}}), (map {"-l$_"} @{$opts->{lib_links}})),
 +        LIBS => join(' ', (map {"-l$_"} @{$opts->{lib_links}})),

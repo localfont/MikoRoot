@@ -11,8 +11,8 @@ The build on MIPS64 with n32 ABI was broken for a few reasons.
   jit_mips-fpu.c provides its own version;
 - The "ww" opcodes were allowed, which was probably not meant to happen.
 
-Fixes a build issue reported by Buildroot:
-http://autobuild.buildroot.net/results/27123bf0ddc84599bceb02ac987327817d498659/
+Fixes a build issue reported by MikoOS:
+http://autobuild.mikoos.net/results/27123bf0ddc84599bceb02ac987327817d498659/
 
 Signed-off-by: Paul Cercueil <paul@crapouillou.net>
 Upstream: http://git.savannah.gnu.org/cgit/lightning.git/commit/?id=778d326740f9893c398f959b419629935b613099

@@ -367,7 +367,7 @@
 
 	chosen {
 		stdout-path = "/pl011@9000000";
-		/* Buildroot specific: KASLR needs to be disabled for the Kexec test. */
+		/* MikoOS specific: KASLR needs to be disabled for the Kexec test. */
 		kaslr-seed = <0 0>;
 	};
 };

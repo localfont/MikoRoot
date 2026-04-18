@@ -25,7 +25,7 @@ config BR2_XTENSA_OVERLAY_FILE
 	  vendor or directly from Tensilica.
 
 	  The path can be either absolute, or relative to the top
-	  directory of buildroot.
+	  directory of mikoos.
 
 choice
 	prompt "Target Architecture Endianness"

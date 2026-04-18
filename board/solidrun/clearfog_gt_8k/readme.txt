@@ -2,7 +2,7 @@ Intro
 =====
 
 The default configuration described below will allow you to start
-experimenting with the buildroot environment for the SolidRun Clearfog GT-8K
+experimenting with the mikoos environment for the SolidRun Clearfog GT-8K
 based on the Marvell Armada 8040 SoC.
 
 This default configuration will bring up the board and allow shell command

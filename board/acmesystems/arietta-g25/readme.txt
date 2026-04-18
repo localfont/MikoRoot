@@ -4,7 +4,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the Arietta G25. With the current configuration
+mikoos environment for the Arietta G25. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 You can find additional informations, tutorials and a very comprehensive
@@ -28,7 +28,7 @@ To customize the configuration chosen type:
 
 $ make menuconfig
 
-When you are ready to start building Buildroot type:
+When you are ready to start building MikoOS type:
 
 $ make
 

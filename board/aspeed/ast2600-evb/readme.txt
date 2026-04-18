@@ -14,7 +14,7 @@ controllers to drive the server board.
 How to build it
 ===============
 
-Configure buildroot:
+Configure mikoos:
 
   $ make aspeed_ast2600evb_defconfig
 

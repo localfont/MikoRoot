@@ -14,7 +14,7 @@ preamble() {
 
     cat - "${template}" <<-_EOF_
 	# This file is generated; do not edit!
-	# Builds appear on https://gitlab.com/buildroot.org/buildroot/pipelines
+	# Builds appear on https://gitlab.com/mikoos.org/mikoos/pipelines
 
 	image: ${CI_JOB_IMAGE}
 
@@ -36,7 +36,7 @@ gen_tests() {
              )
 
     if [ -n "${CI_COMMIT_TAG}" ]; then
-        # When a tag is added to the Buildroot git tree, we want
+        # When a tag is added to the MikoOS git tree, we want
         # to run the runtime tests and only test Qemu defconfigs.
         defconfigs=( $(cd configs; LC_ALL=C ls -1 qemu_*_defconfig) )
         do_basics=true

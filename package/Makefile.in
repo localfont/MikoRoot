@@ -26,7 +26,7 @@ override MAKE = $(HOSTMAKE) \
 ifeq ($(BR2_TOOLCHAIN_BUILDROOT),y)
 TARGET_VENDOR = $(call qstrip,$(BR2_TOOLCHAIN_BUILDROOT_VENDOR))
 else
-TARGET_VENDOR = buildroot
+TARGET_VENDOR = mikoos
 endif
 
 # Sanity checks

@@ -26,7 +26,7 @@ GESFTPSERVER_DEPENDENCIES += \
 	$(if $(BR2_PACKAGE_OPENSSH),openssh)
 
 # Python on the host is only used for tests, which we don't use in
-# Buildroot
+# MikoOS
 GESFTPSERVER_CONF_ENV += rjk_cv_python3=false
 
 # openssh/dropbear looks here

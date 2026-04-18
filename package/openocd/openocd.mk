@@ -101,7 +101,7 @@ OPENOCD_CONF_OPTS += \
 # Enable all configuration options for host build.
 #
 # Note that deprecated options have been removed. CMSIS_DAP needs
-# hidapi (currently not included in buildroot) and zy1000 stuff fails
+# hidapi (currently not included in mikoos) and zy1000 stuff fails
 # to build, so they've been removed too.
 #
 HOST_OPENOCD_CONF_OPTS = \

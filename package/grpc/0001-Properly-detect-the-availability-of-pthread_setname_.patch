@@ -12,13 +12,13 @@ non-POSIX function in all cases.
 Upstream: https://github.com/grpc/grpc/pull/17610
 Signed-off-by: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
 
-[buildroot@heine.tech:
+[mikoos@heine.tech:
   1.42.0 added new logic to handle older glibc without pthread_setname_np()
   but is still not sufficient for all cases. So alter the patch to wrap all
   this with our cmake based workaround.
   See: https://github.com/grpc/grpc/pull/27540
 ]
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 ---
  CMakeLists.txt                       | 6 ++++++
  include/grpc/support/port_platform.h | 2 ++

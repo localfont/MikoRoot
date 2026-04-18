@@ -3,7 +3,7 @@ From: Adam Duskett <adam.duskett@amarulasolutions.com>
 Date: Wed, 19 Jul 2023 11:48:59 -0700
 Subject: [PATCH] pkg-config.py: do not prepend sysroot path
 
-Buildroot uses the standard PKG_CONFIG_SYSROOT_DIR variable, so what the
+MikoOS uses the standard PKG_CONFIG_SYSROOT_DIR variable, so what the
 pkg-config.py script is doing doesn't make sense. There is no need to prepend
 the sysroot, and flutter should let pkg-config use the PKG_CONFIG_SYSROOT_DIR
 variable.

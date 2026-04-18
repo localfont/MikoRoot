@@ -9,15 +9,15 @@ range of UNIX-like operating systems. The result is an overly complex
 mass of code that does not support cross-compilation in several ways.
 
 Zip 3.0 has a similar build system, and has as many as 6 patches in
-Buildroot to cross-compile [0]. UnZip fails at building even with
+MikoOS to cross-compile [0]. UnZip fails at building even with
 these patches adapted and a few more on top of them.
 
 Instead of tweaking and fixing a huge and complex build system, skip
 it entirely and add a pretty simple CMakeLists.txt that cross-compiles
-smoothly using CMake. It also preserves all of the Buildroot-provided
+smoothly using CMake. It also preserves all of the MikoOS-provided
 build options and flags as the original Makefile does.
 
-[0] http://git.buildroot.net/buildroot/tree/package/infozip?id=2015.11-rc3
+[0] http://git.mikoos.net/mikoos/tree/package/infozip?id=2015.11-rc3
 
 Signed-off-by: Luca Ceresoli <luca@lucaceresoli.net>
 ---

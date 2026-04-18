@@ -6,7 +6,7 @@ Subject: [PATCH] nilfs_cleanerd: link dynamically
 When nilfs_cleanerd does not run due to shared object problems,
 nilfs2 filesystems may run out of space soon.
 This logic that justified linking nilfs_cleanerd statically
-does IMO not apply to embedded systems built by buildroot.
+does IMO not apply to embedded systems built by mikoos.
 This commit therefore drops the static linking.
 
 Signed-off-by: Kurt Van Dijck <dev.kurt@vandijck-laurijssen.be>

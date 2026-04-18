@@ -13,7 +13,7 @@ LIBPLIST_LICENSE_FILES = COPYING
 LIBPLIST_CPE_ID_VENDOR = libimobiledevice
 
 # Disable building Python bindings, because it requires host-cython, which
-# is not packaged in Buildroot at all.
+# is not packaged in MikoOS at all.
 LIBPLIST_CONF_OPTS = --without-cython
 
 $(eval $(autotools-package))

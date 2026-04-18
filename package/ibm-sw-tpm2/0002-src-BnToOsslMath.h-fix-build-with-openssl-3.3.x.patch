@@ -14,7 +14,7 @@ TpmToOsslMath.h:83:5: error: #error Untested OpenSSL version
       |     ^~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/2fb5e1cb792fe25ef860ff8111622cd1ff3770bf
+ - http://autobuild.mikoos.org/results/2fb5e1cb792fe25ef860ff8111622cd1ff3770bf
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/kgoldman/ibmswtpm2/pull/15

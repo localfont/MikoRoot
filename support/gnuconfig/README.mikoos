@@ -3,7 +3,7 @@ If your package uses config.guess and/or config.sub, then it probably
 relies on the autotools as its build system. In this case, you should
 use the autotools-package infrastructure, which will take care of updating
 the config.guess and/or config.sub files appropriately. See the
-Buildroot documentation for details about the autotools-package
+MikoOS documentation for details about the autotools-package
 infrastructure.
 
 If for some reason your package does not use the autotools-package
@@ -15,7 +15,7 @@ files of your package to be updated by using:
 --- UPDATE ---
 Run the script 'update' in this directory, and commit the result.
 
-The current Buildroot version is based on this commit of the config.git
+The current MikoOS version is based on this commit of the config.git
 repository (leave alone on its own line, the script updates it):
 
 948ae97ca5703224bd3eada06b7a69f40dd15a02

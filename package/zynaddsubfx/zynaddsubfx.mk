@@ -10,7 +10,7 @@ ZYNADDSUBFX_SITE = http://downloads.sourceforge.net/zynaddsubfx
 ZYNADDSUBFX_LICENSE = GPL-2.0+
 ZYNADDSUBFX_LICENSE_FILES = COPYING
 
-# There is no package in buildroot using LV2 plugins: disabling
+# There is no package in mikoos using LV2 plugins: disabling
 ZYNADDSUBFX_CONF_OPTS = -DCompileTests=OFF -DPluginEnable=OFF
 
 ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)

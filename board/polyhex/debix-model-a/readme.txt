@@ -11,7 +11,7 @@ User Manual: [1]
 How to build it
 ===============
 
-Configure buildroot:
+Configure mikoos:
 
   $ make polyhex_debix_model_a_defconfig
 
@@ -31,7 +31,7 @@ After building, the output/images directory contains:
 
 output/images/
 ├── bl31.bin
-├── ddr_fw.bin -> /home/gilles/buildroot-dev/output/images/lpddr4_pmu_train_fw.bin
+├── ddr_fw.bin -> /home/gilles/mikoos-dev/output/images/lpddr4_pmu_train_fw.bin
 ├── flash.bin
 ├── freescale
 │   └── imx8mp-debix-model-a.dtb

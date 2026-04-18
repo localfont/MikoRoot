@@ -1,6 +1,6 @@
 Makefile: disable testsuite and example
 
-We do not need them in the context of Buildroot.
+We do not need them in the context of MikoOS.
 
 Also, they break for a shared-only build (but it's fixed in patch 0001).
 

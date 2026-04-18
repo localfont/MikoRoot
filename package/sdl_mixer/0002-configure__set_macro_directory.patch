@@ -12,7 +12,7 @@ order, and that autoreconf properly updates our macros with the newer
 system ones, if any.
 
 Fixes:
-    http://autobuild.buildroot.org/results/63a/63ae0bddb3c4436efe967c318e299047f496c5a5/build-end.log
+    http://autobuild.mikoos.org/results/63a/63ae0bddb3c4436efe967c318e299047f496c5a5/build-end.log
 
     libtool: Version mismatch error.  This is libtool 2.4.6, but the
     libtool: definition of this LT_INIT comes from libtool 2.2.6.

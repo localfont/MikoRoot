@@ -13,10 +13,10 @@
 #
 # Limitations
 #
-#  * Some packages have dependencies that depend on the Buildroot
+#  * Some packages have dependencies that depend on the MikoOS
 #    configuration. For example, many packages have a dependency on
 #    openssl if openssl has been enabled. This tool will graph the
-#    dependencies as they are with the current Buildroot
+#    dependencies as they are with the current MikoOS
 #    configuration.
 #
 # Copyright (C) 2010-2013 Thomas Petazzoni <thomas.petazzoni@free-electrons.com>

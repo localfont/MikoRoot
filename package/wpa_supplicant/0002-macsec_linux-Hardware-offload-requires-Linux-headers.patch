@@ -11,8 +11,8 @@ in kernels v5.6 and v5.7, see commits:
 - https://github.com/torvalds/linux/commit/76564261a7db80c5f5c624e0122a28787f266bdf
 
 New libnl with older Linux headers is a valid combination. This is how
-hostapd build failure has been detected by Buildroot autobuilder, see:
-- http://autobuild.buildroot.net/results/b59d5bc5bd17683a3a1e3577c40c802e81911f84/
+hostapd build failure has been detected by MikoOS autobuilder, see:
+- http://autobuild.mikoos.net/results/b59d5bc5bd17683a3a1e3577c40c802e81911f84/
 
 Extend compile time condition for the enablement of the macsec hardware
 offload adding Linux headers version check.

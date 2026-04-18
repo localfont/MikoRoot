@@ -1,4 +1,4 @@
-This document explains how to set up a basic Buildroot system on
+This document explains how to set up a basic MikoOS system on
 various Atmel/Microchip boards. Additional details can also be found
 on the Linux4SAM website: http://www.linux4sam.org
 
@@ -41,20 +41,20 @@ tests the features of the SoC:
 - SSH for convenience
 - GDB/GDB server for debug
 
-Configuring and building Buildroot
+Configuring and building MikoOS
 ==================================
 
-For the Xplained/Evaluation Kit boards, the Buildroot configuration is
+For the Xplained/Evaluation Kit boards, the MikoOS configuration is
 provided to boot from an SD card. Those configurations are labeled as
-'mmc'. In this case, after building Buildroot, follow the instructions
+'mmc'. In this case, after building MikoOS, follow the instructions
 in the "Preparing the SD card" section.
 
-For the other configurations listed above, the Buildroot configuration
+For the other configurations listed above, the MikoOS configuration
 assumes the system will be flashed on NAND. In this case, after
-building Buildroot, follow the instructions in the "Flashing the NAND
+building MikoOS, follow the instructions in the "Flashing the NAND
 using SAM-BA" section below.
 
-To configure and build Buildroot, run:
+To configure and build MikoOS, run:
 
   make <board>_defconfig
   make
@@ -136,7 +136,7 @@ For example, for an out of tree build made in
 /tmp/atmel_sama5d3_xplained/ for the sama5d3 Xplained, you would use:
 board/atmel/flasher.sh /tmp/atmel_sama5d3_xplained/ /dev/ttyACM0 sama5d3_xplained
 
-Reboot, the system should boot up to the buildroot login invite.
+Reboot, the system should boot up to the mikoos login invite.
 
 Preparing the SD card
 =====================

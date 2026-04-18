@@ -72,7 +72,7 @@ class TestWine(infra.basetest.BRTest):
 
         # We check we can print an arbitrary string with the
         # cmd.exe shell.
-        string = "Hello Buildroot !"
+        string = "Hello MikoOS !"
         cmd = f"wine cmd.exe /C 'ECHO {string}'"
         out, ret = self.emulator.run(cmd, timeout=10)
         self.assertEqual(ret, 0)

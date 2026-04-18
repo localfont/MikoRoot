@@ -8,7 +8,7 @@ Signed-off-by: Peter Seiderer <ps.report@gmx.net>
 Notes:
 
   - the existing test/check for static build in meson.build does not
-    catch this case because e.g. the buildroot toolchain
+    catch this case because e.g. the mikoos toolchain
     br-arm-full-static-2019.05.1 provides an empty libdl.a
 
   169 # Among others FreeBSD does not have a separate dl library.

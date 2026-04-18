@@ -28,7 +28,7 @@ class TestIpRoute2(infra.basetest.BRTest):
         self.assertRunOk("ifstat")
         self.assertRunOk("ip link show dev lo")
 
-        # Buildroot is supposed to have setup the loopback "lo"
+        # MikoOS is supposed to have setup the loopback "lo"
         # interface. We should be able to ping any address in
         # the 127.0.0.0/8 subnet.
         addrs = ["127.0.0.1", "127.0.1.2", "127.1.2.3"]

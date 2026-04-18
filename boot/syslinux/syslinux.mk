@@ -25,7 +25,7 @@ ifeq ($(BR2_TARGET_SYSLINUX_LEGACY_BIOS),y)
 SYSLINUX_TARGET += bios
 endif
 
-# The syslinux build system must be forced to use Buildroot's gnu-efi
+# The syslinux build system must be forced to use MikoOS's gnu-efi
 # package by setting EFIINC, LIBDIR and LIBEFI. Otherwise, it uses its
 # own copy of gnu-efi included in syslinux's sources since 6.03
 # release.
@@ -99,7 +99,7 @@ define SYSLINUX_INSTALL_TARGET_CMDS
 endef
 
 # That 'syslinux' binary is an installer actually built for the target.
-# However, buildroot makes no usage of it, so better delete it than have it
+# However, mikoos makes no usage of it, so better delete it than have it
 # installed at the wrong place
 define SYSLINUX_POST_INSTALL_CLEANUP
 	rm -rf $(HOST_DIR)/bin/syslinux

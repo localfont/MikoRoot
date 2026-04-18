@@ -12,7 +12,7 @@ NETIFRC_LICENSE_FILES = LICENSE
 NETIFRC_DEPENDENCIES = openrc
 
 # set LIBNAME so netifrc puts files in proper directories and sets proper
-# paths in installed files. Since in buildroot /lib64 and /lib32 always
+# paths in installed files. Since in mikoos /lib64 and /lib32 always
 # points to /lib, it's safe to hardcode it to "lib"
 NETIFRC_MAKE_OPTS = \
 	LIBNAME=lib \

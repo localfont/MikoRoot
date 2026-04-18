@@ -108,12 +108,12 @@ endef
 define SYSLOG_NG_INSTALL_INIT_SYSTEMD
 	mkdir -p $(TARGET_DIR)/usr/lib/systemd/system/syslog-ng@.service.d
 	printf '[Install]\nDefaultInstance=default\n' \
-		>$(TARGET_DIR)/usr/lib/systemd/system/syslog-ng@.service.d/buildroot-default-instance.conf
+		>$(TARGET_DIR)/usr/lib/systemd/system/syslog-ng@.service.d/mikoos-default-instance.conf
 endef
 
 # By default syslog-ng installs a number of sample configuration
 # files. Some of these rely on optional features being
-# enabled. Because of this buildroot uninstalls the shipped config
+# enabled. Because of this mikoos uninstalls the shipped config
 # files and provides a simplified configuration.
 define SYSLOG_NG_FIXUP_CONFIG
 	$(TARGET_MAKE_ENV) $(MAKE) -C $(@D) \

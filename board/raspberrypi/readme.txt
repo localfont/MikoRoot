@@ -25,10 +25,10 @@ These instructions apply to all models of the Raspberry Pi:
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
-There are several Raspberry Pi defconfig files in Buildroot, one for
+There are several Raspberry Pi defconfig files in MikoOS, one for
 each major variant, which you should base your work on:
 
 For models A, B, A+, B+ and CM:
@@ -94,7 +94,7 @@ For model CM5 (on IO Board):
 Build the rootfs
 ----------------
 
-Note: you will need to have access to the network, since Buildroot will
+Note: you will need to have access to the network, since MikoOS will
 download the packages' sources.
 
 You may now build your rootfs with:

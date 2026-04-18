@@ -6,7 +6,7 @@
 # It is based on the generic-package infrastructure, and inherits all of its
 # features.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure.
 #
 ################################################################################

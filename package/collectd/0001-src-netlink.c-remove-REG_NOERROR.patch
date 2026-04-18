@@ -17,7 +17,7 @@ src/netlink.c:243:51: error: 'REG_NOERROR' undeclared (first use in this functio
                                                    REG_NOTBOL
 
 Fixes:
- - http://autobuild.buildroot.org/results/cd4d75888b5259b028132dd224be34f69bcbb702
+ - http://autobuild.mikoos.org/results/cd4d75888b5259b028132dd224be34f69bcbb702
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/collectd/collectd/pull/3569]

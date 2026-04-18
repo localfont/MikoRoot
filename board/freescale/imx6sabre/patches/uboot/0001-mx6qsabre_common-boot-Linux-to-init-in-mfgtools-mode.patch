@@ -6,18 +6,18 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-Buildroot supplies a nice /init wrapper script to use when booting from a
+MikoOS supplies a nice /init wrapper script to use when booting from a
 ramdisk.
 
 This patch tells u-boot to tell the kernel to boot into /init (instead of
 /linuxrc) on i.MX6, when booting in mfgtools mode. This way we can boot a
-buildroot system entirely through USB.
+mikoos system entirely through USB.
 
 Signed-off-by: Vincent Stehlé <vincent.stehle@freescale.com>
 Signed-off-by: Julien Olivain <julien.olivain@oss.nxp.com>
 [Julien: rebased patch on lf-6.6.23-2.0.0]
 Signed-off-by: Julien Olivain <ju.o@free.fr>
-Upstream: Not applicable, Buildroot specific.
+Upstream: Not applicable, MikoOS specific.
 ---
  include/configs/imx_env.h | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

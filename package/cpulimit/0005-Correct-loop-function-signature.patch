@@ -9,7 +9,7 @@ prototype to be used: void *(*start_routine) (void *)
 Correct the signature to avoid such warnings:
 
 In file included from busy.c:3:
-/home/buildroot/instance-0/output-1/host/mips-buildroot-linux-uclibc/sysroot/usr/include/pthread.h:164:36: note: expected 'void * (*)(void *)' but argument is of type 'void * (*)(void)'
+/home/mikoos/instance-0/output-1/host/mips-mikoos-linux-uclibc/sysroot/usr/include/pthread.h:164:36: note: expected 'void * (*)(void *)' but argument is of type 'void * (*)(void)'
   164 |                            void *(*__start_routine) (void *),
       |                            ~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~
 busy.c:6:7: note: 'loop' declared here

@@ -9,7 +9,7 @@ https://libre.computer/products/boards/aml-s805x-ac/
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make lafrite_defconfig
 

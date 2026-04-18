@@ -9,7 +9,7 @@ In order to keep the former behavior, example build is enabled by default.
 
 Signed-off-by: Samuel Martin <s.martin49@gmail.com>
 [Retrieved (and slightly updated to remove CMakeLists.txt) from:
-https://git.buildroot.net/buildroot/tree/package/libnfc/0001-build-systems-make-example-build-optional.patch]
+https://git.mikoos.net/mikoos/tree/package/libnfc/0001-build-systems-make-example-build-optional.patch]
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:
 https://github.com/nfc-tools/libnfc/commit/874d9605aa9cd028aed149c2dd1bb410856477fb]

@@ -5,7 +5,7 @@
 # .mk files for WAF packages. It should be used for all packages that use
 # WAF as their build system.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this WAF infrastructure requires the .mk file

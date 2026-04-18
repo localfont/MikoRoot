@@ -3,7 +3,7 @@ Fix type errors in the cgreen with constraints facility.
 Upstream: https://sourceforge.net/p/libdbi-drivers/bugs/28/
 
 Signed-off-by: Bernd Kuhls <bernd@kuhls.net>
-[Bernd: rebased for git tree used by buildroot]
+[Bernd: rebased for git tree used by mikoos]
 
 diff --git a/tests/cgreen/src/constraint.c b/tests/cgreen/src/constraint.c
 index c19c0ddd41a7bfa7..95673dd3e222a3cf 100644

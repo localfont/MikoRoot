@@ -33,7 +33,7 @@ PETITBOOT_CONF_OPTS = \
 	HOST_PROG_SH=/usr/libexec/petitboot/pb-shell \
 	HOST_PROG_SHUTDOWN=/usr/libexec/petitboot/kexec-restart
 
-# HPA and Busybox tftp are supported. HPA tftp is part of Buildroot's tftpd
+# HPA and Busybox tftp are supported. HPA tftp is part of MikoOS's tftpd
 # package.
 ifeq ($(BR2_PACKAGE_TFTPD),y)
 PETITBOOT_CONF_OPTS += --with-tftp=hpa

@@ -1,7 +1,7 @@
 Intro
 =====
 
-This directory contains a Buildroot configuration for building a
+This directory contains a MikoOS configuration for building a
 Pine64 PineCube.
 
 Board homepage: https://www.pine64.org/cube/

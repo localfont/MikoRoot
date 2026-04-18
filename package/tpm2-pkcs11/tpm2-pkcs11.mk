@@ -22,7 +22,7 @@ TPM2_PKCS11_CONF_ENV += CFLAGS="$(TARGET_CFLAGS) -std=gnu99"
 TPM2_PKCS11_CONF_ENV += ac_cv_prog_PANDOC=''
 
 # tpm2-pkcs11 checks for tpm2-tools programs and errors out if not
-# found, even though they are only used by the (unused in Buildroot)
+# found, even though they are only used by the (unused in MikoOS)
 # python-based tools
 TPM2_PKCS11_CONF_ENV += \
 	ac_cv_prog_tpm2_createprimary=yes \

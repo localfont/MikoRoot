@@ -91,10 +91,10 @@ define ALSA_UTILS_INSTALL_INIT_SYSTEMD
 		$(TARGET_DIR)/usr/lib/systemd/system/alsa-state.service
 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/lib/systemd/system/alsa-restore.service.d
 	printf '[Install]\nWantedBy=multi-user.target\n' \
-		>$(TARGET_DIR)/usr/lib/systemd/system/alsa-restore.service.d/buildroot-enable.conf
+		>$(TARGET_DIR)/usr/lib/systemd/system/alsa-restore.service.d/mikoos-enable.conf
 	$(INSTALL) -d -m 0755 $(TARGET_DIR)/usr/lib/systemd/system/alsa-state.service.d
 	printf '[Install]\nWantedBy=multi-user.target\n' \
-		>$(TARGET_DIR)/usr/lib/systemd/system/alsa-state.service.d/buildroot-enable.conf;
+		>$(TARGET_DIR)/usr/lib/systemd/system/alsa-state.service.d/mikoos-enable.conf;
 endef
 endif
 

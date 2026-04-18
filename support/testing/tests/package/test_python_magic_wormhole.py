@@ -26,8 +26,8 @@ class TestPythonPy3MagicWormhole(TestPythonPackageBase):
         return s
 
     def test_run(self):
-        code = "123-hello-buildroot"
-        text = "Hello Buildroot!"
+        code = "123-hello-mikoos"
+        text = "Hello MikoOS!"
 
         relay_url = "ws://localhost:4000/v1"
         transit_helper = "tcp:localhost:4001"

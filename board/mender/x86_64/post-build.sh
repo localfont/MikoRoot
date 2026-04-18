@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-DEVICE_TYPE="buildroot-x86_64"
+DEVICE_TYPE="mikoos-x86_64"
 
 parse_args() {
     local o O opts

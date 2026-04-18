@@ -20,7 +20,7 @@ This problem was reported by "Ting Liu <b28495@freescale.com>"
 Signed-off-by: Thomas De Schampheleire <thomas.de.schampheleire@gmail.com>
 Signed-off-by: Vicente Olivert Riera <Vincent.Riera@imgtec.com>
 
-Upstream-status: rejected, suggests to add in buildroot instead [1]
+Upstream-status: rejected, suggests to add in mikoos instead [1]
 
 [1] http://news.gmane.org/find-root.php?message_id=1412062906%2d27378%2d1%2dgit%2dsend%2demail%2dpatrickdepinguin%40gmail.com
 

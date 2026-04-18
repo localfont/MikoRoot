@@ -1,13 +1,13 @@
 NXP i.MX8MN DDR4 EVK
 ====================
 
-This is a Buildroot target for building an image for the imx8mn-ddr4-evk
+This is a MikoOS target for building an image for the imx8mn-ddr4-evk
 board using upstream components: TF-A, U-Boot and kernel.
 
 How to build it
 ===============
 
-Configure Buildroot and build it:
+Configure MikoOS and build it:
 
   $ make imx8mn-ddr4-evk_defconfig
   $ make

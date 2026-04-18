@@ -3,7 +3,7 @@ from avro.schema import parse
 from avro.io import DatumReader, BinaryDecoder
 
 schema = parse("""{
-"namespace": "org.buildroot.package.python_avro",
+"namespace": "org.mikoos.package.python_avro",
 "type": "record",
 "name": "Developer",
 "fields": [

@@ -11,7 +11,7 @@ Crypto.cc:139:26: error: aggregate 'EVP_CIPHER_CTX ctx' has incomplete type and 
       |                          ^~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/2e6eebbe2ed8305b88047bc92c19350c1ecada16
+ - http://autobuild.mikoos.org/results/2e6eebbe2ed8305b88047bc92c19350c1ecada16
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/nmap/nmap/pull/2480

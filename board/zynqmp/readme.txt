@@ -2,7 +2,7 @@
 Xilinx ZCU102 / ZCU104 / ZCU106 boards - ZynqMP SoC
 ***************************************************
 
-This document describes the Buildroot support for the ZCU102, ZCU104
+This document describes the MikoOS support for the ZCU102, ZCU104
 and ZCU106 boards by Xilinx, based on the Zynq UltraScale+ MPSoC (aka
 ZynqMP).  It has been tested with the ZCU102 and ZCU106 production
 boards.
@@ -22,7 +22,7 @@ https://www.amd.com/en/products/adaptive-socs-and-fpgas/evaluation-boards/zcu106
 How to build it
 ===============
 
-Configure Buildroot: (use the command for the specific board)
+Configure MikoOS: (use the command for the specific board)
 
     $ make zynqmp_zcu102_defconfig
     $ make zynqmp_zcu104_defconfig
@@ -70,7 +70,7 @@ Support for other boards:
 
 If you want to build a system for other boards based on the same SoC, and the
 board is already supported by the upstream kernel and U-Boot, you simply need
-to change the following Buildroot options:
+to change the following MikoOS options:
 
  - Kernel Device Tree file name (BR2_LINUX_KERNEL_INTREE_DTS_NAME)
  - U-Boot (BR2_TARGET_UBOOT_CUSTOM_MAKEOPTS="DEVICE_TREE=<dts file name>")
@@ -88,7 +88,7 @@ board/xilinx/zynqmp/ directory of U-Boot for natively supported psu_init
 files. If the psu_init files for your board are not found in U-Boot,
 you need to add them using BR2_TARGET_UBOOT_ZYNQMP_PSU_INIT_FILE.
 
-1) Start with a defconfig supported by Buildroot (e.g. ZCU106)
+1) Start with a defconfig supported by MikoOS (e.g. ZCU106)
     make zynqmp_zcu106_defconfig
 
 2) make menuconfig
@@ -105,9 +105,9 @@ Important Note
 ==============
 
 The DDR memory on the original ZCU102 and ZCU106 boards is EOL.
-The Buildroot defconfigs for these boards use the new DDR memory
+The MikoOS defconfigs for these boards use the new DDR memory
 which is configured by the u-boot spl initialization with the
-Buildroot config options below.
+MikoOS config options below.
 
 New DDR Memories:
 BR2_TARGET_UBOOT_CUSTOM_MAKEOPTS="DEVICE_TREE=zynqmp-zcu102-rev1.0"
@@ -115,7 +115,7 @@ BR2_TARGET_UBOOT_CUSTOM_MAKEOPTS="DEVICE_TREE=zynqmp-zcu106-rev1.0"
 
 If nothing is printing upon boot, most likely it is because the
 board has the original DDR memories.  To fix the problem, modify
-the Buildroot defconfig file to use the u-boot spl initialization
+the MikoOS defconfig file to use the u-boot spl initialization
 for the original DDR memory using the config below for the target
 board.
 

@@ -1,16 +1,16 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-[[customize-store-buildroot-config]]
-=== Storing the Buildroot configuration
+[[customize-store-mikoos-config]]
+=== Storing the MikoOS configuration
 
-The Buildroot configuration can be stored using the command
+The MikoOS configuration can be stored using the command
  +make savedefconfig+.
 
-This strips the Buildroot configuration down by removing configuration
+This strips the MikoOS configuration down by removing configuration
 options that are at their default value. The result is stored in a file
 called +defconfig+. If you want to save it in another place, change the
-+BR2_DEFCONFIG+ option in the Buildroot configuration itself, or call
++BR2_DEFCONFIG+ option in the MikoOS configuration itself, or call
 make with +make savedefconfig BR2_DEFCONFIG=<path-to-defconfig>+.
 
 The recommended place to store this defconfig is
@@ -26,7 +26,7 @@ Alternatively, you can copy the file to any other place and rebuild with
 
 The configuration files for BusyBox, the Linux kernel, Barebox, U-Boot
 and uClibc should be stored as well if changed. For each of these
-components, a Buildroot configuration option exists to point to an input
+components, a MikoOS configuration option exists to point to an input
 configuration file, e.g. +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE+. To store
 their configuration, set these configuration options to a path where you
 want to save the configuration files, and then use the helper targets
@@ -38,11 +38,11 @@ store these configuration files is
 
 Make sure that you create a configuration file 'before' changing
 the +BR2_LINUX_KERNEL_CUSTOM_CONFIG_FILE+ etc. options. Otherwise,
-Buildroot will try to access this config file, which doesn't exist
+MikoOS will try to access this config file, which doesn't exist
 yet, and will fail. You can create the configuration file by running
 +make linux-menuconfig+ etc.
 
-Buildroot provides a few helper targets to make the saving of
+MikoOS provides a few helper targets to make the saving of
 configuration files easier.
 
 * +make linux-update-defconfig+ saves the linux configuration to the

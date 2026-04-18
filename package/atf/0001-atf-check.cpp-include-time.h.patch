@@ -3,8 +3,8 @@ From: Bernd Kuhls <bernd@kuhls.net>
 Date: Sat, 22 Nov 2025 23:47:41 +0100
 Subject: [PATCH] atf-check.cpp: include time.h
 
-Fixes build error with gcc 14 as reported by the buildroot autobuilders:
-https://autobuild.buildroot.net/results/41b/41b25ee8e66e34323eca011e4b5fe479ece9ed76/build-end.log
+Fixes build error with gcc 14 as reported by the mikoos autobuilders:
+https://autobuild.mikoos.net/results/41b/41b25ee8e66e34323eca011e4b5fe479ece9ed76/build-end.log
 
 atf-sh/atf-check.cpp: In function 'useconds_t get_monotonic_useconds()':
 atf-sh/atf-check.cpp:183:24: error: 'CLOCK_MONOTONIC' was not declared in this scope

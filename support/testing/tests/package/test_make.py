@@ -41,7 +41,7 @@ class TestMake(infra.basetest.BRTest):
         # string.
         out, ret = self.emulator.run("make message")
         self.assertEqual(ret, 0)
-        self.assertEqual(out[0], "Hello Buildroot!")
+        self.assertEqual(out[0], "Hello MikoOS!")
 
         # We redo the same test, this time by passing a new message
         # with a variable.

@@ -249,7 +249,7 @@ same command again; it will re-run the test where it failed. If you did
 specify a package (with -p), the package build dir will be removed first.
 
 The list of toolchains is retrieved from ${TOOLCHAINS_CSV}.
-Only the external toolchains are tried, because building a Buildroot toolchain
+Only the external toolchains are tried, because building a MikoOS toolchain
 would take too long. An alternative toolchains CSV file can be specified with
 the -t option. This file should have lines consisting of the path to the
 toolchain config fragment and the required host architecture, separated by a
@@ -279,7 +279,7 @@ Options:
 
     -a, --all
         Test all toolchains, instead of the default subset defined by
-        Buildroot developers.
+        MikoOS developers.
 
     -n N, --number N
         Test N toolchains, in the order defined in the toolchain CSV

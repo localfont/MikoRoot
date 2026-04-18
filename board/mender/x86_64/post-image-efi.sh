@@ -3,7 +3,7 @@ set -e
 BOARD_DIR="$(realpath "$(dirname "$0")")"
 DATA_PART="${BINARIES_DIR}"/data-part
 DATA_PART_SIZE="32M"
-DEVICE_TYPE="buildroot-x86_64"
+DEVICE_TYPE="mikoos-x86_64"
 ARTIFACT_NAME="1.0"
 
 # Parse arguments.

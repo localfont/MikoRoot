@@ -11,9 +11,9 @@ When the mv-ddr-marvell folder is not a git tree the build fails
 complaining that it "does not contain valid mv-ddr-marvell git
 repository".
 
-Remove this check to allow building in Buildroot.
+Remove this check to allow building in MikoOS.
 
-Upstream: Not applicable. Buildroot specific.
+Upstream: Not applicable. MikoOS specific.
 Signed-off-by: Vincent Stehlé <vincent.stehle@arm.com>
 ---
  plat/marvell/armada/a8k/common/ble/ble.mk | 1 -

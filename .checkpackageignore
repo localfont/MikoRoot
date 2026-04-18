@@ -826,7 +826,7 @@ package/read-edid/0002-Fix-compiler-check.patch lib_patch.Upstream
 package/read-edid/0003-fix-build-with-gcc-10.patch lib_patch.Upstream
 package/redis/0001-uclibc.patch lib_patch.Upstream
 package/redis/0002-largefile-conditional-define.patch lib_patch.Upstream
-package/redis/0003-redis.conf-adjust-defauts-for-buildroot.patch lib_patch.Upstream
+package/redis/0003-redis.conf-adjust-defauts-for-mikoos.patch lib_patch.Upstream
 package/redis/S50redis Shellcheck lib_sysv.Variables
 package/restorecond/S02restorecond Shellcheck
 package/ripgrep/0001-puts-jemalloc-allocator-behind-a-cargo-feature-flag.patch lib_patch.Upstream
@@ -912,7 +912,7 @@ package/triggerhappy/S10triggerhappy Shellcheck lib_sysv.Indent lib_sysv.Variabl
 package/trousers/0001-Check-if-the-compiler-understands-pie-and-relro-options.patch lib_patch.Upstream
 package/trousers/0002-Check-that-getpwent_r-is-available-before-using-it.patch lib_patch.Upstream
 package/trousers/0003-Fix-build-with-LibreSSL-2-7.patch lib_patch.Upstream
-package/tstools/0001-build-get-along-with-buildroot.patch lib_patch.Upstream
+package/tstools/0001-build-get-along-with-mikoos.patch lib_patch.Upstream
 package/tvheadend/0001-no-check_config.patch lib_patch.Upstream
 package/tvheadend/S99tvheadend Shellcheck lib_sysv.Indent lib_sysv.Variables
 package/uboot-tools/0001-drop-configh-from-tools.patch lib_patch.Upstream
@@ -1040,10 +1040,10 @@ support/download/scp Shellcheck
 support/download/sftp Shellcheck
 support/download/wget Shellcheck
 support/gnuconfig/update Shellcheck
-support/libtool/buildroot-libtool-v1.5.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
-support/libtool/buildroot-libtool-v2.2.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
-support/libtool/buildroot-libtool-v2.4.4.patch lib_patch.ApplyOrder lib_patch.Upstream
-support/libtool/buildroot-libtool-v2.4.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
+support/libtool/mikoos-libtool-v1.5.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
+support/libtool/mikoos-libtool-v2.2.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
+support/libtool/mikoos-libtool-v2.4.4.patch lib_patch.ApplyOrder lib_patch.Upstream
+support/libtool/mikoos-libtool-v2.4.patch lib_patch.ApplyOrder lib_patch.Sob lib_patch.Upstream
 support/misc/relocate-sdk.sh Shellcheck
 support/scripts/apply-patches.sh Shellcheck
 support/scripts/check-bin-arch Shellcheck

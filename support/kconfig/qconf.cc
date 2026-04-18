@@ -55,7 +55,7 @@ static inline QString qgettext(const QString& str)
 }
 
 ConfigSettings::ConfigSettings()
-	: QSettings("buildroot.org", "qconf")
+	: QSettings("mikoos.org", "qconf")
 {
 }
 

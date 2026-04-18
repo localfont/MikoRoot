@@ -11,7 +11,7 @@ Content-Transfer-Encoding: 8bit
 
 Fixes:
 
-  .../host/x86_64-buildroot-linux-uclibc/sysroot/usr/include/sys/random.h:27:35: error: unknown type name ‘size_t’
+  .../host/x86_64-mikoos-linux-uclibc/sysroot/usr/include/sys/random.h:27:35: error: unknown type name ‘size_t’
      27 | extern int getrandom(void *__buf, size_t count, unsigned int flags)
         |                                   ^~~~~~
 

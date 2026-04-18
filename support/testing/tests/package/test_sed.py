@@ -46,19 +46,19 @@ class TestSed(infra.basetest.BRTest):
         cmd = f"sed -i '{sed_script}' file[0-9]*.txt"
         self.assertRunOk(cmd)
 
-        # We substitute numbers with the string "Buildroot". We use an
+        # We substitute numbers with the string "MikoOS". We use an
         # extended regular expression (with the '+'), so we test with
         # the '-r' option.
-        sed_script = "s/[0-9]+/Buildroot/g"
+        sed_script = "s/[0-9]+/MikoOS/g"
         cmd = f"sed -r -i '{sed_script}' file[0-9]*.txt"
         self.assertRunOk(cmd)
 
         # Our previous text manipulations are expected to end up with
-        # the "Hello Buildroot" string in all files.
+        # the "Hello MikoOS" string in all files.
         cmd = "cat file[0-9]*.txt"
         output, exit_code = self.emulator.run(cmd)
         self.assertEqual(exit_code, 0)
-        self.assertEqual(output, ["Hello Buildroot"] * testfile_num)
+        self.assertEqual(output, ["Hello MikoOS"] * testfile_num)
 
     def check_sed_line_count(self):
         # We use the '=' command to count lines.

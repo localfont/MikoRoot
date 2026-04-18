@@ -5,15 +5,15 @@ Subject: [PATCH] meson.build: set c_std to gnu99
 
 Set c_std to gnu99 to avoid the following build failure with gcc 4.8:
 
-In file included from /tmp/instance-0/output-1/host/arm-buildroot-linux-gnueabi/sysroot/usr/include/resolv.h:65:0,
-                 from /tmp/instance-0/output-1/host/arm-buildroot-linux-gnueabi/sysroot/usr/include/glib-2.0/gio/gnetworking.h:40,
+In file included from /tmp/instance-0/output-1/host/arm-mikoos-linux-gnueabi/sysroot/usr/include/resolv.h:65:0,
+                 from /tmp/instance-0/output-1/host/arm-mikoos-linux-gnueabi/sysroot/usr/include/glib-2.0/gio/gnetworking.h:40,
                  from ../libsoup/soup-address.c:14:
-/tmp/instance-0/output-1/host/arm-buildroot-linux-gnueabi/sysroot/usr/include/arpa/nameser.h:115:2: error: unknown type name 'u_char'
+/tmp/instance-0/output-1/host/arm-mikoos-linux-gnueabi/sysroot/usr/include/arpa/nameser.h:115:2: error: unknown type name 'u_char'
   const u_char *_msg, *_eom;
   ^
 
 Fixes:
- - http://autobuild.buildroot.org/results/56b9cb987e25b99d6fed16c537552f47c3376f21
+ - http://autobuild.mikoos.org/results/56b9cb987e25b99d6fed16c537552f47c3376f21
 
 Upstream: https://gitlab.gnome.org/GNOME/libsoup/-/merge_requests/241
 

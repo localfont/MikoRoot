@@ -4,7 +4,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting
-with the buildroot environment for the LinkSprite pcDuino v1 board
+with the mikoos environment for the LinkSprite pcDuino v1 board
 including its flavors pcDuino-Lite and pcDuino-Lite-WiFi. With the
 current configuration it will bring-up the board and allow access
 through the serial console as well as ethernet and wireless
@@ -13,7 +13,7 @@ network interfaces.
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make linksprite_pcduino_defconfig
 

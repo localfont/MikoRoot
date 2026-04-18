@@ -10,7 +10,7 @@ failure:
 FAILED: src/libqrtr-glib/libqrtr-glib.so.0.0.0
 
 Fixes:
- - http://autobuild.buildroot.org/results/e0442e97279a07f33a14ec52840f98b7ec0fe32d
+ - http://autobuild.mikoos.org/results/e0442e97279a07f33a14ec52840f98b7ec0fe32d
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://gitlab.freedesktop.org/mobile-broadband/libqrtr-glib/-/merge_requests/24

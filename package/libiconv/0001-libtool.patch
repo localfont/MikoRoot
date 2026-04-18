@@ -1,7 +1,7 @@
 Libtool fixes for cross-compilation, many past contributors/authors.
 Update based on libtool-2.4.4, useful for 2.4.3 as well but not 2.4.2.
 
-Upstream: Not applicable (Buildroot specific)
+Upstream: Not applicable (MikoOS specific)
 
 Signed-off-by: Gustavo Zacarias <gustavo@zacarias.com.ar>
 [Bernd: rebased for version 1.18]

@@ -20,7 +20,7 @@ function display_activity(result, activity) {
         let d = new Date(entry.updated);
         let data = '[' + d.toLocaleDateString() + '] ' + entry.title;
         data = data.replace("Re: ","");
-        data = data.replace("[Buildroot] ","");
+        data = data.replace("[MikoOS] ","");
         let text = document.createTextNode(data);
         link.appendChild(text);
         link.title = entry.title;
@@ -101,5 +101,5 @@ jQuery(document).ready(function($) {
 
     load_activity("/new.atom");
 
-    $('#slides').html('<iframe src="https://docs.google.com/gview?url=http://bootlin.com/doc/training/buildroot/buildroot-slides.pdf&embedded=true" style="position:absolute; width:100%; height:100%; top:0; left:0;" frameborder="0"></iframe>')
+    $('#slides').html('<iframe src="https://docs.google.com/gview?url=http://bootlin.com/doc/training/mikoos/mikoos-slides.pdf&embedded=true" style="position:absolute; width:100%; height:100%; top:0; left:0;" frameborder="0"></iframe>')
 });

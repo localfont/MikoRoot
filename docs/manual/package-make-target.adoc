@@ -8,7 +8,7 @@
 Running +make <package>+ builds and installs that particular package
 and its dependencies.
 
-For packages relying on the Buildroot infrastructure, there are
+For packages relying on the MikoOS infrastructure, there are
 numerous special make targets that can be called independently like
 this:
 
@@ -73,7 +73,7 @@ package
   directly or indirectly)
 
 | +graph-depends+   | Generate a dependency graph of the package, in the
-context of the current Buildroot configuration. See
+context of the current MikoOS configuration. See
 xref:graph-depends[this section] for more details about dependency
 graphs.
 

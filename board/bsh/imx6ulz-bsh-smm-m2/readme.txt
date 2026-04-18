@@ -1,13 +1,13 @@
 i.MX6ULZ BSH SMM M2
 ==================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the i.MX6ULZ BSH SMM M2 board.
 
 Building
 --------
 
-Configure buildroot:
+Configure mikoos:
 
   $ make imx6ulz_bsh_smm_m2_defconfig
 

@@ -13,7 +13,7 @@ Only enable PIDFD support when systemd is available until
 upstream fix the issue.
 
 Fixes:
-https://gitlab.com/buildroot.org/buildroot/-/jobs/8199992596
+https://gitlab.com/mikoos.org/mikoos/-/jobs/8199992596
 
 [1] https://github.com/polkit-org/polkit/issues/451
 

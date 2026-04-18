@@ -9,7 +9,7 @@ https://beagleboard.org/ai
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make beagleboneai_defconfig
 

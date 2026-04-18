@@ -4,7 +4,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the NanoPi NEO. With the current configuration
+mikoos environment for the NanoPi NEO. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 FriendlyARM Nanopi NEO link:

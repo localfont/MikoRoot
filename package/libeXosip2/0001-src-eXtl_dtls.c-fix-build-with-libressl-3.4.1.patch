@@ -8,7 +8,7 @@ SSL_set0_rbio() since
 https://github.com/libressl-portable/openbsd/commit/c99939f9665a9c3c648682b4987df46600b70efc:
 
 In file included from eXtl_dtls.c:82:
-/home/autobuild/autobuild/instance-4/output-1/host/x86_64-buildroot-linux-musl/sysroot/usr/include/openssl/ssl.h:1272:6: note: previous declaration of 'SSL_set0_rbio' was here
+/home/autobuild/autobuild/instance-4/output-1/host/x86_64-mikoos-linux-musl/sysroot/usr/include/openssl/ssl.h:1272:6: note: previous declaration of 'SSL_set0_rbio' was here
  1272 | void SSL_set0_rbio(SSL *s, BIO *rbio);
       |      ^~~~~~~~~~~~~
 eXtl_dtls.c: In function 'SSL_set0_rbio':
@@ -17,7 +17,7 @@ eXtl_dtls.c:108:17: error: invalid use of incomplete typedef 'SSL' {aka 'struct 
       |                 ^~
 
 Fixes:
- - http://autobuild.buildroot.org/results/dfafdbf71b31fbda1b5ba491ac35239af4a20aa2
+ - http://autobuild.mikoos.org/results/dfafdbf71b31fbda1b5ba491ac35239af4a20aa2
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: sent to amoizard@antisip.com]

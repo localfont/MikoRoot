@@ -8,11 +8,11 @@ and
 https://github.com/libressl-portable/openbsd/commit/9866ae34c0af718973475296bd9ef036d3aaa94e
 resulting in the following build failure:
 
-/nvmedata/autobuild/instance-21/output-1/host/opt/ext-toolchain/bin/../lib/gcc/microblaze-buildroot-linux-musl/11.2.0/../../../../microblaze-buildroot-linux-musl/bin/ld: /nvmedata/autobuild/instance-21/output-1/host/microblaze-buildroot-linux-musl/sysroot/usr/lib/libcrypto.a(x509_lu.c.o): in function `X509_OBJECT_get0_X509_CRL':
+/nvmedata/autobuild/instance-21/output-1/host/opt/ext-toolchain/bin/../lib/gcc/microblaze-mikoos-linux-musl/11.2.0/../../../../microblaze-mikoos-linux-musl/bin/ld: /nvmedata/autobuild/instance-21/output-1/host/microblaze-mikoos-linux-musl/sysroot/usr/lib/libcrypto.a(x509_lu.c.o): in function `X509_OBJECT_get0_X509_CRL':
 (.text+0xc3c): multiple definition of `X509_OBJECT_get0_X509_CRL'; /nvmedata/autobuild/instance-21/output-1/build/lftp-4.9.2/src/.libs/liblftp-network.a(liblftp_network_la-lftp_ssl.o):(.text+0x894): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/7fd1dfd5bc750ae5a3278ca950c838ae90704b23
+ - http://autobuild.mikoos.org/results/7fd1dfd5bc750ae5a3278ca950c838ae90704b23
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

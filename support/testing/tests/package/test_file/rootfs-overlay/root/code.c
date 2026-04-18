@@ -4,6 +4,6 @@
 int
 main(void)
 {
-    printf("Hello Buildroot!\n");
+    printf("Hello MikoOS!\n");
     exit(EXIT_SUCCESS);
 }

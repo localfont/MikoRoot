@@ -81,7 +81,7 @@ else
 ERLANG_CONF_OPTS += --without-odbc
 endif
 
-# Always use Buildroot's zlib
+# Always use MikoOS's zlib
 ERLANG_CONF_OPTS += --disable-builtin-zlib
 ERLANG_DEPENDENCIES += zlib
 

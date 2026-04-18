@@ -10,7 +10,7 @@ patchset relaxes the restriction such that builds can still
 occur on older host machines.
 
 Here's a related post from 2018 for a similar patchset.
-http://lists.busybox.net/pipermail/buildroot/2018-December/237949.html
+http://lists.busybox.net/pipermail/mikoos/2018-December/237949.html
 
 Timeline of relevant commits that adjust the dependency upstream.
 GCC 4.9+

@@ -4,15 +4,15 @@
 [[customize-dir-structure]]
 === Recommended directory structure
 
-When customizing Buildroot for your project, you will be creating one or
+When customizing MikoOS for your project, you will be creating one or
 more project-specific files that need to be stored somewhere. While most
 of these files could be placed in _any_ location as their path is to be
-specified in the Buildroot configuration, the Buildroot developers
+specified in the MikoOS configuration, the MikoOS developers
 recommend a specific directory structure which is described in this
 section.
 
 Orthogonal to this directory structure, you can choose _where_ you place
-this structure itself: either inside the Buildroot tree, or outside of
+this structure itself: either inside the MikoOS tree, or outside of
 it using a br2-external tree. Both options are valid, the choice is up
 to you.
 
@@ -56,7 +56,7 @@ to you.
 
 Details on the files shown above are given further in this chapter.
 
-Note: if you choose to place this structure outside of the Buildroot
+Note: if you choose to place this structure outside of the MikoOS
 tree but in a br2-external tree, the <company> and possibly <boardname>
 components may be superfluous and can be left out.
 
@@ -67,7 +67,7 @@ need the same customizations. Instead of duplicating these
 customizations for each project, it is recommended to use a layered
 customization approach, as explained in this section.
 
-Almost all of the customization methods available in Buildroot, like
+Almost all of the customization methods available in MikoOS, like
 post-build scripts and root filesystem overlays, accept a
 space-separated list of items. The specified items are always treated in
 order, from left to right. By creating more than one such item, one for
@@ -113,18 +113,18 @@ followed by the patches from the 'fooboard' layer.
 
 ==== Custom top Makefile
 
-You normally launch Buildroot from the buildroot source directory, pointing
+You normally launch MikoOS from the mikoos source directory, pointing
 +BR2_EXTERNAL+ and +O+ to the right places for the build you want to make.
 You can simplify this by adding a Makefile to your br2-external that sets
-these variables and calls into buildroot.
+these variables and calls into mikoos.
 
 You can add additional, custom rules to this Makefile for various tasks you
 need to perform, e.g. integrate multiple configurations into a single image,
 upload to a release server or to a test device, include multiple
 br2-external configurations, etc.
 
-A basic Makefile looks like this. It assumes the buildroot source is available
-(e.g. as a git submodule) in the +buildroot+ subdirectory. It makes sure that
+A basic Makefile looks like this. It assumes the mikoos source is available
+(e.g. as a git submodule) in the +mikoos+ subdirectory. It makes sure that
 the download directory is shared between different builds, and it organizes
 the output directories in a structure under +outputs/+.
 
@@ -137,7 +137,7 @@ MAKEFLAGS += --no-builtin-rules
 
 THIS_EXTERNAL_PATH := $(abspath $(dir $(lastword $(MAKEFILE_LIST))))
 
-# Put downloads in this directory instead of in the Buildroot directory
+# Put downloads in this directory instead of in the MikoOS directory
 ifeq ($(BR2_DL_DIR),)
 BR2_DL_DIR = $(THIS_EXTERNAL_PATH)/dl
 endif
@@ -145,7 +145,7 @@ endif
 OUTPUT_BASEDIR = $(THIS_EXTERNAL_PATH)/output
 OUTPUT_DIR = $(OUTPUT_BASEDIR)/$(patsubst %_defconfig,%,$@)
 
-MAKE_BUILDROOT = $(MAKE) -C $(THIS_EXTERNAL_PATH)/buildroot BR2_EXTERNAL=$(THIS_EXTERNAL_PATH)
+MAKE_BUILDROOT = $(MAKE) -C $(THIS_EXTERNAL_PATH)/mikoos BR2_EXTERNAL=$(THIS_EXTERNAL_PATH)
 
 %: $(THIS_EXTERNAL_PATH)/configs/%
 	$(MAKE_BUILDROOT) O=$(OUTPUT_DIR) $@

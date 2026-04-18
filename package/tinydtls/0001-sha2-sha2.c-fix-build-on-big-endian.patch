@@ -16,7 +16,7 @@ Fix this error by replacing tmp by val
 Moreover, move MEMCPY_BCOPY before its usage or linking step will fail
 
 Fixes:
- - http://autobuild.buildroot.org/results/e8704e02fdede7b63e22da552292977b23380b32
+ - http://autobuild.mikoos.org/results/e8704e02fdede7b63e22da552292977b23380b32
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream: https://github.com/eclipse/tinydtls/commit/78a2d32f47165eda10cbf8f5cf79f86fa1c4872b]

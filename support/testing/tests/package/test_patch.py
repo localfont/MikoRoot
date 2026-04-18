@@ -41,4 +41,4 @@ class TestPatch(infra.basetest.BRTest):
         # applying the patch.
         out, ret = self.emulator.run(sed_cmd)
         self.assertEqual(ret, 0)
-        self.assertEqual(out[0], "Hello Buildroot!")
+        self.assertEqual(out[0], "Hello MikoOS!")

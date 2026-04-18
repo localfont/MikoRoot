@@ -7,10 +7,10 @@ ctest fails on the target, because it cannot find CMake.cmake inside
 CMAKE_DATA_DIR (typically set to "/usr/share/cmake-3.0"): all *.cmake
 files are removed at build time via the target-finalize rule.
 
-This buildroot-specific patch makes sure ctest looks also for
+This mikoos-specific patch makes sure ctest looks also for
 "Modules/CMake.cmake.ctest" before complaining
 
-Upstream: N/A (specific to buildroot)
+Upstream: N/A (specific to mikoos)
 
 [Vincent: tweak patch for 3.6.3]
 [James: tweak patch for 3.15.4]

@@ -10,7 +10,7 @@ with a recent version of libxml2.
 
 Upstream: Not Applicable
 [libsoup2 is not maintained upstream, and libsoup3 no longer contains
-the XMLRPC code. We are keepin libsoup2 in Buildroot for compatibility
+the XMLRPC code. We are keepin libsoup2 in MikoOS for compatibility
 with packages that haven't moved to libsoup3 yet.]
 Signed-off-by: Thomas Petazzoni <thomas.petazzoni@bootlin.com>
 ---

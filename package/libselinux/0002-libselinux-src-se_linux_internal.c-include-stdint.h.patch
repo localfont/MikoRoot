@@ -20,7 +20,7 @@ selinux_internal.c:25:29: note: each undeclared identifier is reported only once
       |                             ^~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/7e627744beaa4f7fdfd488dfacbaafc074a999f7
+ - http://autobuild.mikoos.org/results/7e627744beaa4f7fdfd488dfacbaafc074a999f7
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/SELinuxProject/selinux/pull/435

@@ -15,7 +15,7 @@ CMake Error at .../CMakeLists.txt: (GET_TARGET_PROPERTY):
   expression $<TARGET_FILE>, as appropriate.
 
 Signed-off-by: Rudi Heitbaum <rudi@heitbaum.com>
-Fixes: https://autobuild.buildroot.org/results/0b6/0b6ada93f45c16cc8c558ec23a0eb56da2aa86e9
+Fixes: https://autobuild.mikoos.org/results/0b6/0b6ada93f45c16cc8c558ec23a0eb56da2aa86e9
 Upstream: https://github.com/lloyd/yajl/pull/256
 ---
  CMakeLists.txt             | 2 +-

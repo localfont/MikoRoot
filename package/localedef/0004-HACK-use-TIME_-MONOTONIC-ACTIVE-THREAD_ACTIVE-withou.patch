@@ -7,13 +7,13 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-The Buildroot host-localdef package is built when
+The MikoOS host-localdef package is built when
 BR2_GENERATE_LOCALE has a value defined.
 
 localdef is a tool from the glibc package, and is normally
 meant to be built with the glibc version it is included in.
 
-When Buildroot builds host-localedef, it will use the host glibc.
+When MikoOS builds host-localedef, it will use the host glibc.
 When the host glibc version is < 2.40, the compilation fails with
 error:
 
@@ -24,11 +24,11 @@ error:
     ../include/time.h:547:11: error: ‘TIME_THREAD_ACTIVE’ undeclared
      (first use in this function)
 
-This error happen for example in the Buildroot Docker image
+This error happen for example in the MikoOS Docker image
 (which is a Debian 12, glibc 2.36).
 
 This is because glibc < 2.40 does not define _ISOC23_SOURCE, which
-was added in upstream commit [1], and the previous Buildroot localedef
+was added in upstream commit [1], and the previous MikoOS localedef
 package patch which also removes the _ISOC23_SOURCE definition.
 
 This patch workaround the situation by removing the condition around

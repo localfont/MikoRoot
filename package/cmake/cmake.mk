@@ -17,7 +17,7 @@ HOST_CMAKE_ADD_CCACHE_DEPENDENCY = NO
 
 # CMake is a particular package:
 # * CMake can be built using the generic infrastructure or the cmake one.
-#   Since Buildroot has no requirement regarding the host system cmake
+#   Since MikoOS has no requirement regarding the host system cmake
 #   program presence, it uses the generic infrastructure to build the
 #   host-cmake package, then the (target-)cmake package can be built
 #   using the cmake infrastructure;

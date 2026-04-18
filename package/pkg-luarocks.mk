@@ -8,7 +8,7 @@
 # This luarocks infrastructure supports only the builtin mode,
 # the make & cmake modes could be directly handled by generic & cmake infrastructure.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this LuaRocks infrastructure requires
@@ -141,7 +141,7 @@ $(call inner-generic-package,$(1),$(2),$(3),$(4))
 
 # Upgrade helper
 $(1)-upgrade: host-luarocks
-	$$(LUAROCKS_RUN_CMD) buildroot $$($(2)_NAME_UPSTREAM) $(1)
+	$$(LUAROCKS_RUN_CMD) mikoos $$($(2)_NAME_UPSTREAM) $(1)
 
 .PHONY: $(1)-upgrade
 

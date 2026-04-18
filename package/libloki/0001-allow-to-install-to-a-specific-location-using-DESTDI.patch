@@ -6,7 +6,7 @@ Subject: [PATCH] allow to install to a specific location using DESTDIR
 DESTDIR is the autotools standard variable where to copy
 headers, libraries and binaries. It's not the same as "prefix".
 
-So while installing to Buildroot STAGING directory, use prefix=/usr
+So while installing to MikoOS STAGING directory, use prefix=/usr
 and DESTOR=$(STAGING_DIR).
 
 Signed-off-by: Romain Naour <romain.naour@gmail.com>

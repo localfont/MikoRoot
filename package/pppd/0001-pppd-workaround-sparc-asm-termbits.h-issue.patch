@@ -22,13 +22,13 @@ with kernel headers older than 6.10.
 Fixes:
 
 In file included from termios_linux.h:39:
-/home/thomas/projets/buildroot/output/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/asm/termbits.h:17:8: error: redefinition of ‘struct termio’
+/home/thomas/projets/mikoos/output/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/asm/termbits.h:17:8: error: redefinition of ‘struct termio’
    17 | struct termio {
       |        ^~~~~~
   CC       pppd-ipv6cp.o
-In file included from /home/thomas/projets/buildroot/output/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/sys/ioctl.h:29,
+In file included from /home/thomas/projets/mikoos/output/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/sys/ioctl.h:29,
                  from sys-linux.c:76:
-/home/thomas/projets/buildroot/output/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/bits/ioctl-types.h:36:8: note: originally defined here
+/home/thomas/projets/mikoos/output/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/bits/ioctl-types.h:36:8: note: originally defined here
    36 | struct termio
       |        ^~~~~~
 

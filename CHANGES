@@ -45,7 +45,7 @@
 	Misc:
 	- Various tweaks to utils/generate-cyclonedx for better SBOM
 	  compatibility and more detailed annotations for CVEs fixed
-	  by patches in Buildroot.
+	  by patches in MikoOS.
 
 	New defconfigs: AMD Versal2 VEK385, HP-9000, QEMU HPPA B160L,
 	STM32h747i-disco
@@ -78,28 +78,28 @@
 
 	Issues resolved:
 	- GNU GRUB (BIOS) with f2fs filesystem failed
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/61
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/61
 
 	- The shadow package does not correctly configure the ENCRYPT_METHOD..
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/134
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/134
 
-	- EGL not found when building libWPE from buildroot base folder
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/144
+	- EGL not found when building libWPE from mikoos base folder
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/144
 
 	- Awkward error message: "Fix you path"
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/151
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/151
 
 	- Detected presence of version control tool artifacts
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/154
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/154
 
 	- run-tests tool broken with Python 3.14
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/156
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/156
 
 	- Moving away from bminor Github mirrors
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/160
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/160
 
 	- How can I make the 'en_US' locale by default?
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/161
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/161
 
 2025.11.3, released March 17, 2026
 
@@ -978,16 +978,16 @@
 	Issues resolved:
 
 	- openh264's build/ should not be removed
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/64
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/64
 
 	- package/dbus: incorrect session bus configuration file..
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/67
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/67
 
 	- Update pkcs11-tool to v1.9.1
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/109
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/109
 
 	- netsnmp: unexpected header length in /proc/net/snmp...
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/110
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/110
 
 2025.02.12, released March 17, 2026
 
@@ -1573,8 +1573,8 @@
 	Infrastructure updates / fixes:
 
 	- pkg-cmake now forces CMake>=3.5
-	- pkg-meson now uses a dedicated buildroot build directory
-	  see https://gitlab.com/buildroot.org/buildroot/-/issues/64
+	- pkg-meson now uses a dedicated mikoos build directory
+	  see https://gitlab.com/mikoos.org/mikoos/-/issues/64
 	- include defconfigs in sub-directories in make list-defconfigs
 	- new manual section about private repositories
 	- pkg-autotools: handle libtool 2.5.x
@@ -1693,7 +1693,7 @@
 	- pkg-stats: fix typo in --disable help text
 	- imx28evk: enable BR2_DOWNLOAD_FORCE_CHECK_HASHES
 	- friendlyarm_nanopi_r3s: fix host linux headers custom version
-	- support/dependencies/dependencies.sh: awk is needed by Buildroot
+	- support/dependencies/dependencies.sh: awk is needed by MikoOS
 	- Config.in: introduce BR2_HOST_GCC_AT_LEAST_{12..15}
 	- dbus: set session-socket-dir to /tmp
 	- fs/erofs: unbreak custom compression handling
@@ -1714,7 +1714,7 @@
 	Changes with potentially large impact:
 
 	- gstreamer1 and related packages: updated from 1.22.x to 1.24.x.
-	  1.22.x was already EOL when Buildroot 2025.02 was released, so
+	  1.22.x was already EOL when MikoOS 2025.02 was released, so
 	  GStreamer should really already have been udpated to 1.24.x.
 	  This update was needed to fix a lot of vulnerabilities.
 	- frr: updated from 9.1.3 to 10.3. Version 9 is no longer
@@ -1851,13 +1851,13 @@
 
 	Issues resolved:
 	- bluetooth.service cannot connect to D-BUS
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/65
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/65
         - gdb package doesn't have a licence hash in the gdb.hash file
-          https://gitlab.com/buildroot.org/buildroot/-/issues/66
+          https://gitlab.com/mikoos.org/mikoos/-/issues/66
 	- package/libsha1: Build failure with GCC 14 [-Wimplicit-int]
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/69
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/69
 	- samba4 build failed in master
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/86
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/86
 
 2024.11.4, released April 22nd, 2025
 
@@ -1938,7 +1938,7 @@
 
 	Issues resolved:
 	- samba4 build failed in master
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/86
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/86
 
 2024.11.1, released January 9th, 2025
 
@@ -1966,11 +1966,11 @@
 
 	Issues resolved:
 	- bluetooth.service cannot connect to D-BUS
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/65
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/65
         - gdb package doesn't have a licence hash in the gdb.hash file
-          https://gitlab.com/buildroot.org/buildroot/-/issues/66
+          https://gitlab.com/mikoos.org/mikoos/-/issues/66
 	- package/libsha1: Build failure with GCC 14 [-Wimplicit-int]
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/69
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/69
 
 2024.11, released December 8th, 2024
 
@@ -1981,7 +1981,7 @@
 
 	Issues resolved:
         - procps-ng: builderror in 2024.08
-          https://gitlab.com/buildroot.org/buildroot/-/issues/38
+          https://gitlab.com/mikoos.org/mikoos/-/issues/38
 
 2024.11-rc3, released Decemmber 5th, 2024
 
@@ -2042,11 +2042,11 @@
 
 	Issues resolved:
 	- host rpath fixups misses needed directory
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/39
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/39
 	- procps-ng: build failure when linking to systemd
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/28
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/28
 	- ripgrep leaves /usr/crates2.json / .crates.toml files
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/17
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/17
 
 2024.08.3, released December 8th, 2024
 
@@ -2066,9 +2066,9 @@
 
 	Issues resolved:
 	- procps-ng: builderror in 2024.08
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/38
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/38
 	- fbv package download link is broken in long term support branch
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/73
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/73
 
 2024.08.2, released November 14th, 2024
 
@@ -2112,15 +2112,15 @@
 
 	Issues resolved:
 	- procps-ng: build failure when linking to systemd
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/28
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/28
 	- orange pi 2w does not boot
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/36
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/36
 	- glibc configure fails on aarch64 with mathvec SVE ACLE error
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/40
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/40
 	- Kernel Build from Custom Git Repo fails with hash-error
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/46
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/46
 	- package/linux-pam: Remove unneeded flex dependency
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/47
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/47
 
 2024.08, released September 6th, 2024
 
@@ -2223,36 +2223,36 @@
 
 	Issues resolved:
 	- Are there plans to add raspberrypizero2w_64_defconfig config?
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/1
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/1
 	- Some folders can't visit and some file is missing while running
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/2
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/2
 	- wpewebkit build fails on ARM Neon
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/3
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/3
 	- TAR-1.35 will not build for target (host-variant will build)
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/4
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/4
 	- package/xz without shared libraries breaks Python build
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/5
-	- unable to build - 404 at sources.buildroot.net
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/10
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/5
+	- unable to build - 404 at sources.mikoos.net
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/10
 	- OpenSSH 9.8 broken
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/11
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/11
 	- Update Openssh to Version 9.8p1 (CVE-2024-6387) in Long Term
 	  Support Release 2024.02.x
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/14
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/14
 	- Toolchain (host-gcc-final-14.1.0) build failure with
 	  y2038/BR2_TIME_BITS_64 enabled
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/16
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/16
 	- building go/golang gives error
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/18
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/18
 	- GCC 13.3 is missing
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/20
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/20
 	- package containerd update to avoid hanging docker exec
 	  commands
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/21
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/21
 	- "BR2_EXTERNAL broken missing srctree error Config.in"
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/24
-	- Can't subscribe buildroot mailing list
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/25
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/24
+	- Can't subscribe mikoos mailing list
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/25
 
 2024.05.3, released September 9th, 2024
 
@@ -2287,10 +2287,10 @@
 
         Issues resolved:
 	- TAR-1.35 will not build for target (host-variant will build)
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/4
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/4
 	- Toolchain (host-gcc-final-14.1.0) build failure with
 	  y2038/BR2_TIME_BITS_64 enabled
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/16
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/16
 
 2024.05.2, released August 14th, 2024
 
@@ -2320,7 +2320,7 @@
 	Important / security related fixes.
 
 	Infrastructure: Ensure support/scripts/apply-patches can be
-	used outside Buildroot (regression in 2024.05).
+	used outside MikoOS (regression in 2024.05).
 
 	Defconfig: Pine64 rockpro64: Build ethernet driver in kernel
 	rather than as module. QEMU sh4: Change to initramfs to
@@ -2411,7 +2411,7 @@
 	  support for the FLAT binary format dropped, as support has
 	  been removed from the Linux kernel as of v5.19.
 
-        Download (notice, Buildroot generated tarballs have changed):
+        Download (notice, MikoOS generated tarballs have changed):
         - Tar 1.35 is now required (will be automatically built if not
           available on the host). Notice that tar 1.35 changes the way
           devmajor/minor is stored, so tarballs created with 1.35 are
@@ -2457,7 +2457,7 @@
 
         #14416: Mesa3D missing DRI3 support for various Gallium drivers
         #15766: BR2_PACKAGE_WESTON_XWAYLAND -- 12.0.1 -- fails to build..
-        #15997: Build Squid with GCC12.3 in Buildroot 2024.02 will fail
+        #15997: Build Squid with GCC12.3 in MikoOS 2024.02 will fail
         #16009: 'select' does not work with 'choice'
         #16036: android-tools version is too old
         #16075: Cannot use linux kernel extensions from external tree..
@@ -2533,9 +2533,9 @@
 
 	Issues resolved:
         - OpenSSH 9.8 broken
-          https://gitlab.com/buildroot.org/buildroot/-/issues/11
+          https://gitlab.com/mikoos.org/mikoos/-/issues/11
         - samba4 build failed in master
-          https://gitlab.com/buildroot.org/buildroot/-/issues/86
+          https://gitlab.com/mikoos.org/mikoos/-/issues/86
 
 2024.02.10, released January 9th, 2025
 
@@ -2560,11 +2560,11 @@
 
 	Issues resolved:
         - gdb package doesn't have a licence hash in the gdb.hash file
-          https://gitlab.com/buildroot.org/buildroot/-/issues/66
+          https://gitlab.com/mikoos.org/mikoos/-/issues/66
 	- package/libsha1: Build failure with GCC 14 [-Wimplicit-int]
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/69
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/69
 	- [2024.02.9] Mosquitto doesn't build
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/78
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/78
 
 2024.02.9, released December 8th, 2024
 
@@ -2580,9 +2580,9 @@
 
 	Issues resolved:
 	- procps-ng: builderror in 2024.08
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/38
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/38
 	- fbv package download link is broken in long term support branch
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/73
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/73
 
 2024.02.8, released November 14th, 2024
 
@@ -2626,15 +2626,15 @@
 
 	Issues resolved:
 	- procps-ng: build failure when linking to systemd
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/28
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/28
 	- orange pi 2w does not boot
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/36
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/36
 	- glibc configure fails on aarch64 with mathvec SVE ACLE error
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/40
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/40
 	- Kernel Build from Custom Git Repo fails with hash-error
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/46
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/46
 	- package/linux-pam: Remove unneeded flex dependency
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/47
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/47
 
 2024.02.6, released September 9th, 2024
 
@@ -2664,7 +2664,7 @@
         Issues resolved:
 	- Toolchain (host-gcc-final-14.1.0) build failure with
 	  y2038/BR2_TIME_BITS_64 enabled
-	  https://gitlab.com/buildroot.org/buildroot/-/issues/16
+	  https://gitlab.com/mikoos.org/mikoos/-/issues/16
 
 2024.02.5, released August 14th, 2024
 
@@ -2821,7 +2821,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#15997: Build Squid with GCC12.3 in Buildroot 2024.02 will fail
+	#15997: Build Squid with GCC12.3 in MikoOS 2024.02 will fail
 
 2024.02, released March 5th, 2024
 
@@ -2866,7 +2866,7 @@
 
 	- Add support for building a bare metal toolchain suitable for
 	  building firmware for certain (co-)processors, possibly
-	  using a different CPU architecture than the main Buildroot
+	  using a different CPU architecture than the main MikoOS
 	  configuration.
 
 	Default optimization level changed from optimize for size
@@ -2905,7 +2905,7 @@
 
 	#10096: SH4 toolchain does not build Linux kernel magicpanelr2_..
 	#15889: please update meson
-	#15898: Unable to boot syslinux.efi produced by buildroot (EFI 64-..
+	#15898: Unable to boot syslinux.efi produced by mikoos (EFI 64-..
 	#15910: USB keyboard is not working by default "raspberrypicm4io_..
 	#15952: Grub fails to load large rootfs files
 
@@ -2935,7 +2935,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#15997: Build Squid with GCC12.3 in Buildroot 2024.02 will fail
+	#15997: Build Squid with GCC12.3 in MikoOS 2024.02 will fail
 
 2023.11.2, released March 1st, 2024
 
@@ -2984,7 +2984,7 @@
 	  HOST_MAKE_ENV/TARGET_MAKE_ENV) to the build steps to
 	  workaround packages trying to detect if they are building in
 	  a git checkout and getting confused when building in a sub
-	  directory of a Buildroot git checkout.
+	  directory of a MikoOS git checkout.
 
 	Defconfigs: Rock5b: Add download hashes for U-Boot and Linux
 
@@ -3541,7 +3541,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#15997: Build Squid with GCC12.3 in Buildroot 2024.02 will fail
+	#15997: Build Squid with GCC12.3 in MikoOS 2024.02 will fail
 
 2023.02.10, released March 1st, 2024
 
@@ -3584,7 +3584,7 @@
 	  HOST_MAKE_ENV/TARGET_MAKE_ENV) to the build steps to
 	  workaround packages trying to detect if they are building in
 	  a git checkout and getting confused when building in a sub
-	  directory of a Buildroot git checkout.
+	  directory of a MikoOS git checkout.
 
 	Updated/fixed packages: apcupsd, arm-trusted-firmware, botan,
 	cjson, cups, dropbear, duktape, edk2, exim, faad2, freeswitch,
@@ -3982,7 +3982,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#14971: Kernel 3.10.108 fail to build in Buildroot 2022.08-rc1
+	#14971: Kernel 3.10.108 fail to build in MikoOS 2022.08-rc1
 	#14996: Too many directories in BR2_EXTERNAL causes hang during make
 	#15161: kernel can't support SUBDIR
 	#15196: Setting BR2_PACKAGE_RPI_FIRMWARE_CONFIG_FILE does not work
@@ -4016,7 +4016,7 @@
 	Issues resolved (http://bugs.uclibc.org):
 
 	#15306: glibc build fails in Docker container
-	#15361: Buildroot linking error on Apple Silicon
+	#15361: MikoOS linking error on Apple Silicon
 
 2022.11.2, released March 1st, 2023
 
@@ -4098,7 +4098,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#14971: Kernel 3.10.108 fail to build in Buildroot 2022.08-rc1
+	#14971: Kernel 3.10.108 fail to build in MikoOS 2022.08-rc1
 	#14996: Too many directories in BR2_EXTERNAL causes hang during make
 	#15161: kernel can't support SUBDIR
 	#15196: Setting BR2_PACKAGE_RPI_FIRMWARE_CONFIG_FILE does not work
@@ -4201,7 +4201,7 @@
 
 	#11776: qt5webengine 5.12.2 build failed with arm toolchain
 	        and linaro toolchain
-	#12131: qt5webengine builderror in the latest stable Buildroot
+	#12131: qt5webengine builderror in the latest stable MikoOS
 	        2019.05.01 version
 	#13216: 2020.02.6 requires GNU find  utils
 	#14601: Python build fails on 2022.02-rc2
@@ -4210,7 +4210,7 @@
 	#14921: wpewebkit build fails because of internal  build order
 	#14936: nodejs does not build
 	#15006: toolchain Arm AArch64 toolchain 11.2-2022.02
-	#15021: Buildroot not compiling with systemd  and glibc.
+	#15021: MikoOS not compiling with systemd  and glibc.
 	#15026: package/udisks: install to staging
 	#15061: Node.js Package fails to build against musl  i386
 	#15071: RTL8723BS library is outdated
@@ -4667,7 +4667,7 @@
 	Issues resolved (http://bugs.uclibc.org):
 
 	#15306: glibc build fails in Docker container
-	#15361: Buildroot linking error on Apple Silicon
+	#15361: MikoOS linking error on Apple Silicon
 
 2022.02.10, released March 1st, 2023
 
@@ -4739,7 +4739,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#14971: Kernel 3.10.108 fail to build in Buildroot 2022.08-rc1
+	#14971: Kernel 3.10.108 fail to build in MikoOS 2022.08-rc1
 	#14996: Too many directories in BR2_EXTERNAL causes hang during make
 	#15161: kernel can't support SUBDIR
 	#15196: Setting BR2_PACKAGE_RPI_FIRMWARE_CONFIG_FILE does not work
@@ -4938,7 +4938,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#14766: package dhcp on buildroot 2022.02.1 failed
+	#14766: package dhcp on mikoos 2022.02.1 failed
 	#14821: Samba server is failing to compile
 	#14826: make qemu_x86_64_defconfig stopped working
 
@@ -5587,7 +5587,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#13326: regarding dtc error in buildroot source code
+	#13326: regarding dtc error in mikoos source code
 	#13661: host-python2 build fails on aarch64
 	#13836: package build failure when target install set to no on
 	        pkg-generic pkg types
@@ -5784,7 +5784,7 @@
 	setups, so explicitly inform about this.
 
 	Infrastructure: Expose CONFIG_DIR to post-build/post-image
-	scripts, so they can call the Buildroot Makefile in the
+	scripts, so they can call the MikoOS Makefile in the
 	correct directory for both in-tree / out-of-tree builds.
 
 	CMake infrastructure: Use CMAKE_EXE_LINKER_FLAGS rather than
@@ -5833,7 +5833,7 @@
 	#13271: systemd-resolved: /etc/resolv.conf link broken on per-pa..
 	#13516: utils/scanpypi: Failure when parsing diffoscope
 	#13551: 2021.02.rc2: Unicode not work on qt 5.15.2
-	#13576: Issues compiling buildroot for 5x86
+	#13576: Issues compiling mikoos for 5x86
 	#13601: Gen image :Iappropriate ioctl error
 	#13616: tar file from git repository generation issue
 	#13631: Commit 54d3d94b6e breaks packages with git download method
@@ -6142,7 +6142,7 @@
 	issue with poppler.
 
 	Infrastructure: Expose CONFIG_DIR to post-build/post-image
-	scripts, so they can call the Buildroot Makefile in the
+	scripts, so they can call the MikoOS Makefile in the
 	correct directory for both in-tree / out-of-tree builds.
 
 	Updated/fixed packages: at91bootstrap, avahi, bash, bind,
@@ -6233,7 +6233,7 @@
 	Issues resolved (http://bugs.uclibc.org):
 
 	#13516: utils/scanpypi: Failure when parsing diffoscope
-	#13576: Issues compiling buildroot for 5x86
+	#13576: Issues compiling mikoos for 5x86
 	#13601: Gen image :Iappropriate ioctl error
 	#13616: tar file from git repository generation issue
 	#13641: glibc on raspberrypi
@@ -6401,7 +6401,7 @@
 
 	#13516: utils/scanpypi: Failure when parsing diffoscope
 	#13541: 2021.02.rc2: irqbalance: Daemon couldn't be bound to..
-	#13576: Issues compiling buildroot for 5x86
+	#13576: Issues compiling mikoos for 5x86
 	#13581: jpegsrc.v9d.tar.gz has changed hash
 	#13616: tar file from git repository generation issue
 
@@ -6444,7 +6444,7 @@
 	pkg-stats: Fix python 3.8+ deprecation warning.
 
 	meson: Ensure ccache is not detected and used, as it may
-	conflict with the ccache handling in Buildroot.
+	conflict with the ccache handling in MikoOS.
 
 	Updated/fixed packages: barebox, boost, brltty, dbus,
 	docker-containerd, dovecot, dovecot-pigeonhole,
@@ -6573,7 +6573,7 @@
 	<pkg>_SELINUX_MODULES.
 
 	support/scripts/cve-checker: Utility script to check for known
-	CVEs in just the packages enabled in a Buildroot configuration
+	CVEs in just the packages enabled in a MikoOS configuration
 	rather than all packages, by passing the output of 'make
 	show-info' to it.
 
@@ -7110,12 +7110,12 @@
 	#12626: PHP missing header files within 2020.02
 	#12631: glibc support Power-PC SPE
 	#12656: bison fails to relocate with relocate-sdk.sh
-	#12661: cups problems in buildroot
+	#12661: cups problems in mikoos
 	#12686: recipe for target 'install_dev' failed (libcrypto.so:..
 	#12691: host-rust build fails
-	#12761: Buildroot fails when building GCNano binaries for the STM..
+	#12761: MikoOS fails when building GCNano binaries for the STM..
 	#12786: Systemd spawns two getty processes when the getty port..
-	#12806: There are multiple issues in buildroot that faults cups..
+	#12806: There are multiple issues in mikoos that faults cups..
 	#12826: nodejs-12.16.1: error: 'uv_sleep' was not declared in..
 	#12831: RPI-firmware package: DTB-overlay dependency
 	#12836: libunwind: package does not show up in menuconfig for..
@@ -7239,7 +7239,7 @@
 
 	#13516: utils/scanpypi: Failure when parsing diffoscope
 	#13541: 2021.02.rc2: irqbalance: Daemon couldn't be bound to..
-	#13576: Issues compiling buildroot for 5x86
+	#13576: Issues compiling mikoos for 5x86
 	#13581: jpegsrc.v9d.tar.gz has changed hash
 	#13616: tar file from git repository generation issue
 
@@ -7278,7 +7278,7 @@
 	pkg-stats: Fix python 3.8+ deprecation warning.
 
 	meson: Ensure ccache is not detected and used, as it may
-	conflict with the ccache handling in Buildroot.
+	conflict with the ccache handling in MikoOS.
 
 	New packages: libnpupnp
 
@@ -7685,7 +7685,7 @@
 	- Packages will only be able to access the explicitly listed
           dependencies and not any other packages that happen to be
           built before, ensuring correct dependency information in
-          Buildroot.
+          MikoOS.
 
 	- Possibility for top-level parallel builds, speeding up
           builds on multicore machines.
@@ -7699,7 +7699,7 @@
 
 	Toolchain: Add binutils 2.33.1, GCC 7.5.0, Arm 9.2-2019.12
 	toolchains, ARC 2019.09 toolchain. Allow using custom kernel
-	headers newer than what is known by Buildroot.
+	headers newer than what is known by MikoOS.
 
 	pkg-stats: Support for CVE vulnerability reporting by
 	comparing to NVD database.
@@ -7713,7 +7713,7 @@
 
 	Util-linux: Ensure that hwclock is built without GPLv3
 	code. Notice that builds with hwclock has contained
-	GPLv3-licensed code since util-linux 2.30 (Buildroot 2017.08+)
+	GPLv3-licensed code since util-linux 2.30 (MikoOS 2017.08+)
 
 	New defconfigs: Beelink GS1, Raspberrypi4 64bit
 
@@ -7755,7 +7755,7 @@
 	#12376: python-scapy3k is deprecated
 	#12386: carriage return issue when "make menuconfig"
 	#12441: qt5webengine build error: asm/errno.h: No such file or..
-	#12446: Buildroot fails to finish installing packages
+	#12446: MikoOS fails to finish installing packages
 	#12456: qtvirtualkeyboard: No such file or directory
 	#12461: libglib2 build files with deep directory structure
 	#12481: minicom fails when output directory path contains "m4"
@@ -7806,7 +7806,7 @@
 
 	Util-linux: Ensure that hwclock is built without GPLv3
 	code. Notice that builds with hwclock has contained
-	GPLv3-licensed code since util-linux 2.30 (Buildroot 2017.08+)
+	GPLv3-licensed code since util-linux 2.30 (MikoOS 2017.08+)
 
 	Updated/fixed packages: armadillo, at, bcm2835, binutils,
 	blktrace, bluez-alsa, bootstrap, brltty, busybox, cairo,
@@ -8175,7 +8175,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#12156:	buildroot-2019.08-rc3 does not build for Pi Zero W
+	#12156:	mikoos-2019.08-rc3 does not build for Pi Zero W
 
 2019.08-rc3, released August 28th, 2019
 
@@ -8317,7 +8317,7 @@
 	#11271: utils/check-package fails with exception depending on..
 	#11991: [numpy] segfault when compiling for RPi3 64bits
 	#12016: Grub fails to boot bzImage after upgrade to 2019.05
-	#12046: Can’t login as root user after upgrading to buildroot..
+	#12046: Can’t login as root user after upgrading to mikoos..
 	#12051: package/dhcp installs libtool wrapper scripts on tar...
 	#12076: Patchelf can link against an incompatible libc++ ver...
 
@@ -8571,7 +8571,7 @@
 
 	Util-linux: Ensure that hwclock is built without GPLv3
 	code. Notice that builds with hwclock has contained
-	GPLv3-licensed code since util-linux 2.30 (Buildroot 2017.08+)
+	GPLv3-licensed code since util-linux 2.30 (MikoOS 2017.08+)
 
 	Updated/fixed packages: armadillo, at, binutils, blktrace,
 	bootstrap, busybox, cairo, cups, czmq, dnsmasq,
@@ -9020,8 +9020,8 @@
 
 	Various improvements to the meson infrastructure.
 
-	Luarocks: A Buildroot addon has been added to automate
-	creating a Buildroot package from luarocks, similar to
+	Luarocks: A MikoOS addon has been added to automate
+	creating a MikoOS package from luarocks, similar to
 	scancpan and scanpypi.
 
 	scanpypi: protect against zip-slip vulnerability in zip/tar
@@ -9101,7 +9101,7 @@
 
 	#10851: Patch to handle numpad Enter key properly
 	#11066: x11r7 X11 S40xorg leads to a black screen on QEMU x86..
-	#11126: Bash Shell Programming using Buildroot
+	#11126: Bash Shell Programming using MikoOS
 	#11426: pps-tools bash dependency
 	#11476: stdio2.h error invalid use of __builtin_va_arg_pack
 	#11536: dt-utils building fails with glibc 2.28
@@ -9309,7 +9309,7 @@
 	Detect and reject build paths containing '@', as this confuses
 	a number of packages, including GCC.
 
-	utils/diffconfig: Make it work for (non-Buildroot) config
+	utils/diffconfig: Make it work for (non-MikoOS) config
 	files not using the BR2_ prefix.
 
 	New defconfigs: Amarula a64-relic, Bananapi m2 ultra, Embest
@@ -9359,7 +9359,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#11116: Buildroot should set PYTHON_EGG_CACHE instead of writing ..
+	#11116: MikoOS should set PYTHON_EGG_CACHE instead of writing ..
 	#11156: In python3 module 'socket' has no attribute 'AF_BLUETOOTH'
 	#11166: Erlang bad argument on valid uint64 when crosscompiled on..
 	#11206: zlib: fails to build with Linaro toolchain, BR2_RELRO_FULL..
@@ -9458,7 +9458,7 @@
 	utils/get-developers: Add -e option for use with git
 	send-email.
 
-	utils/diffconfig: Make it work for (non-Buildroot) config
+	utils/diffconfig: Make it work for (non-MikoOS) config
 	files not using the BR2_ prefix.
 
 	u-boot: Fix for environment image handling on big endian
@@ -9642,7 +9642,7 @@
 	#9411:	MUSL build with RT Error relocating /lib/libgcc_s.so.1:
 		__cpu_indicator_init: symbol not found
 	#9921: lockfile module within python-daemon not	 available
-	#10341: gdb install of py files when using buildroot toolchain
+	#10341: gdb install of py files when using mikoos toolchain
 		includes build path
 	#10661: /etc/init.d/S29netplug starts multiple	instances of netplugd
 	#10751: Missing dependency in pulseaudio package
@@ -9714,7 +9714,7 @@
 	Important / security related fixes.
 
 	U-Boot: Ensure host version of ncurses is picked up and not
-	host-ncurses built by buildroot, as that otherwise causes
+	host-ncurses built by mikoos, as that otherwise causes
 	widechar/non-widechar conflicts and corrupted menuconfig
 	menus.
 
@@ -9796,7 +9796,7 @@
 	download rework - Now it does not work at all.
 
 	Linux: Ensure host version of ncurses is picked up and not
-	host-ncurses built by buildroot, as that otherwise causes
+	host-ncurses built by mikoos, as that otherwise causes
 	widechar/non-widechar conflicts and corrupted menuconfig
 	menus.
 
@@ -9857,7 +9857,7 @@
 	  fetched from Git no longer needs to be re-cloned entirely
 	  everytime its version is changed. Anoter visible change is
 	  that the download folder now has subfolders per package. See
-	  http://lists.busybox.net/pipermail/buildroot/2018-April/217923.html
+	  http://lists.busybox.net/pipermail/mikoos/2018-April/217923.html
 	  for more details about those changes.
 
 	- The logic that generates the root filesystem images has been
@@ -10073,7 +10073,7 @@
 	utils/get-developers: Add -e option for use with git
 	send-email.
 
-	utils/diffconfig: Make it work for (non-Buildroot) config
+	utils/diffconfig: Make it work for (non-MikoOS) config
 	files not using the BR2_ prefix.
 
 	u-boot: Fix for environment image handling on big endian
@@ -10147,7 +10147,7 @@
 	Important / security related fixes.
 
 	U-Boot: Ensure host version of ncurses is picked up and not
-	host-ncurses built by buildroot, as that otherwise causes
+	host-ncurses built by mikoos, as that otherwise causes
 	widechar/non-widechar conflicts and corrupted menuconfig
 	menus.
 
@@ -10477,7 +10477,7 @@
 	ntp, php, pound, rpcbind, tar, ti-cgt-pru, webkitgtk, xen,
 	xlib_libXpm
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9996: lz4 package does not install lz4 binaries in target
 	#10176: Rsyslog's S01logging is deleted by Busybox.mk from...
@@ -10522,7 +10522,7 @@
 	systemd-bootchart, webkitgtk, wireguard, xlib_libXcursor,
 	xlib_libXfont, xlib_libXfont2,
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	10501: host-localedef fails to compile on Ubuntu 17.10
 	10506: Changed kernel image type (e.g. zImage to uImage)...
@@ -10537,10 +10537,10 @@
 	snmp++, usb_modeswitch, util-linux, vboot-utils, webkitgtk,
 	wireshark, wpa_supplicant, xapp_xdriinfo
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#10326: mesa3d package fails to build when BR2_SHARED_STATIC_LIBS=y
-	#10491: Cannot output security warning when compiled with buildroot..
+	#10491: Cannot output security warning when compiled with mikoos..
 
 2017.11-rc1, Released November 6th, 2017
 
@@ -10584,7 +10584,7 @@
 
 	Removed packages: aiccu, rfkill, sepolgen
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#10281: lsblk does not compile for util-linux
 	#10336: lttng compilation fails : linking error
@@ -10626,7 +10626,7 @@
 	swupdate, ti-gfx, uboot-tools, usb_modeswitch, vboot-utils,
 	webkitgtk, wget, wireshark, xapp_xdriinfo.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	10326: mesa3d package fails to build when BR2_SHARED_STATIC_LIBS=y
 	10361: python3 python-config script generates invalid includes
@@ -10647,7 +10647,7 @@
 	tarballs. check-bin-arch: Correctly handle (ignore) symbolic
 	links. check-rpath: Also handle PIE binaries
 
-	External toolchain: Correctly handle glibc Buildroot
+	External toolchain: Correctly handle glibc MikoOS
 	toolchains built with merged /usr
 
 	musl: fix ARMv4 build with binutils 2.27.51+, fix for
@@ -10683,7 +10683,7 @@
 
 	Removed packages: simicfs.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#10261: Grub2 fails to build for x86_64
 
@@ -10706,7 +10706,7 @@
 	skeleton-* packages introduced in -rc1 have been renamed to
 	skeleton-init-* instead.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#10141: Squashfs extended attribute failures
 
@@ -10727,7 +10727,7 @@
 	fixed to not incorrectly detect target packages through
 	pkg-config.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9926:  systemd-resolved.service: Failed at step NAMESPACE (systemd 233)
 	#10021: libqeglfs-viv-integration.so file is missing for qt5 on armv7
@@ -10735,7 +10735,7 @@
 	#10146: package/skeleton-common fix recursive variable
 	#10156: glibc compilation fails for X86 32bits (i386)
 	#10201: toolchain-wrapper.c:192: (error) Memory leak:
-	#10221: Buildroot Support
+	#10221: MikoOS Support
 
 2017.08-rc1, Released August 2nd, 2017
 
@@ -10776,7 +10776,7 @@
 	  externally used toolchain. For compatibility with existing
 	  scripts, a usr -> . link is still added.
 
-	- Hashes are now checked on tarballs by Buildroot when a
+	- Hashes are now checked on tarballs by MikoOS when a
 	  package is sourced from a Git repository.
 
 	- Patches are no longer being downloaded from Github, since
@@ -10863,20 +10863,20 @@
 
 	Removed packages: cloog, input-tools, mke2img
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#7892: systemd-journald is broken
 	#9341: avahi-utils does not compile with uClibc +  libglib2
 	#9441: Link BR2_TOOLCHAIN_EXTERNAL_GDB_SERVER_COPY to
 	       BR2_ENABLE_DEBUG
-	#9746: ext4 image generated by Buildroot is not working
+	#9746: ext4 image generated by MikoOS is not working
 	       properly with U-Boot
 	#9886: Build fails with "unexpected EOF while looking for
 	       matching `"'" if PATH contains a newline
 	#9891: parted 3.1 => 3.2?
 	#9911: qt5 does not build on sparc
 	#9916: qt5 does not build on
-	       arm-buildroot-linux-uclibcgnueabihf for ARMv8 cores
+	       arm-mikoos-linux-uclibcgnueabihf for ARMv8 cores
 	#9936: Host QEMU does not build with SDL support because of
 	       pkg-config
 	#9941: nodejs option disappears for arm
@@ -10885,14 +10885,14 @@
 	#9976: License file for package 'rtl8821au' incorrect
 	#9991: SGX Error implicit declaration of function
 	       ‘dmac_map_area’
-	#10011: wget does not work from Buildroot
-	#10036: Buildroot builds Raspbian Jessie headless image
+	#10011: wget does not work from MikoOS
+	#10036: MikoOS builds Raspbian Jessie headless image
 		presenting incorrect prompt
 	#10051: make: *** No rule to make target
-		'raspberrpi3_defconfig'. Stop reported with Buildroot
+		'raspberrpi3_defconfig'. Stop reported with MikoOS
 		v2017.05.1
-	#10056: No .config file was produced in /buildroot folder
-	#10061: gcc5.4 buildroot toolchain for powerpc libsanitizer
+	#10056: No .config file was produced in /mikoos folder
+	#10061: gcc5.4 mikoos toolchain for powerpc libsanitizer
 		failure
 	#10071: fakeroot: replace hard-coded paths in post install
 	#10076: Makefile:4113: recipe for target 'all-gcc'  failed
@@ -10920,9 +10920,9 @@
 	samba4, syslinux, systemd, spice, tcpdump, tiff, uboot-tools,
 	webkitgtk, x265, xserver_xorg-server, xvisor
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
-	#10061: gcc5.4 buildroot toolchain for powerpc libsanitizer...
+	#10061: gcc5.4 mikoos toolchain for powerpc libsanitizer...
 
 2017.05.1, Released July 4th, 2017
 
@@ -10951,7 +10951,7 @@
 	qt5multimedia, rtl8821au, socat, spice, systemd, tor, trinity,
 	tslib, vlc, x264, xen, xlib_libxshmfenc, xserver_xorg-server
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9976: License file for package 'rtl8821au' incorrect
 
@@ -10966,7 +10966,7 @@
 	qpid-proton, rtl8188eu, snmppp, stm32flash, strongswan, sudo,
 	xen
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9906: genimage: Disk full
 
@@ -10989,7 +10989,7 @@
 
 	Removed packages: firejail, ola
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9871: fbgrab 1.3 won't build with BR2_REPRODUCIBLE set
 	#9876: aarch64 support with gcc 4.8 toolchain
@@ -11009,7 +11009,7 @@
 	rtmpdump, strongswan, sudo, ltp-testsuite, uclibc-ng-test,
 	vlc, x11vnc, xfsprogs
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9796: source-check broken for Git downloads
 	#9866: BASE_DIR usage
@@ -11025,7 +11025,7 @@
 	  architecture variants.
 
 	- Luarocks infrastructure improvements to extraction handling,
-	  support for upstream name != Buildroot package name.
+	  support for upstream name != MikoOS package name.
 
 	- 'make printvars' output format has changed to make it easier
 	  to use in scripts. It now has options to quote the variables
@@ -11058,7 +11058,7 @@
 	  before submitting has been added in support/scripts/check-package
 
 	- Defconfigs are now tested by gitlab-CI instead of Travis:
-	  https://gitlab.com/buildroot.org/buildroot
+	  https://gitlab.com/mikoos.org/mikoos
 
 	- Infrastructure for runtime testing has been added to
           support/testing
@@ -11135,7 +11135,7 @@
 	polarssl, portmap, xdriver_xf86-video-glide,
 	xdriver_xf86-video-v4l, xdriver_xf86-video-wsfb
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#8831: image generation fails on host ZFS due to "no free space"
 	#9436: e2fsprogs remove busybox applets even of unselected e2fs..
@@ -11151,7 +11151,7 @@
 	#9721: version 2017.02: no acceptable m4 could be found in $PATH
 	#9726: Raspberry Pi version B - Problems with UART speed in..
 	#9751: expat legal info - manifest.csv: GPLv2 Source site: MIT..
-	#9756: glibc fails to build on buildroot-sh4*-buildroot-linux-gnu
+	#9756: glibc fails to build on mikoos-sh4*-mikoos-linux-gnu
 	#9766: support/scripts/pkgutil.py conflicts with the pkgutil.py..
 	#9776: libubox build failed
 	#9791: Python searches for packages in the user site directory
@@ -11201,7 +11201,7 @@
 	pound, rpcbind, squid, tar, ti-cgt-pru, transmission,
 	util-linux, webkitgtk, wireshark, xen
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9996: lz4 package does not install lz4 binaries in target
 	#10176: Rsyslog's S01logging is deleted by Busybox.mk from...
@@ -11248,7 +11248,7 @@
 	samba4, snmppp, ti-gfx, vboot-utils, webkitgtk, wireshark,
 	xapp_xdriinfo.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	10326: mesa3d package fails to build when BR2_SHARED_STATIC_LIBS=y
 	10361: python3 python-config script generates invalid includes
@@ -11295,7 +11295,7 @@
 	tor, transmission, unrar, valgrind, vim, webkitgtk, whois,
 	xen, zmqpp
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#10141: Squashfs extended attribute failures
 	#10261: Grub2 fails to build for x86_64
@@ -11320,9 +11320,9 @@
 	systemd, spice, tcpdump, tiff, webkitgtk, x265, xen,
 	xserver_xorg-server, xvisor
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
-	#10061: gcc5.4 buildroot toolchain for powerpc libsanitizer...
+	#10061: gcc5.4 mikoos toolchain for powerpc libsanitizer...
 
 2017.02.4, Released July 4th, 2017
 
@@ -11348,7 +11348,7 @@
 	qt5multimedia, rtl8821au, socat, spice, systemd, tor, tslib,
 	vlc, x264, xserver_xorg-server
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9976: License file for package 'rtl8821au' incorrect
 
@@ -11371,7 +11371,7 @@
 	postgresql, pulseview, qt5base, qwt, rabbitmq-c, redis,
 	rpcbind, rtmpdump, samba4, strongswan, sudo, vlc
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9796: source-check broken for Git downloads
 	#9871: fbgrab 1.3 won't build with BR2_REPRODUCIBLE set
@@ -11391,7 +11391,7 @@
 	python-web2py, samba4, syslinux, systemd, tiff, trinity,
 	uboot, wireshark, xen
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9791: Python searches for packages in the user site directory
 
@@ -11430,7 +11430,7 @@
 	tcpreplay, tor, upmpdcli, wget, wireshark,
 	xdriver_xf86-video-vmware, xlib_libXv, zmqpp
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9456: mkusers script bash errors
 
@@ -11461,7 +11461,7 @@
 	oracle-mysql, poco, python, qt5base, qt5webkit, sslh, synergy,
 	trousers, uclibc-ng-test, util-linux, vlc, xfsprogs
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9251: Shared C++ libraries for Microblaze results in Segmentation...
 	#9456: mkusers script bash errors
@@ -11496,7 +11496,7 @@
 	uclibc, util-linux, vim, wavpack, wget, wiringpi, xfsprogs,
 	xserver_xorg-server
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#8941: Valgrind fails to build with stack protection turned on
 	#9291: perl: SysV message queues not configured, even if available
@@ -11576,7 +11576,7 @@
 	Tooling: addition of a test-pkg script to help contributors
 	build test their package.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#8946: Valgrind fails to build with stack protection turned on
 	#9461: odroidc2 - toolchain Linaro AArch64 2016.11 compile error
@@ -11588,7 +11588,7 @@
 	#9546: seems BR2_PACKAGE_RPI_FIRMWARE_INSTALL_DTB_OVERLAYS do nothing
 	#9551: Coreutils fails to build target src/src_libsinglebin_pinky_a-pinky.o
 	#9566: [kmod] Compilation fails with uclibc
-	#9571: buildroot fails while building opencv for arm64 platform
+	#9571: mikoos fails while building opencv for arm64 platform
 	#9576: External tree with BR 2016.11 does not work anymore
 	#9606: xorg-server cannot build for ARM target
 
@@ -11611,7 +11611,7 @@
 	imagemagick, irssi, libpng, libvncserver, musl, opus, php,
 	php-imagick, rabbitmq-server, runc, wireshark,
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9576: External tree with BR 2016.11 does not work anymore
 
@@ -11624,7 +11624,7 @@
 	nodejs, openssh, php, python, python-bottle, samba4, squid,
 	uboot, vim, wireshark, xorg-server uboot
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9466: VIM_REMOVE_DOCS removes rgb.txt
 
@@ -11635,7 +11635,7 @@
 	Updated/fixed packages: bzip2, gcc, jasper, sane-backends,
 	uboot, uclibc
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9451: packages/postgresql/postgresql.mk contains wrong POST...
 
@@ -11663,7 +11663,7 @@
 	taskd, tiff, tremor, trousers, udisks, uclibc, wireshark,
 	xapp_xload, xenomai, xmlstarlet
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9386: ubinize fails with or without custom config
 	#9431: A misspelling
@@ -11759,7 +11759,7 @@
 	CMake support: the toolchainfile.cmake file now provides a
 	definition of the CMAKE_BUILD_TYPE variable. The
 	toolchainfile.cmake also no longer forces the compiler/linker
-	flags defined by Buildroot.
+	flags defined by MikoOS.
 
 	New defconfigs: WaRP7, Solidrun's MX6 Cubox/Hummingboard,
 	TS-4900, Grinn's liteBoard, Udoo MX6Q/DL, Qemu ARM noMMU,
@@ -11781,7 +11781,7 @@
 	wvdial, wvstreams.
 
 	Documentation: the list of packages that was present in the
-	Buildroot manual has been removed.
+	MikoOS manual has been removed.
 
 	Legal info: the "licenses.txt" file that concatenates all
 	license texts is no longer generated - it was not considered
@@ -11791,7 +11791,7 @@
 	Other: addition of a DEVELOPERS file listing developers taking
 	care of packages or architectures.
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#7802: host-python build hangs compiling getbuildinfo.o
 	#8206: mplayer uses host xorg development files
@@ -11804,7 +11804,7 @@
 	#8811: rp-pppoe - generated scripts commands use HOST pathnames,
 	       not necessarily TARGET
 	#8846: Orphaned/missing toolchain borks eclipse plugin
-	#8856: python tornado runtime wasn't met on buildroot 2016.02
+	#8856: python tornado runtime wasn't met on mikoos 2016.02
 	#8901: gcc failes to build if fortran is enabled
 	#8916: LDFLAGS pass to openssh
 	#8941: "ls" of an NFSv4 share only works when pumped through strace
@@ -11815,13 +11815,13 @@
 	#9176: minnowboard : USB not mounted
 	#9196: raspberry pi 3 default build seem broken
 	#9201: Permission denied make: *** [core-dependencies] Error 126 in
-	       Buildroot-2015.08.1
+	       MikoOS-2015.08.1
 	#9216: log4cpp package build fails to build within install
 	#9221: Kodi needs "Python .py and .pyc support" otherwise it crashes when
 	       pressing buttons.
 	#9229: Firefly boot fails with: "failed to find part:boot"
 	#9256: [Config file] New device: Odroid-U2/U3
-	#9296: Buildroot Fails on applying patches
+	#9296: MikoOS Fails on applying patches
 	#9301: U-boot fails to build with default zynq_zed_defconfig configuration
 	#9316: U-boot fails to build if libssl-dev is not installed
 	#9321: Vanilla libcrypt++ v5.6.3 doesn't allow to work Nvidia Tegra's
@@ -11843,7 +11843,7 @@
 
 	Updated/fixed packages: libshout, luajit, mpd, mplayer
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#7520: CodeSourcery toolchain ARM: C++11 std::exception_ptr..
 	#8341: Getting EGL Error: Could not create the egl surface:..
@@ -11883,7 +11883,7 @@
 	trousers, tstools, uboot-tools, uclibc, ulogd, ustr, vlc,
 	webkitgtk, wireshark, xdriver_xf86-video-intel
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9101: Error on support/download/git with system git older than 1.8.4
 	#9181: Compiling linux kernel fails if BR2_LINUX_KERNEL_TOOL_CPU..
@@ -11909,7 +11909,7 @@
 	uboot-tools, uclibc, webrtc-audio-processing, wayland, weston,
 	xdriver_xf86-video-savage, xserver_xorg-server, xen
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#9136: make graph-size fails with "ValueError: too many values to..
 	#9151: qt: fix build with ALSA >= 1.1.x
@@ -11994,16 +11994,16 @@
 
 	Removed packages: sunxi-mali-prop
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#8931: segment fault when compile argp-help.c using aarch64-bu...
-	#8966: eglfs error. buildroot don't compile the library libeglfs.so
+	#8966: eglfs error. mikoos don't compile the library libeglfs.so
 	#8971: build for beaglebone fails
 	#8986: qt5imageformats fails to build on AArch64
 	#8991: grub2 fails to compile
 	#9001: Nodejs option not available
 	#9006: gcc with c++ support v4 and v5 fail to compile on fedora 24
-	#9016: arceb-buildroot-linux-uclibc ld uses incorrect default format
+	#9016: arceb-mikoos-linux-uclibc ld uses incorrect default format
 	#9066: 8139TOO - faulty behaviour
 	#9086: Syntax Error (missing ")" in boot/uboot/uboot.mk on line 203)
 	#9091: U-Boot fails to boot with large ramdisk
@@ -12115,10 +12115,10 @@
 	Removed packages: foomatic-filters, python-m2crypto,
 	qt5quick1, qt5webkit-examples, samba, xdriver_xf86-input-void
 
-	Issues resolved (http://bugs.buildroot.org):
+	Issues resolved (http://bugs.mikoos.org):
 
 	#6830: Qt5: no fonts are installed
-	#7562: musl buildroot-toolchain and BR2_MIPS_SOFT_FLOAT break
+	#7562: musl mikoos-toolchain and BR2_MIPS_SOFT_FLOAT break
 	#7580: Invalid filesystem in Pandaboard defconfig
 	#8346: wf111 package removes all kernel module dependencies
 	#8436: xserver_xorg-server Segmentation fault
@@ -12129,14 +12129,14 @@
 	#8771: make savedefconfig modifies sources
 	#8781: Unable to build uboot for imx28evk
 	#8786: gdb fails to build with xz and expat support at the same
-	#8801: Compilation of Buildroot 2016.2 for Raspberry Pi with...
-	#8806: Buildroot 2016.2 for Raspberry Pi requires that ext4...
+	#8801: Compilation of MikoOS 2016.2 for Raspberry Pi with...
+	#8806: MikoOS 2016.2 for Raspberry Pi requires that ext4...
 	#8836: Can't select Vim in menuconfig
 	#8851: Make sure fio can compile with libaio support if it...
-	#8861: With buildroot 2016.02 trying to build for corei7-avx
+	#8861: With mikoos 2016.02 trying to build for corei7-avx
 	       fails while trying to build host-binutils
 	#8866: Making an USB flash bootable with extlinux build with
-	        buildroot does not work
+	        mikoos does not work
 
 2016.02, Released March 1st, 2016
 
@@ -12178,7 +12178,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#8651: libMonoPosixHelper.so wrong link reference in buildroot..
+	#8651: libMonoPosixHelper.so wrong link reference in mikoos..
 
 2016.02-rc2, Released February 18th, 2016
 
@@ -12486,7 +12486,7 @@
 	  uclibc-ng 1.0.8, host-gdb enabled on AArch64.
 
 	- The toolchain wrapper which was used only for external
-	  toolchains is now also used for Buildroot internal
+	  toolchains is now also used for MikoOS internal
 	  toolchains. This allowed to fix the ccache support, prepare
 	  the way for top-level parallel build support and remove gcc
 	  patches used to detect header/library path poisoning.
@@ -12546,7 +12546,7 @@
 
 	- Improved ccache support, thanks to the usage of a toolchain
 	  wrapper for internal toolchain. Now a single cache directory
-	  can be shared between different Buildroot builds.
+	  can be shared between different MikoOS builds.
 
 	- Addition of a 'graph-size' make targets, which generates a
 	  PDF graph of per-package size of the root filesystem.
@@ -12682,7 +12682,7 @@
 	       bad RPATH pointing to host machine
 	#8331: kexec wants shutdown in /sbin, but systemd installs it
 	       in /usr/sbin
-	#8361: Buildroot 2015.08.1 skeleton inittab overwritten by
+	#8361: MikoOS 2015.08.1 skeleton inittab overwritten by
 	       busybox's version
 	#8366: libevent does not build
 	#8386: build failed with external toolchain
@@ -12736,7 +12736,7 @@
 	Issues resolved (http://bugs.uclibc.org):
 
 	#8276: package/dropbear: symlink resolution incorrect
-	#8286: Error with buildroot
+	#8286: Error with mikoos
 	#8301: ldconfig parameter in Makefile
 
 2015.08-rc1, Released August, 5th 2015
@@ -12784,7 +12784,7 @@
 
 	Infrastructure:
 
-	 - Buildroot takes better care now of generating predictable
+	 - MikoOS takes better care now of generating predictable
 	   permissions in the target filesystem. However, existing
 	   permissions on a custom skeleton or rootfs overlay will no
 	   longer be preserved. Therefore, it is necessary to add a
@@ -12945,13 +12945,13 @@
 	#4291: Segmentation fault with all binaries that use threads
                when compiled with gcc 4.6
 	#6944: building toolchain for sh4 fails
-	#7592: Buildroot GCC: -lto requires plugin support in ranlib
+	#7592: MikoOS GCC: -lto requires plugin support in ranlib
 	#7628: Python SSL does not get built for Raspberry Pi
 	#7682: Missing dependencies for NFS
 	#7742: dhcp lacks important features when BR2_ENABLE_DEBUG
-	#7754: make: *** [/..../buildroot-2014.11/output/build/host-gcc-initial-4.8.3/.stamp_built] Error 2
-	#7946: libglib2-2.42.2 fails to build for sparc-buildroot-linux-gnu
-	#7956: glibc 2.20 and 2.21 fail to build for sh64-buildroot-linux-gnu
+	#7754: make: *** [/..../mikoos-2014.11/output/build/host-gcc-initial-4.8.3/.stamp_built] Error 2
+	#7946: libglib2-2.42.2 fails to build for sparc-mikoos-linux-gnu
+	#7956: glibc 2.20 and 2.21 fail to build for sh64-mikoos-linux-gnu
 	#7971: python-flask, python-werkzeug. No module named zlib
 	#7981: Target file system skeleton permissions hazard
 	#8006: rpcdebug in nfs-utils built for the host
@@ -13198,11 +13198,11 @@
 	#7724: Startx is not installed in the target
 	#7760: botan: wrong prefix in botan-1.10.pc
 	#7826: Building of cdparanoia
-	#7844: Lua with hard-float on MIPS by buildroot doesn't work
+	#7844: Lua with hard-float on MIPS by mikoos doesn't work
 	#7874: X.org configure error
-	#7941: glibc-2.20 fails to build for sparc-buildroot-linux-gnu
-	#7951: gcc 4.9.2 fails to build for sparc-buildroot-linux-gnu
-	#7961: Qt5 fails to build for xtensa-buildroot-linux-uclibc
+	#7941: glibc-2.20 fails to build for sparc-mikoos-linux-gnu
+	#7951: gcc 4.9.2 fails to build for sparc-mikoos-linux-gnu
+	#7961: Qt5 fails to build for xtensa-mikoos-linux-uclibc
 	#7976: mkuser script fails with: user already exists with...
 	#8011: When building only busybox and strace, strace fails...
 	#8016: collectd fails to build, network.c:171:19: error:...
@@ -13320,7 +13320,7 @@
 	#7556: make interactive CLI optional for nftables
 	#7730: Error while connecting Qt Cretaor to device
 	#7766: logrotate default gzip path is usually wrong
-	#7790: Invalid ext4 image generated by Buildroot
+	#7790: Invalid ext4 image generated by MikoOS
 
 2014.11, Released December 1st, 2014
 
@@ -13387,10 +13387,10 @@
 	powerpc64 pseries added and a number of updates to the
 	existing configurations.
 
-	Infrastructure: Buildroot is now less noisy when built with
+	Infrastructure: MikoOS is now less noisy when built with
 	the silent option (make -s).
 	A number of package infrastructure variables have been renamed
-	from *_OPT to *_OPTS for constency. Buildroot will complain if
+	from *_OPT to *_OPTS for constency. MikoOS will complain if
 	the old names are used to assist in updating out of tree
 	packages.
 	Fixes for host systems where bash isn't located in /bin, and
@@ -13602,7 +13602,7 @@
 	#7370: ngrep - requires --with-pcap-includes fully defined to find...
 	#7442: rootfs remount does not work as expected with sysvinit
 	#7448: Having export MACHINE="something" breaks glibc build on IMX6...
-	#7568: musl buildroot-toolchain does not put libgcc_s.so.1 into place
+	#7568: musl mikoos-toolchain does not put libgcc_s.so.1 into place
 	#7574: quota-4.01 fails to build statically
 
 2014.08, Released September 1st, 2014
@@ -13793,7 +13793,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#5750: Doing a Buildroot build from /usr doesn't work
+	#5750: Doing a MikoOS build from /usr doesn't work
 	#5900: config flags to the Xenomai build system
 	#6230: Cannot compile gcc without threads (uClibc-based)
 	#6626: procps Unknown HZ value! (XX) Assume 100
@@ -13869,7 +13869,7 @@
 	Issues resolved (http://bugs.uclibc.org):
 
 	#5396: Boot hangs when starting samba if BR2_ENABLE_LOCALE...
-	#7016: Git issues in resulting buildroot tar
+	#7016: Git issues in resulting mikoos tar
 	#7094: pciutils doesn't build on Blackfin
 
 2014.05-rc1, Released May 13th, 2014
@@ -14068,7 +14068,7 @@
 	#5774: Not able to build ALSA-Utils for static build
 	#6542: external python modules fail to compile to pyc if...
 	#6764: Support for kernel signed modules
-	#6794: Busybox compiled from buildroot hangs on pass from...
+	#6794: Busybox compiled from mikoos hangs on pass from...
 
 2014.02-rc2, Released February 20th, 2014
 
@@ -14225,7 +14225,7 @@
 	#5390: System banner - change to empty doesn't remove /etc/issue
 	#5780: spurious build failure because it cannot remove ubinize.cfg
 	#5798: ncurses-5.9 fails to compile statically
-	#5810: Buildroot 2012.11: Additional GCC option "-msoft-float" ...
+	#5810: MikoOS 2012.11: Additional GCC option "-msoft-float" ...
 	#6080: Git fetch caching
 	#6092: Bootable ISO image creation seems to have stopped working..
 	#6272: coreutils build fails
@@ -14254,10 +14254,10 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#1279: Buildroot compiled Busybox and Coreutils LFS issues
+	#1279: MikoOS compiled Busybox and Coreutils LFS issues
 	#2995: -fstack-protector-all causes ssh to SIGSEGV
 	#5570: Cannot compile software on the target machine
-	#6428: util-linux libmount segfaults with patch from buildroot
+	#6428: util-linux libmount segfaults with patch from mikoos
 	#6500: php fails to build for armel
 	#6554: gdb needs to dependents on host texinfo
 	#6692: GNU nano fails to compile for x86_64
@@ -14379,7 +14379,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#1138: Buildroot fails to build packages if BR2_GCC_SHARED_LIBGCC=y
+	#1138: MikoOS fails to build packages if BR2_GCC_SHARED_LIBGCC=y
 	#5408: qt build failure with Sourcery CodeBench ARM 2010.09
 	#5630: makefile error with toolchain helpers.mk
 	#5672: htop: remove X11 stuff
@@ -14387,11 +14387,11 @@
 	#5696: python3 installation is too large, patches from python2 needed
 	#5978: Erlang does not build for arm in 2013.02-rc3
 	#6392: Extended ARM uImage kernel options
-	#6404: Buildroot's coreutils 'uname -p' reports 'Unknown' on recent..
-	#6428: util-linux libmount segfaults with patch from buildroot
+	#6404: MikoOS's coreutils 'uname -p' reports 'Unknown' on recent..
+	#6428: util-linux libmount segfaults with patch from mikoos
 	#6452: eglibc from Linaro 2013.07 not copied to target correctly
 	#6566: PHP segfault when crosscompiled to mips64 - patch included
-	#6572: [PowerPC] Buildroot uses wrong external toolchain libraries..
+	#6572: [PowerPC] MikoOS uses wrong external toolchain libraries..
 	#6578: udisks package broken
 	#6602: ebtables 64 bit kernel + 32 bit userland alignment error..
 	#6608: ebtables missing ethertypes - fix included
@@ -14399,7 +14399,7 @@
 	#6632: CMake use host pkg-config
 	#6638: pkgconf doesn't download
 	#6644: "all" target doesn't work in out-of-tree builds
-	#6650: Segmentation fault when trying to build latest buildroot
+	#6650: Segmentation fault when trying to build latest mikoos
 	#6668: iptables limit module alignment problem on mips64
 
 2013.08, Released August 31th, 2013:
@@ -14556,7 +14556,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#4868: Buildroot compile failure for toolchain/gdb-7.4/intl/reloc...
+	#4868: MikoOS compile failure for toolchain/gdb-7.4/intl/reloc...
 	#4988: flex and m4 problems
 	#5912: obsolete CVS files
 
@@ -14648,7 +14648,7 @@
 
 	Patch handling: apply-patches now has .patch.xz support,
 	Patch logic reworked as discussed during Febrary dev days:
-	http://elinux.org/Buildroot:DeveloperDaysFOSDEM2013
+	http://elinux.org/MikoOS:DeveloperDaysFOSDEM2013
 
 	<pkg>-rsync now excludes version control files.
 
@@ -15056,7 +15056,7 @@
 	Integration of a legal information reporting infrastructure,
 	which allows to generate detailed informations about the
 	licenses and source code of all components of a system
-	generated by Buildroot. License information will progressively
+	generated by MikoOS. License information will progressively
 	be added on packages.
 
 	Default configuration files added for Calao-systems USB-A9263
@@ -15134,7 +15134,7 @@
 	#1315: Allow use of older external toolchains without sysroot
                support [won't fix]
 	#5276: Hiawatha needs to manage IPV6 if so [fixed]
-	#5360: buildroot fails when building "host-libglib2 2.30.2
+	#5360: mikoos fails when building "host-libglib2 2.30.2
                Building" [won't fix, upstream problem]
 	#5384: Can't build packages relying on gets on newer glibc
                [fixed]
@@ -15175,7 +15175,7 @@
 	Use /etc/os-release for version info rather than
 	/etc/br-version.
 
-	CMake toolchain file moved to $HOST_DIR/usr/share/buildroot.
+	CMake toolchain file moved to $HOST_DIR/usr/share/mikoos.
 
 	Apply-patches.sh: cleanups, archived patches handling fixes,
 	support series files.
@@ -15319,7 +15319,7 @@
 	Various manual updates. Release tarballs now contain generated
 	manual in text/html/pdf formats.
 
-	Buildroot now calls the stop function of scripts in
+	MikoOS now calls the stop function of scripts in
 	/etc/init.d at shutdown.
 
 	Updated/fixed packages: atk, avahi, barebox, bash, beecrypt,
@@ -15362,7 +15362,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#743:  Add Transmission bit torrent option to buildroot
+	#743:  Add Transmission bit torrent option to mikoos
 	#755:  Add Boost libraries as a package
 	#2299: Add crypto support to libsoup
 	#2617: Pixman 0.19.2 & Cairo 1.10.0
@@ -15481,7 +15481,7 @@
 	#507:  Enable live and tv options in MPlayer-1.0rc2
 	#531:  let e2fsprogs package to export headers to staging dir if needed
 	#1171: Linuxthreads new cannot find sysdep.h
-	#1357: Add bluez to buildroot system
+	#1357: Add bluez to mikoos system
 	#2107: New package: input-event-daemon
 	#2599: New package: orc (Oil Runtime Compiler)
 	#2605: gstreamer: Update to 0.10.30
@@ -15606,9 +15606,9 @@
 	External toolchain improvements: We now build a binary
 	toolchain wrapper and install it into HOST_DIR/usr/bin, which
 	enforces the correct compiler arguments, making an external
-	toolchain as easy to use outside of Buildroot as the internal
+	toolchain as easy to use outside of MikoOS as the internal
 	ones are. This also brought a cleanup of CFLAGS, making the
-	Buildroot build output easier to read.
+	MikoOS build output easier to read.
 
 	Rootfs device handling improvements: Choice between static
 	/dev, devtmpfs and devtmpfs with either mdev or udev.
@@ -15656,11 +15656,11 @@
 	#3457: alsamixergui: broken URL
 	#3475: Calling sync on large filesystems when not always necessary
 	#3511: make busybox-menuconfig does not download busybox package
-	#3541: Quotes in the top Makefile:217 break buildroot/kernel config...
+	#3541: Quotes in the top Makefile:217 break mikoos/kernel config...
 	#3571: u-boot: fw_printenv does not build
 	#3643: popt source url is not responding
 	#3733: dropbear: make zlib optional
-	#3757: Buildroot can't build mplayer with libmad
+	#3757: MikoOS can't build mplayer with libmad
 
 2011.02, Released February 28th, 2011:
 
@@ -15706,7 +15706,7 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#3205: Failing chmod when running "make" in buildroot (openssl)...
+	#3205: Failing chmod when running "make" in mikoos (openssl)...
 	#3277: quagga fails to build with SNMP support
 	#3283: See why nfs-utils needs fakeroot, and convert to autotools
 	#3307: synergy fails to build due to missing XTest library
@@ -15717,7 +15717,7 @@
 
 	External toolchain improvements: clarification of the options,
 	and introduction of the toolchain profile concept, for
-	well-known toolchains. Buildroot is now capable of
+	well-known toolchains. MikoOS is now capable of
 	automatically downloading and extracting well-known toolchains
 	(for the moment, CodeSourcery ARM, PowerPC, MIPS and SuperH
 	toolchains are supported). Crosstool-NG backend updated and
@@ -15726,7 +15726,7 @@
 	Complete rework of how hardware boards are supported.
 	Each board now only has a single defconfig file, and all
 	board-specific options have been removed. See
-	docs/buildroot.html#board_support for details.
+	docs/mikoos.html#board_support for details.
 
 	Added support for the following boards: Mini2440, Qemu ARM
 	Versatile, Qemu MIPSel Malta, Qemu PowerPC G3beige, Qemu SH4
@@ -15744,7 +15744,7 @@
 	set.
 
 	Ccache support reworked. Now used for both host and target
-	compilation, and cache is stored in ~/.buildroot-ccache.
+	compilation, and cache is stored in ~/.mikoos-ccache.
 
 	Toolchain: uClibc 0.9.32-rc2, several components moved to
 	normal AUTOTARGET packages.
@@ -15804,7 +15804,7 @@
 	#1723: [PATCH] axel: convert to generic package infrastructure and...
 	#1735: [PATCH] mplayer: convert to autotools infrastructure
 	#2551: [PATCH] native toolchain in the target filesystem fails
-	#2623: buildroot-snapshot-20100922 fails when compiling development...
+	#2623: mikoos-snapshot-20100922 fails when compiling development...
 	#2647: makedevs package lacks support for 16-bit major/minor numbers
 	#2371: QT MYSQL Module does not build when MySQL installed on the host
 	#2839: compile fails in various packages with a odd message "error:...
@@ -15851,7 +15851,7 @@
 
 	#759:  Sysstat build broken without libintl
 	#2479: host-module-init-tools 3.11 fails to build
-	#2725: Buildroot overrides kernel config
+	#2725: MikoOS overrides kernel config
 	#2785: mtd-utils build fails due to missing libmtd
 	#2791: Added PHP-Process Control to the PHP-Package
 	#2797: pciutils dependencies on zlib not taken into account
@@ -15941,10 +15941,10 @@
 	#2533: xserver_xorg-server: Enable glx, if mesa3d is built
 	#2563: [PATCH] cairo: Expose the configure option to disable some...
 	#2581: libmms: Update to 0.6, and patch to work on architectures...
-	#2707: Can't compile linux kernel using buildroot + crosstool-ng
+	#2707: Can't compile linux kernel using mikoos + crosstool-ng
 	#2731: Build order
-	#2737: buildroot configuration tool crashing when the path exceeds...
-	#2767: Build for lsof broken in buildroot-2010.08
+	#2737: mikoos configuration tool crashing when the path exceeds...
+	#2767: Build for lsof broken in mikoos-2010.08
 
 2010.08: Released August 31th, 2010:
 
@@ -16047,24 +16047,24 @@
 	#401:  new package: ffmpeg
 	#475:  uImage target for U-boot failed generating
 	#543:  ATK requires X11 on DirectFB target
-	#575:  webkit: Buildroot Libtool Patch Fails
+	#575:  webkit: MikoOS Libtool Patch Fails
 	#583:  build fails with external x86_64 toolchain
 	#729:  sstrip creates corrupted headers
 	#829:  Webkit r44552 needs libXt
-	#835:  Package Dataflashboot-1.05 does not compile with buildroot...
+	#835:  Package Dataflashboot-1.05 does not compile with mikoos...
 	#847:  Compiling target-gcc v4.4 fails with "libc.so.0: cannot open...
 	#859:  Add (head of) nptl branch to list of uClibc versions
 	#949:  compile with debug info
 	#955:  Grub fails to build with External Toolchain
 	#1051: Webkit doesn't compile (Linuxthreads new, x86)
 	#1213: Move .config into output directory
-	#1225: Buildroot fails to account for "nof" subdirectory (no float...
+	#1225: MikoOS fails to account for "nof" subdirectory (no float...
 	#1231: (sparc) Linux kernel fails to build
 	#1261: The getline() in output/build/linux-2.6.28/scripts/unifdef.c...
 	#1339: Busybox needs -fno-strict-aliasing to compile cleanly
 	#1393: neon config fails libxml/parser.h: libxml2 requires, but not ...
 	#1405: WebKit fails to build because pthread_getattr_np is not impl...
-	#1675: GMP Error during buildroot make process
+	#1675: GMP Error during mikoos make process
 	#1741: external toolchain linking error
 	#1753: lmbench: convert to generic package infrastructure
 	#1771: Fakeroot and the target/generic/device_table.txt create bad...
@@ -16092,7 +16092,7 @@
 	#2101: blackbox depends on locale support
 	#2119: Tries to build kernel, although disabled in config
 	#2125: libXfont build fail
-	#2143: buildroot compiler generates segfaulting statically linked exe..
+	#2143: mikoos compiler generates segfaulting statically linked exe..
 	#2149: xterm build failure
 	#2155: Compression lzo don't set for ubifs
 	#2161: [SECURITY] Update libpng to 1.2.44
@@ -16138,8 +16138,8 @@
 
 	Issues resolved (http://bugs.uclibc.org):
 
-	#75: arm buildroot "unrecognized option" error
-	#699: Buildroot fails to copy libstdc++ to target when using external...
+	#75: arm mikoos "unrecognized option" error
+	#699: MikoOS fails to copy libstdc++ to target when using external...
 	#1693: NTP trys IPV6 even if not configured error: 'IPV6_MULTICAST...
 	#1729: alsamixergui fails to build
 	#1801: Avahi-autoipd doesn't create TARGET_DIR/var/lib
@@ -16343,7 +16343,7 @@
 	#757: U-Boot: mkimage cannot be installed using external toolchain
 	#761: Add binutils 2.20 to toolchain options
 	#763: [SECURITY] Update pcre to 7.9
-	#765: Add buildroot branding to gcc
+	#765: Add mikoos branding to gcc
 	#767: Bump iw package to 0.9.18
 	#773: [SECURITY] Update bind to 9.5.2-P1
 	#795: Minor edits to fix typos, grammar, spelling, usage in documen...
@@ -16388,7 +16388,7 @@
 	Fixes all over the tree and new features.
 
 	Cleaned up / Simplified build directory layout. Refer to
-	docs/buildroot.html#using for details.
+	docs/mikoos.html#using for details.
 
 	Target defconfig files moved to configs/ and listed in 'make help'
 	output.
@@ -16432,7 +16432,7 @@
 	#565: libevent: Bump version and clean up makefile
 	#587: Use iptables multipurpose binaries and bump to 1.4.4
 	#593: Missing early check for patch(1)
-	#597: (REOP)  Selecting busybox in buildroot's config clobbers ar ...
+	#597: (REOP)  Selecting busybox in mikoos's config clobbers ar ...
 	#609: libmicrohttpd: New package
 	#615: python: Don't delete .py files unless asked
 	#617: netkit/inetd requires RPC and fails to build if RPC is disabled
@@ -16503,7 +16503,7 @@
 
 	Improvement of external toolchain support:
 	  - Support for glibc toolchains.
-	  - The toolchain configuration announced to Buildroot is
+	  - The toolchain configuration announced to MikoOS is
 	    verified against the real toolchain configuration.
 	  - Fixes, documentation.
 
@@ -16647,7 +16647,7 @@
 	#139: Bump sqlite to 3.6.11 and convert to
          Makefile.autotools.in
 	#145: Bump bind package to 9.5.1-P1 (security)
-	#147: buildroot toolchain fails to build w/binutils-2.19.1
+	#147: mikoos toolchain fails to build w/binutils-2.19.1
 	#151: openssl package trivial fixes
 	#161: vim fails on patching with errors in configure.patch
 	#169: blackbox-0.70.1 does not build

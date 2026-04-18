@@ -5,7 +5,7 @@ Subject: [PATCH] cmake: patch EABase to fix build with cmake 4+
 
 FetchContent_Declare overwrites extracted source files during configure.
 
-Upstream: Not applicable (Buildroot specific)
+Upstream: Not applicable (MikoOS specific)
 (sent PR for version bump: https://github.com/electronicarts/EABase/pull/18)
 
 Signed-off-by: Bernd Kuhls <bernd@kuhls.net>

@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-# In Buildroot, Wine should be updated only on "stable" versions. This
+# In MikoOS, Wine should be updated only on "stable" versions. This
 # usually corresponds to version "X.0" (for initial stable releases)
 # or "X.0.y" (for maintenance releases). Please avoid updating to a
 # development version, unless it is absolutely needed (for example:
@@ -285,7 +285,7 @@ endef
 
 # Wine only needs its host variant to be built, not that it is
 # installed, as it uses the tools from the build directory. But
-# we have no way in Buildroot to state that a host package should
+# we have no way in MikoOS to state that a host package should
 # not be installed. So, just provide an noop install command.
 define HOST_WINE_INSTALL_CMDS
 	:

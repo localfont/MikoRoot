@@ -6,7 +6,7 @@ Subject: [PATCH] fix ejabberdctl
 Change default values so ejabberdctl run commands as ejabberd user.
 
 Signed-off-by: Johan Oudinet <johan.oudinet@gmail.com>
-Upstream: N/A (specific to buildroot)
+Upstream: N/A (specific to mikoos)
 ---
  ejabberdctl.template | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

@@ -4,7 +4,7 @@
 [[make-tips]]
 === 'make' tips
 
-This is a collection of tips that help you make the most of Buildroot.
+This is a collection of tips that help you make the most of MikoOS.
 
 .Display all commands executed by make:
 
@@ -66,7 +66,7 @@ The manual outputs will be generated in 'output/docs/manual'.
 - A few tools are required to build the documentation (see:
   xref:requirement-optional[]).
 
-.Resetting Buildroot for a new target:
+.Resetting MikoOS for a new target:
 
 To delete all build products as well as the configuration:
 
@@ -76,7 +76,7 @@ To delete all build products as well as the configuration:
 
 .Notes
 If +ccache+ is enabled, running +make clean+ or +distclean+ does
-not empty the compiler cache used by Buildroot. To delete it, refer
+not empty the compiler cache used by MikoOS. To delete it, refer
 to xref:ccache[].
 
 .Dumping the internal make variables:

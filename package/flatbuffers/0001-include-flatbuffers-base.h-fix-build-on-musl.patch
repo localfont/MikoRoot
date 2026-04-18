@@ -13,11 +13,11 @@ flatbuffers, the result of this check is not available and
 FLATBUFFERS_LOCALE_INDEPENDENT is set to 1 resulting in the following
 build failure:
 
-In file included from /tmp/instance-0/output-1/host/x86_64-buildroot-linux-musl/sysroot/usr/include/flatbuffers/flexbuffers.h:24,
-                 from /tmp/instance-0/output-1/host/x86_64-buildroot-linux-musl/sysroot/usr/include/flatbuffers/idl.h:26,
+In file included from /tmp/instance-0/output-1/host/x86_64-mikoos-linux-musl/sysroot/usr/include/flatbuffers/flexbuffers.h:24,
+                 from /tmp/instance-0/output-1/host/x86_64-mikoos-linux-musl/sysroot/usr/include/flatbuffers/idl.h:26,
                  from /tmp/instance-0/output-1/build/snort3-3.1.6.0/src/network_inspectors/perf_monitor/fbs_formatter.cc:29:
-/tmp/instance-0/output-1/host/x86_64-buildroot-linux-musl/sysroot/usr/include/flatbuffers/util.h: In function 'void flatbuffers::strtoval_impl(int64_t*, const char*, char**, int)':
-/tmp/instance-0/output-1/host/x86_64-buildroot-linux-musl/sysroot/usr/include/flatbuffers/util.h:258:12: error: 'strtoll_l' was not declared in this scope; did you mean 'strcoll_l'?
+/tmp/instance-0/output-1/host/x86_64-mikoos-linux-musl/sysroot/usr/include/flatbuffers/util.h: In function 'void flatbuffers::strtoval_impl(int64_t*, const char*, char**, int)':
+/tmp/instance-0/output-1/host/x86_64-mikoos-linux-musl/sysroot/usr/include/flatbuffers/util.h:258:12: error: 'strtoll_l' was not declared in this scope; did you mean 'strcoll_l'?
   258 |     *val = __strtoll_impl(str, endptr, base);
       |            ^~~~~~~~~~~~~~
 
@@ -25,7 +25,7 @@ Fix this failure by checking if __GNUC__ is defined before setting
 FLATBUFFERS_LOCALE_INDEPENDENT to 1.
 
 Fixes:
- - http://autobuild.buildroot.org/results/68045b83e94f8caa337b1af7ed5f493ac1a55c47
+ - http://autobuild.mikoos.org/results/68045b83e94f8caa337b1af7ed5f493ac1a55c47
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: Rejected:

@@ -18,7 +18,7 @@ DOCKER_ENGINE_CPE_ID_PRODUCT = moby
 
 DOCKER_ENGINE_LDFLAGS = \
 	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.BuildTime="" \
-	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.GitCommit="buildroot" \
+	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.GitCommit="mikoos" \
 	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.IAmStatic="false" \
 	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.InitCommitID="" \
 	-X $(DOCKER_ENGINE_GOMOD)/dockerversion.Version="$(DOCKER_ENGINE_VERSION)"

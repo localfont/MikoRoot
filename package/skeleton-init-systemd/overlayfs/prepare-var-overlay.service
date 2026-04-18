@@ -2,12 +2,12 @@
 Description=Variable storage overlay setup
 ConditionPathIsSymbolicLink=!/var
 DefaultDependencies=no
-RequiresMountsFor=/run/buildroot/mounts/var
+RequiresMountsFor=/run/mikoos/mounts/var
 
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/mkdir -p /run/buildroot/mounts/var/lower /run/buildroot/mounts/var/upper /run/buildroot/mounts/var/work
+ExecStart=/usr/bin/mkdir -p /run/mikoos/mounts/var/lower /run/mikoos/mounts/var/upper /run/mikoos/mounts/var/work
 
 # Ideally, we would like to use a systemd mount unit to manage the bind
 # mount. Unfortunately, that creates a circular dependency: such a unit
@@ -15,5 +15,5 @@ ExecStart=/usr/bin/mkdir -p /run/buildroot/mounts/var/lower /run/buildroot/mount
 # an implicit dependency from that unit to var.mount, but var.mount
 # would have an explicit dependency to be ordered after that unit.
 # So we handle the bind mount manually.
-ExecStart=/usr/bin/mount -n -o bind,private /var /run/buildroot/mounts/var/lower
-ExecStop=/usr/bin/umount -l /run/buildroot/mounts/var/lower
+ExecStart=/usr/bin/mount -n -o bind,private /var /run/mikoos/mounts/var/lower
+ExecStop=/usr/bin/umount -l /run/mikoos/mounts/var/lower

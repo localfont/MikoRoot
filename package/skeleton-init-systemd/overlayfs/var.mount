@@ -10,5 +10,5 @@ BindsTo=prepare-var-overlay.service
 What=overlay_var
 Where=/var
 Type=overlay
-Options=lowerdir=/run/buildroot/mounts/var/lower,upperdir=/run/buildroot/mounts/var/upper,workdir=/run/buildroot/mounts/var/work,redirect_dir=on,index=on,xino=on
+Options=lowerdir=/run/mikoos/mounts/var/lower,upperdir=/run/mikoos/mounts/var/upper,workdir=/run/mikoos/mounts/var/work,redirect_dir=on,index=on,xino=on
 LazyUnmount=true

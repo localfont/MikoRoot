@@ -18,7 +18,7 @@ MUSL_DEPENDENCIES = host-gcc-initial linux-headers
 # So, add the musl-compat-headers package that will install those files,
 # into the staging directory:
 #   sys/queue.h:  header from NetBSD
-#   sys/cdefs.h:  minimalist header bundled in Buildroot
+#   sys/cdefs.h:  minimalist header bundled in MikoOS
 MUSL_DEPENDENCIES += musl-compat-headers
 
 # musl is part of the toolchain so disable the toolchain dependency

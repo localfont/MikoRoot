@@ -2,12 +2,12 @@
 Freescale i.MX8MN EVK board
 ***************************
 
-This file documents the Buildroot support for the i.MX8M Nano EVK board.
+This file documents the MikoOS support for the i.MX8M Nano EVK board.
 
 Build
 =====
 
-First, configure Buildroot for the i.MX8MN EVK board:
+First, configure MikoOS for the i.MX8MN EVK board:
 
   make freescale_imx8mnevk_defconfig
 
@@ -42,7 +42,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

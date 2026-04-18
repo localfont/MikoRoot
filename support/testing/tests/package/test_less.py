@@ -26,7 +26,7 @@ class TestLess(infra.basetest.BRTest):
         self.assertRunOk("less --version")
 
         # We create a test file.
-        ref_txt = "Hello Buildroot!"
+        ref_txt = "Hello MikoOS!"
         input_fname = "input.txt"
         self.assertRunOk(f"echo \'{ref_txt}\' > {input_fname}")
 

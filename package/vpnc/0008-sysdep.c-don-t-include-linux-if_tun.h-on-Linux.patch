@@ -13,12 +13,12 @@ ethhdr', causing the following build failure with the musl C library:
 
 In file included from sysdep.h:28:0,
                  from sysdep.c:71:
-.../buildroot/output/host/usr/arm-buildroot-linux-musleabihf/sysroot/usr/include/netinet/if_ether.h:96:8: error: redefinition of ‘struct ethhdr’
+.../mikoos/output/host/usr/arm-mikoos-linux-musleabihf/sysroot/usr/include/netinet/if_ether.h:96:8: error: redefinition of ‘struct ethhdr’
  struct ethhdr {
         ^
-In file included from .../buildroot/output/host/usr/arm-buildroot-linux-musleabihf/sysroot/usr/include/linux/if_tun.h:20:0,
+In file included from .../mikoos/output/host/usr/arm-mikoos-linux-musleabihf/sysroot/usr/include/linux/if_tun.h:20:0,
                  from sysdep.c:62:
-.../buildroot/output/host/usr/arm-buildroot-linux-musleabihf/sysroot/usr/include/linux/if_ether.h:138:8: note: originally defined here
+.../mikoos/output/host/usr/arm-mikoos-linux-musleabihf/sysroot/usr/include/linux/if_ether.h:138:8: note: originally defined here
  struct ethhdr {
         ^
 

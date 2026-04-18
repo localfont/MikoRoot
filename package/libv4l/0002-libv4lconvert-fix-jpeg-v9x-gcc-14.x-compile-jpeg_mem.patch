@@ -20,7 +20,7 @@ Fixes:
         |                                              long unsigned int *
   In file included from ../lib/libv4lconvert/libv4lconvert-priv.h:26,
                    from ../lib/libv4lconvert/jl2005bcd.c:30:
-  .../host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/jpeglib.h:979:28: note: expected ‘size_t *’ {aka ‘unsigned int *’} but argument is of type ‘long unsigned int *’
+  .../host/arm-mikoos-linux-gnueabihf/sysroot/usr/include/jpeglib.h:979:28: note: expected ‘size_t *’ {aka ‘unsigned int *’} but argument is of type ‘long unsigned int *’
     979 | EXTERN(void) jpeg_mem_dest JPP((j_compress_ptr cinfo,
         |                            ^~~
 
@@ -32,7 +32,7 @@ Fixes:
         |                                             long unsigned int *
   In file included from ../lib/libv4lconvert/libv4lconvert-priv.h:26,
                    from ../lib/libv4lconvert/jpeg.c:21:
-  .../host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/jpeglib.h:979:28: note: expected ‘size_t *’ {aka ‘unsigned int *’} but argument is of type ‘long unsigned int *’
+  .../host/arm-mikoos-linux-gnueabihf/sysroot/usr/include/jpeglib.h:979:28: note: expected ‘size_t *’ {aka ‘unsigned int *’} but argument is of type ‘long unsigned int *’
     979 | EXTERN(void) jpeg_mem_dest JPP((j_compress_ptr cinfo,
         |                            ^~~
 

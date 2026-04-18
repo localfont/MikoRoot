@@ -4,31 +4,31 @@
 [[adding-board-support]]
 == Adding support for a particular board
 
-Buildroot contains basic configurations for several publicly available
+MikoOS contains basic configurations for several publicly available
 hardware boards, so that users of such a board can easily build a system
 that is known to work. You are welcome to add support for other boards
-to Buildroot too.
+to MikoOS too.
 
-To do so, you need to create a normal Buildroot configuration that
+To do so, you need to create a normal MikoOS configuration that
 builds a basic system for the hardware: (internal) toolchain, kernel,
 bootloader, filesystem and a simple BusyBox-only userspace. No specific
 package should be selected: the configuration should be as minimal as
 possible, and should only build a working basic BusyBox system for the
 target platform. You can of course use more complicated configurations
-for your internal projects, but the Buildroot project will only
+for your internal projects, but the MikoOS project will only
 integrate basic board configurations. This is because package
 selections are highly application-specific.
 
 Once you have a known working configuration, run +make
 savedefconfig+. This will generate a minimal +defconfig+ file at the
-root of the Buildroot source tree. Move this file into the +configs/+
+root of the MikoOS source tree. Move this file into the +configs/+
 directory, and rename it +<boardname>_defconfig+.
 
 Always use fixed versions or commit hashes for the different
 components, not the "latest" version. For example, set
 +BR2_LINUX_KERNEL_CUSTOM_VERSION=y+ and
 +BR2_LINUX_KERNEL_CUSTOM_VERSION_VALUE+ to the kernel version you tested
-with. If you are using the buildroot toolchain +BR2_TOOLCHAIN_BUILDROOT+
+with. If you are using the mikoos toolchain +BR2_TOOLCHAIN_BUILDROOT+
 (which is the default), additionally ensure that the same kernel headers
 are used (+BR2_KERNEL_HEADERS_AS_KERNEL+, which is also the default) and
 set the custom kernel headers series to match your kernel version
@@ -45,7 +45,7 @@ configuration or patches specific to your target platform. To do so,
 create a directory +board/<manufacturer>+ and a subdirectory
 +board/<manufacturer>/<boardname>+. You can then store your patches
 and configurations in these directories, and reference them from the main
-Buildroot configuration. Refer to xref:customize[] for more details.
+MikoOS configuration. Refer to xref:customize[] for more details.
 
 Before submitting patches for new boards it is recommended to test it by
 building it using latest gitlab-CI docker container. To do this use
@@ -56,18 +56,18 @@ building it using latest gitlab-CI docker container. To do this use
  $ make
 ----
 
-By default, Buildroot developers use the official image hosted on the
-https://gitlab.com/buildroot.org/buildroot/container_registry/2395076[gitlab.com
+By default, MikoOS developers use the official image hosted on the
+https://gitlab.com/mikoos.org/mikoos/container_registry/2395076[gitlab.com
 registry] and it should be convenient for most usage. If you still want
 to build your own docker image, you can base it off the official image
 as the +FROM+ directive of your own _Dockerfile_:
 
 ----
-FROM registry.gitlab.com/buildroot.org/buildroot/base:YYYYMMDD.HHMM
+FROM registry.gitlab.com/mikoos.org/mikoos/base:YYYYMMDD.HHMM
 RUN ...
 COPY ...
 ----
 
 The current version _YYYYMMDD.HHMM_ can be found in the +.gitlab-ci.yml+
-file at the top of the Buildroot source tree; all past versions are
+file at the top of the MikoOS source tree; all past versions are
 listed in the aforementioned registry as well.

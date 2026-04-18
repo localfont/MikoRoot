@@ -1,7 +1,7 @@
 urg: fix 'narrowing conversion' with gcc6
 
 Fixes:
-  http://autobuild.buildroot.net/results/d0c/d0cd11163753db69a14c02e941dbda40e5f98bba/
+  http://autobuild.mikoos.net/results/d0c/d0cd11163753db69a14c02e941dbda40e5f98bba/
 
 Signed-off-by: Samuel Martin <s.martin49@gmail.com>
 

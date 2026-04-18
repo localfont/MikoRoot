@@ -19,7 +19,7 @@ build failures with 3.4.x:
           |     ^~~~~
 
 Fixes:
-- http://autobuild.buildroot.net/results/be6c679b821183b4385c74471e26d9ad7d3d8967
+- http://autobuild.mikoos.net/results/be6c679b821183b4385c74471e26d9ad7d3d8967
 
 Signed-off-by: Peter Korsgaard <peter@korsgaard.com>
 Upstream: https://github.com/kgoldman/ibmswtpm2/pull/17

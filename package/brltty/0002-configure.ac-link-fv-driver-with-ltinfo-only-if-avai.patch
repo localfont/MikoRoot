@@ -3,7 +3,7 @@ From: Dario Binacchi <dario.binacchi@amarulasolutions.com>
 Date: Thu, 30 Oct 2025 16:52:53 +0100
 Subject: [PATCH] configure.ac: link fv driver with -ltinfo only if available
 
-During the brltty bump to version 6.8 in Buildroot, the build failed on
+During the brltty bump to version 6.8 in MikoOS, the build failed on
 systems without libtinfo:
 
   /usr/bin/ld: cannot find -ltinfo: No such file or directory

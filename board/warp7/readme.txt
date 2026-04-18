@@ -2,12 +2,12 @@
 Warp i.MX7S board
 *****************
 
-This file documents the Buildroot support for the Warp i.MX7S board.
+This file documents the MikoOS support for the Warp i.MX7S board.
 
 Build
 =====
 
-First, configure Buildroot for the Warp i.MX7S board:
+First, configure MikoOS for the Warp i.MX7S board:
 
   make warp7_defconfig
 
@@ -37,7 +37,7 @@ To determine the device associated to the eMMC have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped into the eMMC. Launch the following
 command:
 
@@ -111,6 +111,6 @@ Using Wifi
 (enter the wifi password and press enter)
 # wpa_supplicant -iwlan0 -c /etc/wpa.conf &
 # udhcpc -i wlan0
-# ping buildroot.org
+# ping mikoos.org
 
 Enjoy!

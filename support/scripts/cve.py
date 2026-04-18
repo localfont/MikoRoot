@@ -90,7 +90,7 @@ class CPE:
     def matches(self, target) -> bool:
         """
         As an example let's take the example of CVE-2023-... for syslog-ng.
-        One of the node as the following CPE criteria matched with the Buildroot CPE:
+        One of the node as the following CPE criteria matched with the MikoOS CPE:
 
         cpe:2.3:a:oneidentitty:syslog-ng:*:*:*:*:-:*:*:*
         cpe:2.3:a:oneidentitty:syslog-ng:4.71:*:*:*:*:*:*:*
@@ -287,7 +287,7 @@ class CVE:
 
     def affects(self, name, version, cpeid=None):
         """
-        True if the Buildroot Package object passed as argument is affected
+        True if the MikoOS Package object passed as argument is affected
         by this CVE.
         """
         if cpeid is None:

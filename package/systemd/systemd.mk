@@ -638,12 +638,12 @@ SYSTEMD_CONF_OPTS += -Dbootloader=enabled
 
 SYSTEMD_BOOT_EFI_ARCH = $(call qstrip,$(BR2_PACKAGE_SYSTEMD_BOOT_EFI_ARCH))
 define SYSTEMD_INSTALL_BOOT_FILES
-	$(INSTALL) -D -m 0644 $(@D)/buildroot-build/src/boot/systemd-boot$(SYSTEMD_BOOT_EFI_ARCH).efi \
+	$(INSTALL) -D -m 0644 $(@D)/mikoos-build/src/boot/systemd-boot$(SYSTEMD_BOOT_EFI_ARCH).efi \
 		$(BINARIES_DIR)/efi-part/EFI/BOOT/boot$(SYSTEMD_BOOT_EFI_ARCH).efi
 	$(INSTALL) -D -m 0644 $(SYSTEMD_PKGDIR)/boot-files/loader.conf \
 		$(BINARIES_DIR)/efi-part/loader/loader.conf
-	$(INSTALL) -D -m 0644 $(SYSTEMD_PKGDIR)/boot-files/buildroot.conf \
-		$(BINARIES_DIR)/efi-part/loader/entries/buildroot.conf
+	$(INSTALL) -D -m 0644 $(SYSTEMD_PKGDIR)/boot-files/mikoos.conf \
+		$(BINARIES_DIR)/efi-part/loader/entries/mikoos.conf
 endef
 
 else
@@ -747,7 +747,7 @@ ifneq ($(call qstrip,$(BR2_TARGET_GENERIC_GETTY_PORT)),)
 # * Enable a getty on $BR2_TARGET_GENERIC_GETTY_PORT
 # * Set the baudrate for all units according to BR2_TARGET_GENERIC_GETTY_BAUDRATE
 # * Always enable a getty on the console using systemd-getty-generator
-#   (backward compatibility with previous releases of buildroot)
+#   (backward compatibility with previous releases of mikoos)
 #
 # What we do
 # * disable getty@tty1 (enabled by upstream systemd)
@@ -757,7 +757,7 @@ ifneq ($(call qstrip,$(BR2_TARGET_GENERIC_GETTY_PORT)),)
 define SYSTEMD_INSTALL_SERVICE_TTY
 	mkdir -p $(TARGET_DIR)/usr/lib/systemd/system/getty@.service.d; \
 	printf '[Install]\nDefaultInstance=\n' \
-		>$(TARGET_DIR)/usr/lib/systemd/system/getty@.service.d/buildroot-console.conf; \
+		>$(TARGET_DIR)/usr/lib/systemd/system/getty@.service.d/mikoos-console.conf; \
 	if [ $(BR2_TARGET_GENERIC_GETTY_PORT) = "console" ]; \
 	then \
 		: ; \
@@ -765,12 +765,12 @@ define SYSTEMD_INSTALL_SERVICE_TTY
 	then \
 		printf '[Install]\nDefaultInstance=%s\n' \
 			$(call qstrip,$(BR2_TARGET_GENERIC_GETTY_PORT)) \
-			>$(TARGET_DIR)/usr/lib/systemd/system/getty@.service.d/buildroot-console.conf; \
+			>$(TARGET_DIR)/usr/lib/systemd/system/getty@.service.d/mikoos-console.conf; \
 	else \
 		mkdir -p $(TARGET_DIR)/usr/lib/systemd/system/serial-getty@.service.d;\
 		printf '[Install]\nDefaultInstance=%s\n' \
 			$(call qstrip,$(BR2_TARGET_GENERIC_GETTY_PORT)) \
-			>$(TARGET_DIR)/usr/lib/systemd/system/serial-getty@.service.d/buildroot-console.conf;\
+			>$(TARGET_DIR)/usr/lib/systemd/system/serial-getty@.service.d/mikoos-console.conf;\
 	fi; \
 	if [ $(call qstrip,$(BR2_TARGET_GENERIC_GETTY_BAUDRATE)) -gt 0 ] ; \
 	then \
@@ -783,7 +783,7 @@ endef
 endif
 
 define SYSTEMD_INSTALL_PRESET
-	$(INSTALL) -D -m 644 $(SYSTEMD_PKGDIR)/80-buildroot.preset $(TARGET_DIR)/usr/lib/systemd/system-preset/80-buildroot.preset
+	$(INSTALL) -D -m 644 $(SYSTEMD_PKGDIR)/80-mikoos.preset $(TARGET_DIR)/usr/lib/systemd/system-preset/80-mikoos.preset
 endef
 
 define SYSTEMD_INSTALL_INIT_SYSTEMD
@@ -1025,7 +1025,7 @@ HOST_SYSTEMD_NINJA_ENV = DESTDIR=$(HOST_DIR)
 #   need to link with libsystemd which is not in a standard path
 # * meson can only replace the RPATH, not append to it
 # * the original rpath is thus lost.
-# * the original path had been tweaked by buildroot via LDFLAGS to add
+# * the original path had been tweaked by mikoos via LDFLAGS to add
 #   $(HOST_DIR)/lib
 # * thus re-tweak rpath after the installation for all binaries that need it
 HOST_SYSTEMD_HOST_TOOLS = busctl journalctl systemctl systemd-* udevadm

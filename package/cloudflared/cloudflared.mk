@@ -12,6 +12,6 @@ CLOUDFLARED_CPE_ID_VENDOR = cloudflare
 CLOUDFLARED_BUILD_TARGETS = cmd/cloudflared
 CLOUDFLARED_LDFLAGS = \
 	-X main.Version=$(CLOUDFLARED_VERSION) \
-	-X github.com/cloudflare/cloudflared/cmd/cloudflared/updater.BuiltForPackageManager=buildroot
+	-X github.com/cloudflare/cloudflared/cmd/cloudflared/updater.BuiltForPackageManager=mikoos
 
 $(eval $(golang-package))

@@ -29,11 +29,11 @@ class TestAttr(infra.basetest.BRTest):
         self.assertRunOk("setfattr --version")
 
         test_file = "/root/file.txt"
-        attr_name = "buildroot"
+        attr_name = "mikoos"
         attr_value = "is-great"
 
         # Create a test file.
-        self.assertRunOk(f"echo 'Hello Buildroot!' > {test_file}")
+        self.assertRunOk(f"echo 'Hello MikoOS!' > {test_file}")
 
         # Set an extended attribute.
         cmd = f"setfattr -n user.{attr_name} -v {attr_value} {test_file}"

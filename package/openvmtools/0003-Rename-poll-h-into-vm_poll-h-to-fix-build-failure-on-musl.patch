@@ -12,7 +12,7 @@ also a local header file, the musl libc header is never included. This
 leads to the following build failure:
 
 In file included from asyncsocket.c:73:0:
-.../host/i586-buildroot-linux-musl/sysroot/usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
+.../host/i586-mikoos-linux-musl/sysroot/usr/include/sys/poll.h:1:2: warning: #warning redirecting incorrect #include <sys/poll.h> to <poll.h> [-Wcpp]
  #warning redirecting incorrect #include <sys/poll.h> to <poll.h>
 asyncsocket.c: In function ‘AsyncTCPSocketPollWork’:
 asyncsocket.c:2537:13: error: invalid use of undefined type ‘struct pollfd’
@@ -29,7 +29,7 @@ So rename poll.h into vm_poll.h as suggested by srowe in
 https://github.com/vmware/open-vm-tools/issues/359#issuecomment-533529956
 
 Fixes:
- - http://autobuild.buildroot.org/results/4f575ef42bbc4387a07e396205052b2da081c64d
+ - http://autobuild.mikoos.org/results/4f575ef42bbc4387a07e396205052b2da081c64d
 
 Fix #359
 

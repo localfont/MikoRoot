@@ -2,7 +2,7 @@
 Freescale i.MX6 Q, DL and SoloX SABRE development boards
 ********************************************************
 
-This file documents the Buildroot support for the Freescale SABRE Board
+This file documents the MikoOS support for the Freescale SABRE Board
 for Smart Devices Based on the i.MX 6 and i.MX 6SoloX Series (SABRESD),
 as well as the Freescale SABRE Board for Automotive Infotainment.
 
@@ -21,7 +21,7 @@ https://www.nxp.com/webapp/Download?colCode=IMX6SABREINFOQSG
 Building with NXP kernel and NXP U-Boot
 =======================================
 
-First, configure Buildroot for your SABRE board.
+First, configure MikoOS for your SABRE board.
 For i.MX6Q SABRE SD board:
 
   make freescale_imx6qsabresd_defconfig
@@ -60,7 +60,7 @@ Building with mainline kernel and mainline U-Boot
 Mainline U-Boot uses SPL and can support the three
 variants of mx6sabreauto boards: mx6q, mx6dl and mx6qp.
 
-First, configure Buildroot for your mx6sabreauto board
+First, configure MikoOS for your mx6sabreauto board
 
   make imx6-sabreauto_defconfig
 
@@ -83,7 +83,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a microSD card. Launch the following
 command as root:
 

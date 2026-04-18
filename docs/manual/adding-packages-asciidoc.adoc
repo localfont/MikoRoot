@@ -5,7 +5,7 @@
 
 [[asciidoc-documents-tutorial]]
 
-The Buildroot manual, which you are currently reading, is entirely written
+The MikoOS manual, which you are currently reading, is entirely written
 using the http://asciidoc.org/[AsciiDoc] mark-up syntax. The manual is then
 rendered to many formats:
 
@@ -15,13 +15,13 @@ rendered to many formats:
 * epub
 * text
 
-Although Buildroot only contains one document written in AsciiDoc, there
+Although MikoOS only contains one document written in AsciiDoc, there
 is, as for packages, an infrastructure for rendering documents using the
 AsciiDoc syntax.
 
 Also as for packages, the AsciiDoc infrastructure is available from a
 xref:outside-br-custom[br2-external tree]. This allows documentation for
-a br2-external tree to match the Buildroot documentation, as it will be
+a br2-external tree to match the MikoOS documentation, as it will be
 rendered to the same formats and use the same layout and theme.
 
 ==== +asciidoc-document+ tutorial
@@ -45,7 +45,7 @@ Here is an example to render a simple AsciiDoc document.
 
 On line 7, the Makefile declares what the sources of the document are.
 Currently, it is expected that the document's sources are only local;
-Buildroot will not attempt to download anything to render a document.
+MikoOS will not attempt to download anything to render a document.
 Thus, you must indicate where the sources are. Usually, the string
 above is sufficient for a document with no sub-directory structure.
 
@@ -77,9 +77,9 @@ on hooks), that a document may set to define extra actions to be done at
 various steps:
 
 * +FOO_POST_RSYNC_HOOKS+ to run additional commands after the sources
-  have been copied by Buildroot. This can for example be used to
+  have been copied by MikoOS. This can for example be used to
   generate part of the manual with information extracted from the
-  tree. As an example, Buildroot uses this hook to generate the tables
+  tree. As an example, MikoOS uses this hook to generate the tables
   in the appendices.
 
 * +FOO_CHECK_DEPENDENCIES_HOOKS+ to run additional tests on required
@@ -91,7 +91,7 @@ various steps:
 * +FOO_CHECK_DEPENDENCIES_<FMT>_HOOKS+, to run additional tests for
   the specified format +<FMT>+ (see the list of rendered formats, above).
 
-Buildroot sets the following variable that can be used in the definitions
+MikoOS sets the following variable that can be used in the definitions
 above:
 
 * +$(FOO_DOCDIR)+, similar to +$(FOO_PKGDIR)+, contains the path to the

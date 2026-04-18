@@ -6,7 +6,7 @@ Subject: [PATCH] lib/pud/Makefile: fix parallel build
 nmealib is needed to build olsrd_pud plugin otherwise build fails on:
 
 [LD] olsrd_pud.so.3.0.0 (nmealib dynamically linked)
-/home/fabrice/buildroot/output/host/opt/ext-toolchain/bin/../lib/gcc/arm-none-linux-gnueabi/4.8.3/../../../../arm-none-linux-gnueabi/bin/ld: cannot find -lnmea
+/home/fabrice/mikoos/output/host/opt/ext-toolchain/bin/../lib/gcc/arm-none-linux-gnueabi/4.8.3/../../../../arm-none-linux-gnueabi/bin/ld: cannot find -lnmea
 wireformat/lib/libOlsrdPudWireFormat.so: file not recognized: File truncated
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>

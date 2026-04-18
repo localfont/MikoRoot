@@ -46,11 +46,11 @@ class TestBtrfs(infra.basetest.BRTest):
         self.assertRunOk("btrfs filesystem show /")
 
         # We query the label and check it is the one from the
-        # Buildroot config.
+        # MikoOS config.
         out, ret = self.emulator.run("btrfs filesystem label /")
         self.assertEqual(ret, 0)
         self.assertEqual(out[0], self.btrfs_label)
 
         # We try to write data on the root filesystem.
-        self.assertRunOk("echo 'Hello Buildroot' > /root/file.txt")
+        self.assertRunOk("echo 'Hello MikoOS' > /root/file.txt")
         self.assertRunOk("sync")

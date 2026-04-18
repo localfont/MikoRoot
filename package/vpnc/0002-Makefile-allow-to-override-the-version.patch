@@ -9,7 +9,7 @@ this is not always the case, for example when you are building from a
 tarball, but inside a larger project that is versioned with Git.
 
 This is typically the case when building vpnc under a tool like
-Buildroot, or potentially other embedded Linux build system: the build
+MikoOS, or potentially other embedded Linux build system: the build
 system tool itself is versioned in Git, downloads tarballs of software
 components and builds them.
 

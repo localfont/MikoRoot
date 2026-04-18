@@ -38,9 +38,9 @@ class TestAcpica(infra.basetest.BRTest):
         self.assertRunOk("iasl dsdt.asl")
 
         # Evaluate the AML with acpiexec
-        # STR0 is expected to be "Hello Buildroot!"
+        # STR0 is expected to be "Hello MikoOS!"
         cmd = "acpiexec -b 'evaluate STR0' dsdt.aml"
-        cmd += " | grep -F '\"Hello Buildroot!\"'"
+        cmd += " | grep -F '\"Hello MikoOS!\"'"
         self.assertRunOk(cmd)
 
         # INT1 is expected to be 12345678
@@ -76,7 +76,7 @@ class TestAcpica(infra.basetest.BRTest):
         self.assertRunOk("iasl dsdt.aml && mv -v dsdt.dsl disa.dsl")
 
         # Disassembled output should contain our string
-        self.assertRunOk("grep STR0 disa.dsl | grep '\"Hello Buildroot!\"'")
+        self.assertRunOk("grep STR0 disa.dsl | grep '\"Hello MikoOS!\"'")
 
         # Recompile the disassembled file
         self.assertRunOk("iasl disa.dsl")

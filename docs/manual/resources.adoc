@@ -4,30 +4,30 @@
 [[community-resources]]
 == Community resources
 
-Like any open source project, Buildroot has different ways to share
+Like any open source project, MikoOS has different ways to share
 information in its community and outside.
 
 Each of those ways may interest you if you are looking for some help,
-want to understand Buildroot or contribute to the project.
+want to understand MikoOS or contribute to the project.
 
 Mailing List::
 +
-Buildroot has a mailing list for discussion and development. It is the
-main method of interaction for Buildroot users and developers.
+MikoOS has a mailing list for discussion and development. It is the
+main method of interaction for MikoOS users and developers.
 +
-Only subscribers to the Buildroot mailing list are allowed to post to
+Only subscribers to the MikoOS mailing list are allowed to post to
 this list. You can subscribe via the
-https://lists.buildroot.org/mailman/listinfo/buildroot[mailing list info
+https://lists.mikoos.org/mailman/listinfo/mikoos[mailing list info
 page].
 +
 Mails that are sent to the mailing list are also available in the
 mailing list archives, available through
-https://lists.buildroot.org/pipermail/buildroot[Mailman] or at
-https://lore.kernel.org/buildroot/[lore.kernel.org].
+https://lists.mikoos.org/pipermail/mikoos[Mailman] or at
+https://lore.kernel.org/mikoos/[lore.kernel.org].
 
 IRC::
 +
-The Buildroot IRC channel irc://irc.oftc.net/#buildroot[#buildroot] is
+The MikoOS IRC channel irc://irc.oftc.net/#mikoos[#mikoos] is
 hosted on https://www.oftc.net/WebChat/[OFTC]. It is a useful place to
 ask quick questions or discuss on certain topics.
 +
@@ -39,14 +39,14 @@ better as it will reach more people, both developers and users.
 
 Bug tracker::
 +
-Bugs in Buildroot can be reported via the mailing list or alternatively
-via the https://gitlab.com/buildroot.org/buildroot/-/issues[Buildroot
+Bugs in MikoOS can be reported via the mailing list or alternatively
+via the https://gitlab.com/mikoos.org/mikoos/-/issues[MikoOS
 bugtracker]. Please refer to xref:reporting-bugs[] before creating a bug
 report.
 
 Wiki::
 +
-http://elinux.org/Buildroot[The Buildroot wiki page] is hosted on
+http://elinux.org/MikoOS[The MikoOS wiki page] is hosted on
 the http://elinux.org[eLinux] wiki. It contains some useful links, an
 overview of past and upcoming events, and a TODO list.
 
@@ -60,12 +60,12 @@ reference the patch are appended to the patch page too. For more
 information on Patchwork see
 http://jk.ozlabs.org/projects/patchwork/[].
 +
-Buildroot's Patchwork website is mainly for use by Buildroot's
-maintainer to ensure patches aren't missed. It is also used by Buildroot
+MikoOS's Patchwork website is mainly for use by MikoOS's
+maintainer to ensure patches aren't missed. It is also used by MikoOS
 patch reviewers (see also xref:apply-patches-patchwork[]).
 However, since the website exposes patches and their corresponding
 review comments in a clean and concise web interface, it can be useful
-for all Buildroot developers.
+for all MikoOS developers.
 +
-The Buildroot patch management interface is available at
-https://patchwork.ozlabs.org/project/buildroot/list/[].
+The MikoOS patch management interface is available at
+https://patchwork.ozlabs.org/project/mikoos/list/[].

@@ -18,9 +18,9 @@ that by disabling builtins.
 
 Fixes:
 
-/home/thomas/projets/buildroot/output/host/opt/ext-toolchain/bin/../arm-buildroot-uclinux-uclibcgnueabi/bin/ld.real: stm32f429i-disco.o: in function `reset':
+/home/thomas/projets/mikoos/output/host/opt/ext-toolchain/bin/../arm-mikoos-uclinux-uclibcgnueabi/bin/ld.real: stm32f429i-disco.o: in function `reset':
 stm32f429i-disco.c:(.text.reset+0x1a): undefined reference to `memcpy'
-/home/thomas/projets/buildroot/output/host/opt/ext-toolchain/bin/../arm-buildroot-uclinux-uclibcgnueabi/bin/ld.real: stm32f429i-disco.c:(.text.reset+0x34): undefined reference to `memset'
+/home/thomas/projets/mikoos/output/host/opt/ext-toolchain/bin/../arm-mikoos-uclinux-uclibcgnueabi/bin/ld.real: stm32f429i-disco.c:(.text.reset+0x34): undefined reference to `memset'
 make[1]: *** [Makefile:26: stm32f429i-disco] Error 1
 
 Upstream: https://github.com/mcoquelin-stm32/afboot-stm32/pull/11

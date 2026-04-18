@@ -9,7 +9,7 @@ gnome.generate_gir:
 
 [108/298] Generating src/librygel-core/RygelCore-2.6.typelib with a custom command
 FAILED: src/librygel-core/RygelCore-2.6.typelib
-/home/giuliobenetti/autobuild/run/instance-3/output-1/host/nios2-buildroot-linux-gnu/sysroot/usr/bin/g-ir-compiler --output src/librygel-core/RygelCore-2.6.typelib /home/giuliobenetti/autobuild/run/instance-3/output-1/build/rygel-0.40.2/build/src/librygel-core/RygelCore-2.6.gir
+/home/giuliobenetti/autobuild/run/instance-3/output-1/host/nios2-mikoos-linux-gnu/sysroot/usr/bin/g-ir-compiler --output src/librygel-core/RygelCore-2.6.typelib /home/giuliobenetti/autobuild/run/instance-3/output-1/build/rygel-0.40.2/build/src/librygel-core/RygelCore-2.6.gir
 Could not find GIR file 'GUPnP-1.2.gir'; check XDG_DATA_DIRS or use --includedir
 error parsing file /home/giuliobenetti/autobuild/run/instance-3/output-1/build/rygel-0.40.2/build/src/librygel-core/RygelCore-2.6.gir: Failed to parse included gir GUPnP-1.2
 
@@ -17,7 +17,7 @@ Indeed, the custom_target command is unable to retrieve the correct
 --includedir from glib-2.0.pc so add an ugly hack to custom_target calls
 
 Fixes:
- - http://autobuild.buildroot.org/results/2b8956818f03f66a53480f7ed5fc0abb4f05288d
+ - http://autobuild.mikoos.org/results/2b8956818f03f66a53480f7ed5fc0abb4f05288d
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: probably not upstreamable

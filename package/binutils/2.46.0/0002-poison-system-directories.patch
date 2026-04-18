@@ -19,7 +19,7 @@ Signed-off-by: Gustavo Zacarias <gustavo@zacarias.com.ar>
 Signed-off-by: Bernd Kuhls <bernd@kuhls.net>
 
 Upstream-Status: Inappropriate [distribution: codesourcery]
-Upstream: N/A [Buildroot specific]
+Upstream: N/A [MikoOS specific]
 
 Patch originally created by Mark Hatle, forward-ported to
 binutils 2.21 by Scott Garman.

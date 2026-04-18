@@ -100,7 +100,7 @@ config BR2_LEGACY
 	bool
 	help
 	  This option is selected automatically when your old .config
-	  uses an option that no longer exists in current buildroot. In
+	  uses an option that no longer exists in current mikoos. In
 	  that case, the build will fail. Look for config options which
 	  are selected in the menu below: they no longer exist and
 	  should be replaced by something else.
@@ -114,7 +114,7 @@ menu "Legacy config options"
 if BR2_LEGACY
 comment "----------------------------------------------------"
 comment "Your old configuration uses legacy options that no  "
-comment "longer exist in buildroot, as indicated in the menu "
+comment "longer exist in mikoos, as indicated in the menu "
 comment "below. As long as these options stay selected, or in"
 comment "case of string options are non-empty, the build     "
 comment "will fail.                                          "
@@ -164,7 +164,7 @@ config BR2_PACKAGE_CEGUI
 	bool "cegui"
 	select BR2_LEGACY
 	help
-	  cegui was removed from Buildroot as it was insufficiently
+	  cegui was removed from MikoOS as it was insufficiently
 	  maintained. It can be re-added if someone volunteers to
 	  maintain it.
 
@@ -265,7 +265,7 @@ config BR2_PACKAGE_CRIU
 	bool "criu has been removed"
 	select BR2_LEGACY
 	help
-	  criu was removed from Buildroot as it was insufficiently
+	  criu was removed from MikoOS as it was insufficiently
 	  maintained. It can be re-added if someone volunteers to
 	  maintain it.
 
@@ -282,7 +282,7 @@ config BR2_PACKAGE_LIBSVG
 	help
 	  The libsvg package has been removed. Its latest upstream
 	  release was from 2005, it was incompatible with recent
-	  libxml2 versions, and it wasn't used by any other Buildroot
+	  libxml2 versions, and it wasn't used by any other MikoOS
 	  package except libsvg-cairo, also removed.
 
 config BR2_PACKAGE_LIBSVG_CAIRO
@@ -291,7 +291,7 @@ config BR2_PACKAGE_LIBSVG_CAIRO
 	help
 	  The libsvg-cairo package has been removed. Its latest
 	  upstream release was from 2005, and it wasn't used by any
-	  other Buildroot package.
+	  other MikoOS package.
 
 config BR2_PACKAGE_XDRIVER_XF86_INPUT_MOUSE
 	bool "xf86-input-mouse removed"
@@ -319,151 +319,151 @@ config BR2_PACKAGE_VUEJS_ROUTER
 	bool "vuejs-router has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_VUEJS
 	bool "vuejs has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_VIS_NETWORK
 	bool "vis-network has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_OPENLAYERS
 	bool "openlayers has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JSZIP
 	bool "jszip has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JSON_JAVASCRIPT
 	bool "json-javascript has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_VALIDATION
 	bool "jquery-validation has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_UI_THEMES
 	bool "jquery-ui-themes has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_UI
 	bool "jquery-ui has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_SPARK
 	bool "jquery-spark has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_SIDEBAR
 	bool "jquery-sidebar has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_MOBILE
 	bool "jquery-mobile has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_KEYBOARD
 	bool "jquery-keyboard has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY_DATETIMEPICKER
 	bool "jquery-datetimepicker has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_JQUERY
 	bool "jquery has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_FORGE
 	bool "forge has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_FLOT
 	bool "flot has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_EXPLORERCANVAS
 	bool "explorercanvas has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_DATATABLES_RESPONSIVE
 	bool "datatables-responsive has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_DATATABLES_FIXEDCOLUMNS
 	bool "datatables-fixedcolumns has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_DATATABLES_BUTTONS
 	bool "datatables-buttons has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_DATATABLES
 	bool "datatables has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_CHARTJS
 	bool "chartjs has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_BOOTSTRAP
 	bool "bootstrap has been removed"
 	select BR2_LEGACY
 	help
-	  JS libraries are no longer part of Buildroot packages.
+	  JS libraries are no longer part of MikoOS packages.
 
 config BR2_PACKAGE_SOFTETHER
 	bool "softether has been removed"
 	select BR2_LEGACY
 	help
-	  The version packaged in Buildroot version was outdated
+	  The version packaged in MikoOS version was outdated
 	  compared to upstream and no longer maintained by anyone
 	  listed in the DEVELOPERS file.
 
@@ -806,7 +806,7 @@ config BR2_PACKAGE_LINPHONE
 	bool "linphone has been removed"
 	select BR2_LEGACY
 	help
-	  This package was no longer maintained in Buildroot and was
+	  This package was no longer maintained in MikoOS and was
 	  no longer building. It can be re-added if someone volunteers
 	  to fix the issues, update the package and maintain it.
 
@@ -970,14 +970,14 @@ config BR2_PACKAGE_GKRELLM_CLIENT
 	select BR2_LEGACY
 	help
 	  The gkrellm client option has been removed, as it required
-	  libgtk2, which was removed from Buildroot.
+	  libgtk2, which was removed from MikoOS.
 
 config BR2_PACKAGE_CWIID_WMGUI
 	bool "cwiid wmgui has been removed"
 	select BR2_LEGACY
 	help
 	  The wmgui part of cwiid required libgtk2, which has been
-	  removed from Buildroot.
+	  removed from MikoOS.
 
 config BR2_LINUX_KERNEL_EXT_AUFS
 	bool "Aufs Filesystem Module patch has been removed"
@@ -997,35 +997,35 @@ config BR2_TOOLCHAIN_EXTERNAL_LINARO_ARMEB
 	select BR2_LEGACY
 	help
 	  Linaro armeb 2018.05 is no longer maintained and has been
-	  removed from Buildroot.
+	  removed from MikoOS.
 
 config BR2_TOOLCHAIN_EXTERNAL_LINARO_ARM
 	bool "Linaro ARM 2018.05 external toolchain is deprecated"
 	select BR2_LEGACY
 	help
 	  Linaro ARM 2018.05 is no longer maintained and has been
-	  removed from Buildroot.
+	  removed from MikoOS.
 
 config BR2_TOOLCHAIN_EXTERNAL_LINARO_AARCH64_BE
 	bool "Linaro AArch64 BE 2018.05 external toolchain is deprecated"
 	select BR2_LEGACY
 	help
 	  Linaro AArch64 2018.05 BE is no longer maintained and has been
-	  removed from Buildroot.
+	  removed from MikoOS.
 
 config BR2_TOOLCHAIN_EXTERNAL_LINARO_AARCH64
 	bool "Linaro AArch64 2018.05 external toolchain is deprecated"
 	select BR2_LEGACY
 	help
 	  Linaro AArch64 2018.05 is no longer maintained and has been
-	  removed from Buildroot.
+	  removed from MikoOS.
 
 config BR2_TOOLCHAIN_EXTERNAL_CODESOURCERY_MIPS
 	bool "Sourcery CodeBench MIPS external toolchain is deprecated"
 	select BR2_LEGACY
 	help
 	  Sourcery CodeBench MIPS 2016.05 is no longer maintained
-	  and has been removed from Buildroot.
+	  and has been removed from MikoOS.
 
 config BR2_LINUX_KERNEL_EXT_EV3DEV_LINUX_DRIVERS
 	bool "ev3dev Linux drivers have been removed"
@@ -1041,7 +1041,7 @@ config BR2_PACKAGE_NETSTAT_NAT
 	select BR2_LEGACY
 	help
 	  The upstream URL is gone and netstat-nat has been removed
-	  from Buildroot.
+	  from MikoOS.
 
 config BR2_PACKAGE_LIGHTTPD_LIBEV
 	bool "lighttpd removed libev support"
@@ -1053,14 +1053,14 @@ config BR2_PACKAGE_LIBSVGTINY
 	bool "libsvgtiny has been removed"
 	select BR2_LEGACY
 	help
-	  Libsvgtiny has been removed from Buildroot.
+	  Libsvgtiny has been removed from MikoOS.
 
 config BR2_PACKAGE_THTTPD
 	bool "thttpd has been removed"
 	select BR2_LEGACY
 	help
 	  thttpd is no longer maintained actively by upstream and has
-	  been removed from Buildroot.
+	  been removed from MikoOS.
 
 config BR2_KERNEL_HEADERS_6_15
 	bool "kernel headers version 6.15.x are no longer supported"
@@ -1079,7 +1079,7 @@ config BR2_PACKAGE_LIBOLM
 	bool "libolm has been removed"
 	select BR2_LEGACY
 	help
-	  libolm is deprecated and has been removed from Buildroot.
+	  libolm is deprecated and has been removed from MikoOS.
 	  https://gitlab.matrix.org/matrix-org/olm#important-libolm-is-now-deprecated
 
 config BR2_PACKAGE_LIBWEBSOCK
@@ -1087,7 +1087,7 @@ config BR2_PACKAGE_LIBWEBSOCK
 	select BR2_LEGACY
 	help
 	  The upstream Github repository payden/libwebsock is no
-	  longer available, and has been removed from Buildroot.
+	  longer available, and has been removed from MikoOS.
 
 config BR2_TARGET_EDK2_PLATFORM_SOCIONEXT_DEVELOPERBOX
 	bool "EDK2 Socionext DeveloperBox support has been removed"
@@ -1100,7 +1100,7 @@ config BR2_PACKAGE_LIBEBUR128
 	bool "libebur128 has been removed"
 	select BR2_LEGACY
 	help
-	  The libebur128 package has been removed from Buildroot.
+	  The libebur128 package has been removed from MikoOS.
 
 config BR2_KERNEL_HEADERS_6_14
 	bool "kernel headers version 6.14.x are no longer supported"
@@ -1271,7 +1271,7 @@ config BR2_PACKAGE_DIRECTFB
 	select BR2_LEGACY
 	help
 	  This package was no longer maintained upstream, so it was
-	  dropped from Buildroot.
+	  dropped from MikoOS.
 
 config BR2_PACKAGE_GST_OMX
 	bool "gst-omx has been removed"
@@ -1284,56 +1284,56 @@ config BR2_PACKAGE_MIMIC
 	bool "mimic has been removed"
 	select BR2_LEGACY
 	help
-	  The mimic package has been removed from Buildroot.
+	  The mimic package has been removed from MikoOS.
 
 config BR2_PACKAGE_SDL2_DIRECTFB
 	bool "sdl2 directfb support removed"
 	select BR2_LEGACY
 	help
 	  The directfb support from SDL2 is no longer available, as
-	  directfb is no longer packaged in Buildroot.
+	  directfb is no longer packaged in MikoOS.
 
 config BR2_PACKAGE_SDL_DIRECTFB
 	bool "sdl directfb support removed"
 	select BR2_LEGACY
 	help
 	  The directfb support from SDL is no longer available, as
-	  directfb is no longer packaged in Buildroot.
+	  directfb is no longer packaged in MikoOS.
 
 config BR2_PACKAGE_QT5BASE_DIRECTFB
 	bool "qt5base directfb support removed"
 	select BR2_LEGACY
 	help
 	  The directfb support from qt5base is no longer available, as
-	  directfb is no longer packaged in Buildroot.
+	  directfb is no longer packaged in MikoOS.
 
 config BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_DIRECTFB
 	bool "gstreamer directfb plugin removed"
 	select BR2_LEGACY
 	help
 	  The directfb plugin from GStreamer is no longer supported,
-	  as directfb is no longer packaged in Buildroot.
+	  as directfb is no longer packaged in MikoOS.
 
 config BR2_PACKAGE_LITE
 	bool "lite has been removed"
 	select BR2_LEGACY
 	help
 	  This package was no longer maintained upstream, so it was
-	  dropped from Buildroot.
+	  dropped from MikoOS.
 
 config BR2_PACKAGE_LINUX_FUSION
 	bool "linux-fusion has been removed"
 	select BR2_LEGACY
 	help
 	  This package was no longer maintained upstream, so it was
-	  dropped from Buildroot.
+	  dropped from MikoOS.
 
 config BR2_PACKAGE_DIRECTFB_EXAMPLES
 	bool "directfb-examples has been removed"
 	select BR2_LEGACY
 	help
 	  This package was no longer maintained upstream, so it was
-	  dropped from Buildroot.
+	  dropped from MikoOS.
 
 config BR2_PACKAGE_HIAWATHA
 	bool "hiwatha has been removed"
@@ -1510,7 +1510,7 @@ config BR2_PACKAGE_FROTZ
 	select BR2_LEGACY
 	help
 	  This package was causing build breakage, and was no longer
-	  maintained in Buildroot.
+	  maintained in MikoOS.
 
 config BR2_PACKAGE_FAN_CTRL
 	bool "fan-ctrl has been removed"
@@ -2270,7 +2270,7 @@ config BR2_PACKAGE_LIBOPENSSL_ENABLE_RC5
 	select BR2_LEGACY
 	help
 	  The libopenssl option for rc5 never actually enabled rc5,
-	  which had always been disabled in Buildroot.
+	  which had always been disabled in MikoOS.
 
 config BR2_PACKAGE_LIBDCADEC
 	bool "package was deprecated upstream, use ffmpeg instead"
@@ -2330,7 +2330,7 @@ config BR2_ECLIPSE_REGISTER
 	bool "Eclipse integration removed"
 	select BR2_LEGACY
 	help
-	  The Buildroot integration with the Eclipse IDE has been
+	  The MikoOS integration with the Eclipse IDE has been
 	  removed, as the corresponding Eclipse plugin is no longer
 	  maintained, and is no longer usable with current versions of
 	  Eclipse.
@@ -2385,7 +2385,7 @@ config BR2_nds32
 	help
 	  Support for the nds32 architecture has been removed, due to
 	  its support being removed from the upstream Linux kernel,
-	  and its lack of maintenance in Buildroot.
+	  and its lack of maintenance in MikoOS.
 
 config BR2_PACKAGE_RTL8723BS
 	bool "rtl8723bs removed"
@@ -2722,7 +2722,7 @@ config BR2_PACKAGE_CIVETWEB_WITH_LUA
 	  Lua support does not depend on a version of Lua bundled
 	  within the Civetweb sources anymore. Lua support is
 	  automatically enabled if an Lua interpreter (lua or luajit)
-	  is enabled in Buildroot.
+	  is enabled in MikoOS.
 
 config BR2_PACKAGE_SUNXI_MALI_MAINLINE_DRIVER
 	bool "sunxi-mali-mainline-driver package was renamed"
@@ -3528,7 +3528,7 @@ config BR2_PACKAGE_QT5CANVAS3D
 	select BR2_LEGACY
 	help
 	  This Qt5 module was removed by the upstream Qt project since
-	  Qt 5.13, so the corresponding Buildroot package was removed
+	  Qt 5.13, so the corresponding MikoOS package was removed
 	  as well.
 
 config BR2_PACKAGE_KODI_LIBTHEORA
@@ -3541,7 +3541,7 @@ config BR2_PACKAGE_CEGUI06
 	bool "BR2_PACKAGE_CEGUI06 was removed"
 	select BR2_LEGACY
 	help
-	  cegui06 was removed from Buildroot as it was insufficiently
+	  cegui06 was removed from MikoOS as it was insufficiently
 	  maintained. It can be re-added if someone volunteers to
 	  maintain it.
 
@@ -3595,35 +3595,35 @@ config BR2_PACKAGE_NVIDIA_TEGRA23_BINARIES_GSTREAMER_PLUGINS
 	bool "nvidia-tegra23 binaries gstreamer 0.10.x support removed"
 	select BR2_LEGACY
 	help
-	  Gstreamer 0.10.x is no longer available in Buildroot, so
+	  Gstreamer 0.10.x is no longer available in MikoOS, so
 	  neither is the support in nvidia-tegra23 binaries.
 
 config BR2_PACKAGE_NVIDIA_TEGRA23_BINARIES_NV_SAMPLE_APPS
 	bool "nvidia-tegra23 binaries sample apps removed"
 	select BR2_LEGACY
 	help
-	  Gstreamer 0.10.x is no longer available in Buildroot, so
+	  Gstreamer 0.10.x is no longer available in MikoOS, so
 	  neither is the support in nvidia-tegra23 binaries.
 
 config BR2_PACKAGE_FREERDP_GSTREAMER
 	bool "freerdp gstreamer 0.10.x support removed"
 	select BR2_LEGACY
 	help
-	  Gstreamer 0.10.x is no longer available in Buildroot, so
+	  Gstreamer 0.10.x is no longer available in MikoOS, so
 	  neither is the support in freerdp.
 
 config BR2_PACKAGE_OPENCV3_WITH_GSTREAMER
 	bool "opencv3 gstreamer 0.10.x support removed"
 	select BR2_LEGACY
 	help
-	  Gstreamer 0.10.x is no longer available in Buildroot, so
+	  Gstreamer 0.10.x is no longer available in MikoOS, so
 	  neither is the support in opencv3.
 
 config BR2_PACKAGE_OPENCV_WITH_GSTREAMER
 	bool "opencv gstreamer 0.10.x support removed"
 	select BR2_LEGACY
 	help
-	  Gstreamer 0.10.x is no longer available in Buildroot, so
+	  Gstreamer 0.10.x is no longer available in MikoOS, so
 	  neither is the support in opencv.
 
 config BR2_PACKAGE_LIBPLAYER
@@ -3632,7 +3632,7 @@ config BR2_PACKAGE_LIBPLAYER
 	help
 	  The libplayer package was removed. The latest release is
 	  from 2010 and none of the backends are available in
-	  Buildroot any more.
+	  MikoOS any more.
 
 config BR2_GCC_VERSION_OR1K
 	bool "gcc 5.x fork for or1k has been removed"
@@ -3758,28 +3758,28 @@ config BR2_PACKAGE_TI_SGX_KM_AM335X
 	select BR2_LEGACY
 	select BR2_PACKAGE_TI_SGX_KM
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_KM_AM437X
 	bool "ti-sgx-km AM437X option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_KM_AM4430
 	bool "ti-sgx-km AM4430 option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_KM_AM5430
 	bool "ti-sgx-km AM5430 option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 comment "Legacy options removed in 2019.11"
@@ -3892,7 +3892,7 @@ config BR2_PACKAGE_USTR
 	help
 	  The 'ustr' package was only used by SELinux libsemanage, but
 	  since SELinux 2.7, ustr is no longer used. Therefore, we
-	  removed this package from Buildroot.
+	  removed this package from MikoOS.
 
 config BR2_PACKAGE_KODI_SCREENSAVER_PLANESTATE
 	bool "kodi-screensaver-planestate package was removed"
@@ -4062,7 +4062,7 @@ config BR2_PACKAGE_GST1_PLUGINS_BAD_PLUGIN_OPENCV
 	select BR2_LEGACY
 	help
 	  The gst1-plugins-bad opencv option was removed because
-	  buildroot does not have the opencv_contrib package which
+	  mikoos does not have the opencv_contrib package which
 	  is required for the bgsegm module which gst1-plugins-bad
 	  now requires along with opencv3.
 
@@ -4760,28 +4760,28 @@ config BR2_PACKAGE_TI_SGX_AM335X
 	select BR2_LEGACY
 	select BR2_PACKAGE_TI_SGX_KM
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_AM437X
 	bool "ti-sgx-km AM437X option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_AM4430
 	bool "ti-sgx-km AM4430 option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_TI_SGX_AM5430
 	bool "ti-sgx-km AM5430 option removed"
 	select BR2_LEGACY
 	help
-	  Starting from buildroot release 2020.02, the buildroot package
+	  Starting from mikoos release 2020.02, the mikoos package
 	  only supports the target am335x.
 
 config BR2_PACKAGE_JANUS_AUDIO_BRIDGE
@@ -5202,7 +5202,7 @@ config BR2_PACKAGE_TRANSMISSION_REMOTE
 	help
 	  Upstream does not provide a separate configure option for
 	  the tool transmission-remote, it is built when the
-	  transmission daemon has been enabled. Therefore, Buildroot
+	  transmission daemon has been enabled. Therefore, MikoOS
 	  has automatically enabled BR2_PACKAGE_TRANSMISSION_DAEMON
 	  for you.
 
@@ -5253,7 +5253,7 @@ config BR2_PACKAGE_IQVLINUX
 	  requirement. Intel engineers were even surprised it even
 	  built and were not willing to make any effort to fix their
 	  tarball naming to contain a version number. Therefore, it
-	  does not make sense for Buildroot to provide such a package.
+	  does not make sense for MikoOS to provide such a package.
 
 	  See https://sourceforge.net/p/e1000/bugs/589/ for the
 	  discussion.
@@ -5270,7 +5270,7 @@ config BR2_bfin
 	select BR2_LEGACY
 	help
 	  Following the removal of Blackfin support for the upstream
-	  Linux kernel, Buildroot has removed support for this CPU
+	  Linux kernel, MikoOS has removed support for this CPU
 	  architecture.
 
 config BR2_PACKAGE_KODI_ADSP_BASIC
@@ -5540,7 +5540,7 @@ config BR2_TARGET_ROOTFS_EXT2_EXTRA_INODES
 	int "ext2 extra inodes has been removed" if BR2_TARGET_ROOTFS_EXT2_INODES = 0
 	default 0
 	help
-	  Buildroot now uses mkfs.ext2/3/4 to generate ext2/3/4
+	  MikoOS now uses mkfs.ext2/3/4 to generate ext2/3/4
 	  images. It now automatically selects the number of inodes
 	  based on the image size. The extra number of inodes can no
 	  longer be provided; instead, provide the total number of
@@ -5914,7 +5914,7 @@ config BR2_TOOLCHAIN_EXTERNAL_MUSL_CROSS
 	  The support for the prebuilt toolchain based on the Musl C
 	  library provided by the musl-cross project has been removed.
 	  Upstream doesn't provide any prebuilt toolchain anymore, use
-	  the Buildroot toolchain instead.
+	  the MikoOS toolchain instead.
 
 config BR2_UCLIBC_INSTALL_TEST_SUITE
 	bool "uClibc tests now in uclibc-ng-test"
@@ -5929,15 +5929,15 @@ config BR2_TOOLCHAIN_EXTERNAL_BLACKFIN_UCLINUX
 	select BR2_LEGACY
 	help
 	  The ADI Blackfin toolchain has many bugs which are fixed in
-	  more recent gcc and uClibc-ng releases. Use the Buildroot
+	  more recent gcc and uClibc-ng releases. Use the MikoOS
 	  toolchain instead.
 
 config BR2_PACKAGE_MAKEDEVS
 	bool "makedevs removed"
 	select BR2_LEGACY
 	help
-	  The makedevs tool is part of busybox. The Buildroot fork
-	  should not be used outside of the Buildroot infrastructure.
+	  The makedevs tool is part of busybox. The MikoOS fork
+	  should not be used outside of the MikoOS infrastructure.
 
 config BR2_TOOLCHAIN_EXTERNAL_ARAGO_ARMV7A
 	bool "Arago ARMv7 2011.09 removed"
@@ -5956,14 +5956,14 @@ config BR2_PACKAGE_SNOWBALL_HDMISERVICE
 	select BR2_LEGACY
 	help
 	  We no longer have support for the Snowball platform in
-	  Buildroot, so this package was no longer useful.
+	  MikoOS, so this package was no longer useful.
 
 config BR2_PACKAGE_SNOWBALL_INIT
 	bool "snowball-init removed"
 	select BR2_LEGACY
 	help
 	  We no longer have support for the Snowball platform in
-	  Buildroot, so this package was no longer useful.
+	  MikoOS, so this package was no longer useful.
 
 config BR2_GDB_VERSION_7_9
 	bool "gdb 7.9 has been removed"
@@ -6123,14 +6123,14 @@ config BR2_KERNEL_HEADERS_4_0
 	select BR2_LEGACY
 	help
 	  Version 4.0.x of the Linux kernel headers have been deprecated
-	  for more than four buildroot releases and are now removed.
+	  for more than four mikoos releases and are now removed.
 
 config BR2_KERNEL_HEADERS_3_19
 	bool "kernel headers version 3.19.x are no longer supported"
 	select BR2_LEGACY
 	help
 	  Version 3.19.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_PACKAGE_LIBEVAS_GENERIC_LOADERS
@@ -6167,7 +6167,7 @@ config BR2_PACKAGE_EFL_JP2K
 	select BR2_LEGACY
 	help
 	  JP2K support in EFL requires openjpeg 1.x (libopenjpeg1.pc)
-	  while Buildroot only packages openjpeg 2.x. Therefore, the
+	  while MikoOS only packages openjpeg 2.x. Therefore, the
 	  JP2K loader has been removed from EFL.
 
 config BR2_PACKAGE_SYSTEMD_COMPAT
@@ -6263,7 +6263,7 @@ config BR2_PACKAGE_OPENVPN_CRYPTO_POLARSSL
 	  The OpenVPN polarssl crypto backend option has been removed.
 	  Version from 2.3.10 onwards need polarssl >= 1.3.8 but aren't
 	  compatible with mbedtls (polarssl) series 2.x which is the
-	  version provided in buildroot. And both can't coexist.
+	  version provided in mikoos. And both can't coexist.
 	  It now uses OpenSSL as the only option.
 
 config BR2_PACKAGE_NGINX_HTTP_SPDY_MODULE
@@ -6348,7 +6348,7 @@ config BR2_KERNEL_HEADERS_3_17
 	select BR2_LEGACY
 	help
 	  Version 3.17.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_GDB_VERSION_7_7
@@ -6491,7 +6491,7 @@ config BR2_KERNEL_HEADERS_3_16
 	select BR2_LEGACY
 	help
 	  Version 3.16.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_PACKAGE_PYTHON_PYXML
@@ -6696,14 +6696,14 @@ config BR2_KERNEL_HEADERS_3_0
 	select BR2_LEGACY
 	help
 	  Version 3.0.x of the Linux kernel headers have been deprecated
-	  for more than four buildroot releases and are now removed.
+	  for more than four mikoos releases and are now removed.
 
 config BR2_KERNEL_HEADERS_3_11
 	bool "kernel headers version 3.11.x are no longer supported"
 	select BR2_LEGACY
 	help
 	  Version 3.11.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_KERNEL_HEADERS_3_13
@@ -6711,7 +6711,7 @@ config BR2_KERNEL_HEADERS_3_13
 	select BR2_LEGACY
 	help
 	  Version 3.13.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_KERNEL_HEADERS_3_15
@@ -6719,7 +6719,7 @@ config BR2_KERNEL_HEADERS_3_15
 	select BR2_LEGACY
 	help
 	  Version 3.15.x of the Linux kernel headers have been
-	  deprecated for more than four buildroot releases and are now
+	  deprecated for more than four mikoos releases and are now
 	  removed.
 
 config BR2_PACKAGE_DIRECTFB_EXAMPLES_ANDI

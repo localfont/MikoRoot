@@ -1,7 +1,7 @@
 Microchip PolarFire SoC Icicle Kit
 ==================================
 
-This file describes how to use the pre-defined Buildroot
+This file describes how to use the pre-defined MikoOS
 configuration for Microchip's PolarFire SoC Icicle Kit.
 
 Further information about the PolarFire SoC Icicle Kit can be found
@@ -10,7 +10,7 @@ at https://github.com/polarfire-soc/polarfire-soc-documentation
 Building
 ========
 
-Configure Buildroot using the default board configuration:
+Configure MikoOS using the default board configuration:
 
   '$ make microchip_mpfs_icicle_defconfig'
 
@@ -45,7 +45,7 @@ Once the build has finished you will have the following files:
 Creating a bootable SD card with genimage
 =========================================
 
-By default Buildroot builds a SD card image for you. The first partition
+By default MikoOS builds a SD card image for you. The first partition
 of this image contains a U-Boot binary, embedded in a Hart Software
 Services (HSS) payload. The second partition contains a FAT filesystem
 with a U-Boot env and an ITB file containing the kernel and the device

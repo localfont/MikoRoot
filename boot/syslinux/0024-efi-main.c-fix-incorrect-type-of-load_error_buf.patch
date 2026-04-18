@@ -20,7 +20,7 @@ efi/main.c:1329:21: error: passing argument 1 of ‘setjmp’ from incompatible 
       |                     ^~~~~~~~~~~~~~
       |                     |
       |                     struct <anonymous> (*)[1]
-x86_64-buildroot-linux-gnu/sysroot/usr/include/efi/efisetjmp.h:7:29: note: expected ‘struct <anonymous> *’ but argument is of type ‘struct <anonymous> (*)[1]’
+x86_64-mikoos-linux-gnu/sysroot/usr/include/efi/efisetjmp.h:7:29: note: expected ‘struct <anonymous> *’ but argument is of type ‘struct <anonymous> (*)[1]’
     7 | extern UINTN setjmp(jmp_buf env) __attribute__((returns_twice));
       |                     ~~~~~~~~^~~
 

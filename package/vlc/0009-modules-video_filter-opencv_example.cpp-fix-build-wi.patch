@@ -7,7 +7,7 @@ Subject: [PATCH] modules/video_filter/opencv_example.cpp: fix build with
 Use cvScalar instead of CV_RGB to avoid the following build failure with
 opencv 3.4.9:
 
-In file included from /home/naourr/work/instance-2/output-1/host/x86_64-buildroot-linux-uclibc/sysroot/usr/include/opencv2/imgproc/imgproc.hpp:48,
+In file included from /home/naourr/work/instance-2/output-1/host/x86_64-mikoos-linux-uclibc/sysroot/usr/include/opencv2/imgproc/imgproc.hpp:48,
                  from video_filter/opencv_example.cpp:46:
 video_filter/opencv_example.cpp: In function 'picture_t* Filter(filter_t*, picture_t*)':
 video_filter/opencv_example.cpp:200:46: error: could not convert 'cv::Scalar_<double>((double)0, (double)0, (double)0, (double)0)' from 'cv::Scalar' {aka 'cv::Scalar_<double>'} to 'CvScalar'

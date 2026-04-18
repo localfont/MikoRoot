@@ -3,7 +3,7 @@ From: "Yann E. MORIN" <yann.morin.1998@free.fr>
 Date: Wed, 8 Feb 2023 12:30:10 +0100
 Subject: [PATCH] configure: fix build on mips
 
-This patch is a historical baggage that Buildroot has carried for ages
+This patch is a historical baggage that MikoOS has carried for ages
 (since 2006), and the reason for it are notentirely clear.
 
 Since dmalloc is pretty tricky, and as this patch has not been

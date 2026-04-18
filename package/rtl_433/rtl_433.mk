@@ -21,7 +21,7 @@ RTL_433_CONF_OPTS = \
 	-DBUILD_TESTING_ANALYZER=OFF \
 	-DENABLE_SOAPYSDR=OFF
 
-# do not include Buildroot git info in version output
+# do not include MikoOS git info in version output
 RTL_433_CONF_ENV = GIT_DIR=.
 
 ifeq ($(BR2_PACKAGE_LIBRTLSDR),y)

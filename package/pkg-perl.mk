@@ -4,7 +4,7 @@
 # This file implements an infrastructure that eases development of
 # package .mk files for Perl packages.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this perl infrastructure requires

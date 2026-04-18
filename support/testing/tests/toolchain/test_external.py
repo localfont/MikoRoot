@@ -69,7 +69,7 @@ class TestExternalToolchainArmGnu(TestExternalToolchain):
         self.emulator.login()
 
 
-class TestExternalToolchainBuildrootMusl(TestExternalToolchain):
+class TestExternalToolchainMikoOSMusl(TestExternalToolchain):
     config = BASIC_CONFIG + \
         """
         BR2_arm=y
@@ -78,7 +78,7 @@ class TestExternalToolchainBuildrootMusl(TestExternalToolchain):
         BR2_TOOLCHAIN_EXTERNAL=y
         BR2_TOOLCHAIN_EXTERNAL_CUSTOM=y
         BR2_TOOLCHAIN_EXTERNAL_DOWNLOAD=y
-        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.buildroot.org/toolchains/tarballs/br-arm-cortex-a9-musl-2017.05-1078-g95b1dae.tar.bz2"
+        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.mikoos.org/toolchains/tarballs/br-arm-cortex-a9-musl-2017.05-1078-g95b1dae.tar.bz2"
         BR2_TOOLCHAIN_EXTERNAL_GCC_6=y
         BR2_TOOLCHAIN_EXTERNAL_HEADERS_4_12=y
         BR2_TOOLCHAIN_EXTERNAL_CUSTOM_MUSL=y
@@ -104,7 +104,7 @@ class TestExternalToolchainCtngMusl(TestExternalToolchain):
         BR2_TOOLCHAIN_EXTERNAL=y
         BR2_TOOLCHAIN_EXTERNAL_CUSTOM=y
         BR2_TOOLCHAIN_EXTERNAL_DOWNLOAD=y
-        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.buildroot.net/toolchains/tarballs/arm-ctng-linux-musleabihf.tar.xz"
+        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.mikoos.net/toolchains/tarballs/arm-ctng-linux-musleabihf.tar.xz"
         BR2_TOOLCHAIN_EXTERNAL_CUSTOM_PREFIX="arm-ctng-linux-musleabihf"
         BR2_TOOLCHAIN_EXTERNAL_GCC_7=y
         BR2_TOOLCHAIN_EXTERNAL_HEADERS_3_10=y
@@ -122,14 +122,14 @@ class TestExternalToolchainCtngMusl(TestExternalToolchain):
         self.emulator.login()
 
 
-class TestExternalToolchainBuildrootuClibc(TestExternalToolchain):
+class TestExternalToolchainMikoOSuClibc(TestExternalToolchain):
     config = BASIC_CONFIG + \
         """
         BR2_arm=y
         BR2_TOOLCHAIN_EXTERNAL=y
         BR2_TOOLCHAIN_EXTERNAL_CUSTOM=y
         BR2_TOOLCHAIN_EXTERNAL_DOWNLOAD=y
-        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.buildroot.org/toolchains/tarballs/br-arm-full-2017.05-1078-g95b1dae.tar.bz2"
+        BR2_TOOLCHAIN_EXTERNAL_URL="http://autobuild.mikoos.org/toolchains/tarballs/br-arm-full-2017.05-1078-g95b1dae.tar.bz2"
         BR2_TOOLCHAIN_EXTERNAL_GCC_4_9=y
         BR2_TOOLCHAIN_EXTERNAL_HEADERS_3_10=y
         BR2_TOOLCHAIN_EXTERNAL_LOCALE=y
@@ -147,7 +147,7 @@ class TestExternalToolchainBuildrootuClibc(TestExternalToolchain):
         self.emulator.login()
 
 
-class TestExternalToolchainCCache(TestExternalToolchainBuildrootuClibc):
+class TestExternalToolchainCCache(TestExternalToolchainMikoOSuClibc):
     extraconfig = \
         """
         BR2_CCACHE=y
@@ -155,5 +155,5 @@ class TestExternalToolchainCCache(TestExternalToolchainBuildrootuClibc):
         """
 
     def __init__(self, names):
-        super(TestExternalToolchainBuildrootuClibc, self).__init__(names)
+        super(TestExternalToolchainMikoOSuClibc, self).__init__(names)
         self.config += self.extraconfig.format(builddir=self.builddir)

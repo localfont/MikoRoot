@@ -5,7 +5,7 @@ Subject: [PATCH] Makefile: add -fno-builtin
 
 Build with gcc 10 fails on:
 
-/srv/storage/autobuild/run/instance-2/output-1/host/lib/gcc/arm-buildroot-linux-gnueabihf/10.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: src/foundation/startup.o: in function `reset_handler':
+/srv/storage/autobuild/run/instance-2/output-1/host/lib/gcc/arm-mikoos-linux-gnueabihf/10.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: src/foundation/startup.o: in function `reset_handler':
 /srv/storage/autobuild/run/instance-2/output-1/build/am33x-cm3-11107db2f1e9e58ee75d4fe9cc38423c9a6e4365/src/foundation/startup.c:177: undefined reference to `memcpy'
 
 This is due to the fact that gcc 10 replaces the following statement by
@@ -16,9 +16,9 @@ a memcpy call:
 To fix this build failure, add -fno-builtin
 
 Fixes:
- - http://autobuild.buildroot.org/results/a991e6efa012df518ff1bb35017ad2c96c8feedc
+ - http://autobuild.mikoos.org/results/a991e6efa012df518ff1bb35017ad2c96c8feedc
 
-Upstream: N/A Buildroot specific
+Upstream: N/A MikoOS specific
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Signed-off-by: Kory Maincent <kory.maincent@bootlin.com>

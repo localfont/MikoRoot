@@ -1,6 +1,6 @@
-# Makefile for buildroot
+# Makefile for mikoos
 #
-# Copyright (C) the Buildroot developers <buildroot@buildroot.org>
+# Copyright (C) the MikoOS developers <mikoos@mikoos.org>
 #
 # This program is free software; you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -37,11 +37,11 @@ ifneq ("$(origin O)", "command line")
 O := $(CURDIR)/output
 endif
 
-# Check if the current Buildroot execution meets all the pre-requisites.
-# If they are not met, Buildroot will actually do its job in a sub-make meeting
+# Check if the current MikoOS execution meets all the pre-requisites.
+# If they are not met, MikoOS will actually do its job in a sub-make meeting
 # its pre-requisites, which are:
 #  1- Permissive enough umask:
-#       Wrong or too restrictive umask will prevent Buildroot and packages from
+#       Wrong or too restrictive umask will prevent MikoOS and packages from
 #       creating files and directories.
 #  2- Absolute canonical CWD (i.e. $(CURDIR)):
 #       Otherwise, some packages will use CWD as-is, others will compute its
@@ -72,7 +72,7 @@ CUR_UMASK := $(shell umask)
 # toplevel makefile is called back.
 EXTRAMAKEARGS := O=$(CANONICAL_O)
 
-# Check Buildroot execution pre-requisites here.
+# Check MikoOS execution pre-requisites here.
 ifneq ($(CUR_UMASK):$(CURDIR):$(O),$(REQ_UMASK):$(CANONICAL_CURDIR):$(CANONICAL_O))
 .PHONY: _all $(MAKECMDGOALS)
 
@@ -150,7 +150,7 @@ BR_BUILDING = y
 endif
 
 # We call make recursively to build packages. The command-line overrides that
-# are passed to Buildroot don't apply to those package build systems. In
+# are passed to MikoOS don't apply to those package build systems. In
 # particular, we don't want to pass down the O=<dir> option for out-of-tree
 # builds, because the value specified on the command line will not be correct
 # for packages.
@@ -389,7 +389,7 @@ HOST_UTF8_LOCALE := $(shell \
 HOST_UTF8_LOCALE_ENV := LC_ALL=$(HOST_UTF8_LOCALE)
 endif
 
-# Make sure pkg-config doesn't look outside the buildroot tree
+# Make sure pkg-config doesn't look outside the mikoos tree
 HOST_PKG_CONFIG_PATH := $(PKG_CONFIG_PATH)
 unexport PKG_CONFIG_PATH
 unexport PKG_CONFIG_SYSROOT_DIR
@@ -589,11 +589,11 @@ $(foreach pkg,$(call UPPERCASE,$(PACKAGES)),\
 
 endif
 
-$(BUILD_DIR)/buildroot-config/auto.conf: $(BR2_CONFIG)
+$(BUILD_DIR)/mikoos-config/auto.conf: $(BR2_CONFIG)
 	$(MAKE1) $(EXTRAMAKEARGS) HOSTCC="$(HOSTCC_NOCCACHE)" HOSTCXX="$(HOSTCXX_NOCCACHE)" syncconfig
 
 .PHONY: prepare
-prepare: $(BUILD_DIR)/buildroot-config/auto.conf
+prepare: $(BUILD_DIR)/mikoos-config/auto.conf
 	@$(foreach s, $(call qstrip,$(BR2_ROOTFS_PRE_BUILD_SCRIPT)), \
 		$(call MESSAGE,"Executing pre-build script $(s)"); \
 		$(EXTRA_ENV) $(s) \
@@ -608,20 +608,20 @@ world: target-post-image
 prepare-sdk: world
 	@$(call MESSAGE,"Preparing the SDK")
 	$(INSTALL) -m 755 $(TOPDIR)/support/misc/relocate-sdk.sh $(HOST_DIR)/relocate-sdk.sh
-	mkdir -p $(HOST_DIR)/share/buildroot
+	mkdir -p $(HOST_DIR)/share/mikoos
 	(\
 		export LC_ALL=C; \
 		grep -lr '$(HOST_DIR)' '$(HOST_DIR)' | while read -r FILE; do \
 			if file -b --mime-type "$$FILE" | grep -q '^text/' && \
-			   [ "$$FILE" != '$(HOST_DIR)/share/buildroot/sdk-location' ] && \
-			   [ "$$FILE" != '$(HOST_DIR)/share/buildroot/sdk-relocs' ]; then \
+			   [ "$$FILE" != '$(HOST_DIR)/share/mikoos/sdk-location' ] && \
+			   [ "$$FILE" != '$(HOST_DIR)/share/mikoos/sdk-relocs' ]; then \
 				echo "$$FILE"; \
 			fi; \
 		done \
-	) | sed -e 's|^$(HOST_DIR)|.|g' > $(HOST_DIR)/share/buildroot/sdk-relocs
-	echo $(HOST_DIR) > $(HOST_DIR)/share/buildroot/sdk-location
+	) | sed -e 's|^$(HOST_DIR)|.|g' > $(HOST_DIR)/share/mikoos/sdk-relocs
+	echo $(HOST_DIR) > $(HOST_DIR)/share/mikoos/sdk-location
 
-BR2_SDK_PREFIX ?= $(GNU_TARGET_NAME)_sdk-buildroot
+BR2_SDK_PREFIX ?= $(GNU_TARGET_NAME)_sdk-mikoos
 .PHONY: sdk
 sdk: prepare-sdk $(BR2_TAR_HOST_DEPENDENCY)
 	@$(call MESSAGE,"Generating SDK tarball")
@@ -784,11 +784,11 @@ endif
 		{ echo "ERROR: we shouldn't have a /etc/ld.so.conf.d directory"; exit 1; } || true
 	mkdir -p $(TARGET_DIR)/etc
 	( \
-		echo "NAME=Buildroot"; \
+		echo "NAME=MikoOS"; \
 		echo "VERSION=$(BR2_VERSION_FULL)"; \
-		echo "ID=buildroot"; \
+		echo "ID=mikoos"; \
 		echo "VERSION_ID=$(BR2_VERSION)"; \
-		echo "PRETTY_NAME=\"Buildroot $(BR2_VERSION)\"" \
+		echo "PRETTY_NAME=\"MikoOS $(BR2_VERSION)\"" \
 	) >  $(TARGET_DIR)/usr/lib/os-release
 	ln -sf ../usr/lib/os-release $(TARGET_DIR)/etc
 
@@ -859,13 +859,13 @@ legal-info-clean:
 
 .PHONY: legal-info-prepare
 legal-info-prepare: $(LEGAL_INFO_DIR)
-	@$(call MESSAGE,"Buildroot $(BR2_VERSION_FULL) Collecting legal info")
-	@$(call legal-license-file,HOST,buildroot,buildroot,COPYING,COPYING,support/legal-info/buildroot.hash)
+	@$(call MESSAGE,"MikoOS $(BR2_VERSION_FULL) Collecting legal info")
+	@$(call legal-license-file,HOST,mikoos,mikoos,COPYING,COPYING,support/legal-info/mikoos.hash)
 	@$(call legal-manifest,TARGET,PACKAGE,VERSION,LICENSE,LICENSE FILES,SOURCE ARCHIVE,SOURCE SITE,DEPENDENCIES WITH LICENSES)
 	@$(call legal-manifest,HOST,PACKAGE,VERSION,LICENSE,LICENSE FILES,SOURCE ARCHIVE,SOURCE SITE,DEPENDENCIES WITH LICENSES)
-	@$(call legal-manifest,HOST,buildroot,$(BR2_VERSION_FULL),GPL-2.0+,COPYING,not saved,not saved)
-	@$(call legal-warning,the Buildroot source code has not been saved)
-	@cp $(BR2_CONFIG) $(LEGAL_INFO_DIR)/buildroot.config
+	@$(call legal-manifest,HOST,mikoos,$(BR2_VERSION_FULL),GPL-2.0+,COPYING,not saved,not saved)
+	@$(call legal-warning,the MikoOS source code has not been saved)
+	@cp $(BR2_CONFIG) $(LEGAL_INFO_DIR)/mikoos.config
 
 .PHONY: legal-info
 legal-info: legal-info-clean legal-info-prepare $(foreach p,$(PACKAGES),$(p)-all-legal-info) \
@@ -954,7 +954,7 @@ pkg-stats:
 	$(TOPDIR)/support/scripts/pkg-stats -c \
 		--json $(O)/pkg-stats.json \
 		--html $(O)/pkg-stats.html \
-		--nvd-path $(DL_DIR)/buildroot-nvd
+		--nvd-path $(DL_DIR)/mikoos-nvd
 
 else # ifeq ($(BR2_HAVE_DOT_CONFIG),y)
 
@@ -964,7 +964,7 @@ else # ifeq ($(BR2_HAVE_DOT_CONFIG),y)
 # Also for 'all' we error out and ask the user to configure first.
 .PHONY: linux toolchain
 linux toolchain all: outputmakefile
-	$(error Please configure Buildroot first (e.g. "make menuconfig"))
+	$(error Please configure MikoOS first (e.g. "make menuconfig"))
 	@exit 1
 
 endif # ifeq ($(BR2_HAVE_DOT_CONFIG),y)
@@ -975,7 +975,7 @@ endif # ifeq ($(BR2_HAVE_DOT_CONFIG),y)
 HOSTCFLAGS = $(CFLAGS_FOR_BUILD)
 export HOSTCFLAGS
 
-$(BUILD_DIR)/buildroot-config/%onf:
+$(BUILD_DIR)/mikoos-config/%onf:
 	mkdir -p $(@D)/lxdialog
 	PKG_CONFIG_PATH="$(HOST_PKG_CONFIG_PATH)" $(MAKE) CC="$(HOSTCC_NOCCACHE)" HOSTCC="$(HOSTCC_NOCCACHE)" \
 	    obj=$(@D) -C $(CONFIG) -f Makefile.br $(@F)
@@ -986,27 +986,27 @@ DEFCONFIG = $(call qstrip,$(BR2_DEFCONFIG))
 # recognize that if it's still at its default $(CONFIG_DIR)/defconfig
 COMMON_CONFIG_ENV = \
 	BR2_DEFCONFIG='$(call qstrip,$(value BR2_DEFCONFIG))' \
-	KCONFIG_AUTOCONFIG=$(BUILD_DIR)/buildroot-config/auto.conf \
-	KCONFIG_AUTOHEADER=$(BUILD_DIR)/buildroot-config/autoconf.h \
-	KCONFIG_TRISTATE=$(BUILD_DIR)/buildroot-config/tristate.config \
+	KCONFIG_AUTOCONFIG=$(BUILD_DIR)/mikoos-config/auto.conf \
+	KCONFIG_AUTOHEADER=$(BUILD_DIR)/mikoos-config/autoconf.h \
+	KCONFIG_TRISTATE=$(BUILD_DIR)/mikoos-config/tristate.config \
 	BR2_CONFIG=$(BR2_CONFIG) \
 	HOST_GCC_VERSION="$(HOSTCC_VERSION)" \
 	BASE_DIR=$(BASE_DIR) \
 	SKIP_LEGACY=
 
-xconfig: $(BUILD_DIR)/buildroot-config/qconf outputmakefile
+xconfig: $(BUILD_DIR)/mikoos-config/qconf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< $(CONFIG_CONFIG_IN)
 
-gconfig: $(BUILD_DIR)/buildroot-config/gconf outputmakefile
+gconfig: $(BUILD_DIR)/mikoos-config/gconf outputmakefile
 	@$(COMMON_CONFIG_ENV) srctree=$(TOPDIR) $< $(CONFIG_CONFIG_IN)
 
-menuconfig: $(BUILD_DIR)/buildroot-config/mconf outputmakefile
+menuconfig: $(BUILD_DIR)/mikoos-config/mconf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< $(CONFIG_CONFIG_IN)
 
-nconfig: $(BUILD_DIR)/buildroot-config/nconf outputmakefile
+nconfig: $(BUILD_DIR)/mikoos-config/nconf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< $(CONFIG_CONFIG_IN)
 
-config: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+config: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< $(CONFIG_CONFIG_IN)
 
 # For the config targets that automatically select options, we pass
@@ -1014,11 +1014,11 @@ config: $(BUILD_DIR)/buildroot-config/conf outputmakefile
 # no values are set for the legacy options so a subsequent oldconfig
 # will query them. Therefore, run an additional olddefconfig.
 
-randconfig allyesconfig alldefconfig allnoconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+randconfig allyesconfig alldefconfig allnoconfig: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@$(COMMON_CONFIG_ENV) SKIP_LEGACY=y $< --$@ $(CONFIG_CONFIG_IN)
 	@$(COMMON_CONFIG_ENV) $< --olddefconfig $(CONFIG_CONFIG_IN) >/dev/null
 
-randpackageconfig allyespackageconfig allnopackageconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+randpackageconfig allyespackageconfig allnopackageconfig: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@grep -v BR2_PACKAGE_ $(BR2_CONFIG) > $(CONFIG_DIR)/.config.nopkg
 	@$(COMMON_CONFIG_ENV) SKIP_LEGACY=y \
 		KCONFIG_ALLCONFIG=$(CONFIG_DIR)/.config.nopkg \
@@ -1026,13 +1026,13 @@ randpackageconfig allyespackageconfig allnopackageconfig: $(BUILD_DIR)/buildroot
 	@rm -f $(CONFIG_DIR)/.config.nopkg
 	@$(COMMON_CONFIG_ENV) $< --olddefconfig $(CONFIG_CONFIG_IN) >/dev/null
 
-oldconfig syncconfig olddefconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+oldconfig syncconfig olddefconfig: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< --$@ $(CONFIG_CONFIG_IN)
 
-defconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+defconfig: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< --defconfig$(if $(DEFCONFIG),=$(DEFCONFIG)) $(CONFIG_CONFIG_IN)
 
-%_defconfig: $(BUILD_DIR)/buildroot-config/conf  outputmakefile
+%_defconfig: $(BUILD_DIR)/mikoos-config/conf  outputmakefile
 	@defconfig=$(or \
 		$(firstword \
 			$(foreach d, \
@@ -1047,7 +1047,7 @@ defconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
 
 update-defconfig: savedefconfig
 
-savedefconfig: $(BUILD_DIR)/buildroot-config/conf outputmakefile
+savedefconfig: $(BUILD_DIR)/mikoos-config/conf outputmakefile
 	@$(COMMON_CONFIG_ENV) $< \
 		--savedefconfig=$(if $(DEFCONFIG),$(DEFCONFIG),$(CONFIG_DIR)/defconfig) \
 		$(CONFIG_CONFIG_IN)
@@ -1221,8 +1221,8 @@ help:
 	@echo '  make V=0|1             - 0 => quiet build (default), 1 => verbose build'
 	@echo '  make O=dir             - Locate all output files in "dir", including .config'
 	@echo
-	@echo 'For further details, see README, generate the Buildroot manual, or consult'
-	@echo 'it on-line at http://buildroot.org/docs.html'
+	@echo 'For further details, see README, generate the MikoOS manual, or consult'
+	@echo 'it on-line at http://mikoos.org/docs.html'
 	@echo
 
 # List the defconfig files
@@ -1255,7 +1255,7 @@ list-defconfigs:
 		$(call list-defconfigs,$(BR2_EXTERNAL_$(name)_PATH),\
 			$(BR2_EXTERNAL_$(name)_DESC))$(sep))
 
-release: OUT = buildroot-$(BR2_VERSION)
+release: OUT = mikoos-$(BR2_VERSION)
 
 # Create release tarballs. We need to fiddle a bit to add the generated
 # documentation to the git output

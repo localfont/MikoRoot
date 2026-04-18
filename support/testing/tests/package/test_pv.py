@@ -26,7 +26,7 @@ class TestPv(infra.basetest.BRTest):
         # file. We also force the pv terminal width to 80, since
         # "infra.emulator" is setting a large width to prevent
         # line wrapping.
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
         out_file = "/tmp/out.txt"
         cmd = f"echo '{msg}' | pv -w80 > {out_file}"
         self.assertRunOk(cmd)

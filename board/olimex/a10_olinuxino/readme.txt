@@ -18,7 +18,7 @@ The following defconfigs are available:
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make <board>_defconfig
 

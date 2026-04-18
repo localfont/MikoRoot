@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-# This script expect to run from the Buildroot top directory.
+# This script expect to run from the MikoOS top directory.
 
 import os
 import pexpect
@@ -36,10 +36,10 @@ def main():
     time.sleep(1)
 
     try:
-        child.expect(["buildroot login:"], timeout=600)
+        child.expect(["mikoos login:"], timeout=600)
     except pexpect.EOF as e:
         # Some emulations require a fork of qemu-system, which may be
-        # missing on the system, and is not provided by Buildroot.
+        # missing on the system, and is not provided by MikoOS.
         # In this case, spawn above will succeed at starting the wrapper
         # start-qemu.sh, but that one will fail (exit with 127) in such
         # a situation.

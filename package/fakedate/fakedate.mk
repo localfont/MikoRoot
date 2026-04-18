@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-# source included in buildroot
+# source included in mikoos
 HOST_FAKEDATE_LICENSE = GPL-2.0+
 
 # The package is a dependency to ccache so ccache cannot be a dependency

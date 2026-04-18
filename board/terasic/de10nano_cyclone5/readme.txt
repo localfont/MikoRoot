@@ -9,7 +9,7 @@ https://rocketboards.org/foswiki/Documentation/DE10NanoDevelopmentBoard
 Build
 =====
 
-First, load socrates config for buildroot
+First, load socrates config for mikoos
 
     make terasic_de10nano_cyclone5_defconfig
 

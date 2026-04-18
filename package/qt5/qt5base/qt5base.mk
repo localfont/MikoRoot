@@ -20,11 +20,11 @@ QT5BASE_SYNC_QT_HEADERS = YES
 #  * -no-pch to workaround the issue described at
 #     http://comments.gmane.org/gmane.comp.lib.qt.devel/5933.
 #  * -system-zlib because zlib is mandatory for Qt build, and we
-#     want to use the Buildroot packaged zlib
+#     want to use the MikoOS packaged zlib
 #  * -system-pcre because pcre is mandatory to build Qt, and we
-#    want to use the one packaged in Buildroot
+#    want to use the one packaged in MikoOS
 #  * -no-feature-relocatable to work around path mismatch
-#     while searching qml files and buildroot BR2_ROOTFS_MERGED_USR
+#     while searching qml files and mikoos BR2_ROOTFS_MERGED_USR
 #     feature enabled
 QT5BASE_CONFIGURE_OPTS += \
 	-optimized-qmake \
@@ -64,7 +64,7 @@ QT5BASE_CONFIGURE_OPTS += -no-avx
 else ifeq ($(BR2_X86_CPU_HAS_AVX2),)
 QT5BASE_CONFIGURE_OPTS += -no-avx2
 else
-# no buildroot BR2_X86_CPU_HAS_AVX512 option yet for qt configure
+# no mikoos BR2_X86_CPU_HAS_AVX512 option yet for qt configure
 # option '-no-avx512'
 endif
 
@@ -98,7 +98,7 @@ endif
 QT5BASE_CONFIG_FILE = $(call qstrip,$(BR2_PACKAGE_QT5BASE_CONFIG_FILE))
 
 ifneq ($(QT5BASE_CONFIG_FILE),)
-QT5BASE_CONFIGURE_OPTS += -qconfig buildroot
+QT5BASE_CONFIGURE_OPTS += -qconfig mikoos
 endif
 
 ifeq ($(BR2_PACKAGE_HAS_UDEV),y)
@@ -306,11 +306,11 @@ endif
 
 ifneq ($(QT5BASE_CONFIG_FILE),)
 define QT5BASE_CONFIGURE_CONFIG_FILE
-	cp $(QT5BASE_CONFIG_FILE) $(@D)/src/corelib/global/qconfig-buildroot.h
+	cp $(QT5BASE_CONFIG_FILE) $(@D)/src/corelib/global/qconfig-mikoos.h
 endef
 endif
 
-QT5BASE_ARCH_CONFIG_FILE = $(@D)/mkspecs/devices/linux-buildroot-g++/arch.conf
+QT5BASE_ARCH_CONFIG_FILE = $(@D)/mkspecs/devices/linux-mikoos-g++/arch.conf
 ifeq ($(BR2_TOOLCHAIN_HAS_LIBATOMIC),y)
 # Qt 5.8 needs atomics, which on various architectures are in -latomic
 define QT5BASE_CONFIGURE_ARCH_CONFIG_LIBATOMIC
@@ -329,16 +329,16 @@ define QT5BASE_CONFIGURE_HOSTCC
 	$(SED) 's,^QMAKE_CXX\s*=.*,QMAKE_CXX = $(HOSTCXX_NOCCACHE),' $(@D)/mkspecs/common/g++-base.conf
 endef
 
-# Must be last so can override all options set by Buildroot
+# Must be last so can override all options set by MikoOS
 QT5BASE_CONFIGURE_OPTS += $(call qstrip,$(BR2_PACKAGE_QT5BASE_CUSTOM_CONF_OPTS))
 
 define QT5BASE_CONFIGURE_CMDS
-	mkdir -p $(@D)/mkspecs/devices/linux-buildroot-g++/
+	mkdir -p $(@D)/mkspecs/devices/linux-mikoos-g++/
 	sed 's/@EGLFS_DEVICE@/$(QT5BASE_EGLFS_DEVICE)/g' \
 		$(QT5BASE_PKGDIR)/qmake.conf.in > \
-		$(@D)/mkspecs/devices/linux-buildroot-g++/qmake.conf
+		$(@D)/mkspecs/devices/linux-mikoos-g++/qmake.conf
 	$(INSTALL) -m 0644 -D $(QT5BASE_PKGDIR)/qplatformdefs.h \
-		$(@D)/mkspecs/devices/linux-buildroot-g++/qplatformdefs.h
+		$(@D)/mkspecs/devices/linux-mikoos-g++/qplatformdefs.h
 	$(QT5BASE_CONFIGURE_CONFIG_FILE)
 	touch $(QT5BASE_ARCH_CONFIG_FILE)
 	$(QT5BASE_CONFIGURE_ARCH_CONFIG_LIBATOMIC)
@@ -358,7 +358,7 @@ define QT5BASE_CONFIGURE_CMDS
 		-examplesdir /usr/lib/qt/examples \
 		-no-rpath \
 		-nomake tests \
-		-device buildroot \
+		-device mikoos \
 		-device-option CROSS_COMPILE="$(TARGET_CROSS)" \
 		-device-option BR_COMPILER_CFLAGS="$(QT5BASE_CFLAGS)" \
 		-device-option BR_COMPILER_CXXFLAGS="$(QT5BASE_CXXFLAGS)" \

@@ -3,7 +3,7 @@ MfgTools Howto
 
 1. Build your mfgtool image
 
-Make sure to enable the following Buildroot options:
+Make sure to enable the following MikoOS options:
 
 BR2_PACKAGE_FREESCALE_IMX=y
 BR2_PACKAGE_IMX_UUC=y

@@ -21,7 +21,7 @@ class TestOpenOCD(infra.basetest.BRTest):
         # We check the program can run.
         self.assertRunOk("openocd --version")
 
-        msg = "Buildroot"
+        msg = "MikoOS"
 
         # We check openocd can run, load a "dummy" driver in the
         # standard search path, and use some of its TCL commands. See:

@@ -35,7 +35,7 @@ config BR2_TOOLCHAIN_EXTERNAL_CUSTOM_PREFIX
 	  you call the toolchain's gcc as $(ARCH)-unknown-linux-gnu-gcc,
 	  the prefix is $(ARCH)-unknown-linux-gnu.
 
-	  Note that Buildroot toolchains have shorter aliases that look
+	  Note that MikoOS toolchains have shorter aliases that look
 	  like $(ARCH)-linux, as symlinks to the full-tuple components,
 	  so you can leave this option at default value if you use them
 	  as external toolchain.
@@ -143,14 +143,14 @@ config BR2_TOOLCHAIN_EXTERNAL_GCC_OLD
 	  Use this option if your GCC version is older than any of the
 	  above.
 
-	  Note that the Buildroot community doesn't do any testing with
+	  Note that the MikoOS community doesn't do any testing with
 	  such old toolchains. Some packages may fail to build in
 	  surprising ways, or the generated root filesystem may not
 	  work at all. Use such old toolchains at your own risk.
 
 endchoice
 
-comment "GCC older than 4.8 is not tested by Buildroot. Use at your own risk."
+comment "GCC older than 4.8 is not tested by MikoOS. Use at your own risk."
 	depends on !BR2_TOOLCHAIN_GCC_AT_LEAST_4_8
 
 choice
@@ -506,7 +506,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HEADERS_REALLY_OLD
 
 endchoice
 
-comment "Kernel headers older than 3.13 is not tested by Buildroot. Use at your own risk."
+comment "Kernel headers older than 3.13 is not tested by MikoOS. Use at your own risk."
 	depends on !BR2_TOOLCHAIN_HEADERS_AT_LEAST_3_13
 
 choice
@@ -545,7 +545,7 @@ config BR2_TOOLCHAIN_EXTERNAL_WCHAR
 	select BR2_USE_WCHAR
 	help
 	  Select this option if your external toolchain supports
-	  WCHAR. If you don't know, leave the default value, Buildroot
+	  WCHAR. If you don't know, leave the default value, MikoOS
 	  will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_LOCALE
@@ -555,7 +555,7 @@ config BR2_TOOLCHAIN_EXTERNAL_LOCALE
 	help
 	  Select this option if your external toolchain has locale
 	  support. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS
 	bool "Toolchain has threads support?"
@@ -564,7 +564,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS
 	help
 	  Select this option if your external toolchain has thread
 	  support. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 if BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS
 
@@ -575,7 +575,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS_DEBUG
 	help
 	  Select this option if your external toolchain has thread
 	  debugging support. If you don't know, leave the default
-	  value, Buildroot will tell you if it's correct or not.
+	  value, MikoOS will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS_NPTL
 	bool "Toolchain has NPTL threads support?"
@@ -585,7 +585,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS_NPTL
 	  Select this option if your external toolchain uses the NPTL
 	  (Native Posix Thread Library) implementation of Posix
 	  threads. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 endif # BR2_TOOLCHAIN_EXTERNAL_HAS_THREADS
 
@@ -599,7 +599,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HAS_SSP
 	help
 	  Select this option if your external toolchain has Stack
 	  Smashing Protection support enabled. If you don't know,
-	  leave the default value, Buildroot will tell you if it's
+	  leave the default value, MikoOS will tell you if it's
 	  correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_HAS_SSP_STRONG
@@ -611,7 +611,7 @@ config BR2_TOOLCHAIN_EXTERNAL_HAS_SSP_STRONG
 	help
 	  Select this option if your external toolchain has strong
 	  Stack Smashing Protection support enabled. If you don't
-	  know, leave the default value, Buildroot will tell you if
+	  know, leave the default value, MikoOS will tell you if
 	  it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_INET_RPC
@@ -621,7 +621,7 @@ config BR2_TOOLCHAIN_EXTERNAL_INET_RPC
 	select BR2_TOOLCHAIN_HAS_NATIVE_RPC
 	help
 	  Select this option if your external toolchain supports
-	  RPC. If you don't know, leave the default value, Buildroot
+	  RPC. If you don't know, leave the default value, MikoOS
 	  will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_CXX
@@ -630,7 +630,7 @@ config BR2_TOOLCHAIN_EXTERNAL_CXX
 	help
 	  Select this option if your external toolchain has C++
 	  support. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_DLANG
 	bool "Toolchain has D support?"
@@ -645,7 +645,7 @@ config BR2_TOOLCHAIN_EXTERNAL_FORTRAN
 	help
 	  Select this option if your external toolchain has Fortran
 	  support. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 config BR2_TOOLCHAIN_EXTERNAL_OPENMP
 	bool "Toolchain has OpenMP support?"
@@ -653,6 +653,6 @@ config BR2_TOOLCHAIN_EXTERNAL_OPENMP
 	help
 	  Select this option if your external toolchain has OpenMP
 	  support. If you don't know, leave the default value,
-	  Buildroot will tell you if it's correct or not.
+	  MikoOS will tell you if it's correct or not.
 
 endif

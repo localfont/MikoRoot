@@ -173,16 +173,16 @@ class TestGetDevelopers(unittest.TestCase):
         developers = b'N:\tdev1\n' \
                      b'F:\tpackage/binutils/\n'
         out, err, rc = call_get_developers("./utils/get-developers", [abs_file], self.WITH_EMPTY_PATH, topdir, developers)
-        self.assertIn('git send-email --to buildroot@buildroot.org --cc "dev1"', out)
+        self.assertIn('git send-email --to mikoos@mikoos.org --cc "dev1"', out)
         self.assertEqual(rc, 0)
         self.assertEqual(len(err), 0)
         out, err, rc = call_get_developers("get-developers", [rel_file], self.WITH_UTILS_IN_PATH, abs_path, developers)
-        self.assertIn('git send-email --to buildroot@buildroot.org --cc "dev1"', out)
+        self.assertIn('git send-email --to mikoos@mikoos.org --cc "dev1"', out)
         self.assertEqual(rc, 0)
         self.assertEqual(len(err), 0)
         with open(abs_file, "r") as fd:
             patch_data = fd.read()
         out, err, rc = call_get_developers("./utils/get-developers", [], self.WITH_EMPTY_PATH, topdir, developers, patch_data)
-        self.assertIn('git send-email --to buildroot@buildroot.org --cc "dev1"', out)
+        self.assertIn('git send-email --to mikoos@mikoos.org --cc "dev1"', out)
         self.assertEqual(rc, 0)
         self.assertEqual(len(err), 0)

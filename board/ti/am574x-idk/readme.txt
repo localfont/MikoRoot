@@ -9,7 +9,7 @@ board: https://www.ti.com/tool/TMDSIDK574
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make am574x_idk_defconfig
 

@@ -15,7 +15,7 @@ DAHDI_TOOLS_DEPENDENCIES = dahdi-linux perl
 DAHDI_TOOLS_INSTALL_STAGING = YES
 DAHDI_TOOLS_AUTORECONF = YES
 
-# Buildroot globally exports PERL with the value it has on the host, so we need
+# MikoOS globally exports PERL with the value it has on the host, so we need
 # to override it with the location where it will be on the target.
 DAHDI_TOOLS_CONF_ENV = PERL=/usr/bin/perl
 

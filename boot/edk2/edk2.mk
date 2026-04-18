@@ -33,7 +33,7 @@ endif
 #
 # First, builds rely heavily on Git submodules to fetch various dependencies
 # into specific directory structures. It might be possible to work around this
-# and rely on Buildroot's infrastructure, but using Git submodules greatly
+# and rely on MikoOS's infrastructure, but using Git submodules greatly
 # simplifies this already complicated build system.
 #
 # Second, the build system is spread across various commands and stages.
@@ -53,7 +53,7 @@ endif
 # https://edk2-docs.gitbook.io/edk-ii-build-specification/4_edk_ii_build_process_overview
 
 EDK2_GIT_SUBMODULES = YES
-EDK2_BUILD_PACKAGES = $(@D)/Build/Buildroot
+EDK2_BUILD_PACKAGES = $(@D)/Build/MikoOS
 EDK2_PACKAGES_PATHS = $(@D) $(EDK2_BUILD_PACKAGES) $(STAGING_DIR)/usr/share/edk2-platforms
 
 ifeq ($(BR2_TARGET_EDK2_PLATFORM_OVMF_X64),y)
@@ -133,7 +133,7 @@ EDK2_PACKAGES_PATH = $(subst $(space),:,$(strip $(EDK2_PACKAGES_PATHS)))
 # EDK2 "build" script internally uses and calls "make", which controls
 # its own flags. It is mainly tested while not being a sub-make. In
 # order to stay in that configuration, we avoid leaking top-level
-# Buildroot make flags into EDK2 build by clearing the MAKEFLAGS
+# MikoOS make flags into EDK2 build by clearing the MAKEFLAGS
 # environment variable.
 EDK2_BUILD_ENV += \
 	MAKEFLAGS= \

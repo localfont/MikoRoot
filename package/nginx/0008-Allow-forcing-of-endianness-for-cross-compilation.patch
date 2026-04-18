@@ -1,12 +1,12 @@
 From 4bd8fe780ff2064f2d4e9c905d8a98dd0f9b6191 Mon Sep 17 00:00:00 2001
-From: Nevo Hed <nhed+buildroot@starry.com>
+From: Nevo Hed <nhed+mikoos@starry.com>
 Date: Mon, 30 Aug 2021 13:28:13 -0400
 Subject: [PATCH] Allow forcing of endianness for cross-compilation
 
 Upstream-status: Invalid (upstream doesn't support cross-compilation)
 See https://trac.nginx.org/nginx/ticket/2240
 
-Signed-off-by: Nevo Hed <nhed+buildroot@starry.com>
+Signed-off-by: Nevo Hed <nhed+mikoos@starry.com>
 ---
  auto/endianness | 61 ++++++++++++++++++++++++++++++++-----------------
  auto/options    |  6 +++++

@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: GPL-2.0-or-later AND MIT
 """
 
-Utility for building Buildroot packages for existing PyPI packages
+Utility for building MikoOS packages for existing PyPI packages
 
 Any package built by scanpypi should be manually checked for
 errors.
@@ -105,9 +105,9 @@ def find_file_upper_case(filenames, path='./'):
                 yield (os.path.join(root, file))
 
 
-def pkg_buildroot_name(pkg_name):
+def pkg_mikoos_name(pkg_name):
     """
-    Returns the Buildroot package name for the PyPI package pkg_name.
+    Returns the MikoOS package name for the PyPI package pkg_name.
     Remove all non alphanumeric characters except -
     Also lowers the name and adds 'python-' suffix
 
@@ -168,7 +168,7 @@ class BackendPathFinder:
         return spec
 
 
-class BuildrootPackage():
+class MikoOSPackage():
     """This class's methods are not meant to be used individually please
     use them in the correct order:
 
@@ -193,9 +193,9 @@ class BuildrootPackage():
 
     def __init__(self, real_name, pkg_folder):
         self.real_name = real_name
-        self.buildroot_name = pkg_buildroot_name(self.real_name)
-        self.pkg_dir = os.path.join(pkg_folder, self.buildroot_name)
-        self.mk_name = self.buildroot_name.upper().replace('-', '_')
+        self.mikoos_name = pkg_mikoos_name(self.real_name)
+        self.pkg_dir = os.path.join(pkg_folder, self.mikoos_name)
+        self.mk_name = self.mikoos_name.upper().replace('-', '_')
         self.as_string = None
         self.md5_sum = None
         self.metadata = None
@@ -314,7 +314,7 @@ class BuildrootPackage():
         as_file = io.BytesIO(self.as_string)
         if self.filename[-3:] == 'zip':
             with zipfile.ZipFile(as_file) as as_zipfile:
-                tmp_pkg = os.path.join(tmp_path, self.buildroot_name)
+                tmp_pkg = os.path.join(tmp_path, self.mikoos_name)
                 try:
                     os.makedirs(tmp_pkg)
                 except OSError as exception:
@@ -330,7 +330,7 @@ class BuildrootPackage():
                 pkg_filename = self.filename.split(".zip")[0]
         else:
             with tarfile.open(fileobj=as_file) as as_tarfile:
-                tmp_pkg = os.path.join(tmp_path, self.buildroot_name)
+                tmp_pkg = os.path.join(tmp_path, self.mikoos_name)
                 try:
                     os.makedirs(tmp_pkg)
                 except OSError as exception:
@@ -452,7 +452,7 @@ class BuildrootPackage():
                         if len(item) > 0 and item[0] != '#'}
 
         req_not_found = self.pkg_req
-        self.pkg_req = list(map(pkg_buildroot_name, self.pkg_req))
+        self.pkg_req = list(map(pkg_mikoos_name, self.pkg_req))
         pkg_tuples = list(zip(req_not_found, self.pkg_req))
         # pkg_tuples is a list of tuples that looks like
         # ('werkzeug','python-werkzeug') because I need both when checking if
@@ -469,7 +469,7 @@ class BuildrootPackage():
         """
         header = ['#' * 80 + '\n']
         header.append('#\n')
-        header.append('# {name}\n'.format(name=self.buildroot_name))
+        header.append('# {name}\n'.format(name=self.mikoos_name))
         header.append('#\n')
         header.append('#' * 80 + '\n')
         header.append('\n')
@@ -486,7 +486,7 @@ class BuildrootPackage():
             version=self.version)
         lines.append(version_line)
 
-        if self.buildroot_name != self.real_name:
+        if self.mikoos_name != self.real_name:
             targz = self.filename.replace(
                 self.version,
                 '$({name}_VERSION)'.format(name=self.mk_name))
@@ -649,7 +649,7 @@ class BuildrootPackage():
         """
         Create the lines corresponding to the <package_name>.mk file
         """
-        pkg_mk = '{name}.mk'.format(name=self.buildroot_name)
+        pkg_mk = '{name}.mk'.format(name=self.mikoos_name)
         path_to_mk = os.path.join(self.pkg_dir, pkg_mk)
         print('Creating {file}...'.format(file=path_to_mk))
         lines = self.__create_mk_header()
@@ -667,7 +667,7 @@ class BuildrootPackage():
         """
         Create the lines corresponding to the <package_name>.hash files
         """
-        pkg_hash = '{name}.hash'.format(name=self.buildroot_name)
+        pkg_hash = '{name}.hash'.format(name=self.mikoos_name)
         path_to_hash = os.path.join(self.pkg_dir, pkg_hash)
         print('Creating {filename}...'.format(filename=path_to_hash))
         lines = []
@@ -716,7 +716,7 @@ class BuildrootPackage():
             name=self.mk_name)
         lines.append(config_line)
 
-        bool_line = '\tbool "{name}"\n'.format(name=self.buildroot_name)
+        bool_line = '\tbool "{name}"\n'.format(name=self.mikoos_name)
         lines.append(bool_line)
         if self.pkg_req:
             self.pkg_req.sort()
@@ -757,7 +757,7 @@ class BuildrootPackage():
 def main():
     # Building the parser
     parser = argparse.ArgumentParser(
-        description="Creates buildroot packages from the metadata of "
+        description="Creates mikoos packages from the metadata of "
                     "an existing PyPI packages and include it "
                     "in menuconfig")
     parser.add_argument("packages",
@@ -779,12 +779,12 @@ def main():
     tmp_path = tempfile.mkdtemp(prefix=tmp_prefix)
     try:
         for real_pkg_name in packages:
-            package = BuildrootPackage(real_pkg_name, pkg_folder)
-            print('buildroot package name for {}:'.format(package.real_name),
-                  package.buildroot_name)
+            package = MikoOSPackage(real_pkg_name, pkg_folder)
+            print('mikoos package name for {}:'.format(package.real_name),
+                  package.mikoos_name)
             # First we download the package
             # Most of the info we need can only be found inside the package
-            print('Package:', package.buildroot_name)
+            print('Package:', package.mikoos_name)
             print('Fetching package', package.real_name)
             try:
                 package.fetch_package_info()
@@ -796,7 +796,7 @@ def main():
             except urllib.error.HTTPError as error:
                 print('Error: {code} {reason}'.format(code=error.code,
                                                       reason=error.reason))
-                print('Error downloading package :', package.buildroot_name)
+                print('Error downloading package :', package.mikoos_name)
                 print()
                 continue
 
@@ -831,7 +831,7 @@ def main():
             if req_not_found:
                 print('Added packages \'{pkgs}\' as dependencies of {pkg}'
                       .format(pkgs=", ".join(req_not_found),
-                              pkg=package.buildroot_name))
+                              pkg=package.mikoos_name))
             print('Checking if package {name} already exists...'.format(
                 name=package.pkg_dir))
             try:

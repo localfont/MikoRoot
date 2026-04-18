@@ -4,8 +4,8 @@ Date: Sun, 21 Mar 2021 17:59:15 +0100
 Subject: [PATCH] add uclibc alias and musl
 
 Make linux-uclibcgnueabi an alias for linux-uclibceabi since it's
-what we use in buildroot toolchains.
-Slightly tweak musleabi to match the buildroot-used tuple.
+what we use in mikoos toolchains.
+Slightly tweak musleabi to match the mikoos-used tuple.
 
 Signed-off-by: Gustavo Zacarias <gustavo@zacarias.com.ar>
 [Rebased on 1.20.7.1]

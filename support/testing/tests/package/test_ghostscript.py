@@ -45,4 +45,4 @@ class TestGhostscript(infra.basetest.BRTest):
         cmd = f"cat {txt_file}"
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
-        self.assertEqual(out[0], "Hello Buildroot!")
+        self.assertEqual(out[0], "Hello MikoOS!")

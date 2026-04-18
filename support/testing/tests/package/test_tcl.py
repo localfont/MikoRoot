@@ -29,7 +29,7 @@ class TestTcl(infra.basetest.BRTest):
         self.assertRunOk(cmd)
 
         # We check tclsh correctly print a string.
-        txt = "Hello Buildroot"
+        txt = "Hello MikoOS"
         cmd = f"echo 'puts \"{txt}\"; exit 0' | tclsh"
         output, exit_code = self.emulator.run(cmd)
         self.assertEqual(exit_code, 0)

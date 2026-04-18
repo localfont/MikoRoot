@@ -11,7 +11,7 @@ config BR2_PACKAGE_LIBSIGROKDECODE
 	  Libsigrokdecode is a shared library written in C, which
 	  provides (streaming) protocol decoding functionality. Say
 	  yes here if you want to add this functionality to your
-	  buildroot-generated sigrok suite.
+	  mikoos-generated sigrok suite.
 
 	  This library is a part of the sigrok software suite.
 

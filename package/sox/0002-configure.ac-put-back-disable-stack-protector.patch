@@ -5,7 +5,7 @@ Subject: [PATCH] configure.ac: put back --disable-stack-protector
 
 Put back --disable-stack-protector which has been removed by commit
 70c85915eace83142b84e4f65f5db421cf0c09e3. This will allow the user to
-disable it or to let a higher buildsystem such as buildroot to finely
+disable it or to let a higher buildsystem such as mikoos to finely
 configure it.
 
 Indeed, without this patch, build can fail as some compilers (such as
@@ -13,8 +13,8 @@ uclibc) could missed the needed library (-lssp or -lssp_nonshared) at
 linking step:
 
   CCLD     libsox.la
-/home/fabrice/br-test-pkg/br-arm-full/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/5.5.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: cannot find -lssp_nonshared
-/home/fabrice/br-test-pkg/br-arm-full/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/5.5.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: cannot find -lssp
+/home/fabrice/br-test-pkg/br-arm-full/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/5.5.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: cannot find -lssp_nonshared
+/home/fabrice/br-test-pkg/br-arm-full/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/5.5.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: cannot find -lssp
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://sourceforge.net/p/sox/patches/122/]

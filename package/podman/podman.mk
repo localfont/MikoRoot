@@ -60,7 +60,7 @@ define PODMAN_HELPER_INIT
 	$(Q)ln -sf ../../bin/$(PODMAN_INIT_NAME) $(TARGET_DIR)$(PODMAN_INIT_PATH)
 	$(Q)mkdir -p $(TARGET_DIR)/etc/containers/containers.conf.d
 	$(Q)printf '[containers]\ninit_path = "%s"\n' "$(PODMAN_INIT_PATH)" \
-		>$(TARGET_DIR)/etc/containers/containers.conf.d/50-buildroot-init.conf
+		>$(TARGET_DIR)/etc/containers/containers.conf.d/50-mikoos-init.conf
 endef
 endif
 
@@ -73,7 +73,7 @@ define PODMAN_HELPER_SLIRP4NETNS
 	$(Q)ln -sf ../../bin/slirp4netns $(TARGET_DIR)/usr/libexec/podman/slirp4netns
 	$(Q)mkdir -p $(TARGET_DIR)/etc/containers/containers.conf.d
 	$(Q)printf '[network]\ndefault_rootless_network_cmd = "slirp4netns"\n' \
-		>$(TARGET_DIR)/etc/containers/containers.conf.d/50-buildroot-net-backend.conf
+		>$(TARGET_DIR)/etc/containers/containers.conf.d/50-mikoos-net-backend.conf
 endef
 endif
 

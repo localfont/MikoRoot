@@ -15,7 +15,7 @@ CMake Error at /nvmedata/autobuild/instance-11/output-1/host/share/cmake-3.18/Mo
   is not able to compile a simple test program.
 
 Fixes:
- - http://autobuild.buildroot.org/results/a86d09d569babe6b88cb8e5fbb47483772f42aed
+ - http://autobuild.mikoos.org/results/a86d09d569babe6b88cb8e5fbb47483772f42aed
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/projectNe10/Ne10/pull/280]

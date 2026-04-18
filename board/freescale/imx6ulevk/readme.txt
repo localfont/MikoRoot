@@ -2,7 +2,7 @@
 Freescale i.MX6UL EVK board
 ***************************
 
-This file documents the Buildroot support for the Freescale i.MX6UL EVK board.
+This file documents the MikoOS support for the Freescale i.MX6UL EVK board.
 
 Please read the i.MX6UL Evaluation Kit Quick Start Guide [1] for an
 introduction to the board.
@@ -10,7 +10,7 @@ introduction to the board.
 Build
 =====
 
-First, configure Buildroot for your i.MX6UL EVK board:
+First, configure MikoOS for your i.MX6UL EVK board:
 
 In order to do so there are two supported options:
 
@@ -44,7 +44,7 @@ To determine the device associated to the microSD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a microSD card. Launch the following
 command as root:
 

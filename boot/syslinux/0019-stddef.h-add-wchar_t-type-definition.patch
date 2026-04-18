@@ -5,11 +5,11 @@ Subject: [PATCH] stddef.h: add wchar_t type definition
 
 Syslinux fail to build with gnu-efi >= 3.0.16 with error:
 
-    In file included from /host/i686-buildroot-linux-gnu/sysroot/usr/include/efi/efi.h:44,
+    In file included from /host/i686-mikoos-linux-gnu/sysroot/usr/include/efi/efi.h:44,
                      from /build/syslinux-6.03/efi/efi.h:23,
                      from /build/syslinux-6.03/efi/adv.h:4,
                      from /build/syslinux-6.03/efi/adv.c:29:
-    /host/i686-buildroot-linux-gnu/sysroot/usr/include/efi/ia32/efibind.h:90:9: error: unknown type name 'wchar_t'
+    /host/i686-mikoos-linux-gnu/sysroot/usr/include/efi/ia32/efibind.h:90:9: error: unknown type name 'wchar_t'
      typedef wchar_t CHAR16;
              ^~~~~~~
 
@@ -29,13 +29,13 @@ the com32/include/stddef.h header. Since Syslinux has "-fshort-wchar"
 in its CFLAGS (see [4]), "wchar_t" is simply defined as "short". This
 also follow the previous gnu-efi < 3.0.16 behavior.
 
-This issue was seen in Buildroot Linux, in [5].
+This issue was seen in MikoOS Linux, in [5].
 
 [1] https://sourceforge.net/p/gnu-efi/code/ci/189200d0b0f6fff473d302880d9569f45d4d8c4d
 [2] https://repo.or.cz/syslinux.git/blob/refs/tags/syslinux-6.03:/com32/include/stddef.h
 [3] https://pubs.opengroup.org/onlinepubs/9699919799/basedefs/stddef.h.html
 [4] https://repo.or.cz/syslinux.git/blob/refs/tags/syslinux-6.03:/mk/efi.mk#l27
-[5] https://lists.buildroot.org/pipermail/buildroot/2024-February/685971.html
+[5] https://lists.mikoos.org/pipermail/mikoos/2024-February/685971.html
 
 Upstream: Proposed: https://www.syslinux.org/archives/2024-February/026903.html
 Signed-off-by: Julien Olivain <ju.o@free.fr>

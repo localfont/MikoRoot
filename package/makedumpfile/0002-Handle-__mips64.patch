@@ -11,7 +11,7 @@ makedumpfile.c:1613:39: error: 'KVBASE' undeclared (first use in this function)
                                        ^~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/94824fa8baa8edb99a5ca245e5561e0c4e430638
+ - http://autobuild.mikoos.org/results/94824fa8baa8edb99a5ca245e5561e0c4e430638
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/makedumpfile/makedumpfile/pull/11]

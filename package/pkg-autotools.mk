@@ -5,7 +5,7 @@
 # package .mk files for autotools packages. It should be used for all
 # packages that use the autotools as their build system.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this autotools infrastructure requires
@@ -65,17 +65,17 @@ define LIBTOOL_PATCH_HOOK
 		ltmain_patchlevel=`sed -n '/^[ \t]*VERSION=/{s/^[ \t]*VERSION=//;p;q;}' $$i | \
 		sed -e 's/\([0-9]*\.[0-9]*\.*\)\([0-9]*\).*/\2/' -e 's/\"//'`; \
 		if test $${ltmain_version} = '1.5'; then \
-			patch -i support/libtool/buildroot-libtool-v1.5.patch $${i}; \
+			patch -i support/libtool/mikoos-libtool-v1.5.patch $${i}; \
 		elif test $${ltmain_version} = "2.2"; then\
-			patch -i support/libtool/buildroot-libtool-v2.2.patch $${i}; \
+			patch -i support/libtool/mikoos-libtool-v2.2.patch $${i}; \
 		elif test $${ltmain_version} = "2.4"; then\
 			if test $${ltmain_patchlevel:-0} -gt 2; then\
-				patch -i support/libtool/buildroot-libtool-v2.4.4.patch $${i}; \
+				patch -i support/libtool/mikoos-libtool-v2.4.4.patch $${i}; \
 			else \
-				patch -i support/libtool/buildroot-libtool-v2.4.patch $${i}; \
+				patch -i support/libtool/mikoos-libtool-v2.4.patch $${i}; \
 			fi \
 		elif test $${ltmain_version} = "2.5"; then\
-			patch -i support/libtool/buildroot-libtool-v2.4.4.patch $${i}; \
+			patch -i support/libtool/mikoos-libtool-v2.4.4.patch $${i}; \
 		fi \
 	done
 endef

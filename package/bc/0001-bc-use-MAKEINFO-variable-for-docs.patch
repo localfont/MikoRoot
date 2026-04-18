@@ -7,7 +7,7 @@ Use the appropriate MAKEINFO variable rather than the hardcoded makeinfo
 command directly, otherwise missing logic never works.
 
 Fixes:
-http://autobuild.buildroot.net/results/b0b/b0b9dced0014a5a8026fa972f95085e8bd16a07b/
+http://autobuild.mikoos.net/results/b0b/b0b9dced0014a5a8026fa972f95085e8bd16a07b/
 
 [Recreated for 1.0.7.1 by Matt W and applied to Makefile.am instead of
  Makefile.in]

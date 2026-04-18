@@ -40,7 +40,7 @@ class TestXfs(infra.basetest.BRTest):
         self.assertRunOk(cmd)
 
         # We try to write data on the root filesystem.
-        msg = "Hello Buildroot"
+        msg = "Hello MikoOS"
         fname = "/root/file.txt"
         self.assertRunOk(f"echo '{msg}' > {fname}")
 

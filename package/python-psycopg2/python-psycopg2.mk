@@ -12,7 +12,7 @@ PYTHON_PSYCOPG2_LICENSE = LGPL-3.0+
 PYTHON_PSYCOPG2_LICENSE_FILES = LICENSE
 PYTHON_PSYCOPG2_DEPENDENCIES = postgresql
 
-# Force psycopg2 to use the Buildroot provided postgresql version
+# Force psycopg2 to use the MikoOS provided postgresql version
 # instead of the one from the host machine
 define PYTHON_PSYCOPG2_CREATE_SETUP_CFG
 	printf "[build_ext]\ndefine=\npg_config=$(STAGING_DIR)/usr/bin/pg_config\n" > $(@D)/setup.cfg

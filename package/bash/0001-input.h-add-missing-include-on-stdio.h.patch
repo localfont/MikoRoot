@@ -5,14 +5,14 @@ Subject: [PATCH] input.h: add missing include on stdio.h
 
 This will fix the following build failure on uclibc:
 
-test -n "/usr/lfs/hdd_v1/rc-buildroot-test/scripts/instance-2/output/host/bin/arm-linux-ranlib" && /usr/lfs/hdd_v1/rc-buildroot-test/scripts/instance-2/output/host/bin/arm-linux-ranlib libsh.a
+test -n "/usr/lfs/hdd_v1/rc-mikoos-test/scripts/instance-2/output/host/bin/arm-linux-ranlib" && /usr/lfs/hdd_v1/rc-mikoos-test/scripts/instance-2/output/host/bin/arm-linux-ranlib libsh.a
 In file included from ./exec.def:71:
 ../input.h:76:3: error: unknown type name 'FILE'
    FILE *file;
    ^~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/bfca306868df54c567215c45c8cdac838d02f567
+ - http://autobuild.mikoos.org/results/bfca306868df54c567215c45c8cdac838d02f567
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://savannah.gnu.org/support/?110196]

@@ -15,7 +15,7 @@ Index: kconfig/gconf.glade
  <widget class="GtkWindow" id="window1">
    <property name="visible">True</property>
 -  <property name="title" translatable="yes">Gtk Kernel Configurator</property>
-+  <property name="title" translatable="yes">Gtk Buildroot Configurator</property>
++  <property name="title" translatable="yes">Gtk MikoOS Configurator</property>
    <property name="type">GTK_WINDOW_TOPLEVEL</property>
    <property name="window_position">GTK_WIN_POS_NONE</property>
    <property name="modal">False</property>
@@ -40,7 +40,7 @@ Index: kconfig/mconf.c
  		res = dialog_yesno(NULL,
  				   _("Do you wish to save your new configuration?\n"
 -				     "(Press <ESC><ESC> to continue kernel configuration.)"),
-+				     "(Press <ESC><ESC> to continue Buildroot configuration.)"),
++				     "(Press <ESC><ESC> to continue MikoOS configuration.)"),
  				   6, 60);
  	else
  		res = -1;
@@ -53,7 +53,7 @@ Index: kconfig/zconf.tab.c_shipped
  	 * mainmenu_stmt or here
  	 */
 -	menu_add_prompt(P_MENU, xstrdup("Linux Kernel Configuration"), NULL);
-+	menu_add_prompt(P_MENU, xstrdup("Buildroot Configuration"), NULL);
++	menu_add_prompt(P_MENU, xstrdup("MikoOS Configuration"), NULL);
  }
  
      break;
@@ -66,7 +66,7 @@ Index: kconfig/zconf.y
  	 * mainmenu_stmt or here
  	 */
 -	menu_add_prompt(P_MENU, xstrdup("Linux Kernel Configuration"), NULL);
-+	menu_add_prompt(P_MENU, xstrdup("Buildroot Configuration"), NULL);
++	menu_add_prompt(P_MENU, xstrdup("MikoOS Configuration"), NULL);
  };
  
  
@@ -101,7 +101,7 @@ Index: kconfig/qconf.cc
  
  ConfigSettings::ConfigSettings()
 -	: QSettings("kernel.org", "qconf")
-+	: QSettings("buildroot.org", "qconf")
++	: QSettings("mikoos.org", "qconf")
  {
  }
  

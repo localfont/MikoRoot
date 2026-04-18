@@ -24,7 +24,7 @@ DOVECOT_DEPENDENCIES = \
 # 0001-auth-Fix-handling-passdbs-with-identical-driver-args.patch
 # Note: this ignore CVE entry is reported as stale by pkg-stats, but
 # the NVD database is incorrect:
-# https://lore.kernel.org/buildroot/20250517181815.02ce0393@windsurf/
+# https://lore.kernel.org/mikoos/20250517181815.02ce0393@windsurf/
 DOVECOT_IGNORE_CVES += CVE-2022-30550
 
 DOVECOT_CONF_ENV = \

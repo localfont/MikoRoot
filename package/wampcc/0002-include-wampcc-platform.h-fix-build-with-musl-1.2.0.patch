@@ -12,7 +12,7 @@ bits:
                ^~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/da996e189220499b85efbdb541a891ac18db38c6
+ - http://autobuild.mikoos.org/results/da996e189220499b85efbdb541a891ac18db38c6
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/darrenjs/wampcc/pull/62]

@@ -24,7 +24,7 @@ RAUC_DEPENDENCIES += systemd
 define RAUC_INSTALL_INIT_SYSTEMD
 	mkdir -p $(TARGET_DIR)/usr/lib/systemd/system/rauc.service.d
 	printf '[Install]\nWantedBy=multi-user.target\n' \
-		>$(TARGET_DIR)/usr/lib/systemd/system/rauc.service.d/buildroot-enable.conf
+		>$(TARGET_DIR)/usr/lib/systemd/system/rauc.service.d/mikoos-enable.conf
 endef
 endif
 

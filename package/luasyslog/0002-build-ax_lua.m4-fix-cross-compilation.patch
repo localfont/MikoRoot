@@ -5,13 +5,13 @@ Subject: [PATCH] build/ax_lua.m4: fix cross-compilation
 
 Don't try to "find" and "fix" the script and module directories when
 cross-compiling as this will give unexpected results such as using
-${prefix}/lfs/hdd_v1/rc-buildroot-test/scripts/instance-0/output-1/host/usr/share/lua/5.3
+${prefix}/lfs/hdd_v1/rc-mikoos-test/scripts/instance-0/output-1/host/usr/share/lua/5.3
 instead of
 ${prefix}/share/lua/5.3
 if the host machine root directory is /usr
 
 Fixes:
- - http://autobuild.buildroot.org/results/09fa6dd9844d6d4694801ec59434dad7a56bf290
+ - http://autobuild.mikoos.org/results/09fa6dd9844d6d4694801ec59434dad7a56bf290
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 ---

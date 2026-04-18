@@ -149,7 +149,7 @@ class TestPostgreSQL(infra.basetest.BRTest):
         # Create a new database.
         cmd = f"createdb --username={self.db_admin} "
         cmd += f"--owner={self.db_user} "
-        cmd += f'{self.db_name} "Test Database for Buildroot Test"'
+        cmd += f'{self.db_name} "Test Database for MikoOS Test"'
         self.assertRunOk(cmd)
 
         self.create_tables()

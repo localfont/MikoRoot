@@ -10,7 +10,7 @@ mud/aegis256/aegis256.c:51:10: fatal error: sys/auxv.h: No such file or director
       |          ^~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/4e1bbd72b9b7e0f9963f6693c3d7bc9a1d24fab4
+ - http://autobuild.mikoos.org/results/4e1bbd72b9b7e0f9963f6693c3d7bc9a1d24fab4
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

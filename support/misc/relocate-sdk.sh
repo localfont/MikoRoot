@@ -2,7 +2,7 @@
 
 if [ "$#" -gt 1 ]; then
     echo "Usage: $0 [path]"
-    echo "Run this script to relocate the buildroot SDK to the current location"
+    echo "Run this script to relocate the mikoos SDK to the current location"
     echo "If [path] is given, sets the location to [path] (without moving it)"
     exit 1
 fi
@@ -14,15 +14,15 @@ else
     NEWPATH="${PWD}"
 fi
 
-LOCFILE="share/buildroot/sdk-location"
+LOCFILE="share/mikoos/sdk-location"
 if [ ! -r "${LOCFILE}" ]; then
-    echo "Previous location of the buildroot SDK not found!"
+    echo "Previous location of the mikoos SDK not found!"
     exit 1
 fi
 OLDPATH="$(cat "${LOCFILE}")"
 
 if [ "${NEWPATH}" = "${OLDPATH}" ]; then
-    echo "This buildroot SDK has already been relocated!"
+    echo "This mikoos SDK has already been relocated!"
     exit 0
 fi
 
@@ -35,12 +35,12 @@ if [ "${NEWPATH}" != "${newpath}" ]; then
     exit 1
 fi
 
-echo "Relocating the buildroot SDK from ${OLDPATH} to ${NEWPATH} ..."
+echo "Relocating the mikoos SDK from ${OLDPATH} to ${NEWPATH} ..."
 
 # Replace the old path with the new one in all text files
 while read -r FILE ; do
     sed -i "s|${OLDPATH}|${NEWPATH}|g" "${FILE}"
-done < share/buildroot/sdk-relocs
+done < share/mikoos/sdk-relocs
 
 # At the very end, we update the location file to not break the
 # SDK if this script gets interruted.

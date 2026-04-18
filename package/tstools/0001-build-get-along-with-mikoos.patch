@@ -1,7 +1,7 @@
 From 44f80bce0914d4d9c5e7486c7cdb521ba637b324 Mon Sep 17 00:00:00 2001
 From: Tzu-Jung Lee <tjlee@ambarella.com>
 Date: Fri, 19 Jul 2013 22:45:18 +0800
-Subject: [PATCH] build: get along with buildroot
+Subject: [PATCH] build: get along with mikoos
 
 Signed-off-by: Tzu-Jung Lee <tjlee@ambarella.com>
 ---

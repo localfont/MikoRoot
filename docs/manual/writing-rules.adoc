@@ -4,7 +4,7 @@
 == Coding style
 
 Overall, these coding style rules are here to help you to add new files in
-Buildroot or refactor existing ones.
+MikoOS or refactor existing ones.
 
 If you slightly modify some existing file, the important thing is
 to keep the consistency of the whole file, so you can:
@@ -19,7 +19,7 @@ file,
 === +Config.in+ file
 
 +Config.in+ files contain entries for almost anything configurable in
-Buildroot.
+MikoOS.
 
 An entry has the following pattern:
 
@@ -45,7 +45,7 @@ config BR2_PACKAGE_LIBFOO
   for 8, so 62 characters in the text itself.
 
 The +Config.in+ files are the input for the configuration tool
-used in Buildroot, which is the regular _Kconfig_. For further
+used in MikoOS, which is the regular _Kconfig_. For further
 details about the _Kconfig_ language, refer to
 http://kernel.org/doc/Documentation/kbuild/kconfig-language.txt[].
 
@@ -211,7 +211,7 @@ image sdimage.img {
   specified, lower-case letters should be used.
 
 The +genimage.cfg+ files are the input for the genimage tool used in
-Buildroot to generate the final image file(i.e. sdcard.img). For further
+MikoOS to generate the final image file(i.e. sdcard.img). For further
 details about the _genimage_ language, refer to
 https://github.com/pengutronix/genimage/blob/master/README.rst[].
 

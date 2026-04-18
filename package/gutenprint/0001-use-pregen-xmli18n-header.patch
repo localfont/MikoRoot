@@ -7,7 +7,7 @@ Unfortunately, this program wants to link against the gutenprint libs,
 so we would also need to build them with CC_FOR_HOST, that is build them
 twice, once for build, once for host.
 
-Instead, in the Buildroot context, we first build gutenprint for the build
+Instead, in the MikoOS context, we first build gutenprint for the build
 system, use that to generate the incriminated header, and then re-use that
 header to build the gutenprint for the host.
 

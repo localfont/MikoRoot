@@ -6,7 +6,7 @@ Date: Tue, 9 Jan 2018 14:37:43 +0300
 
     Pass BR2_EXTERNAL value via -e option.
     This will prevent merge_config.sh from silently eating any symbols defined in
-    external trees on a clean buildroot tree invocation.
+    external trees on a clean mikoos tree invocation.
 
     Signed-off-by: Ilya Kuzmich <ilya.kuzmich@gmail.com>
     Acked-by: "Yann E. MORIN" <yann.morin.1998@free.fr>

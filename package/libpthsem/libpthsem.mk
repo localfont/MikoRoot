@@ -22,7 +22,7 @@ LIBPTHSEM_CONFIG_SCRIPTS = pthsem-config
 # "braindead" and therefore falling back to the 'sjljlx' value for
 # ac_cv_check_sjlj. In terms of C library version, it wants
 # __GLIBC_MINOR to be at least 1. Since both conditions are true for
-# all Buildroot systems, we can simply force the setjmp/longjmp
+# all MikoOS systems, we can simply force the setjmp/longjmp
 # detection to ssjlj.
 LIBPTHSEM_CONF_ENV += \
 	ac_cv_check_sjlj=ssjlj

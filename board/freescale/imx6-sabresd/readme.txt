@@ -2,7 +2,7 @@
 Freescale i.MX6 Sabre SD boards
 *******************************
 
-This file documents the Buildroot support for the Freescale i.MX6 Sabre SD
+This file documents the MikoOS support for the Freescale i.MX6 Sabre SD
 boards based on i.MX6Q, i.MX6DL and iMX6QP.
 
 Thanks to the SPL support in U-Boot it is possible to run a single
@@ -13,7 +13,7 @@ This configuration uses U-Boot mainline and kernel mainline.
 Build
 =====
 
-First, configure Buildroot for the i.MX6 Sabre SD board:
+First, configure MikoOS for the i.MX6 Sabre SD board:
 
   make imx6-sabresd_defconfig
 
@@ -39,7 +39,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

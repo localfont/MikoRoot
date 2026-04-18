@@ -2,7 +2,7 @@
 NXP LS1028ARDB
 **************
 
-This file documents the Buildroot support for the LS1028A Reference Design Board.
+This file documents the MikoOS support for the LS1028A Reference Design Board.
 
 For more details about the board and the QorIQ Layerscape SoC, see the following pages:
   - https://www.nxp.com/design/qoriq-developer-resources/layerscape-ls1028a-reference-design-board:LS1028ARDB
@@ -12,7 +12,7 @@ Layerscape platforms are officially supported by NXP under the Layerscape
 Debian Linux SDK (LDLSDK). This uses components from Linux Factory (project
 common with i.MX), but has a slower release cadence than LF. The currently used
 tag is lf-6.12.34-2.1.0, which is in line with the latest LF tag. Generally, in
-Buildroot, the latest Linux Factory release tag is always used, which may be
+MikoOS, the latest Linux Factory release tag is always used, which may be
 considered pre-release software, as it may contain features which are not yet
 documented, and it generally undergoes less testing.
 
@@ -30,7 +30,7 @@ The components from NXP are:
 Build
 =====
 
-First, configure Buildroot for the LS1028ARDB board:
+First, configure MikoOS for the LS1028ARDB board:
 
   make ls1028ardb_defconfig
 
@@ -57,7 +57,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

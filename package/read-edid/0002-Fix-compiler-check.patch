@@ -3,7 +3,7 @@ Fix compiler check
 By default CMake looks for c++ which the project does not need.
 
 Patch by Thomas:
-http://lists.busybox.net/pipermail/buildroot/2015-December/146865.html
+http://lists.busybox.net/pipermail/mikoos/2015-December/146865.html
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>
 

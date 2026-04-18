@@ -33,9 +33,9 @@ class TestNetSNMP(infra.basetest.BRTest):
         # We check few OIDs has the expected values. sysContact and
         # sysLocation are set in the snmpd.conf file.
         tests = [
-            ("system.sysName.0", "STRING: buildroot"),
-            ("system.sysContact.0", "STRING: Buildroot Test User"),
-            ("system.sysLocation.0", "STRING: Buildroot Test Infra")
+            ("system.sysName.0", "STRING: mikoos"),
+            ("system.sysContact.0", "STRING: MikoOS Test User"),
+            ("system.sysLocation.0", "STRING: MikoOS Test Infra")
         ]
         for oid, expected_out in tests:
             cmd = f"snmpget -v 2c -c public -Ov 127.0.0.1 {oid}"

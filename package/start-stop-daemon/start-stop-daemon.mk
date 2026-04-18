@@ -5,7 +5,7 @@
 ################################################################################
 
 # Debian start-stop-daemon is part of dpkg. Since start-stop-daemon is the only
-# interesting tool in it, we call the buildroot package start-stop-daemon.
+# interesting tool in it, we call the mikoos package start-stop-daemon.
 
 START_STOP_DAEMON_VERSION = 1.20.7.1
 START_STOP_DAEMON_SOURCE = dpkg_$(START_STOP_DAEMON_VERSION).tar.xz

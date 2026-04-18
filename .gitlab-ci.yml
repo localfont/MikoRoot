@@ -1,7 +1,7 @@
 # Configuration for Gitlab-CI.
-# Builds appear on https://gitlab.com/buildroot.org/buildroot/pipelines
+# Builds appear on https://gitlab.com/mikoos.org/mikoos/pipelines
 
-image: $CI_REGISTRY/buildroot.org/buildroot/base:20250218.2110
+image: $CI_REGISTRY/mikoos.org/mikoos/base:20250218.2110
 
 stages:
   - generate-gitlab-ci
@@ -22,7 +22,7 @@ generate-gitlab-ci-yml:
       - br-test-pkg/*/.config
       - br-test-pkg/*/missing.config
 
-buildroot-pipeline:
+mikoos-pipeline:
   stage: build
   trigger:
     include:

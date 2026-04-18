@@ -1,7 +1,7 @@
 Intro
 =====
 
-This default configuration allows to start experimenting with the Buildroot
+This default configuration allows to start experimenting with the MikoOS
 environment for the OrangePi 5 Plus board. Default configuration brings up
 the board and allows access through the serial console.
 

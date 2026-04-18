@@ -64,7 +64,7 @@ AVAHI_CONF_ENV = \
 	avahi_cv_sys_cxx_works=yes \
 	DATADIRNAME=share
 
-# Note: even if we have Gtk2 and Gtk3 support in Buildroot, we
+# Note: even if we have Gtk2 and Gtk3 support in MikoOS, we
 # explicitly disable support for them, in order to avoid the following
 # circular dependencies:
 #

@@ -4,7 +4,7 @@ Kontron SMARC-sAL28
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
   $ make kontron_smarc_sal28_defconfig
 
@@ -19,7 +19,7 @@ Compile everything and build the rootfs image:
 Copying the image to a storage device
 =====================================
 
-Buildroot builds an image which can be written to the internal eMMC
+MikoOS builds an image which can be written to the internal eMMC
 storage, a SD card or an USB thumb drive. You can use the following
 command on your host:
 
@@ -75,7 +75,7 @@ You will see something like this at boot time:
 Updating the bootloader
 =======================
 
-Buildroot will automatically build the u-boot bootloader. The resulting
+MikoOS will automatically build the u-boot bootloader. The resulting
 image is called u-boot.rom and you can find it in the images/ directory.
 
 To update the bootloader on the board you could either copy it to an

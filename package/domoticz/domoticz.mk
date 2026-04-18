@@ -85,7 +85,7 @@ endef
 DOMOTICZ_POST_INSTALL_TARGET_HOOKS += DOMOTICZ_REMOVE_UNNEEDED_FILES
 
 # Use dedicated init scripts for systemV and systemd instead of using
-# domoticz.sh as it is not compatible with buildroot init system
+# domoticz.sh as it is not compatible with mikoos init system
 define DOMOTICZ_INSTALL_INIT_SYSV
 	$(INSTALL) -D -m 0755 package/domoticz/S99domoticz \
 		$(TARGET_DIR)/etc/init.d/S99domoticz

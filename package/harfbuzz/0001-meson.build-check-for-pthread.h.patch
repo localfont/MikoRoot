@@ -15,7 +15,7 @@ Run-time dependency threads found: YES
 Moreover, fix detection of pthread fallback
 
 Fixes:
- - http://autobuild.buildroot.org/results/70c98e89b1d5e5b651d1f6928dc53f465103f57a
+ - http://autobuild.mikoos.org/results/70c98e89b1d5e5b651d1f6928dc53f465103f57a
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 ---

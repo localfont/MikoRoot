@@ -2,7 +2,7 @@ For the bootloader, NXP has stablized at SDK2.0 (final release). It is
 suggested to download the prebuilt from NXP downloads and follow the
 release notes for reflashing.
 
-To program the kernel and rootfs created by buildroot into the flash. The
+To program the kernel and rootfs created by mikoos into the flash. The
 fast way is to tftp transfer the files via one of the network interfaces.
 Make sure your devkit has ipaddr, netmask, and serverip defined to reach your
 tftp server. Verify bootargs are reasonable (console=ttyS0,115200).

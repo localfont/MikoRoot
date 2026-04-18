@@ -3,10 +3,10 @@
 
 === Infrastructure for packages building kernel modules
 
-Buildroot offers a helper infrastructure to make it easy to write packages that
+MikoOS offers a helper infrastructure to make it easy to write packages that
 build and install Linux kernel modules. Some packages only contain a kernel
 module, other packages contain programs and libraries in addition to kernel
-modules. Buildroot's helper infrastructure supports either case.
+modules. MikoOS's helper infrastructure supports either case.
 
 [[kernel-module-tutorial]]
 ==== +kernel-module+ tutorial

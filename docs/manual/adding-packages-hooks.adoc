@@ -66,7 +66,7 @@ LIBFOO_POST_PATCH_HOOKS += LIBFOO_POST_PATCH_FIXUP
 The +POST_RSYNC+ hook is run only for packages that use a local source,
 either through the +local+ site method or the +OVERRIDE_SRCDIR+
 mechanism. In this case, package sources are copied using +rsync+ from
-the local location into the buildroot build directory. The +rsync+
+the local location into the mikoos build directory. The +rsync+
 command does not copy all files from the source directory, though.
 Files belonging to a version control system, like the directories
 +.git+, +.hg+, etc. are not copied. For most packages this is

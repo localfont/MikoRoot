@@ -22,7 +22,7 @@ class TestNgrep(infra.basetest.BRTest):
         self.emulator.login()
 
         port = 12345
-        msg = 'Hello Buildroot'
+        msg = 'Hello MikoOS'
 
         # Check the program can execute.
         self.assertRunOk("ngrep -V")

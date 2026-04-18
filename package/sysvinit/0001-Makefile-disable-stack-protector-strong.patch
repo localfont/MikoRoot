@@ -5,10 +5,10 @@ Subject: [PATCH] Makefile: disable stack-protector-strong
 
 Fixes:
 
-  .../aarch64-buildroot-linux-uclibc/bin/ld: runlevel.o: in function `main':
+  .../aarch64-mikoos-linux-uclibc/bin/ld: runlevel.o: in function `main':
   runlevel.c:(.text.startup+0x4): undefined reference to `__stack_chk_guard'
-  .../aarch64-buildroot-linux-uclibc/bin/ld: cannot find -lssp_nonshared
-  .../aarch64-buildroot-linux-uclibc/bin/ld: cannot find -lssp
+  .../aarch64-mikoos-linux-uclibc/bin/ld: cannot find -lssp_nonshared
+  .../aarch64-mikoos-linux-uclibc/bin/ld: cannot find -lssp
 
 Signed-off-by: Peter Seiderer <ps.report@gmx.net>
 ---

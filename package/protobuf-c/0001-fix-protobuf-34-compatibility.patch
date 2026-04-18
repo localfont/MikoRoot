@@ -4,7 +4,7 @@ Date: Tue, 10 Mar 2026 10:37:18 +0100
 Subject: [PATCH] Fix compilation against protobuf v34
 
 Upstream: https://github.com/protobuf-c/protobuf-c/pull/797
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 
 ---
  protoc-gen-c/c_bytes_field.cc     |  4 ++--

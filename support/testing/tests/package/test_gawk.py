@@ -16,7 +16,7 @@ class TestGawk(infra.basetest.BRTest):
         # Check the program can execute
         self.assertRunOk("gawk --version")
 
-        # Check "awk" is "gawk": the Buildroot gawk package recipe is
+        # Check "awk" is "gawk": the MikoOS gawk package recipe is
         # supposed to install the symbolic link.
         output, exit_code = self.emulator.run("awk --version")
         self.assertEqual(exit_code, 0)
@@ -29,7 +29,7 @@ class TestGawk(infra.basetest.BRTest):
         self.assertEqual(exit_code, code)
 
         # Run a basic print program
-        test_string = "Hello Buildroot"
+        test_string = "Hello MikoOS"
         cmd = "gawk 'BEGIN {print \"" + test_string + "\"; }'"
         output, exit_code = self.emulator.run(cmd)
         self.assertEqual(exit_code, 0)

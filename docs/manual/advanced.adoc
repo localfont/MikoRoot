@@ -3,9 +3,9 @@
 
 === Advanced usage
 
-include::using-buildroot-toolchain.adoc[]
+include::using-mikoos-toolchain.adoc[]
 
-include::using-buildroot-debugger.adoc[]
+include::using-mikoos-debugger.adoc[]
 
 include::ccache-support.adoc[]
 
@@ -13,4 +13,4 @@ include::download-location.adoc[]
 
 include::package-make-target.adoc[]
 
-include::using-buildroot-development.adoc[]
+include::using-mikoos-development.adoc[]

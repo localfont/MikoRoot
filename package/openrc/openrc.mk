@@ -17,7 +17,7 @@ OPENRC_CONF_OPTS = \
 	-Dlibrcdir=/usr/libexec/rc \
 	-Dpkgconfig=false \
 	-Dsysvinit=true \
-	-Dbranding="\"Buildroot $(BR2_VERSION_FULL)\""
+	-Dbranding="\"MikoOS $(BR2_VERSION_FULL)\""
 
 ifeq ($(BR2_PACKAGE_AUDIT),y)
 OPENRC_CONF_OPTS += -Daudit=enabled

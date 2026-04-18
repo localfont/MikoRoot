@@ -6,7 +6,7 @@ import subprocess
 from urllib.request import urlopen
 from urllib.error import HTTPError, URLError
 
-ARTIFACTS_URL = "https://autobuild.buildroot.org/artefacts/"
+ARTIFACTS_URL = "https://autobuild.mikoos.org/artefacts/"
 BASE_DIR = os.path.realpath(os.path.join(os.path.dirname(__file__), "../../.."))
 
 
@@ -25,7 +25,7 @@ def open_log_file(builddir, stage, logtofile=True):
 
 
 def basepath(relpath=""):
-    """Return the absolute path for a file or directory relative to the Buildroot top directory."""
+    """Return the absolute path for a file or directory relative to the MikoOS top directory."""
     return os.path.join(BASE_DIR, relpath)
 
 

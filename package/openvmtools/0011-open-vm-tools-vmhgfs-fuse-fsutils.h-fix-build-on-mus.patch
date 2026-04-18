@@ -14,7 +14,7 @@ fsutil.h:76:11: error: unknown type name 'loff_t'; did you mean 'off_t'?
            off_t
 
 Fixes:
- - http://autobuild.buildroot.org/results/4eba7c4585d318efdb9b965d58d879426588aa14
+ - http://autobuild.mikoos.org/results/4eba7c4585d318efdb9b965d58d879426588aa14
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: not sent yet (upstream is not reactive on third patch]

@@ -6,7 +6,7 @@ Subject: [PATCH] configure.ac: fixes missing config macro dir
 This adds the config dir to the AC_CONFIG_MACRO_DIRS in configure.ac
 so that m4 macros are properly loaded upon autoreconf use.
 
-Upstream: N/A (specific to buildroot)
+Upstream: N/A (specific to mikoos)
 Signed-off-by: Jens Maus <mail@jens-maus.de>
 [Dario: make the patch to be applied with fuzz factor 0]
 Signed-off-by: Dario Binacchi <dario.binacchi@amarulasolutions.com>

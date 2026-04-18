@@ -4,11 +4,11 @@ Date: Thu, 19 Sep 2024 18:57:16 +0200
 Subject: [PATCH] [sink_flac] missing SWAPS definition
 
 On big endian architecture with libflac enabled the following error
-would happen when cross-compiling aubio with buildroot.
+would happen when cross-compiling aubio with mikoos.
 
 ```
 [ 75/243] Linking build/tests/test-pitchshift
-/home/autobuild/autobuild/instance-16/output-1/per-package/aubio/host/bin/../lib/gcc/mips64-buildroot-linux-gnu/13.3.0/../../../../mips64-buildroot-linux-gnu/bin/ld: src/libaubio.so: undefined reference to `SWAPS'
+/home/autobuild/autobuild/instance-16/output-1/per-package/aubio/host/bin/../lib/gcc/mips64-mikoos-linux-gnu/13.3.0/../../../../mips64-mikoos-linux-gnu/bin/ld: src/libaubio.so: undefined reference to `SWAPS'
 collect2: error: ld returned 1 exit status
 
 Waf: Leaving directory `/home/autobuild/autobuild/instance-16/output-1/build/aubio-152d6819b360c2e7b379ee3f373d444ab3df0895/build'

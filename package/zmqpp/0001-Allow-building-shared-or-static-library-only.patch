@@ -7,8 +7,8 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 Patchs retrieved from:
- - https://git.buildroot.net/buildroot/tree/package/zmqpp/0001-Allow-building-shared-or-static-library-only.patch
- - https://git.buildroot.net/buildroot/tree/package/zmqpp/0002-Install-static-library-for-static-builds.patch
+ - https://git.mikoos.net/mikoos/tree/package/zmqpp/0001-Allow-building-shared-or-static-library-only.patch
+ - https://git.mikoos.net/mikoos/tree/package/zmqpp/0002-Install-static-library-for-static-builds.patch
 
 Both patches have been merged in a single one and slightly updated to
 keep default behavior of building and installing static library

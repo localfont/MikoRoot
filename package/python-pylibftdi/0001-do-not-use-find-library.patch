@@ -3,7 +3,7 @@ Hard code library loading
 Shortcut the search for the libraries in case the built in
 find_library is broken.
 
-As buildroot does not ship any of the external programs that the core
+As mikoos does not ship any of the external programs that the core
 procedure use to find libraries use the canonical name of the shared
 object and load it.
 

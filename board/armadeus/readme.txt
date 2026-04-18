@@ -10,7 +10,7 @@ custom docking boards.
 Supported platforms
 ===================
 
-Buildroot currently supports the following Armadeus platforms with the
+MikoOS currently supports the following Armadeus platforms with the
 associated defconfigs:
 
  * APF27 SOM + devt board    -> armadeus_apf27_defconfig
@@ -23,7 +23,7 @@ configurations.
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
 Let's say you own an APFxx SOM with it's corresponding development

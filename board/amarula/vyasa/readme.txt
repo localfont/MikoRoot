@@ -21,7 +21,7 @@ Compile all and build rootfs image:
 Prepare your SDCard
 ===================
 
-Buildroot generates a ready-to-use SD card image that you can flash directly to
+MikoOS generates a ready-to-use SD card image that you can flash directly to
 the card. The image will be in output/images/sdcard.img.
 You can write this image directly to an SD card device (i.e. /dev/xxx):
 

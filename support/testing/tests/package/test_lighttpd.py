@@ -18,7 +18,7 @@ class TestLighttpd(infra.basetest.BRTest):
                            options=["-initrd", cpio_file])
         self.emulator.login()
 
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
 
         self.assertRunOk("lighttpd -v")
         self.assertRunOk(f"echo '{msg}' > /var/www/index.html")

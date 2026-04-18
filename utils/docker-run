@@ -52,7 +52,7 @@ else
 fi
 
 # curl lists (and recognises and uses) other types of *_proxy variables,
-# but only those make sense for Buildroot:
+# but only those make sense for MikoOS:
 for env in all_proxy http_proxy https_proxy ftp_proxy no_proxy; do
     if [ "${!env}" ]; then
         docker_opts+=( --env "${env}" )

@@ -23,7 +23,7 @@ config BR2_PACKAGE_BANDWIDTHD
 
 	  As upstream is no longer actively maintained, a fork is
 	  available on github that works on making BandwidthD's build
-	  process more compatible with buildroot's.
+	  process more compatible with mikoos's.
 
 	  Upstream:
 	  http://bandwidthd.sourceforge.net/

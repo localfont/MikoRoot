@@ -42,7 +42,7 @@ RM_API_STATUS_FOUND_BY_DISTRO = 2
 RM_API_STATUS_FOUND_BY_PATTERN = 3
 RM_API_STATUS_NOT_FOUND = 4
 
-HTTP_HEADERS = {'User-Agent': 'buildroot.org pkg-stats'}
+HTTP_HEADERS = {'User-Agent': 'mikoos.org pkg-stats'}
 
 
 class Defconfig:
@@ -64,7 +64,7 @@ class Defconfig:
 
 def get_defconfig_list():
     """
-    Builds the list of Buildroot defconfigs, returning a list of Defconfig
+    Builds the list of MikoOS defconfigs, returning a list of Defconfig
     objects.
     """
     return [
@@ -185,7 +185,7 @@ class Package:
         """
         Fills in the .infras field
         """
-        # If we're running pkg-stats for a given Buildroot
+        # If we're running pkg-stats for a given MikoOS
         # configuration, keep only the type/infra that applies
         if show_info_js:
             keep_host = "host-%s" % self.name in show_info_js
@@ -349,7 +349,7 @@ class Package:
 
 def get_pkglist(trees, npackages, package_list):
     """
-    Builds the list of Buildroot packages, returning a list of Package
+    Builds the list of MikoOS packages, returning a list of Package
     objects. Only the .name and .path fields of the Package object are
     initialized.
 
@@ -526,7 +526,7 @@ def check_package_latest_version_set_status(pkg, status, version, identifier):
 
 
 async def check_package_get_latest_version_by_distro(session, pkg, retry=True):
-    url = "https://release-monitoring.org/api/project/Buildroot/%s" % pkg.name
+    url = "https://release-monitoring.org/api/project/MikoOS/%s" % pkg.name
     try:
         async with session.get(url, headers=HTTP_HEADERS) as resp:
             if resp.status != 200:
@@ -898,7 +898,7 @@ function expandField(fieldId){
 
 </style>
 
-<title>Statistics of Buildroot packages</title>
+<title>Statistics of MikoOS packages</title>
 
 </head>
 
@@ -1034,7 +1034,7 @@ def dump_html_pkg(f, pkg):
         latest_version_text += "<br/>"
 
         if pkg.latest_version['status'] == RM_API_STATUS_FOUND_BY_DISTRO:
-            latest_version_text += 'found by <a href="https://release-monitoring.org/distro/Buildroot/">distro</a>'
+            latest_version_text += 'found by <a href="https://release-monitoring.org/distro/MikoOS/">distro</a>'
         else:
             latest_version_text += "found by guess"
 

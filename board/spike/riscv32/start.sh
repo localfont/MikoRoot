@@ -3,7 +3,7 @@
 SCRIPT_DIR="$(dirname "$0")"
 BR_BASEDIR="$(readlink -e "${SCRIPT_DIR}/../../..")"
 
-# spike uses dtc at runtime startup, so make sure buildroot host
+# spike uses dtc at runtime startup, so make sure mikoos host
 # directory is in the PATH
 export PATH="${BR_BASEDIR}/output/host/usr/bin:$PATH"
 

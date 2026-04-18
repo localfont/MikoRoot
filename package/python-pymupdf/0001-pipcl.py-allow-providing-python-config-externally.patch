@@ -6,7 +6,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-When cross-compiling (e.g. using Buildroot), the python-config
+When cross-compiling (e.g. using MikoOS), the python-config
 executable that resides next to the host python executable provides
 incorrect includes (the ones for the host).
 

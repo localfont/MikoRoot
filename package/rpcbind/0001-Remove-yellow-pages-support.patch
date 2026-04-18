@@ -4,7 +4,7 @@ Date: Sat, 10 Nov 2012 22:03:43 +0100
 Subject: [PATCH] Remove yellow pages support
 
 This support requires yellow pages support in libtirpc, which isn't
-available. As most Buildroot users are most likely never going to need
+available. As most MikoOS users are most likely never going to need
 such feature, get rid of it.
 
 Signed-off-by: Thomas Petazzoni <thomas.petazzoni@free-electrons.com>

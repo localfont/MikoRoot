@@ -44,7 +44,7 @@ cargo vendor \
 # to the project's .cargo/config.toml, data that it outputs on stdout.
 # Since we redirect stdout to .cargo/config.toml, the message on stderr
 # gets confusing, so instruct the user that it's been handled.
-printf '(note: .cargo/config.toml automatically updated by Buildroot)\n\n'
+printf '(note: .cargo/config.toml automatically updated by MikoOS)\n\n'
 
 popd > /dev/null
 

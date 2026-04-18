@@ -64,7 +64,7 @@ define PYTHON_WEB2PY_INSTALL_INIT_SYSTEMD
 endef
 
 # www-data user and group are used for web2py. Because these user and group
-# are already set by buildroot, it is not necessary to redefine them.
+# are already set by mikoos, it is not necessary to redefine them.
 # See system/skeleton/etc/passwd
 #   username: www-data    uid: 33
 #   groupname: www-data   gid: 33

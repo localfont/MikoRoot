@@ -4,7 +4,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with
-the buildroot environment for the A13-OLinuXino. With the current
+the mikoos environment for the A13-OLinuXino. With the current
 configuration it will bring-up the board, and allow access through the
 serial console.
 
@@ -15,7 +15,7 @@ https://www.olimex.com/Products/OLinuXino/A13/A13-OLinuXino/open-source-hardware
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make olimex_a13_olinuxino_defconfig
 

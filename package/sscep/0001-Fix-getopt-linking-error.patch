@@ -3,16 +3,16 @@ From: Dario Binacchi <dario.binacchi@amarulasolutions.com>
 Date: Fri, 9 Dec 2022 18:18:27 +0100
 Subject: [PATCH] Fix getopt linking error
 
-The buildroot project, to which the sscep application was added, has
+The mikoos project, to which the sscep application was added, has
 configurations that raise the following linking error:
-buildroot/output/host/lib/gcc/arc-buildroot-linux-uclibc/11.3.0/../../../../arc-buildroot-linux-uclibc/bin/ld: buildroot/output/host/bin/../arc-buildroot-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os):(.data+0x8): multiple definition of `optind'; src/getopt.o:(.data+0x0): first defined here
-buildroot/output/host/lib/gcc/arc-buildroot-linux-uclibc/11.3.0/../../../../arc-buildroot-linux-uclibc/bin/ld: buildroot/output/host/bin/../arc-buildroot-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os): in function `__GI_getopt':
+mikoos/output/host/lib/gcc/arc-mikoos-linux-uclibc/11.3.0/../../../../arc-mikoos-linux-uclibc/bin/ld: mikoos/output/host/bin/../arc-mikoos-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os):(.data+0x8): multiple definition of `optind'; src/getopt.o:(.data+0x0): first defined here
+mikoos/output/host/lib/gcc/arc-mikoos-linux-uclibc/11.3.0/../../../../arc-mikoos-linux-uclibc/bin/ld: mikoos/output/host/bin/../arc-mikoos-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os): in function `__GI_getopt':
 getopt.c:(.text+0x5a4): multiple definition of `getopt'; src/getopt.o:getopt.c:(.text+0x0): first defined here
-buildroot/output/host/lib/gcc/arc-buildroot-linux-uclibc/11.3.0/../../../../arc-buildroot-linux-uclibc/bin/ld: buildroot/output/host/bin/../arc-buildroot-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os): in function `getopt_long':
+mikoos/output/host/lib/gcc/arc-mikoos-linux-uclibc/11.3.0/../../../../arc-mikoos-linux-uclibc/bin/ld: mikoos/output/host/bin/../arc-mikoos-linux-uclibc/sysroot/usr/lib/libc.a(getopt.os): in function `getopt_long':
 getopt.c:(.text+0x5b0): multiple definition of `getopt_long'; src/getopt.o:getopt.c:(.text+0x128): first defined here
 collect2: error: ld returned 1 exit status
 make[2]: *** [Makefile:507: sscep] Error 1
-make[1]: *** [package/pkg-generic.mk:293: buildroot/output/build/sscep-0.10.0/.stamp_built] Error 2
+make[1]: *** [package/pkg-generic.mk:293: mikoos/output/build/sscep-0.10.0/.stamp_built] Error 2
 
 The patch re-added a check that commit
 81f56f635259b9 ("Replaced GNU getopt by a BSD licensed alternative")

@@ -16,13 +16,13 @@ conftest.c:53:1: warning: function declaration isn't a prototype [-Wstrict-proto
 conftest.c:55:1: warning: function declaration isn't a prototype [-Wstrict-prototypes]
    55 | main ()
       | ^~~~
-/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/9.3.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: /srv/storage/autobuild/run/instance-0/output-1/host/arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/libmagic.a(compress.o): in function `uncompresszlib':
+/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/9.3.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: /srv/storage/autobuild/run/instance-0/output-1/host/arm-mikoos-linux-uclibcgnueabi/sysroot/usr/lib/libmagic.a(compress.o): in function `uncompresszlib':
 compress.c:(.text+0x1d0): undefined reference to `inflateInit_'
-/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/9.3.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: compress.c:(.text+0x1e4): undefined reference to `inflate'
-/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/9.3.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: compress.c:(.text+0x1fc): undefined reference to `inflateEnd'
+/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/9.3.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: compress.c:(.text+0x1e4): undefined reference to `inflate'
+/srv/storage/autobuild/run/instance-0/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/9.3.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: compress.c:(.text+0x1fc): undefined reference to `inflateEnd'
 
 Fixes:
- - http://autobuild.buildroot.org/results/d96f27cd96926060046e2e1115777f5bceda3741
+ - http://autobuild.mikoos.org/results/d96f27cd96926060046e2e1115777f5bceda3741
 
 Signed-off-by: Julien Olivain <ju.o@free.fr>
 [Julien: rebased patch on package git version 7524160]

@@ -7,11 +7,11 @@ Patch that was fixing build on mips64el was reverted:
 https://github.com/brltty/brltty/commit/9e7d62c869d3c1cbe12dda8b0291a4692c193416
 
 So fix the issue again, this time by checking if $(GCC) is available as
-suggested by Arnout during review of buildroot patch:
+suggested by Arnout during review of mikoos patch:
 https://patchwork.ozlabs.org/patch/972614
 
 Fixes:
- - http://autobuild.buildroot.org/results/31f682838b3d3b2c7103b5c51f2aba0b89d4f630
+ - http://autobuild.mikoos.org/results/31f682838b3d3b2c7103b5c51f2aba0b89d4f630
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/brltty/brltty/pull/149]

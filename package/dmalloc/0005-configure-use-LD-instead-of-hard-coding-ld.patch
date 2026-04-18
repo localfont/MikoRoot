@@ -7,7 +7,7 @@ When doing cross-compilation, we do not want to use the native tools to
 test, but the target tools.
 
 Note that the weird quoting is inherited from a legacy patch in
-Buildroot, which dates back ages (at least 2006), and as it has not been
+MikoOS, which dates back ages (at least 2006), and as it has not been
 identified as breaking things, we keep it as-is... Meh...
 
 Signed-off-by: Yann E. MORIN <yann.morin.1998@free.fr>

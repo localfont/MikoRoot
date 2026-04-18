@@ -46,7 +46,7 @@ Use the correct mode for booting:
 - SD card RGPIO_0=1, GRPIO_1=0
 - SPI NOR flash RGPIO_0=1, GRPIO_1=1
 
-Note that Buildroot puts the bootloader both in SPI NOR and on the SD card,
+Note that MikoOS puts the bootloader both in SPI NOR and on the SD card,
 so after flashing as instructed above, either boot mode should work.
 
 https://doc-en.rvspace.org/VisionFive2/Quick_Start_Guide/VisionFive2_SDK_QSG/boot_mode_settings.html

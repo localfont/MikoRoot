@@ -75,12 +75,12 @@ REFPOLICY_MODULES = \
 		$(basename $(notdir $(wildcard $(d)/*.te))))
 
 define REFPOLICY_COPY_EXTRA_MODULES
-	mkdir -p $(@D)/policy/modules/buildroot
+	mkdir -p $(@D)/policy/modules/mikoos
 	rsync -au $(addsuffix /*,$(REFPOLICY_EXTRA_MODULES_DIRS)) \
-		$(@D)/policy/modules/buildroot/
-	if [ ! -f $(@D)/policy/modules/buildroot/metadata.xml ]; then \
-		echo "<summary>Buildroot extra modules</summary>" > \
-			$(@D)/policy/modules/buildroot/metadata.xml; \
+		$(@D)/policy/modules/mikoos/
+	if [ ! -f $(@D)/policy/modules/mikoos/metadata.xml ]; then \
+		echo "<summary>MikoOS extra modules</summary>" > \
+			$(@D)/policy/modules/mikoos/metadata.xml; \
 	fi
 endef
 

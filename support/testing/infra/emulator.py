@@ -140,7 +140,7 @@ class Emulator(object):
     def login(self, password=None, timeout=60):
         # The login prompt can take some time to appear when running multiple
         # instances in parallel, so set the timeout to a large value
-        index = self.qemu.expect(["buildroot login:", pexpect.TIMEOUT],
+        index = self.qemu.expect(["mikoos login:", pexpect.TIMEOUT],
                                  timeout=timeout * self.timeout_multiplier)
         if index != 0:
             self.logfile.write("==> System does not boot")

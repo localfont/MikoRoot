@@ -3,11 +3,11 @@
 #
 # This file implements an infrastructure that eases development of
 # package .mk files. It should be used for packages that do not rely
-# on a well-known build system for which Buildroot has a dedicated
-# infrastructure (so far, Buildroot has special support for
+# on a well-known build system for which MikoOS has a dedicated
+# infrastructure (so far, MikoOS has special support for
 # autotools-based and CMake-based packages).
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this generic infrastructure requires the
@@ -443,7 +443,7 @@ endef
 #   makefiles have already been parsed. One specific case is when $$(pkgdir) is
 #   assigned to a variable using deferred evaluation with '=' and this variable
 #   is used in a target rule outside the eval'ed inner block. In this case, the
-#   pkgdir will be that of the last makefile parsed by buildroot, which is not
+#   pkgdir will be that of the last makefile parsed by mikoos, which is not
 #   the expected value. This mechanism is for example used for the TARGET_PATCH
 #   rule.
 # - All other variables should be referenced with a double dollar sign:
@@ -1125,7 +1125,7 @@ endif
 $(1)-legal-info: PKG=$(2)
 $(1)-legal-info:
 	@$$(call MESSAGE,"Collecting legal info")
-# Packages without a source are assumed to be part of Buildroot, skip them.
+# Packages without a source are assumed to be part of MikoOS, skip them.
 	$$(foreach hook,$$($(2)_PRE_LEGAL_INFO_HOOKS),$$(call $$(hook))$$(sep))
 ifneq ($$(call qstrip,$$($(2)_SOURCE)),)
 
@@ -1181,7 +1181,7 @@ endif # redistribute
 endif # ifneq ($$(call qstrip,$$($(2)_SOURCE)),)
 	$$(foreach hook,$$($(2)_POST_LEGAL_INFO_HOOKS),$$(call $$(hook))$$(sep))
 
-# add package to the general list of targets if requested by the buildroot
+# add package to the general list of targets if requested by the mikoos
 # configuration
 ifeq ($$($$($(2)_KCONFIG_VAR)),y)
 

@@ -2,10 +2,10 @@
 // vim: set syntax=asciidoc:
 
 [[adding-packages]]
-== Adding new packages to Buildroot
+== Adding new packages to MikoOS
 
 This section covers how new packages (userspace libraries or
-applications) can be integrated into Buildroot. It also shows how
+applications) can be integrated into MikoOS. It also shows how
 existing packages are integrated, which is needed for fixing issues or
 tuning their configuration.
 

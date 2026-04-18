@@ -50,8 +50,8 @@ class TestOci(infra.basetest.BRTest):
         cmd = "containerd &"
         self.assertRunOk(cmd)
 
-        cmd = "ctr image import --base-name buildroot-test /oci.tar"
+        cmd = "ctr image import --base-name mikoos-test /oci.tar"
         self.assertRunOk(cmd, timeout=120)
 
-        cmd = "ctr run --rm --tty buildroot-test:latest v1"
+        cmd = "ctr run --rm --tty mikoos-test:latest v1"
         self.assertRunOk(cmd, timeout=120)

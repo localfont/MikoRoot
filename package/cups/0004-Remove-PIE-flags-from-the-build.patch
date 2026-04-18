@@ -4,7 +4,7 @@ Date: Sun, 3 Jul 2016 12:20:21 +0200
 Subject: [PATCH] Remove PIE flags from the build
 
 Generating a statically linked binary built with PIE requires the
-Scrt1.o file, which isn't part of Buildroot uClibc toolchains. To
+Scrt1.o file, which isn't part of MikoOS uClibc toolchains. To
 solve this, we simply disable the PIE flags.
 
 [olivier tweak patch for 2.2.4]

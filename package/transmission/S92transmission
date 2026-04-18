@@ -3,7 +3,7 @@
 # Original Author: Lennart A. Jtte, based on Rob Howell's script
 # Modified by Maarten Van Coile & others (on IRC)
 
-# Changes for buildroot:
+# Changes for mikoos:
 # USERNAME points to 'default' in standard installation
 # TODO: set logfile with --logfile option
 

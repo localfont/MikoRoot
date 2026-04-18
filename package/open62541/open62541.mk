@@ -15,7 +15,7 @@ OPEN62541_CPE_ID_VENDOR = open62541
 
 # Force Release build to remove -Werror.
 # Don't use git describe to get the version number.
-# Disable hardening options to let Buildroot handle it.
+# Disable hardening options to let MikoOS handle it.
 OPEN62541_CONF_OPTS = \
 	-DCMAKE_BUILD_TYPE=Release \
 	-DGIT_EXECUTABLE=NO \

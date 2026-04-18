@@ -5,7 +5,7 @@ Subject: [PATCH] setup.py: remove pytest-runner requirement
 
 setup.py: pytest-runner is not required to install the package
 
-Upstream: N/A, Buildroot packaging related
+Upstream: N/A, MikoOS packaging related
 Signed-off-by: Arno Messiaen <arnomessiaen@gmail.com>
 ---
  setup.py | 3 ---

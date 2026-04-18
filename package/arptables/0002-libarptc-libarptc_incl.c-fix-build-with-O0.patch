@@ -18,7 +18,7 @@ In file included from .//include/libarptc/libarptc.h:7,
       |                                           ^~~~~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/730dce4101e7afcee233067e2870603cd64b8a48
+ - http://autobuild.mikoos.org/results/730dce4101e7afcee233067e2870603cd64b8a48
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 ---

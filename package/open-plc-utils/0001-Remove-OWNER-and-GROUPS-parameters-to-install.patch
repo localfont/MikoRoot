@@ -4,7 +4,7 @@ Date: Tue, 30 Sep 2014 13:46:59 +0200
 Subject: [PATCH] Remove OWNER and GROUPS parameters to install
 
 The Install tries to change the owner and groups of the binary. In
-Buildroot we don't want that, since fakeroot will do its job when we
+MikoOS we don't want that, since fakeroot will do its job when we
 finalize the rootfs.
 
 Signed-off-by: Maxime Hadjinlian <maxime.hadjinlian@devialet.com>

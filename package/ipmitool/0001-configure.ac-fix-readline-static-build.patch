@@ -14,12 +14,12 @@ configure: error: ** Unable to find readline required by ipmishell.
 
 [...]
 
-configure:15125: /tmp/instance-0/output-1/host/bin/armeb-buildroot-linux-musleabi-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O0 -g0  -static -Wall -Wextra -std=gnu11 -pedantic -Wformat -Wformat-nonliteral -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c -lreadline   -lcrypto >&5
-/tmp/instance-0/output-1/host/lib/gcc/armeb-buildroot-linux-musleabi/11.3.0/../../../../armeb-buildroot-linux-musleabi/bin/ld: /tmp/instance-0/output-1/host/armeb-buildroot-linux-musleabi/sysroot/usr/lib/libreadline.a(display.o): in function `_rl_move_cursor_relative':
+configure:15125: /tmp/instance-0/output-1/host/bin/armeb-mikoos-linux-musleabi-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O0 -g0  -static -Wall -Wextra -std=gnu11 -pedantic -Wformat -Wformat-nonliteral -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c -lreadline   -lcrypto >&5
+/tmp/instance-0/output-1/host/lib/gcc/armeb-mikoos-linux-musleabi/11.3.0/../../../../armeb-mikoos-linux-musleabi/bin/ld: /tmp/instance-0/output-1/host/armeb-mikoos-linux-musleabi/sysroot/usr/lib/libreadline.a(display.o): in function `_rl_move_cursor_relative':
 display.c:(.text+0x80fc): undefined reference to `tputs'
 
 Fixes:
- - http://autobuild.buildroot.org/results/dabc6a4f49d464c129ac6bc3710011678142fcbe
+ - http://autobuild.mikoos.org/results/dabc6a4f49d464c129ac6bc3710011678142fcbe
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/ipmitool/ipmitool/pull/374]

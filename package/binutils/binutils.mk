@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-# Version is set when using buildroot toolchain.
+# Version is set when using mikoos toolchain.
 # If not, we do like other packages
 BINUTILS_VERSION = $(call qstrip,$(BR2_BINUTILS_VERSION))
 ifeq ($(BINUTILS_VERSION),)

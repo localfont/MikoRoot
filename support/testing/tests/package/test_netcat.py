@@ -22,7 +22,7 @@ class TestNetCat(infra.basetest.BRTest):
 
         self.assertRunOk("nc --version")
 
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
         out_file = "output.txt"
         port = 12345
 

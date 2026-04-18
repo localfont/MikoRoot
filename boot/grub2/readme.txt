@@ -87,7 +87,7 @@ To test your i386/x86-64 EFI image in Qemu
 ------------------------------------------
 
 1. Download/install the EFI BIOS for Qemu
-   You can get it using the edk2 package in Buildroot (installed
+   You can get it using the edk2 package in MikoOS (installed
    in BINARIES_DIR), grab prebuilt images from the unofficial nightly
    builds [0], or use one provided by your distribution as OVMF.
 
@@ -100,7 +100,7 @@ Notes on using Grub2 for ARM u-boot-based platforms
 
 The following steps show how to use the Grub2 arm-uboot platform
 support in the simplest way possible and with a single
-buildroot-generated filesystem.
+mikoos-generated filesystem.
 
  1. Load qemu_arm_vexpress_defconfig
 
@@ -128,7 +128,7 @@ buildroot-generated filesystem.
     set default="0"
     set timeout="5"
 
-    menuentry "Buildroot" {
+    menuentry "MikoOS" {
         set root='(hd0)'
         linux /boot/zImage root=/dev/mmcblk0 console=ttyAMA0
         devicetree /boot/vexpress-v2p-ca9.dtb
@@ -159,7 +159,7 @@ buildroot-generated filesystem.
   => ext2load mmc 0:0 ${loadaddr} /boot/grub/grub.img
   => bootm
 
-12. This should bring the grub2 menu, upon which selecting the "Buildroot"
+12. This should bring the grub2 menu, upon which selecting the "MikoOS"
     entry should boot Linux.
 
 
@@ -175,7 +175,7 @@ using qemu and EFI firmware built for qemu.
 
  3. Download the EFI firmware for qemu aarch64
 
-    You can get it using the edk2 package in Buildroot (installed
+    You can get it using the edk2 package in MikoOS (installed
     in BINARIES_DIR), grab prebuilt images from the unofficial nightly
     builds [1], or use one provided by your distribution as OVMF-aarch64
     or AAVMF.
@@ -189,4 +189,4 @@ using qemu and EFI firmware built for qemu.
     -netdev user,id=eth0 -device virtio-net-device,netdev=eth0
 
  5. This should bring the grub2 menu, upon which selecting the
-    "Buildroot" entry should boot Linux.
+    "MikoOS" entry should boot Linux.

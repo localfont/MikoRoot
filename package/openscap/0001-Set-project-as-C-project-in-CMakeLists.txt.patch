@@ -6,11 +6,11 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-The openscap tool has been recently integrated in the buildroot build
+The openscap tool has been recently integrated in the mikoos build
 system ([1]), which makes the openscap tool buildable for a wide variety
 or architectures/OSes, with a wide variety of _compilers_. And so when
 such compilers are not supporting C++ projects (as it is the case with a
-default buildroot toolchain), the build breaks on the following error
+default mikoos toolchain), the build breaks on the following error
 (see [2] for an example):
 
   -- Detecting CXX compiler ABI info
@@ -26,18 +26,18 @@ default buildroot toolchain), the build breaks on the following error
 
     It fails with the following output:
 
-      Change Dir: '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
+      Change Dir: '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
 
       Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1834b/fast
-      make[1]: Entering directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
+      make[1]: Entering directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
       /usr/bin/make  -f CMakeFiles/cmTC_1834b.dir/build.make CMakeFiles/cmTC_1834b.dir/build
-      make[2]: Entering directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
+      make[2]: Entering directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
       Building CXX object CMakeFiles/cmTC_1834b.dir/testCXXCompiler.cxx.o
-      /bin/false    -o CMakeFiles/cmTC_1834b.dir/testCXXCompiler.cxx.o -c /home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI/testCXXCompiler.cxx
+      /bin/false    -o CMakeFiles/cmTC_1834b.dir/testCXXCompiler.cxx.o -c /home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI/testCXXCompiler.cxx
       make[2]: *** [CMakeFiles/cmTC_1834b.dir/build.make:81: CMakeFiles/cmTC_1834b.dir/testCXXCompiler.cxx.o] Error 1
-      make[2]: Leaving directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
+      make[2]: Leaving directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
       make[1]: *** [Makefile:134: cmTC_1834b/fast] Error 2
-      make[1]: Leaving directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/buildroot-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
+      make[1]: Leaving directory '/home/autobuild/autobuild/instance-6/output-1/build/openscap-1.3.12/mikoos-build/CMakeFiles/CMakeScratch/TryCompile-tUydqI'
 
     CMake will not be able to correctly generate this project.
   Call Stack (most recent call first):
@@ -50,8 +50,8 @@ should rather not try to check C++ support.
 Enforce the project as a C project in CMakeLists.txt to make sure not to
 test C++ features on the used toolchain.
 
-[1] https://buildroot.org/
-[2] https://autobuild.buildroot.org/results/1fe550ffa79f0a083a450ae03fe067a8ab7336be/build-end.log
+[1] https://mikoos.org/
+[2] https://autobuild.mikoos.org/results/1fe550ffa79f0a083a450ae03fe067a8ab7336be/build-end.log
 
 Upstream: https://github.com/OpenSCAP/openscap/commit/bbfb2d7b00cbb8e08d999546734d3ba6ae150736
 [patch slightly adapted to be applicable on v1.4.3]

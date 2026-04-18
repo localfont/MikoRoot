@@ -16,7 +16,7 @@ VALGRIND_CONF_OPTS = \
 VALGRIND_INSTALL_STAGING = YES
 
 # Valgrind must be compiled with no stack protection, so forcefully
-# pass -fno-stack-protector to override what Buildroot may have in
+# pass -fno-stack-protector to override what MikoOS may have in
 # TARGET_CFLAGS if BR2_SSP_* support is enabled.
 VALGRIND_CFLAGS = \
 	$(TARGET_CFLAGS) \
@@ -26,7 +26,7 @@ VALGRIND_CFLAGS = \
 # -march=mips32 to CFLAGS; when it detects a 64-bit MIPS architecture,
 # it forcibly adds -march=mips64. This causes Valgrind to be built
 # always for the first ISA revision level (R1), even when the user has
-# configured Buildroot for the second ISA revision level (R2).
+# configured MikoOS for the second ISA revision level (R2).
 #
 # Override the CFLAGS variable (which Valgrind appends to its CFLAGS)
 # and pass the right -march option, so they take precedence over

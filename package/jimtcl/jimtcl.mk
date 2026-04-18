@@ -39,7 +39,7 @@ endif
 
 # build system doesn't use autotools, but does use an old version of
 # gnuconfig which doesn't know all the architectures supported by
-# Buildroot, so update config.guess / config.sub like we do in
+# MikoOS, so update config.guess / config.sub like we do in
 # pkg-autotools.mk
 JIMTCL_POST_PATCH_HOOKS += UPDATE_CONFIG_HOOK
 HOST_JIMTCL_POST_PATCH_HOOKS += UPDATE_CONFIG_HOOK

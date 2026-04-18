@@ -8,9 +8,9 @@ avoid linking errors related to overlapping sections if toolchain
 enforces PIE.
 
 Fixes:
- - http://autobuild.buildroot.org/results/418a40b995e91bc66e692dfbc4b0521db3fa5fbb
+ - http://autobuild.mikoos.org/results/418a40b995e91bc66e692dfbc4b0521db3fa5fbb
 
-Upstream: N/A Buildroot specific
+Upstream: N/A MikoOS specific
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Signed-off-by: Kory Maincent <kory.maincent@bootlin.com>

@@ -1,13 +1,13 @@
 Intro
 =====
 
-This directory contains a buildroot configuration for building a
+This directory contains a mikoos configuration for building a
 LicheePi Zero.
 
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
   $ make sipeed_licheepi_zero_defconfig
@@ -15,7 +15,7 @@ Configure Buildroot
 Build the rootfs
 ----------------
 
-Note: you will need to have access to the network, since Buildroot
+Note: you will need to have access to the network, since MikoOS
 will download the packages' sources.
 
 You may now build your rootfs with:

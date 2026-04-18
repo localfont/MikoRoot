@@ -4,12 +4,12 @@ Date: Tue, 7 Oct 2025 22:44:01 +0200
 Subject: [PATCH] cta: include sys/types.h
 
 Fixes build error with uClibc-based toolchain and gcc 15.2.0 found by
-Buildroot autobuilders[1]:
+MikoOS autobuilders[1]:
 
 ../cta.c: In function 'parse_vendor_hdmi_block':
 ../cta.c:168:15: error: unknown type name 'ssize_t'; did you mean 'size_t'?
 
-[1] https://autobuild.buildroot.org/results/2d72feabdd0c9e1c9aa89e6d683d5f5ae0bb942d/
+[1] https://autobuild.mikoos.org/results/2d72feabdd0c9e1c9aa89e6d683d5f5ae0bb942d/
 
 Upstream: https://gitlab.freedesktop.org/emersion/libdisplay-info/-/commit/84e8da3de9a89a95c4305abf6f578feae66dfa69
 

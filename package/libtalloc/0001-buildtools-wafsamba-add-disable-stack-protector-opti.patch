@@ -7,7 +7,7 @@ Allow the user to disable stack-protector through
 --disable-stack-protector to avoid the following build failure with
 libtalloc on embedded toolchains which don't support stack-protector:
 
-/home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/i686-buildroot-linux-musl/9.4.0/../../../../i686-buildroot-linux-musl/bin/ld: talloc.c.5.o: in function `_vasprintf_tc':
+/home/autobuild/autobuild/instance-5/output-1/host/lib/gcc/i686-mikoos-linux-musl/9.4.0/../../../../i686-mikoos-linux-musl/bin/ld: talloc.c.5.o: in function `_vasprintf_tc':
 talloc.c:(.text+0x427d): undefined reference to `__stack_chk_fail_local'
 
 This build failure is raised since
@@ -18,7 +18,7 @@ libssp is not available:
 Checking if compiler accepts -fstack-protector-strong                                           : yes
 
 Fixes:
- - http://autobuild.buildroot.org/results/e221bde25c7622db99761d0adcd56663296beb15
+ - http://autobuild.mikoos.org/results/e221bde25c7622db99761d0adcd56663296beb15
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status:

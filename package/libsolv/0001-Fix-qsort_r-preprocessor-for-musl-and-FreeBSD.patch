@@ -5,7 +5,7 @@ Subject: [PATCH] Fix qsort_r preprocessor for musl and FreeBSD
 
 The original mentioned qsort_r signature difference now only exists in DragonFly
 BSD & MacOS. However, the preprocessor also broke the compliation on musl+linux
-and FreeBSD, leading the compilation error on buildroot.
+and FreeBSD, leading the compilation error on mikoos.
 
 musl: https://git.musl-libc.org/cgit/musl/commit/?id=b76f37fd5625d038141b52184956fb4b7838e9a5
 freebsd, dragonfly, macos: QSORT(3)

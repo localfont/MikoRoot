@@ -15,7 +15,7 @@ HOST_VBOOT_UTILS_DEPENDENCIES = host-openssl host-util-linux host-pkgconf
 # vboot_reference contains code that goes into bootloaders,
 # utilities intended for the target system, and a bunch of scripts
 # for Chromium OS build system. Most of that does not make sense
-# in a buildroot host-package.
+# in a mikoos host-package.
 #
 # We only need futility for signing images, the keys, and cgpt for boot
 # media partitioning.

@@ -8,11 +8,11 @@ since version 3.2.0 and
 https://github.com/openssl/openssl/commit/1853d20a008a85d327f4faa9e07be40a85549f8e
 resulting in the following static build failure:
 
-/home/autobuild/autobuild/instance-12/output-1/host/lib/gcc/powerpc-buildroot-linux-uclibcspe/8.4.0/../../../../powerpc-buildroot-linux-uclibcspe/bin/ld: /home/autobuild/autobuild/instance-12/output-1/host/bin/../powerpc-buildroot-linux-uclibcspe/sysroot/usr/lib/libssl.a(libssl-lib-tls_common.o): in function `tls_free':
+/home/autobuild/autobuild/instance-12/output-1/host/lib/gcc/powerpc-mikoos-linux-uclibcspe/8.4.0/../../../../powerpc-mikoos-linux-uclibcspe/bin/ld: /home/autobuild/autobuild/instance-12/output-1/host/bin/../powerpc-mikoos-linux-uclibcspe/sysroot/usr/lib/libssl.a(libssl-lib-tls_common.o): in function `tls_free':
 tls_common.c:(.text+0x808): multiple definition of `tls_free'; ../libsofia-sip-ua/.libs/libsofia-sip-ua.a(tport_tls.o):tport_tls.c:(.text+0x1128): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/ee862bdafd44c8c56f77e2702ee0a7462634fa0b
+ - http://autobuild.mikoos.org/results/ee862bdafd44c8c56f77e2702ee0a7462634fa0b
 
 Upstream: https://github.com/freeswitch/sofia-sip/pull/240
 

@@ -2,7 +2,7 @@
 Xilinx Kria SOM Starter Kits - ZynqMP SoC
 **************************************************
 
-This document describes the Buildroot support for the Kria KD240,
+This document describes the MikoOS support for the Kria KD240,
 KR260 and KV260 starter kits by Xilinx, based on Kria SOM including the
 Zynq UltraScale+ MPSoC (aka ZynqMP).  It has been tested with 
 the KD240, KR260 and KV260 production boards.
@@ -21,7 +21,7 @@ https://www.amd.com/en/products/system-on-modules/kria/k26/kv260-vision-starter-
 How to build it
 ===============
 
-Configure Buildroot: (use the command for the specific board)
+Configure MikoOS: (use the command for the specific board)
 
     $ make zynqmp_kria_kd240_defconfig
     $ make zynqmp_kria_kr260_defconfig
@@ -104,5 +104,5 @@ KD240 / KR260 Flashing Instructions:
     $ sf erase 0x200000 +$filesize
     $ sf write 0x1000000 0x200000 $filesize
 
-It is possible to boot the Buildroot generated SD card image without
+It is possible to boot the MikoOS generated SD card image without
 updating the QSPI qspi.bin image, so this is an optional step.

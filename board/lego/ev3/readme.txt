@@ -3,7 +3,7 @@ Lego Mindstorms EV3
 Intro
 =====
 
-This is the buildroot basic board support for the Lego Mindstorms EV3
+This is the mikoos basic board support for the Lego Mindstorms EV3
 programmable brick.
 
 The Lego Mindstorms EV3 brick comprises a Texas Instruments AM1808 SoC, with
@@ -30,7 +30,7 @@ built-in 16MB flash.
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
 The lego_ev3_defconfig configuration provides basic support to boot on the Lego
@@ -41,7 +41,7 @@ Mindstorms EV3 programmable brick:
 Build everything
 ----------------
 
-Note: you will need to have access to the network, since Buildroot will
+Note: you will need to have access to the network, since MikoOS will
 download the packages' sources.
 
   $ make

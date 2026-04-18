@@ -9,7 +9,7 @@ time.
 
 However, that poses at least two problems:
 
-  - in Buildroot, we already have validated the downloads with the sha1s
+  - in MikoOS, we already have validated the downloads with the sha1s
     anyway, and trying to download anything at install time is not
     always possible (e.g. for off-line builds);
 

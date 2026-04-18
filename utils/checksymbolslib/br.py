@@ -35,8 +35,8 @@ symbols_defined_only_for_barebox_variant = [
     'BR2_TARGET_BAREBOX_AUX_BAREBOXENV',
 ]
 # toolchain/toolchain/toolchain.mk
-# toolchain/toolchain-buildroot/toolchain-buildroot.mk
-# toolchain/toolchain-bare-metal-buildroot/toolchain-bare-metal-buildroot.mk
+# toolchain/toolchain-mikoos/toolchain-mikoos.mk
+# toolchain/toolchain-bare-metal-mikoos/toolchain-bare-metal-mikoos.mk
 symbols_not_defined_for_fake_virtual_packages = [
     'BR2_PACKAGE_HAS_TOOLCHAIN',
     'BR2_PACKAGE_HAS_TOOLCHAIN_BUILDROOT',

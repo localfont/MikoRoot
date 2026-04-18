@@ -6,7 +6,7 @@ MIME-Version: 1.0
 Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
-The compilation in Buildroot for the raspberrypi3_qt5we_defconfig
+The compilation in MikoOS for the raspberrypi3_qt5we_defconfig
 configuration:
 
 make raspberrypi3_qt5we_defconfig
@@ -14,9 +14,9 @@ make
 
 raises the following error:
 
-In file included from buildroot/output/build/snappy-1.2.1/snappy.cc:29:
-buildroot/output/build/snappy-1.2.1/snappy-internal.h: In function ‘snappy::internal::V128 snappy::internal::V128_Shuffle(V128, V128)’:
-buildroot/output/build/snappy-1.2.1/snappy-internal.h:109:10: error: ‘vqtbl1q_u8’ was not declared in this scope; did you mean ‘vtbl1_u8’?
+In file included from mikoos/output/build/snappy-1.2.1/snappy.cc:29:
+mikoos/output/build/snappy-1.2.1/snappy-internal.h: In function ‘snappy::internal::V128 snappy::internal::V128_Shuffle(V128, V128)’:
+mikoos/output/build/snappy-1.2.1/snappy-internal.h:109:10: error: ‘vqtbl1q_u8’ was not declared in this scope; did you mean ‘vtbl1_u8’?
   109 |   return vqtbl1q_u8(input, shuffle_mask);
       |          ^~~~~~~~~~
       |          vtbl1_u8

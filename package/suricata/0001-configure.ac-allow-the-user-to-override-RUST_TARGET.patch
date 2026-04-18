@@ -4,7 +4,7 @@ Date: Sat, 10 Oct 2020 21:34:21 +0200
 Subject: [PATCH] configure.ac: allow the user to override RUST_TARGET
 
 When cross-compiling, RUST_TARGET is not always equal to host_triplet
-(e.g. buildroot) so allow the user to override this default value
+(e.g. mikoos) so allow the user to override this default value
 through RUST_TARGET environment variable
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>

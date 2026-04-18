@@ -21,8 +21,8 @@ fp-gnuppc.c:53:15: error: '_FPU_RC_NEAREST' undeclared (first use in this functi
       |               ^~~~~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/d73e116c81bf16d2e55fced215d6bd3b382fef10
- - http://autobuild.buildroot.org/results/48403946bb4cda9013e51db59c1b2ffdcf4e2854
+ - http://autobuild.mikoos.org/results/d73e116c81bf16d2e55fced215d6bd3b382fef10
+ - http://autobuild.mikoos.org/results/48403946bb4cda9013e51db59c1b2ffdcf4e2854
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://lists.gnu.org/archive/html/bug-gsl/2022-11/msg00000.html

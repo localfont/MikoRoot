@@ -4,7 +4,7 @@ i.MX8MN BSH SMM S2 PRO
 How to build it
 ---------------
 
-Configure buildroot:
+Configure mikoos:
 
   $ make imx8mn_bsh_smm_s2_pro_defconfig
 

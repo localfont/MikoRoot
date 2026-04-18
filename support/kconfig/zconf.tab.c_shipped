@@ -1515,7 +1515,7 @@ yyreduce:
 	 * later regardless of whether it comes from the 'prompt' in
 	 * mainmenu_stmt or here
 	 */
-	menu_add_prompt(P_MENU, xstrdup("Buildroot Configuration"), NULL);
+	menu_add_prompt(P_MENU, xstrdup("MikoOS Configuration"), NULL);
 }
 
     break;

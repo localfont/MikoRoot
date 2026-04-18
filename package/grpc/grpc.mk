@@ -17,7 +17,7 @@ GRPC_DEPENDENCIES = c-ares host-grpc libabseil-cpp openssl protobuf re2 zlib
 HOST_GRPC_DEPENDENCIES = host-protobuf
 
 # gRPC_CARES_PROVIDER=package won't work because it requires c-ares to have
-# installed a cmake config file, but buildroot uses c-ares' autotools build,
+# installed a cmake config file, but mikoos uses c-ares' autotools build,
 # which doesn't do this.  These CARES settings trick the gRPC cmake code into
 # not looking for c-ares at all and yet still linking with the library.
 GRPC_CONF_OPTS = \

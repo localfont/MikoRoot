@@ -7,7 +7,7 @@ https://www.kontron.com/produkte/baseboard-bl-i.mx8m-mini/p158549
 How to build it
 ===============
 
-Configure buildroot:
+Configure mikoos:
 
   $ make kontron_bl_imx8mm_defconfig
 

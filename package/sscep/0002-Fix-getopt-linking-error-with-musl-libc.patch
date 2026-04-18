@@ -3,18 +3,18 @@ From: Dario Binacchi <dario.binacchi@amarulasolutions.com>
 Date: Sat, 11 May 2024 19:38:01 +0200
 Subject: [PATCH] Fix getopt linking error with musl-libc
 
-The buildroot project, to which the sscep application was added, has
+The mikoos project, to which the sscep application was added, has
 configurations that raise the following linking error:
-buildroot/output/host/opt/ext-toolchain/bin/../lib/gcc/i586-buildroot-linux-musl/9.3.0/../../../../i586-buildroot-linux-musl/bin/ld: buildroot/output/host/i586-buildroot-linux-musl/sysroot/lib/libc.a(getopt.o): in function `getopt':
+mikoos/output/host/opt/ext-toolchain/bin/../lib/gcc/i586-mikoos-linux-musl/9.3.0/../../../../i586-mikoos-linux-musl/bin/ld: mikoos/output/host/i586-mikoos-linux-musl/sysroot/lib/libc.a(getopt.o): in function `getopt':
 getopt.c:(.text.getopt+0x0): multiple definition of `getopt'; src/getopt.o:getopt.c:(.text+0x0): first defined here
-buildroot/output/host/opt/ext-toolchain/bin/../lib/gcc/i586-buildroot-linux-musl/9.3.0/../../../../i586-buildroot-linux-musl/bin/ld: buildroot/output/host/i586-buildroot-linux-musl/sysroot/lib/libc.a(getopt.o):(.data.optind+0x0): multiple definition of `optind'; src/getopt.o:(.data+0x0): first defined here
+mikoos/output/host/opt/ext-toolchain/bin/../lib/gcc/i586-mikoos-linux-musl/9.3.0/../../../../i586-mikoos-linux-musl/bin/ld: mikoos/output/host/i586-mikoos-linux-musl/sysroot/lib/libc.a(getopt.o):(.data.optind+0x0): multiple definition of `optind'; src/getopt.o:(.data+0x0): first defined here
 collect2: error: ld returned 1 exit status
 
 The commit 65561b53344b8 ("Fix getopt linking error") actually fixed the
 linking error only for uclibc, but not for musl-libc. The patch fixes
 the error for both uclibc and musl-libc.
 
-Link: http://autobuild.buildroot.net/results/d5b1b4e5e9d9c8eca5e75c345db4d1f3f0cd84ed/build-end.log
+Link: http://autobuild.mikoos.net/results/d5b1b4e5e9d9c8eca5e75c345db4d1f3f0cd84ed/build-end.log
 Signed-off-by: Dario Binacchi <dario.binacchi@amarulasolutions.com>
 Upstream: https://github.com/certnanny/sscep/pull/181
 ---

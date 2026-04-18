@@ -11,7 +11,7 @@ SYNERGY_LICENSE_FILES = LICENSE
 SYNERGY_CPE_ID_VENDOR = symless
 SYNERGY_DEPENDENCIES = xlib_libX11 xlib_libXtst
 
-# Avoid using buildroot commit hash inside cmake/Version.cmake
+# Avoid using mikoos commit hash inside cmake/Version.cmake
 # by setting SYNERGY_VERSION_STAGE != snapshot
 SYNERGY_CONF_ENV += SYNERGY_VERSION_STAGE="beta"
 

@@ -6,10 +6,10 @@ Subject: [PATCH] fix build with 32-bits kernel
 Use div_s64 or div_s64_rem to fix the following build failure on 32-bits
 kernels:
 
-ERROR: modpost: "__divdi3" [/home/fabrice/buildroot/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp_usb.ko] undefined!
-ERROR: modpost: "__udivdi3" [/home/fabrice/buildroot/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp_usb.ko] undefined!
-ERROR: modpost: "__moddi3" [/home/fabrice/buildroot/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp.ko] undefined!
-ERROR: modpost: "__divdi3" [/home/fabrice/buildroot/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp.ko] undefined!
+ERROR: modpost: "__divdi3" [/home/fabrice/mikoos/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp_usb.ko] undefined!
+ERROR: modpost: "__udivdi3" [/home/fabrice/mikoos/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp_usb.ko] undefined!
+ERROR: modpost: "__moddi3" [/home/fabrice/mikoos/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp.ko] undefined!
+ERROR: modpost: "__divdi3" [/home/fabrice/mikoos/output/build/dahdi-linux-5c840cf43838e0690873e73409491c392333b3b8/drivers/dahdi/xpp/xpp.ko] undefined!
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/asterisk/dahdi-linux/pull/32

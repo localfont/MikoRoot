@@ -2,8 +2,8 @@ Mediatek MT8173 aka Chromebook Elm
 ==================================
 
 This file describes booting the Chromebook from an SD card containing
-Buildroot kernel and rootfs, using the original bootloader. This is
-the least invasive way to get Buildroot onto the devices and a good
+MikoOS kernel and rootfs, using the original bootloader. This is
+the least invasive way to get MikoOS onto the devices and a good
 starting point.
 
 The bootloader will only boot a kernel from a GPT partition marked

@@ -105,7 +105,7 @@ def __main__():
             for dev in matching_devs:
                 print(f"{'Cc: ' if args.cc else ''}{dev}")
         else:
-            result = "--to buildroot@buildroot.org"
+            result = "--to mikoos@mikoos.org"
             for dev in matching_devs:
                 result += " --cc \"%s\"" % dev
 

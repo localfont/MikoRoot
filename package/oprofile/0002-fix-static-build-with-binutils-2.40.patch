@@ -7,14 +7,14 @@ sframe library was added by binutils 2.40 and
 https://github.com/bminor/binutils-gdb/commit/19e559f1c91bfaedbd2f91d85ee161f3f03fda3c
 resulting in the following static build failure:
 
-/home/buildroot/autobuild/run/instance-1/output-1/build/binutils-2.41/bfd/elf-sframe.c:220: undefined reference to `sframe_decode'
+/home/mikoos/autobuild/run/instance-1/output-1/build/binutils-2.41/bfd/elf-sframe.c:220: undefined reference to `sframe_decode'
 
 [...]
 
 configure: error: bfd library not found
 
 Fixes:
- - http://autobuild.buildroot.org/results/a9f3e09e6543b3773440c011e93bd41e357691e4
+ - http://autobuild.mikoos.org/results/a9f3e09e6543b3773440c011e93bd41e357691e4
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://sourceforge.net/p/oprofile/bugs/295

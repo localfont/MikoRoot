@@ -3,7 +3,7 @@ From: Norbert Lange <nolange79@gmail.com>
 Date: Sun, 9 Jan 2022 00:22:40 +0100
 Subject: [PATCH] Also create /run/lock/subsys directory
 
-Buildroot service scripts regularly use this directory, so
+MikoOS service scripts regularly use this directory, so
 create it in the most appropriate spot.
 
 Signed-off-by: Norbert Lange <nolange79@gmail.com>

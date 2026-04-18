@@ -29,12 +29,12 @@ an example :
 On line 7, we declare the version of the package.
 
 On line 8 and 9, we declare the name of the tarball (xz-ed tarball
-recommended) and the location of the tarball on the Web. Buildroot
+recommended) and the location of the tarball on the Web. MikoOS
 will automatically download the tarball from this location.
 
-On line 10, we tell Buildroot what options to enable for libfoo.
+On line 10, we tell MikoOS what options to enable for libfoo.
 
-On line 11, we tell Buildroot the dependencies of libfoo.
+On line 11, we tell MikoOS the dependencies of libfoo.
 
 Finally, on line line 13, we invoke the +qmake-package+
 macro that generates all the Makefile rules that actually allows the

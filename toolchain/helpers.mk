@@ -57,7 +57,7 @@ copy_toolchain_lib_root = \
 #
 # If ARCH_LIB_DIR is not a singular directory component, e.g.
 # 'lib32/octeon2', then symbolic links in ARCH_LIB_DIR and
-# usr/ARCH_LIB_DIR may be broken because Buildroot will flatten the
+# usr/ARCH_LIB_DIR may be broken because MikoOS will flatten the
 # directory structure (e.g. lib32/octeon2/foo is actually stored in
 # lib/foo). This is only relevant for links that contain one or more ../
 # components, as links to the current directory are always fine.
@@ -203,7 +203,7 @@ check_gcc_version = \
 # glibc, so we simply check that the corresponding option is properly
 # enabled.
 #
-# $1: Buildroot option name
+# $1: MikoOS option name
 # $2: feature description
 #
 check_glibc_feature = \
@@ -230,7 +230,7 @@ check_glibc_rpc_feature = \
 
 #
 # Check the correctness of a glibc external toolchain configuration.
-#  1. Check that the C library selected in Buildroot matches the one
+#  1. Check that the C library selected in MikoOS matches the one
 #     of the external toolchain
 #  2. Check that all the C library-related features are enabled in the
 #     config, since glibc always supports all of them
@@ -260,15 +260,15 @@ check_musl = \
 	fi
 
 #
-# Check the conformity of Buildroot configuration with regard to the
+# Check the conformity of MikoOS configuration with regard to the
 # uClibc configuration of the external toolchain, for a particular
 # feature.
 #
-# If 'Buildroot option name' ($2) is empty it means the uClibc option
+# If 'MikoOS option name' ($2) is empty it means the uClibc option
 # is mandatory.
 #
 # $1: uClibc macro name
-# $2: Buildroot option name
+# $2: MikoOS option name
 # $3: uClibc config file
 # $4: feature description
 #
@@ -276,7 +276,7 @@ check_uclibc_feature = \
 	IS_IN_LIBC=`grep -q "\#define $(1) 1" $(3) && echo y` ; \
 	if [ -z "$(2)" ] ; then \
 		if [ "$${IS_IN_LIBC}" != "y" ] ; then \
-			echo "$(4) not available in C library, toolchain unsuitable for Buildroot" ; \
+			echo "$(4) not available in C library, toolchain unsuitable for MikoOS" ; \
 			exit 1 ; \
 		fi ; \
 	else \
@@ -292,9 +292,9 @@ check_uclibc_feature = \
 
 #
 # Check the correctness of a uclibc external toolchain configuration
-#  1. Check that the C library selected in Buildroot matches the one
+#  1. Check that the C library selected in MikoOS matches the one
 #     of the external toolchain
-#  2. Check that the features enabled in the Buildroot configuration
+#  2. Check that the features enabled in the MikoOS configuration
 #     match the features available in the uClibc of the external
 #     toolchain
 #
@@ -318,7 +318,7 @@ check_uclibc = \
 	$(call check_uclibc_feature,__UCLIBC_HAS_THREADS_NATIVE__,BR2_TOOLCHAIN_HAS_THREADS_NPTL,$${UCLIBC_CONFIG_FILE},NPTL thread support)
 
 #
-# Check that the Buildroot configuration of the ABI matches the
+# Check that the MikoOS configuration of the ABI matches the
 # configuration of the external toolchain.
 #
 # $1: cross-gcc path
@@ -430,7 +430,7 @@ check_cross_compiler_exists = \
 	fi
 
 #
-# Check for toolchains known not to work with Buildroot.
+# Check for toolchains known not to work with MikoOS.
 # - For the Angstrom toolchains, we check by looking at the vendor part of
 #   the host tuple.
 # - Exclude distro-class toolchains which are not relocatable.
@@ -450,27 +450,27 @@ check_unusable_toolchain = \
 		echo "Angstrom toolchains are not pure toolchains: they contain" ; \
 		echo "many other libraries than just the C library, which makes" ; \
 		echo "them unsuitable as external toolchains for build systems" ; \
-		echo "such as Buildroot." ; \
+		echo "such as MikoOS." ; \
 		exit 1 ; \
 	fi; \
 	with_sysroot=`$${__CROSS_CC} -v 2>&1 |sed -r -e '/.* --with-sysroot=([^[:space:]]+)[[:space:]].*/!d; s//\1/'`; \
 	if test "$${with_sysroot}"  = "/" ; then \
-		echo "Distribution toolchains are unsuitable for use by Buildroot," ; \
+		echo "Distribution toolchains are unsuitable for use by MikoOS," ; \
 		echo "as they were configured in a way that makes them non-relocatable,"; \
 		echo "and contain a lot of pre-built libraries that would conflict with"; \
-		echo "the ones Buildroot wants to build."; \
+		echo "the ones MikoOS wants to build."; \
 		exit 1; \
 	fi; \
 	libc_a_path=`$${__CROSS_CC} -print-file-name=libc.a` ; \
 	if test "$${libc_a_path}" = "libc.a" ; then \
-		echo "Unable to detect the toolchain sysroot, Buildroot cannot use this toolchain." ; \
+		echo "Unable to detect the toolchain sysroot, MikoOS cannot use this toolchain." ; \
 		exit 1 ; \
 	fi ; \
 	libc_a_archsysroot_path=`$${__CROSS_CC} $${__TOOLCHAIN_CFLAGS} -print-file-name=libc.a` ; \
 	if test "$${libc_a_archsysroot_path}" = "libc.a" ; then \
 		echo "Unable to detect the toolchain architecture sysroot." ; \
 		echo "Please check the Target Architecture Variant selected, the toolchains may not support it." ; \
-		echo "Buildroot cannot use this toolchain." ; \
+		echo "MikoOS cannot use this toolchain." ; \
 		exit 1 ; \
 	fi; \
 	sysroot_dir="$(call toolchain_find_sysroot,$${__CROSS_CC})" ; \
@@ -506,12 +506,12 @@ check_toolchain_ssp = \
 	rm -f $(BUILD_DIR)/.br-toolchain-test.tmp*
 
 #
-# Generate gdbinit file for use with Buildroot
+# Generate gdbinit file for use with MikoOS
 #
 gen_gdbinit_file = \
-	mkdir -p $(STAGING_DIR)/usr/share/buildroot/ ; \
-	echo "add-auto-load-safe-path $(STAGING_DIR)" > $(STAGING_DIR)/usr/share/buildroot/gdbinit ; \
-	echo "set sysroot $(STAGING_DIR)" >> $(STAGING_DIR)/usr/share/buildroot/gdbinit
+	mkdir -p $(STAGING_DIR)/usr/share/mikoos/ ; \
+	echo "add-auto-load-safe-path $(STAGING_DIR)" > $(STAGING_DIR)/usr/share/mikoos/gdbinit ; \
+	echo "set sysroot $(STAGING_DIR)" >> $(STAGING_DIR)/usr/share/mikoos/gdbinit
 
 # Given a path, determine the relative prefix (../) needed to return to the
 # root level. Note that the last component is treated as a file component; use a

@@ -23,7 +23,7 @@ HOST_LIBXCB_DEPENDENCIES = \
 LIBXCB_CONF_OPTS = --with-doxygen=no
 HOST_LIBXCB_CONF_OPTS = --with-doxygen=no
 
-# Force detection of Buildroot host-python3 over system python
+# Force detection of MikoOS host-python3 over system python
 LIBXCB_CONF_OPTS += ac_cv_path_PYTHON=$(HOST_DIR)/bin/python3
 HOST_LIBXCB_CONF_OPTS += ac_cv_path_PYTHON=$(HOST_DIR)/bin/python3
 

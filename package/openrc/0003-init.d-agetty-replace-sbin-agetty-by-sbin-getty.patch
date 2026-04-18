@@ -3,7 +3,7 @@ From: Carlos Santos <unixmania@gmail.com>
 Date: Sun, 1 Mar 2020 09:04:48 -0300
 Subject: [PATCH] init.d/agetty: replace /sbin/agetty by /sbin/getty
 
-In Buildroot getty is provided by BusyBox or util-linux (agetty). Both
+In MikoOS getty is provided by BusyBox or util-linux (agetty). Both
 create a /sbin/getty symlink pointing to the actual program, so make the
 agetty service use that path instead of /sbin/agetty.
 

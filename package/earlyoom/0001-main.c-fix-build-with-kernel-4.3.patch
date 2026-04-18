@@ -14,7 +14,7 @@ main.c:119:11: error: 'PR_CAP_AMBIENT' undeclared (first use in this function)
            ^
 
 Fixes:
- - http://autobuild.buildroot.org/results/5a0ad7e1f6de3c37e40c37d8f583fc699a457753
+ - http://autobuild.mikoos.org/results/5a0ad7e1f6de3c37e40c37d8f583fc699a457753
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/rfjakob/earlyoom/pull/276]

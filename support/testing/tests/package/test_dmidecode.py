@@ -27,7 +27,7 @@ class TestDmidecode(infra.basetest.BRTest):
     def test_run(self):
 
         # An arbitrary SMBIOS OEM string for the test
-        oem_string = "Hello Buildroot SMBIOS"
+        oem_string = "Hello MikoOS SMBIOS"
 
         kernel = os.path.join(self.builddir, "images", "bzImage")
         cpio_file = os.path.join(self.builddir, "images", "rootfs.cpio.gz")

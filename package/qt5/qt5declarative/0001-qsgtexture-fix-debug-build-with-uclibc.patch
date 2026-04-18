@@ -19,7 +19,7 @@ CAN_BACKTRACE_EXECINFO is undefined if QT_NO_DEBUG is set
 So keep defined(__GLIBC__), but put back !defined(__UCLIBC__)
 
 Fixes:
- - http://autobuild.buildroot.org/results/6fce0ce5aea943e097532efbbc8d1e28f41e5866
+ - http://autobuild.mikoos.org/results/6fce0ce5aea943e097532efbbc8d1e28f41e5866
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/qt/qtdeclarative/pull/4]

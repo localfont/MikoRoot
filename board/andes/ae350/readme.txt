@@ -8,7 +8,7 @@ The AE350 prototype demonstrates the AE350 platform on the FPGA.
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
   $ make andes_ae350_45_defconfig
@@ -19,7 +19,7 @@ If you want to customize your configuration:
 
 Build everything
 ----------------
-Note: you will need to access to the network, since Buildroot will
+Note: you will need to access to the network, since MikoOS will
 download the packages' sources.
 
   $ make
@@ -50,7 +50,7 @@ as below:
 
   Local Host                 Local/Remote Host
  .-----------------.          .--------------.
- | buildroot images|          |              |
+ | mikoos images|          |              |
  |                 |         ICEman host <IP:PORT>
  | .----------.    |          |  .--------.  |
  | | SPI_burn |<---+--socket--+->| ICEman |  |

@@ -77,7 +77,7 @@ class TestXvisor(infra.basetest.BRTest):
         self.assertTrue(output[0].startswith("Xvisor"))
 
         # Check a basic echo.
-        test_str = "Hello Buildroot!"
+        test_str = "Hello MikoOS!"
         output, exit_code = self.run_xvisor_cmd("echo " + test_str)
         self.assertEqual(exit_code, 0)
         self.assertEqual(output[0].strip(), test_str)
@@ -99,10 +99,10 @@ class TestXvisor(infra.basetest.BRTest):
         self.assertEqual(exit_code, 0)
         self.assertIn("os-release", "\n".join(output))
 
-        # Check the word "Buildroot" is in the /etc/issue file.
+        # Check the word "MikoOS" is in the /etc/issue file.
         output, exit_code = self.run_xvisor_cmd("vfs cat /etc/issue")
         self.assertEqual(exit_code, 0)
-        self.assertIn("Buildroot", "\n".join(output))
+        self.assertIn("MikoOS", "\n".join(output))
 
         # Check qemu is seen in host info.
         output, exit_code = self.run_xvisor_cmd("host info")

@@ -51,7 +51,7 @@ define SKELETON_INIT_SYSTEMD_PRE_ROOTFS_VAR_FACTORY
 			printf "C! %s - - - -\n" "$${j}" \
 			|| exit 1; \
 		fi; \
-	done >$(TARGET_DIR)/usr/lib/tmpfiles.d/00-buildroot-var.conf
+	done >$(TARGET_DIR)/usr/lib/tmpfiles.d/00-mikoos-var.conf
 	$(INSTALL) -D -m 0644 $(SKELETON_INIT_SYSTEMD_PKGDIR)/factory/var.mount \
 		$(TARGET_DIR)/usr/lib/systemd/system/var.mount
 endef

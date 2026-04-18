@@ -71,7 +71,7 @@ def add_file(filesdict, relpath, abspath, pkg):
 # elements: the name of the package to which this file belongs and the
 # size of the file.
 #
-# builddir: path to the Buildroot output directory
+# builddir: path to the MikoOS output directory
 #
 def build_package_dict(builddir):
     filesdict = {}
@@ -95,7 +95,7 @@ def build_package_dict(builddir):
 # belongs, and the size of the file. As returned by
 # build_package_dict.
 #
-# builddir: path to the Buildroot output directory
+# builddir: path to the MikoOS output directory
 #
 def build_package_size(filesdict, builddir):
     pkgsize = collections.defaultdict(int)
@@ -267,7 +267,7 @@ def main():
     parser = argparse.ArgumentParser(description='Draw size statistics graphs')
 
     parser.add_argument("--builddir", '-i', metavar="BUILDDIR", required=True,
-                        help="Buildroot output directory")
+                        help="MikoOS output directory")
     parser.add_argument("--graph", '-g', metavar="GRAPH",
                         help="Graph output file (.pdf or .png extension)")
     parser.add_argument("--file-size-csv", '-f', metavar="FILE_SIZE_CSV",

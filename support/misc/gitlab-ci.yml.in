@@ -59,7 +59,7 @@ before_script:
         - echo "Configure MikoOS for ${DEFCONFIG_NAME}"
         - make ${DEFCONFIG_NAME}
         - ./support/scripts/check-dotconfig.py .config ./configs/${DEFCONFIG_NAME}
-        - echo 'Build buildroot'
+        - echo 'Build mikoos'
         - *run_make
         - |
             ./support/scripts/boot-qemu-image.py "${DEFCONFIG_NAME}" > >(tee runtime-test.log) 2>&1 || {
@@ -133,7 +133,7 @@ before_script:
         - echo "Configure MikoOS for ${OUTPUT_DIR}"
         - make O=${OUTPUT_DIR} syncconfig
         - make O=${OUTPUT_DIR} savedefconfig
-        - echo 'Build buildroot'
+        - echo 'Build mikoos'
         - *run_make
     needs:
         - pipeline: $PARENT_PIPELINE_ID

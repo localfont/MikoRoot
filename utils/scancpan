@@ -489,9 +489,9 @@ use Text::Wrap;
 $Text::Wrap::columns = 62;
 
 # Below, 5.042 should be aligned with the version of perl actually
-# bundled in Buildroot:
+# bundled in MikoOS:
 die <<"MSG" if $] < 5.042;
-This script needs a host perl with the same major version as Buildroot target perl.
+This script needs a host perl with the same major version as MikoOS target perl.
 
 Your current host perl is:
     $^X
@@ -684,21 +684,21 @@ foreach my $distname (@ARGV) {
 }
 say scalar keys %dist, q{ packages fetched.} unless $quiet;
 
-# Buildroot package name: lowercase
+# MikoOS package name: lowercase
 sub fsname {
     my $name = shift;
     $name =~ s|_|-|g;
     return q{perl-} . lc $name;
 }
 
-# Buildroot variable name: uppercase
+# MikoOS variable name: uppercase
 sub brname {
     my $name = shift;
     $name =~ s|-|_|g;
     return uc $name;
 }
 
-# Buildroot requires license name as in https://spdx.org/licenses/
+# MikoOS requires license name as in https://spdx.org/licenses/
 sub brlicense {
     my $license = shift;
     $license =~ s|apache_1_1|Apache-1.1|;
@@ -951,15 +951,15 @@ Adds dependencies for test.
 
 =head1 DESCRIPTION
 
-This script creates templates of the Buildroot package files for all the
+This script creates templates of the MikoOS package files for all the
 Perl/CPAN distributions required by the specified distnames. The
 dependencies and metadata are fetched from https://metacpan.org/.
 
 After running this script, it is necessary to check the generated files.
 For distributions that link against a target library, you have to add the
-buildroot package name for that library to the DEPENDENCIES variable.
+mikoos package name for that library to the DEPENDENCIES variable.
 
-See the Buildroot documentation for details on the usage of the Perl
+See the MikoOS documentation for details on the usage of the Perl
 infrastructure.
 
 The major version of the host perl must be aligned on the target one,
@@ -983,7 +983,7 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307 USA
 
-This script is a part of Buildroot.
+This script is a part of MikoOS.
 
 This script requires the module C<MetaCPAN::API::Tiny> (version 1.131730)
 which was included at the beginning of this file by the tool C<fatpack>.

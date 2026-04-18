@@ -22,7 +22,7 @@ class TestSoCat(infra.basetest.BRTest):
         self.emulator.login()
 
         # Some values, for the test.
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
         out_file = "output.txt"
         port1 = 11111
         port2 = 22222

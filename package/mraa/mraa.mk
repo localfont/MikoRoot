@@ -23,7 +23,7 @@ MRAA_ARCH = mips
 endif
 
 # USBPLAT only makes sense with FTDI4222, which requires the ftd2xx library,
-# which doesn't exist in buildroot
+# which doesn't exist in mikoos
 # Disable C++ as it is used only by FTDI4222 and tests
 MRAA_CONF_OPTS += \
 	-DBUILDARCH=$(MRAA_ARCH) \

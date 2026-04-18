@@ -1,18 +1,18 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-= The Buildroot user manual
+= The MikoOS user manual
 :toc:
 
-Buildroot {sys:echo $BR2_VERSION} manual generated on {localdate}
+MikoOS {sys:echo $BR2_VERSION} manual generated on {localdate}
 {localtime} from git revision {sys:git rev-parse --short HEAD}
 
-The Buildroot manual is written by the Buildroot developers.
+The MikoOS manual is written by the MikoOS developers.
 It is licensed under the GNU General Public License, version 2. Refer to the
-https://gitlab.com/buildroot.org/buildroot/-/blob/master/COPYING[COPYING]
-file in the Buildroot sources for the full text of this license.
+https://gitlab.com/mikoos.org/mikoos/-/blob/master/COPYING[COPYING]
+file in the MikoOS sources for the full text of this license.
 
-Copyright (C) The Buildroot developers <buildroot@buildroot.org>
+Copyright (C) The MikoOS developers <mikoos@mikoos.org>
 
 image::logo.png[]
 
@@ -46,11 +46,11 @@ include::known-issues.adoc[]
 
 include::legal-notice.adoc[]
 
-include::beyond-buildroot.adoc[]
+include::beyond-mikoos.adoc[]
 
 = Developer guide
 
-include::how-buildroot-works.adoc[]
+include::how-mikoos-works.adoc[]
 
 include::writing-rules.adoc[]
 
@@ -62,7 +62,7 @@ include::patch-policy.adoc[]
 
 include::download-infra.adoc[]
 
-include::debugging-buildroot.adoc[]
+include::debugging-mikoos.adoc[]
 
 include::contribute.adoc[]
 

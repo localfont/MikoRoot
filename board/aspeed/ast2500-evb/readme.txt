@@ -14,7 +14,7 @@ the server board.
 How to build it
 ===============
 
-Configure buildroot:
+Configure mikoos:
 
   $ make aspeed_ast2500evb_defconfig
 

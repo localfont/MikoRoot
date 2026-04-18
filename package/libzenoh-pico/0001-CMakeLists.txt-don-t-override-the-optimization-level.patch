@@ -12,7 +12,7 @@ flags. And this causes issues for example when doing a debug build
 with _FORTIFY_SOURCE enabled, as _FORTIFY_SOURCE support in glibc is
 incompatible with unoptimized builds causing this build failure:
 
-/home/thomas/projets/buildroot/output/host/arm-buildroot-linux-gnueabihf/sysroot/usr/include/features.h:414:4: error: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Werror=cpp]
+/home/thomas/projets/mikoos/output/host/arm-mikoos-linux-gnueabihf/sysroot/usr/include/features.h:414:4: error: #warning _FORTIFY_SOURCE requires compiling with optimization (-O) [-Werror=cpp]
   414 | #  warning _FORTIFY_SOURCE requires compiling with optimization (-O)
       |    ^~~~~~~
 

@@ -7,11 +7,11 @@
 
 While integrating a new package or updating an existing one, it may be
 necessary to patch the source of the software to get it cross-built within
-Buildroot.
+MikoOS.
 
-Buildroot offers an infrastructure to automatically handle this during
+MikoOS offers an infrastructure to automatically handle this during
 the builds. It supports three ways of applying patch sets: downloaded patches,
-patches supplied within buildroot and patches located in a user-defined
+patches supplied within mikoos and patches located in a user-defined
 global patch directory.
 
 === Providing patches
@@ -20,8 +20,8 @@ global patch directory.
 
 If it is necessary to apply a patch that is available for download, then add it
 to the +<packagename>_PATCH+ variable. If an entry contains +://+,
-then Buildroot will assume it is a full URL and download the patch
-from this location. Otherwise, Buildroot will assume that the patch should be
+then MikoOS will assume it is a full URL and download the patch
+from this location. Otherwise, MikoOS will assume that the patch should be
 downloaded from +<packagename>_SITE+. It can be a single patch,
 or a tarball containing a patch series.
 
@@ -30,16 +30,16 @@ file.
 
 This method is typically used for packages from Debian.
 
-==== Within Buildroot
+==== Within MikoOS
 
-Most patches are provided within Buildroot, in the package
+Most patches are provided within MikoOS, in the package
 directory; these typically aim to fix cross-compilation, libc support,
 or other such issues.
 
 These patch files should be named +<number>-<description>.patch+.
 
 .Notes
-- The patch files coming with Buildroot should not contain any package version
+- The patch files coming with MikoOS should not contain any package version
   reference in their filename.
 - The field +<number>+ in the patch file name refers to the 'apply order',
   and shall start at 1; It is preferred to pad the number with zeros up to 4
@@ -76,7 +76,7 @@ details.
 . If +<packagename>_PATCH+ is defined, then patches from these
   tarballs are applied;
 
-. If there are some +*.patch+ files in the package's Buildroot
+. If there are some +*.patch+ files in the package's MikoOS
   directory or in a package subdirectory named +<packageversion>+,
   then:
 +
@@ -101,7 +101,7 @@ If something goes wrong in the steps _3_ or _4_, then the build fails.
 === Format and licensing of the package patches
 
 Patches are released under the same license as the software they apply
-to (see xref:legal-info-buildroot[]).
+to (see xref:legal-info-mikoos[]).
 
 A message explaining what the patch does, and why it is needed, should
 be added in the header commentary of the patch.
@@ -157,8 +157,8 @@ preferred that the URL to the commit is referenced:
 Upstream: <URL to upstream commit>
 ----
 
-If a new issue is identified in Buildroot and upstream is generally affected by 
-the issue (it's not a Buildroot specific issue), users should submit the patch
+If a new issue is identified in MikoOS and upstream is generally affected by 
+the issue (it's not a MikoOS specific issue), users should submit the patch
 upstream and provide a link to that submission when possible:
 
 ----
@@ -174,7 +174,7 @@ about any changes to the patch that may have been necessary.
 If a patch does not apply upstream then this should be noted with a comment:
 
 ----
-Upstream: N/A <additional information about why patch is Buildroot specific>
+Upstream: N/A <additional information about why patch is MikoOS specific>
 ----
 
 Adding this documentation helps streamline the patch review process during

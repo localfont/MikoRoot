@@ -22,7 +22,7 @@ ifeq ($(BR2_PACKAGE_IPTABLES).$(BR2_PACKAGE_NFTABLES),.y)
 define NETAVARK_CONFIG_NFTABLES
 	$(Q)mkdir -p $(TARGET_DIR)/etc/containers/containers.conf.d/
 	printf '[network]\nfirewall_driver = "nftables"\n' \
-		> $(TARGET_DIR)/etc/containers/containers.conf.d/50-buildroot-nftables.conf
+		> $(TARGET_DIR)/etc/containers/containers.conf.d/50-mikoos-nftables.conf
 endef
 NETAVARK_POST_INSTALL_TARGET_HOOKS += NETAVARK_CONFIG_NFTABLES
 

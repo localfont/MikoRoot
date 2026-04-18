@@ -1,7 +1,7 @@
 SiFive HiFive Unmatched
 =======================
 
-This file describes how to use the pre-defined Buildroot
+This file describes how to use the pre-defined MikoOS
 configuration for the SiFive HiFive Unmatched board.
 
 Further information about the HiFive Unmatched board can be found
@@ -10,7 +10,7 @@ at https://www.sifive.com/boards/hifive-unmatched
 Building
 ========
 
-Configure Buildroot using the default board configuration:
+Configure MikoOS using the default board configuration:
 
   $ make hifive_unmatched_defconfig
 
@@ -48,7 +48,7 @@ Once the build has finished you will have the following files:
 Creating a bootable SD card with genimage
 =========================================
 
-By default Buildroot builds a SD card image for you. All you need to do
+By default MikoOS builds a SD card image for you. All you need to do
 is dd the image to your SD card, which can be done with the following
 command on your development host:
 

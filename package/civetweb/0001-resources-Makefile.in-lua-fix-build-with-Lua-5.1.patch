@@ -7,11 +7,11 @@ Fix the following build failure with Lua 5.1 raised since version 1.16
 and
 https://github.com/civetweb/civetweb/commit/82ba5a04c9a1ca980d8dfe00c18e086017e8ab25:
 
-/home/buildroot/autobuild/instance-1/output-1/host/opt/ext-toolchain/bin/../lib/gcc/sh4-buildroot-linux-gnu/13.2.0/../../../../sh4-buildroot-linux-gnu/bin/ld: out/src/third_party/lua_struct.o: in function `luaopen_struct':
+/home/mikoos/autobuild/instance-1/output-1/host/opt/ext-toolchain/bin/../lib/gcc/sh4-mikoos-linux-gnu/13.2.0/../../../../sh4-mikoos-linux-gnu/bin/ld: out/src/third_party/lua_struct.o: in function `luaopen_struct':
 lua_struct.c:(.text+0xce4): undefined reference to `luaL_newlib'
 
 Fixes:
- - http://autobuild.buildroot.org/results/7459b504e52f473c5830c0f3c7bffd037f6e1770
+ - http://autobuild.mikoos.org/results/7459b504e52f473c5830c0f3c7bffd037f6e1770
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/civetweb/civetweb/pull/1211

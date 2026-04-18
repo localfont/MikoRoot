@@ -4,7 +4,7 @@ import infra.basetest
 
 
 class TestKvmTool(infra.basetest.BRTest):
-    # This test passes the Buildroot image directory to the emulated
+    # This test passes the MikoOS image directory to the emulated
     # guest using the 9p virtiofs. This guest enables the
     # virtualization support. It will start a nested KVM virtual
     # machine, using the same Kernel/initramfs images. For these

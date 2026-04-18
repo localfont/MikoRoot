@@ -1,13 +1,13 @@
 fix parallel build issue
 
-Build randomly fails since December 2017 on buildroot
-(http://autobuild.buildroot.org/?reason=ecryptfs-utils-111):
+Build randomly fails since December 2017 on mikoos
+(http://autobuild.mikoos.org/?reason=ecryptfs-utils-111):
 
-make[5]: Entering directory '/home/buildroot/autobuild/instance-2/output-1/build/ecryptfs-utils-111/src/utils'
-  /bin/mkdir -p '/home/buildroot/autobuild/instance-2/output-1/target/sbin'
-  /bin/bash ../../libtool   --mode=install /usr/bin/install -c mount.ecryptfs umount.ecryptfs mount.ecryptfs_private '/home/buildroot/autobuild/instance-2/output-1/target/sbin'
-libtool: install: /usr/bin/install -c mount.ecryptfs /home/buildroot/autobuild/instance-2/output-1/target/sbin/mount.ecryptfs
-/usr/bin/install: cannot create regular file '/home/buildroot/autobuild/instance-2/output-1/target/sbin/mount.ecryptfs': File exists
+make[5]: Entering directory '/home/mikoos/autobuild/instance-2/output-1/build/ecryptfs-utils-111/src/utils'
+  /bin/mkdir -p '/home/mikoos/autobuild/instance-2/output-1/target/sbin'
+  /bin/bash ../../libtool   --mode=install /usr/bin/install -c mount.ecryptfs umount.ecryptfs mount.ecryptfs_private '/home/mikoos/autobuild/instance-2/output-1/target/sbin'
+libtool: install: /usr/bin/install -c mount.ecryptfs /home/mikoos/autobuild/instance-2/output-1/target/sbin/mount.ecryptfs
+/usr/bin/install: cannot create regular file '/home/mikoos/autobuild/instance-2/output-1/target/sbin/mount.ecryptfs': File exists
 Makefile:832: recipe for target 'install-rootsbinPROGRAMS' failed
 make[5]: *** [install-rootsbinPROGRAMS] Error 1
 

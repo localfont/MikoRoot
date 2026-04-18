@@ -4,7 +4,7 @@ Date: Thu, 15 Sep 2016 06:19:57 +0200
 Subject: [PATCH] Serial driver: add missing header to C and C++ serial driver
 
 Fixes:
-  http://autobuild.buildroot.net/results/cd7/cd76699188d2ee99b5f2d32b6a797de0d832a192/
+  http://autobuild.mikoos.net/results/cd7/cd76699188d2ee99b5f2d32b6a797de0d832a192/
 
 Signed-off-by: Samuel Martin <s.martin49@gmail.com>
 ---

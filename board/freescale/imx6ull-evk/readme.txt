@@ -2,13 +2,13 @@
 Freescale i.MX6ULL EVK board
 ****************************
 
-This file documents the Buildroot support for the Freescale i.MX6ULL EVK board
+This file documents the MikoOS support for the Freescale i.MX6ULL EVK board
 using Upstream U-Boot and Linux.
 
 Build
 =====
 
-First, configure Buildroot for your i.MX6ULL EVK board:
+First, configure MikoOS for your i.MX6ULL EVK board:
 
 In order to do so issue:
 
@@ -37,7 +37,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

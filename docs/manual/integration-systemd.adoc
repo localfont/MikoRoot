@@ -4,7 +4,7 @@
 [[integration-systemd]]
 === Systemd
 
-This chapter describes the decisions taken in Buildroot's integration of
+This chapter describes the decisions taken in MikoOS's integration of
 systemd, and how various use cases can be implemented.
 
 ==== DBus daemon

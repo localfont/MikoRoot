@@ -13,9 +13,9 @@ This causes build issues in Debian:
 
   https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1121121
 
-And in Buildroot:
+And in MikoOS:
 
-  https://autobuild.buildroot.net/results/0e9/0e9de0c0d8b6ec57eea9f8834f02076b296ba4f1/build-end.log
+  https://autobuild.mikoos.net/results/0e9/0e9de0c0d8b6ec57eea9f8834f02076b296ba4f1/build-end.log
 
 To fix this, we use the --no-build-isolation pip install argument so
 that pip install is allowed to use the system-provided setuptools,

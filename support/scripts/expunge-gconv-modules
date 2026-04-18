@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # This script is used to generate a gconv-modules file that takes into
-# account only the gconv modules installed by Buildroot, and generates
+# account only the gconv modules installed by MikoOS, and generates
 # a stripped-down gconv-moduels file on its stdout.
 # It takes two arguments:
 #   $1: the directory where to look for gconv modules definitions

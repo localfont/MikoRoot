@@ -169,8 +169,8 @@ LINUX_MAKE_FLAGS = \
 ifeq ($(BR2_REPRODUCIBLE),y)
 LINUX_MAKE_ENV += \
 	KBUILD_BUILD_VERSION=1 \
-	KBUILD_BUILD_USER=buildroot \
-	KBUILD_BUILD_HOST=buildroot \
+	KBUILD_BUILD_USER=mikoos \
+	KBUILD_BUILD_HOST=mikoos \
 	KBUILD_BUILD_TIMESTAMP="$(shell LC_ALL=C TZ='UTC' date -d @$(SOURCE_DATE_EPOCH))"
 endif
 
@@ -537,7 +537,7 @@ endif
 # the same $(BR2_MAKE) invocation has shown to cause parallel build
 # issues.
 # The call to disable gcc-plugins is a stop-gap measure:
-#   https://lore.kernel.org/buildroot/20200512095550.GW12536@scaer
+#   https://lore.kernel.org/mikoos/20200512095550.GW12536@scaer
 define LINUX_BUILD_CMDS
 	$(call KCONFIG_DISABLE_OPT,CONFIG_GCC_PLUGINS)
 	$(foreach dts,$(call qstrip,$(BR2_LINUX_KERNEL_CUSTOM_DTS_PATH)), \

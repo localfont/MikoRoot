@@ -20,7 +20,7 @@ SerialPort.cpp:1226:14: error: 'BAUD_2000000' is not a member of 'LibSerial::Bau
          case BaudRate::BAUD_2000000:
 
 Fixes:
- - http://autobuild.buildroot.org/results/63ba95b6786464fa8e75af64593010df84530079
+ - http://autobuild.mikoos.org/results/63ba95b6786464fa8e75af64593010df84530079
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/crayzeewulf/libserial/pull/127]

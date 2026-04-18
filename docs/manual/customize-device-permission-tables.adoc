@@ -10,7 +10,7 @@ root. Since the post-build scripts are not run as root, you cannot do
 such changes from there unless you use an explicit fakeroot from the
 post-build script.
 
-Instead, Buildroot provides support for so-called _permission tables_.
+Instead, MikoOS provides support for so-called _permission tables_.
 To use this feature, set config option +BR2_ROOTFS_DEVICE_TABLE+ to a
 space-separated list of permission tables, regular text files following
 the xref:makedev-syntax[makedev syntax].

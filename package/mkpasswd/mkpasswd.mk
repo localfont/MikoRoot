@@ -4,7 +4,7 @@
 #
 ################################################################################
 
-# source included in buildroot, taken from
+# source included in mikoos, taken from
 # https://github.com/rfc1036/whois/blob/master/
 # at revision 5a0f08500fa51608b6d3b73ee338be38c692eadb
 HOST_MKPASSWD_LICENSE = GPL-2.0+

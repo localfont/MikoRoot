@@ -10,17 +10,17 @@ XILINX_EMBEDDEDSW_LICENSE = MIT
 XILINX_EMBEDDEDSW_LICENSE_FILES = license.txt
 XILINX_EMBEDDEDSW_INSTALL_TARGET = NO
 XILINX_EMBEDDEDSW_INSTALL_IMAGES = YES
-XILINX_EMBEDDEDSW_DEPENDENCIES = toolchain-bare-metal-buildroot
+XILINX_EMBEDDEDSW_DEPENDENCIES = toolchain-bare-metal-mikoos
 
 XILINX_EMBEDDEDSW_MICROBLAZE_CC = $(call qstrip, \
 	$(if $(wildcard $(HOST_DIR)/bin/microblazeel-xilinx-elf-gcc), \
 		$(HOST_DIR)/bin/microblazeel-xilinx-elf-gcc, \
-		$(HOST_DIR)/bin/microblazeel-buildroot-elf-gcc))
+		$(HOST_DIR)/bin/microblazeel-mikoos-elf-gcc))
 XILINX_EMBEDDEDSW_MICROBLAZE_AR = $(XILINX_EMBEDDEDSW_MICROBLAZE_CC)-ar
 
 ifeq ($(basename $(notdir $(XILINX_EMBEDDEDSW_MICROBLAZE_CC))),microblazeel-xilinx-elf-gcc)
 $(warning microblazeel-xilinx-elf in BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH is not supported anymore!)
-$(error Replace microblazeel-xilinx-elf with microblazeel-buildroot-elf in BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH)
+$(error Replace microblazeel-xilinx-elf with microblazeel-mikoos-elf in BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH)
 endif
 
 # ZYNQMP_PMUFW application allows users to add cflags
@@ -35,9 +35,9 @@ XILINX_EMBEDDEDSW_ASUFW_CFLAGS = "-O2 -ffat-lto-objects -fno-lto"
 ifeq ($(BR2_TARGET_XILINX_EMBEDDEDSW_VERSAL2_ASUFW),y)
 define XILINX_EMBEDDEDSW_BUILD_VERSAL2_ASUFW
 	$(MAKE) -C $(@D)/lib/sw_apps/asufw/src \
-		COMPILER=$(HOST_DIR)/bin/riscv32-buildroot-elf-gcc \
-		ARCHIVER=$(HOST_DIR)/bin/riscv32-buildroot-elf-gcc-ar \
-		CC=$(HOST_DIR)/bin/riscv32-buildroot-elf-gcc \
+		COMPILER=$(HOST_DIR)/bin/riscv32-mikoos-elf-gcc \
+		ARCHIVER=$(HOST_DIR)/bin/riscv32-mikoos-elf-gcc-ar \
+		CC=$(HOST_DIR)/bin/riscv32-mikoos-elf-gcc \
 		CFLAGS=$(XILINX_EMBEDDEDSW_ASUFW_CFLAGS)
 endef
 

@@ -2,7 +2,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the A64-OLinuXino. With the current configuration
+mikoos environment for the A64-OLinuXino. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 A64-OLinuXino link:

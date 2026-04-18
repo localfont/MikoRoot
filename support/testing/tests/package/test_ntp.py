@@ -41,7 +41,7 @@ class TestNtp(infra.basetest.BRTest):
         self.assertRunOk("ntpq --version")
 
         # The ntp daemon is expected to be started from init startup
-        # scripts, for the Buildroot package recipe. We wait a bit
+        # scripts, for the MikoOS package recipe. We wait a bit
         # here to let the daemon settle. The next test step checks for
         # the local peer to be the system peer (by checking the
         # '*'). If querying the peers too soon after startup the peer

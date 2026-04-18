@@ -14,7 +14,7 @@ Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 
 Updated for 1.76.0:
 [build utf8_range_lib as it is now explicitly required]
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 ---
  CMakeLists.txt | 39 +++++++++++++++++++++++++++++++++------
  1 file changed, 33 insertions(+), 6 deletions(-)

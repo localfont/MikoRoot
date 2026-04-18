@@ -9,9 +9,9 @@ written with cross-compilation in mind, since it needs to build for the
 host architecture, including the build of object files which it then
 assumes can be linked into the target library.
 To make the packaging process simpler for a cross-compilation system
-like Buildroot, separate the 'makeguids' tool build to an explicit make
+like MikoOS, separate the 'makeguids' tool build to an explicit make
 target and remove target build dependencies from it.
-This way, Buildroot can build the tool separately in a host build step
+This way, MikoOS can build the tool separately in a host build step
 and the target build step can then be straightforward.
 
 Upstream: Not applicable (does not support cross compilation)

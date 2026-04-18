@@ -2,7 +2,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-Buildroot environment for the Bananapi M2 Zero. With the current configuration
+MikoOS environment for the Bananapi M2 Zero. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 Bananapi M2 Zero link:

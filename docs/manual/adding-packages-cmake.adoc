@@ -31,10 +31,10 @@ with an example :
 On line 7, we declare the version of the package.
 
 On line 8 and 9, we declare the name of the tarball (xz-ed tarball recommended)
-and the location of the tarball on the Web. Buildroot will automatically
+and the location of the tarball on the Web. MikoOS will automatically
 download the tarball from this location.
 
-On line 10, we tell Buildroot to install the package to the staging
+On line 10, we tell MikoOS to install the package to the staging
 directory. The staging directory, located in +output/staging/+
 is the directory where all the packages are installed, including their
 development files, etc. By default, packages are not installed to the
@@ -44,7 +44,7 @@ other libraries or applications depending on them. Also by default, when
 staging installation is enabled, packages are installed in this location
 using the +make install+ command.
 
-On line 11, we tell Buildroot to not install the package to the
+On line 11, we tell MikoOS to not install the package to the
 target directory. This directory contains what will become the root
 filesystem running on the target. For purely static libraries, it is
 not necessary to install them in the target directory because they will
@@ -52,7 +52,7 @@ not be used at runtime. By default, target installation is enabled; setting
 this variable to NO is almost never needed. Also by default, packages are
 installed in this location using the +make install+ command.
 
-On line 12, we tell Buildroot to pass custom options to CMake when it is
+On line 12, we tell MikoOS to pass custom options to CMake when it is
 configuring the package.
 
 On line 13, we declare our dependencies, so that they are built

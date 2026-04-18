@@ -11,14 +11,14 @@ Usage: pcap-config [ --help ] [ --static | --static-pcap-only ] [ --libs | --add
 perl -nle 'm/^Version:\s+(.*)$/ and print $1' \
 	bustle.cabal > dist/build/autogen/version.txt
 echo '#define BUSTLE_VERSION "'`cat dist/build/autogen/version.txt`'"' > dist/build/autogen/version.h
-/home/buildroot/autobuild/run/instance-2/output-1/host/bin/arm-linux-gcc -Idist/build/autogen -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  \
+/home/mikoos/autobuild/run/instance-2/output-1/host/bin/arm-linux-gcc -Idist/build/autogen -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  \
 	-o dist/build/bustle-pcap c-sources/pcap-reader.c c-sources/pcap-monitor.c c-sources/bustle-pcap.c \
-	-I/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/glib-2.0 -I/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib/glib-2.0/include -I/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/libmount -I/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/blkid -I/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/include/gio-unix-2.0 -pthread -L/home/buildroot/autobuild/run/instance-2/output-1/host/bin/../arm-buildroot-linux-uclibcgnueabi/sysroot/usr/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0
-/home/buildroot/autobuild/run/instance-2/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-uclibcgnueabi/10.3.0/../../../../arm-buildroot-linux-uclibcgnueabi/bin/ld: /tmp/cc5SQkTV.o: in function `bustle_pcap_reader_finalize':
+	-I/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/include/glib-2.0 -I/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/lib/glib-2.0/include -I/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/include/libmount -I/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/include/blkid -I/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/include/gio-unix-2.0 -pthread -L/home/mikoos/autobuild/run/instance-2/output-1/host/bin/../arm-mikoos-linux-uclibcgnueabi/sysroot/usr/lib -lgio-2.0 -lgobject-2.0 -lglib-2.0
+/home/mikoos/autobuild/run/instance-2/output-1/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-uclibcgnueabi/10.3.0/../../../../arm-mikoos-linux-uclibcgnueabi/bin/ld: /tmp/cc5SQkTV.o: in function `bustle_pcap_reader_finalize':
 pcap-reader.c:(.text+0x254): undefined reference to `pcap_close'
 
 Fixes:
- - http://autobuild.buildroot.org/results/f3dcb617488e4172e639e3bd51a93bc9822ea186
+ - http://autobuild.mikoos.org/results/f3dcb617488e4172e639e3bd51a93bc9822ea186
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status:

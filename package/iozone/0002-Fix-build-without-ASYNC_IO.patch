@@ -5,11 +5,11 @@ Subject: [PATCH] Fix build without ASYNC_IO
 
 Fix the following build failure without ASYNC_IO:
 
-/home/buildroot/autobuild/run/instance-1/output-1/host/opt/ext-toolchain/bin/../lib/gcc/mipsel-buildroot-linux-uclibc/12.3.0/../../../../mipsel-buildroot-linux-uclibc/bin/ld: iozone_linux-noaio.o: in function `read_perf_test':
+/home/mikoos/autobuild/run/instance-1/output-1/host/opt/ext-toolchain/bin/../lib/gcc/mipsel-mikoos-linux-uclibc/12.3.0/../../../../mipsel-mikoos-linux-uclibc/bin/ld: iozone_linux-noaio.o: in function `read_perf_test':
 iozone.c:(.text+0x11a74): undefined reference to `end_async'
 
 Fixes:
- - http://autobuild.buildroot.org/results/31a4f0ac9eeb71df5d2f40ffe9f1f256cb58e399
+ - http://autobuild.mikoos.org/results/31a4f0ac9eeb71df5d2f40ffe9f1f256cb58e399
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: sent to capps@iozone.org

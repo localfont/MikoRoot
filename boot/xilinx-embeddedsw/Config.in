@@ -1,6 +1,6 @@
-comment "xilinx-embeddedsw needs a bare metal toolchain for tuple microblazeel-buildroot-elf"
-	depends on BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH != "microblazeel-buildroot-elf"
-	depends on BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH != "microblazeel-buildroot-elf riscv32-buildroot-elf"
+comment "xilinx-embeddedsw needs a bare metal toolchain for tuple microblazeel-mikoos-elf"
+	depends on BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH != "microblazeel-mikoos-elf"
+	depends on BR2_TOOLCHAIN_BARE_METAL_BUILDROOT_ARCH != "microblazeel-mikoos-elf riscv32-mikoos-elf"
 	depends on BR2_TOOLCHAIN_BARE_METAL_BUILDROOT
 
 menuconfig BR2_TARGET_XILINX_EMBEDDEDSW

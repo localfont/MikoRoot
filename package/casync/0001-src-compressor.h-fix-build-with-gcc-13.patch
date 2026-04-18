@@ -15,7 +15,7 @@ In file included from ../src/compressor.c:3:
    19 |
 
 Fixes:
- - http://autobuild.buildroot.org/results/ab08f3b90d253db45643dd058b80ae1dd5f49d0f
+ - http://autobuild.mikoos.org/results/ab08f3b90d253db45643dd058b80ae1dd5f49d0f
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/systemd/casync/pull/270

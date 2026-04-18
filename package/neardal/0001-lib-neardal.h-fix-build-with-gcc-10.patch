@@ -6,10 +6,10 @@ Subject: [PATCH] lib/neardal.h: fix build with gcc 10
 Define neardal_output_cb as extern to avoid the following build failure
 with gcc 10 (which defaults to -fno-common):
 
-/srv/storage/autobuild/run/instance-2/output-1/host/lib/gcc/arm-buildroot-linux-gnueabihf/10.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: ./.libs/neardal_adapter.o:(.bss+0x0): multiple definition of `neardal_output_cb'; ./.libs/neardal.o:(.bss+0x68): first defined here
+/srv/storage/autobuild/run/instance-2/output-1/host/lib/gcc/arm-mikoos-linux-gnueabihf/10.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: ./.libs/neardal_adapter.o:(.bss+0x0): multiple definition of `neardal_output_cb'; ./.libs/neardal.o:(.bss+0x68): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/7efb100c899b67ffd570f73c202442f95ca5397e
+ - http://autobuild.mikoos.org/results/7efb100c899b67ffd570f73c202442f95ca5397e
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/connectivity/neardal/pull/10]

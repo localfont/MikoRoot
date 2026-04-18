@@ -7,12 +7,12 @@ Remove SubnetTable[SUBNET_NUM] and IpTable[IP_NUM] from bandwidthd.h as
 they are already in bandwidthd.c otherwise the build with gcc 10 will
 fail on:
 
-/home/buildroot/autobuild/instance-2/output-1/host/bin/arm-buildroot-linux-gnueabihf-gcc  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os     -o bandwidthd bandwidthd.o graph.o extensions.o sqlight.o parser.o lexer.o pgsql.o  -lpcap -lgd -lm -lresolv  -L/home/buildroot/autobuild/instance-2/output-1/host/bin/../arm-buildroot-linux-gnueabihf/sysroot/usr/lib -lpng16 -lz  -L/home/buildroot/autobuild/instance-2/output-1/host/arm-buildroot-linux-gnueabihf/sysroot/usr/bin/../../../../arm-buildroot-linux-gnueabihf/sysroot/usr/lib/.libs -lnl-genl-3 -lnl-3
-/home/buildroot/autobuild/instance-2/output-1/host/lib/gcc/arm-buildroot-linux-gnueabihf/10.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: graph.o:(.bss+0x4b0): multiple definition of `IpTable'; bandwidthd.o:(.bss+0x3e0): first defined here
-/home/buildroot/autobuild/instance-2/output-1/host/lib/gcc/arm-buildroot-linux-gnueabihf/10.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: graph.o:(.bss+0x18c): multiple definition of `SubnetTable'; bandwidthd.o:(.bss+0x88): first defined here
+/home/mikoos/autobuild/instance-2/output-1/host/bin/arm-mikoos-linux-gnueabihf-gcc  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os     -o bandwidthd bandwidthd.o graph.o extensions.o sqlight.o parser.o lexer.o pgsql.o  -lpcap -lgd -lm -lresolv  -L/home/mikoos/autobuild/instance-2/output-1/host/bin/../arm-mikoos-linux-gnueabihf/sysroot/usr/lib -lpng16 -lz  -L/home/mikoos/autobuild/instance-2/output-1/host/arm-mikoos-linux-gnueabihf/sysroot/usr/bin/../../../../arm-mikoos-linux-gnueabihf/sysroot/usr/lib/.libs -lnl-genl-3 -lnl-3
+/home/mikoos/autobuild/instance-2/output-1/host/lib/gcc/arm-mikoos-linux-gnueabihf/10.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: graph.o:(.bss+0x4b0): multiple definition of `IpTable'; bandwidthd.o:(.bss+0x3e0): first defined here
+/home/mikoos/autobuild/instance-2/output-1/host/lib/gcc/arm-mikoos-linux-gnueabihf/10.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: graph.o:(.bss+0x18c): multiple definition of `SubnetTable'; bandwidthd.o:(.bss+0x88): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/6308c8ee38b6017215038d47c009b238113bd36f
+ - http://autobuild.mikoos.org/results/6308c8ee38b6017215038d47c009b238113bd36f
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/nroach44/bandwidthd/commit/dde68ed77114d7b19bfed3068edefc9dc0644445

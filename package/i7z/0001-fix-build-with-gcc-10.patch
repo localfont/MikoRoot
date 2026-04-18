@@ -6,11 +6,11 @@ Subject: [PATCH] fix build with gcc 10
 Fix the following build failure with gcc 10 (which defaults to
 -fno-common):
 
-/home/buildroot/autobuild/instance-2/output-1/host/bin/x86_64-linux-gcc -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os   -fno-schedule-insns2  -fno-schedule-insns -fno-inline-small-functions -fno-caller-saves -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DBUILD_MAIN -Wimplicit-function-declaration -Dx64_BIT  -o i7z i7z.o helper_functions.o i7z_Single_Socket.o i7z_Dual_Socket.o -lncurses -lpthread -lrt -lm
-/home/buildroot/autobuild/instance-2/output-1/host/opt/ext-toolchain/bin/../lib/gcc/x86_64-buildroot-linux-gnu/10.2.0/../../../../x86_64-buildroot-linux-gnu/bin/ld: i7z_Dual_Socket.o:(.bss+0x0): multiple definition of `global_ts'; i7z_Single_Socket.o:(.bss+0x0): first defined here
+/home/mikoos/autobuild/instance-2/output-1/host/bin/x86_64-linux-gcc -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os   -fno-schedule-insns2  -fno-schedule-insns -fno-inline-small-functions -fno-caller-saves -D_GNU_SOURCE -D_FILE_OFFSET_BITS=64 -DBUILD_MAIN -Wimplicit-function-declaration -Dx64_BIT  -o i7z i7z.o helper_functions.o i7z_Single_Socket.o i7z_Dual_Socket.o -lncurses -lpthread -lrt -lm
+/home/mikoos/autobuild/instance-2/output-1/host/opt/ext-toolchain/bin/../lib/gcc/x86_64-mikoos-linux-gnu/10.2.0/../../../../x86_64-mikoos-linux-gnu/bin/ld: i7z_Dual_Socket.o:(.bss+0x0): multiple definition of `global_ts'; i7z_Single_Socket.o:(.bss+0x0): first defined here
 
 Fixes:
- - http://autobuild.buildroot.org/results/1a433611ba8676cf1ca276fccaf3633971bd562e
+ - http://autobuild.mikoos.org/results/1a433611ba8676cf1ca276fccaf3633971bd562e
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/ajaiantilal/i7z/pull/27]

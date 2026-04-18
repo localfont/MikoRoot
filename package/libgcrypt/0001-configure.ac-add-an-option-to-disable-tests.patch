@@ -12,7 +12,7 @@ t-lock.c:359:3: error: unknown type name 'pthread_t'
    pthread_t rthread;
 
 Fixes:
- - http://autobuild.buildroot.org/results/50a8ba572e3fafd3c6a39bd54bcfcaf78b5ad325
+ - http://autobuild.mikoos.org/results/50a8ba572e3fafd3c6a39bd54bcfcaf78b5ad325
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Bernd: rebased for version 1.11.0]

@@ -3,7 +3,7 @@ From: Nicolas Boichat <drinkcat@google.com>
 Date: Fri, 4 Aug 2023 12:55:36 +0000
 Subject: [PATCH] Detect which awk to use
 
-Some embedded distributions (e.g. buildroot) may only provide mawk,
+Some embedded distributions (e.g. mikoos) may only provide mawk,
 without a symlink to awk.
 
 At first glance, awk scripts to appear to work fine with either

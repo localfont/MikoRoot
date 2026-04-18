@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 set -e
-DEVICE_TYPE="buildroot-arm"
+DEVICE_TYPE="mikoos-arm"
 ARTIFACT_NAME="RUNTIME_TEST_ARTIFACT_NAME"
 
 generate_mender_bootstrap_artifact() {

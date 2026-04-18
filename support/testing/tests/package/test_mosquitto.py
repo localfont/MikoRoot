@@ -22,7 +22,7 @@ class TestMosquitto(infra.basetest.BRTest):
 
         topic = "br-test-topic"
         log = "mqtt.log"
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
 
         # We subscribe to a topic and write one message to a log file.
         cmd = f"( mosquitto_sub -t {topic} -C 1 > {log} 2> /dev/null & )"

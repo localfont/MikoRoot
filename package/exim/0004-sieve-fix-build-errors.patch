@@ -16,7 +16,7 @@ toolchain with a huge number of errors, including:
    void  ns_put16 (u_int, u_char *) __THROW;
                                  ^
 
-Discovered when cross-compiling with the Buildroot embedded Linux
+Discovered when cross-compiling with the MikoOS embedded Linux
 buildsystem.
 
 Signed-off-by: Luca Ceresoli <luca@lucaceresoli.net>

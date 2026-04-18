@@ -20,7 +20,7 @@ is necessary, it can be provided by the +libintl+ library of the
 +gettext+ package.
 
 Due to this, and in order to make sure that Native Language Support is
-properly handled, packages in Buildroot that can use NLS support
+properly handled, packages in MikoOS that can use NLS support
 should:
 
 . Ensure NLS support is enabled when +BR2_SYSTEM_ENABLE_NLS=y+. This

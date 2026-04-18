@@ -7,7 +7,7 @@ Subject: [PATCH] Modify the default lighttpd configuration file to have one a
   * Changed the log path to /var/log and logs filenames
   * Disable IPv6 (Dropped since 1.4.68)
   * Do not setuid to a user that doesn't exist on the system
-  * Change the network backend to writev since linux-sendfile fails on buildroot
+  * Change the network backend to writev since linux-sendfile fails on mikoos
 
 Signed-off-by: Maxime Ripard <maxime.ripard@free-electrons.com>
 Signed-off-by: Simon Dawson <spdawson@gmail.com>

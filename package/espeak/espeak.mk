@@ -27,7 +27,7 @@ define ESPEAK_EXTRACT_CMDS
 endef
 
 define ESPEAK_CONFIGURE_CMDS
-	# Buildroot provides portaudio V19, see ReadMe file for more details.
+	# MikoOS provides portaudio V19, see ReadMe file for more details.
 	cp $(@D)/src/portaudio19.h $(@D)/src/portaudio.h
 endef
 

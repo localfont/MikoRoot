@@ -1,7 +1,7 @@
 STM32F429 Discovery
 ===================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the STM32F429 Discovery evaluation platform.
 
 Supported HW

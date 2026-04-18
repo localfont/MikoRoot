@@ -1,6 +1,6 @@
 ################################################################################
 #
-# Check buildroot dependencies and bail out if the user's
+# Check mikoos dependencies and bail out if the user's
 # system is judged to be lacking....
 #
 ################################################################################

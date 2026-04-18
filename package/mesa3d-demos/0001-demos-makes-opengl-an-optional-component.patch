@@ -17,11 +17,11 @@ only if opengl is available.
 Add back dep_glu since it's used in util's meson.
 
 Fixes:
-https://gitlab.com/buildroot.org/buildroot/-/jobs/4936948236
-https://gitlab.com/buildroot.org/buildroot/-/jobs/4936948042
+https://gitlab.com/mikoos.org/mikoos/-/jobs/4936948236
+https://gitlab.com/mikoos.org/mikoos/-/jobs/4936948042
 
 [1].
-https://git.busybox.net/buildroot/tree/package/mesa3d-demos/0001-demos-makes-opengl-an-optional-component.patch?h=2022.08
+https://git.busybox.net/mikoos/tree/package/mesa3d-demos/0001-demos-makes-opengl-an-optional-component.patch?h=2022.08
 [2] https://gitlab.freedesktop.org/mesa/demos/-/commit/c33e2f731c2eab86bbad7b6a028f8a90ea40a00c
 [3] https://gitlab.freedesktop.org/mesa/demos/-/commit/ef24aae22978d4d357340074ca9a1c04d9cf81e6
 

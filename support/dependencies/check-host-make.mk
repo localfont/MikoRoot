@@ -2,7 +2,7 @@
 # https://www.sourceware.org/ml/libc-alpha/2018-08/msg00003.html
 #
 # Set this to either 4.0 or higher, depending on the highest minimum
-# version required by any of the packages bundled in Buildroot. If a
+# version required by any of the packages bundled in MikoOS. If a
 # package is bumped or a new one added, and it requires a higher
 # version, our package infra will catch it and whine.
 #

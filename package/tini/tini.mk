@@ -33,5 +33,5 @@ define TINI_INSTALL_TARGET_CMDS
 	$(INSTALL) -D -m 0755 $(@D)/bin/tini $(TARGET_DIR)/usr/bin/tini
 endef
 
-# Tini's CMakeLists.txt is not suitable for Buildroot.
+# Tini's CMakeLists.txt is not suitable for MikoOS.
 $(eval $(generic-package))

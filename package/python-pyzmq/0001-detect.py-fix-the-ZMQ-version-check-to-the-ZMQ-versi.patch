@@ -2,7 +2,7 @@ From 8eae1193457f72899f9cc2254ae1489026df9bb6 Mon Sep 17 00:00:00 2001
 From: Michael Rommel <rommel@layer-7.net>
 Date: Sat, 10 Aug 2013 00:44:35 +0200
 Subject: [PATCH] detect.py: fix the ZMQ version check to the ZMQ version of
- the buildroot
+ the mikoos
 
 The setup.py script tries to compile a test C program and runs it, to
 retrieve a version string for the installed ZMQ library, but if the cross
@@ -10,11 +10,11 @@ compiler links it together, the result cannot be run on the host, due to
 different architectures and libraries.
 
 And if the host compiler would compile/link it, it would not link with
-the library version inside buildroot but with the library from the
+the library version inside mikoos but with the library from the
 host, possibly returning a wrong version number.
 
 Instead of trying to run the compiled test program to get the version
-dynamically, return the version of the buildroot environment.
+dynamically, return the version of the mikoos environment.
 
 Written by Michael Rommel, modified for version 16.0.2 by Lionel
 Flandrin.

@@ -10,7 +10,7 @@ simulating riscv-openocd/gdb debug sessions (see [2], [3]), or
 generating an accurate per-instruction log of execution (see
 riscv-isa-sim spike -l option)...
 
-To run Buildroot Linux in Spike, use the commands:
+To run MikoOS Linux in Spike, use the commands:
 
     make spike_riscv32_defconfig
     make

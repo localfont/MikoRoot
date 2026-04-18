@@ -27,7 +27,7 @@ def compute_expected_data(input_data):
 
 def main():
 
-    gr.log.info("Starting Buildroot Test for GNU Radio " + gr.version())
+    gr.log.info("Starting MikoOS Test for GNU Radio " + gr.version())
 
     input_data = list(range(INPUT_LENGTH))
 

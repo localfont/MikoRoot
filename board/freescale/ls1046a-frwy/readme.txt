@@ -2,7 +2,7 @@
 NXP LS1046A-FRWY
 **************
 
-This file documents the Buildroot support for the LS1046A Freeway Board.
+This file documents the MikoOS support for the LS1046A Freeway Board.
 
 For more details about the board and the QorIQ Layerscape SoC, see the following pages:
   - https://www.nxp.com/design/software/qoriq-developer-resources/ls1046a-freeway-board:FRWY-LS1046A
@@ -13,7 +13,7 @@ Layerscape platforms are officially supported by NXP under the Layerscape
 Debian Linux SDK (LDLSDK). This uses components from Linux Factory (project
 common with i.MX), but has a slower release cadence than LF. The currently used
 tag is lf-6.12.34-2.1.0, which is in line with the latest LF tag. Generally, in
-Buildroot, the latest Linux Factory release tag is always used, which may be
+MikoOS, the latest Linux Factory release tag is always used, which may be
 considered pre-release software, as it may contain features which are not yet
 documented, and it generally undergoes less testing.
 
@@ -33,7 +33,7 @@ The components from NXP are:
 Build
 =====
 
-First, configure Buildroot for the LS1046A-FRWY board:
+First, configure MikoOS for the LS1046A-FRWY board:
 
   make ls1046a-frwy_defconfig
 
@@ -63,7 +63,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

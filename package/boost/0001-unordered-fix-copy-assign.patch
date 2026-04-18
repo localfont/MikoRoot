@@ -2,7 +2,7 @@ Upstream Patch for Unordered
 
 Prevent erroneous copying of groups data, update max load to properly propagate
 
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 Upstream: https://github.com/boostorg/unordered/commit/067884a4e213352e7c81c441f1453c54735c39f3
 diff --git a/include/boost/unordered/detail/foa/core.hpp b/include/boost/unordered/detail/foa/core.hpp
 index 239d05d3..7ae9f2c8 100644

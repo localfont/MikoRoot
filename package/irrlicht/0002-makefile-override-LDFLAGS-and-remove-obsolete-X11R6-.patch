@@ -5,12 +5,12 @@ Subject: [PATCH] makefile: override LDFLAGS and remove obsolete X11R6
  lib/include directories
 
 Add "override" keyword to LDFLAGS variable in order to link libraries
-using buildroot cross-compiler correctly and remove those non-supported
-paths to lib/includes that are not used and not available in buildroot
+using mikoos cross-compiler correctly and remove those non-supported
+paths to lib/includes that are not used and not available in mikoos
 and in addition point to the host system libraries in a result
 cause the following warning:
 
-/home/bartekk/buildroot/output/host/opt/ext-toolchain/bin/../lib/gcc/arm-buildroot-linux-gnueabihf/9.2.0/../../../../arm-buildroot-linux-gnueabihf/bin/ld: warning: library search path "/usr/X11R6/lib" is unsafe for cross-compilation
+/home/bartekk/mikoos/output/host/opt/ext-toolchain/bin/../lib/gcc/arm-mikoos-linux-gnueabihf/9.2.0/../../../../arm-mikoos-linux-gnueabihf/bin/ld: warning: library search path "/usr/X11R6/lib" is unsafe for cross-compilation
 
 Signed-off-by: Bartosz Bilas <b.bilas@grinn-global.com>
 ---

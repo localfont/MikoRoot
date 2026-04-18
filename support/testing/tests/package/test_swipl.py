@@ -31,7 +31,7 @@ class TestSWIPL(infra.basetest.BRTest):
         self.assertNotEqual(exit_code, 0)
 
         # Test output.
-        string = "Hello Buildroot !"
+        string = "Hello MikoOS !"
         cmd = f"swipl -g 'writeln(\"{string}\")' -t halt"
         output, exit_code = self.emulator.run(cmd)
         self.assertEqual(exit_code, 0)

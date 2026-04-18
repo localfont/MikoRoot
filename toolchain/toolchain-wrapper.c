@@ -1,5 +1,5 @@
 /**
- * Buildroot wrapper for toolchains. This simply executes the real toolchain
+ * MikoOS wrapper for toolchains. This simply executes the real toolchain
  * with a number of arguments (sysroot/arch/..) hardcoded, to ensure the
  * toolchain uses the correct configuration.
  * The hardcoded path arguments are defined relative to the actual location

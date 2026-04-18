@@ -37,7 +37,7 @@ define HOST_LOCALEDEF_CONFIGURE_CMDS
 		--host=$(GNU_HOST_NAME) \
 		--build=$(GNU_HOST_NAME) \
 		--prefix=/usr \
-		--with-pkgversion="Buildroot" \
+		--with-pkgversion="MikoOS" \
 		--without-cvs \
 		--disable-profile \
 		--without-gd \

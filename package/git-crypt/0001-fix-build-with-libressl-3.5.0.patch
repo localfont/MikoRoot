@@ -10,7 +10,7 @@ crypto-openssl-10.cpp:78:18: error: field 'ctx' has incomplete type 'HMAC_CTX' {
       |                  ^~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/98747d470c2ad59280934e160d24bd3fdad1503c
+ - http://autobuild.mikoos.org/results/98747d470c2ad59280934e160d24bd3fdad1503c
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/AGWA/git-crypt/pull/249]

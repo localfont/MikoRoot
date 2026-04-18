@@ -1,42 +1,42 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-==== Using Buildroot during development
+==== Using MikoOS during development
 
-The normal operation of Buildroot is to download a tarball, extract
+The normal operation of MikoOS is to download a tarball, extract
 it, configure, compile and install the software component found inside
 this tarball. The source code is extracted in
 +output/build/<package>-<version>+, which is a temporary directory:
 whenever +make clean+ is used, this directory is entirely removed, and
 re-created at the next +make+ invocation. Even when a Git or
 Subversion repository is used as the input for the package source
-code, Buildroot creates a tarball out of it, and then behaves as it
+code, MikoOS creates a tarball out of it, and then behaves as it
 normally does with tarballs.
 
-This behavior is well-suited when Buildroot is used mainly as an
+This behavior is well-suited when MikoOS is used mainly as an
 integration tool, to build and integrate all the components of an
-embedded Linux system. However, if one uses Buildroot during the
+embedded Linux system. However, if one uses MikoOS during the
 development of certain components of the system, this behavior is not
 very convenient: one would instead like to make a small change to the
 source code of one package, and be able to quickly rebuild the system
-with Buildroot.
+with MikoOS.
 
 Making changes directly in +output/build/<package>-<version>+ is not
 an appropriate solution, because this directory is removed on +make
 clean+.
 
-Therefore, Buildroot provides a specific mechanism for this use case:
-the +<pkg>_OVERRIDE_SRCDIR+ mechanism. Buildroot reads an _override_
-file, which allows the user to tell Buildroot the location of the
+Therefore, MikoOS provides a specific mechanism for this use case:
+the +<pkg>_OVERRIDE_SRCDIR+ mechanism. MikoOS reads an _override_
+file, which allows the user to tell MikoOS the location of the
 source for certain packages.
 
 The default location of the override file is +$(CONFIG_DIR)/local.mk+,
 as defined by the +BR2_PACKAGE_OVERRIDE_FILE+ configuration option.
-+$(CONFIG_DIR)+ is the location of the Buildroot +.config+ file, so
++$(CONFIG_DIR)+ is the location of the MikoOS +.config+ file, so
 +local.mk+ by default lives side-by-side with the +.config+ file,
 which means:
 
-* In the top-level Buildroot source directory for in-tree builds
+* In the top-level MikoOS source directory for in-tree builds
   (i.e., when +O=+ is not used)
 * In the out-of-tree directory for out-of-tree builds (i.e., when
   +O=+ is used)
@@ -45,7 +45,7 @@ If a different location than these defaults is required, it can be
 specified through the +BR2_PACKAGE_OVERRIDE_FILE+ configuration
 option.
 
-In this _override_ file, Buildroot expects to find lines of the form:
+In this _override_ file, MikoOS expects to find lines of the form:
 
 ----
 <pkg1>_OVERRIDE_SRCDIR = /path/to/pkg1/sources
@@ -59,13 +59,13 @@ LINUX_OVERRIDE_SRCDIR = /home/bob/linux/
 BUSYBOX_OVERRIDE_SRCDIR = /home/bob/busybox/
 ----
 
-When Buildroot finds that for a given package, an
+When MikoOS finds that for a given package, an
 +<pkg>_OVERRIDE_SRCDIR+ has been defined, it will no longer attempt to
 download, extract and patch the package. Instead, it will directly use
 the source code available in the specified directory and +make clean+
-will not touch this directory. This allows to point Buildroot to your
+will not touch this directory. This allows to point MikoOS to your
 own directories, that can be managed by Git, Subversion, or any other
-version control system. To achieve this, Buildroot will use _rsync_ to
+version control system. To achieve this, MikoOS will use _rsync_ to
 copy the source code of the component from the specified
 +<pkg>_OVERRIDE_SRCDIR+ to +output/build/<package>-custom/+.
 
@@ -110,7 +110,7 @@ WEBKITGTK_OVERRIDE_SRCDIR_RSYNC_EXCLUSIONS = \
 	--exclude WebKit.xcworkspace --exclude Websites --exclude Examples
 ----
 
-By default, Buildroot skips syncing of VCS artifacts (e.g., the *.git* and
+By default, MikoOS skips syncing of VCS artifacts (e.g., the *.git* and
 *.svn* directories). Some packages prefer to have these VCS directories
 available during build, for example for automatically determining a precise
 commit reference for version information. To undo this built-in filtering at a

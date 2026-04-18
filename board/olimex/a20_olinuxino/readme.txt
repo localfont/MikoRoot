@@ -29,7 +29,7 @@ the users who do not need fancy 3D graphics or video playback acceleration.
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make <board>_defconfig
 

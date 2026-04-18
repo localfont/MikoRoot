@@ -15,13 +15,13 @@ DPDK_LICENSE = \
 # - license/bsd-2-clause.txt
 # - license/isc.txt
 # which is related to a Windows getopt.[ch] compatibility layer.
-# Since Buildroot is not used for Windows target, it is not listed
+# Since MikoOS is not used for Windows target, it is not listed
 # here.
 #
 # All the userland files of DPDK have dual licences BSD or GPL/LGPL
 # Since the Linux kernel modules had been removed from the DPDK, there
 # is no GPL only code into the DPDK anymore.
-# The usage of DPDK with Buildroot is for userland only, it means
+# The usage of DPDK with MikoOS is for userland only, it means
 # that for the dual licenced files, BSD clause is used but not the
 # following ones:
 # - license/gpl-2.0.txt

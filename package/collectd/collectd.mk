@@ -42,8 +42,8 @@ COLLECTD_CONF_ENV += CFLAGS="$(COLLECTD_CFLAGS)"
 # be needed on some old ARM hardware (see [2]), but is not being
 # accounted for as per discussion [1]
 #
-# [1] http://lists.busybox.net/pipermail/buildroot/2017-November/206100.html
-# [2] http://lists.busybox.net/pipermail/buildroot/2017-November/206251.html
+# [1] http://lists.busybox.net/pipermail/mikoos/2017-November/206100.html
+# [2] http://lists.busybox.net/pipermail/mikoos/2017-November/206251.html
 #
 ifeq ($(BR2_ENDIAN),"BIG")
 COLLECTD_FP_LAYOUT=endianflip

@@ -13,7 +13,7 @@ libbridge_devif.c:33:12: error: 'PATH_MAX' undeclared (first use in this functio
       |            AF_MAX
 
 Fixes:
- - http://autobuild.buildroot.org/results/0f080ff6913595ee2732b93206e5001c837c1bcc
+ - http://autobuild.mikoos.org/results/0f080ff6913595ee2732b93206e5001c837c1bcc
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: sent to Stephen Hemminger <sthemmin@microsoft.com>]

@@ -6,7 +6,7 @@ config BR2_PACKAGE_OCTAVE
 	depends on BR2_TOOLCHAIN_HAS_FORTRAN
 	# Some Bootlin x86_64 toolchains (like version
 	# bleeding-edge-2021.11-1) has a file
-	# "x86_64-buildroot-linux-gnu/lib64/libgfortran.la" including
+	# "x86_64-mikoos-linux-gnu/lib64/libgfortran.la" including
 	# a "dependency_libs=" entry with an incorrect absolute path
 	# to linquadmath.la on the bootlin build host. This breaks
 	# builds using libtool with libgfortran. Those toolchains are

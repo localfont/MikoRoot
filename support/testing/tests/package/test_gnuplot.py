@@ -33,7 +33,7 @@ class TestGnuplot(infra.basetest.BRTest):
         self.assertRunOk('export LC_ALL="en_US.UTF-8"')
 
         # We check Gnuplot can print a string.
-        string = "Hello Buildroot !"
+        string = "Hello MikoOS !"
         cmd = self.gen_gnuplot_cmd(f'print "{string}"')
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)
@@ -66,7 +66,7 @@ class TestGnuplot(infra.basetest.BRTest):
         # Our Gnuplot script is supposed to have generated a text
         # output of the plot. We check this file contains the plot
         # title set in the script.
-        exp_str = "Buildroot Test Plot"
+        exp_str = "MikoOS Test Plot"
         cmd = f"grep -Fo '{exp_str}' /root/gnuplot-test.txt"
         out, ret = self.emulator.run(cmd)
         self.assertEqual(ret, 0)

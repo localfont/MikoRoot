@@ -46,9 +46,9 @@ class TestSELinuxExtraModulesDirs(TestSELinuxInfra):
     def test_run(self):
         TestSELinuxInfra.base_test_run(self)
 
-        out, ret = self.emulator.run("seinfo -t buildroot_test_t", 15)
+        out, ret = self.emulator.run("seinfo -t mikoos_test_t", 15)
         self.assertEqual(ret, 0)
-        self.assertEqual(out[2].strip(), "buildroot_test_t")
+        self.assertEqual(out[2].strip(), "mikoos_test_t")
 
 
 class TestSELinuxSetBooleans(TestSELinuxInfra):
@@ -99,6 +99,6 @@ class TestSELinuxPackage(TestSELinuxInfra):
         self.assertEqual(ret, 0)
         self.assertEqual(out[2].strip(), "tor_t")
 
-        out, ret = self.emulator.run("seinfo -t buildroot_test_t", 15)
+        out, ret = self.emulator.run("seinfo -t mikoos_test_t", 15)
         self.assertEqual(ret, 0)
-        self.assertEqual(out[2].strip(), "buildroot_test_t")
+        self.assertEqual(out[2].strip(), "mikoos_test_t")

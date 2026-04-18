@@ -7,11 +7,11 @@ Use pkg-config to retrieve openssl dependencies such as -latomic and
 avoids the following build failure when building statically on
 architectures such as sparc:
 
-/home/autobuild/autobuild/instance-1/output-1/host/lib/gcc/sparc-buildroot-linux-uclibc/10.4.0/../../../../sparc-buildroot-linux-uclibc/bin/ld: /home/autobuild/autobuild/instance-1/output-1/host/sparc-buildroot-linux-uclibc/sysroot/usr/lib/libcrypto.a(threads_pthread.o): in function `CRYPTO_atomic_add':
+/home/autobuild/autobuild/instance-1/output-1/host/lib/gcc/sparc-mikoos-linux-uclibc/10.4.0/../../../../sparc-mikoos-linux-uclibc/bin/ld: /home/autobuild/autobuild/instance-1/output-1/host/sparc-mikoos-linux-uclibc/sysroot/usr/lib/libcrypto.a(threads_pthread.o): in function `CRYPTO_atomic_add':
 threads_pthread.c:(.text+0x208): undefined reference to `__atomic_is_lock_free'
 
 Fixes:
- - http://autobuild.buildroot.org/results/49abbaa1eab94b248bff434b40728065d687e278
+ - http://autobuild.mikoos.org/results/49abbaa1eab94b248bff434b40728065d687e278
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/WayneD/rsync/pull/426

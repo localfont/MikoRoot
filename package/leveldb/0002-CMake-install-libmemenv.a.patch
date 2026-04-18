@@ -4,8 +4,8 @@ Date: Sat, 12 Oct 2019 14:43:46 +0200
 Subject: [PATCH] CMake: install libmemenv.a
 
 Needed for qt5webkit
-https://git.busybox.net/buildroot/commit/?id=8a10d9ce311c6cb0490d76921cae55618c258354
-https://git.busybox.net/buildroot/commit/?id=16f847340d07dce620e4c3fc0a099aa79898d86a
+https://git.busybox.net/mikoos/commit/?id=8a10d9ce311c6cb0490d76921cae55618c258354
+https://git.busybox.net/mikoos/commit/?id=16f847340d07dce620e4c3fc0a099aa79898d86a
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>
 [Fabrice : updated for 1.23]

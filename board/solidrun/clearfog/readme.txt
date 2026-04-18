@@ -2,7 +2,7 @@
 SolidRun Clearfog Base
 **********************
 
-This file documents Buildroot's support for the Clearfog Base by Solid Run.
+This file documents MikoOS's support for the Clearfog Base by Solid Run.
 
 Vendor's documentation:
 https://wiki.solid-run.com/doku.php?id=products:a38x:documents
@@ -18,7 +18,7 @@ only MicroSoMs without the eMMC are supported.
 Build
 =====
 
-Start with the default Buildroot's configuration for Clearfog:
+Start with the default MikoOS's configuration for Clearfog:
 
   make solidrun_clearfog_defconfig
 
@@ -36,7 +36,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a microSD card. Launch the following
 command as root:
 

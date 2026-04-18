@@ -13,14 +13,14 @@ Upstream: ff859050fa4e6535cae098dc35d88a265466448d
 
 This patch fixes the following build failure with i386 binutils 2.28.1:
 
-/builds/arnout/buildroot/output/host/bin/i586-buildroot-linux-uclibc-ld  -Bsymbolic -pie -E --hash-style=gnu -T
-/builds/arnout/buildroot/output/build/syslinux-6.03/core/i386/syslinux.ld -M -o ldlinux.elf ldlinux.o \
-	--start-group libcom32.a --whole-archive /builds/arnout/buildroot/output/build/syslinux-6.03/bios/com32/lib/libcom32core.a libldlinux.a --end-group -N
+/builds/arnout/mikoos/output/host/bin/i586-mikoos-linux-uclibc-ld  -Bsymbolic -pie -E --hash-style=gnu -T
+/builds/arnout/mikoos/output/build/syslinux-6.03/core/i386/syslinux.ld -M -o ldlinux.elf ldlinux.o \
+	--start-group libcom32.a --whole-archive /builds/arnout/mikoos/output/build/syslinux-6.03/bios/com32/lib/libcom32core.a libldlinux.a --end-group -N
 --no-omagic \
 	> ldlinux.map
-/builds/arnout/buildroot/output/host/bin/i586-buildroot-linux-uclibc-ld: ldlinux.elf: Not enough room for program headers, try linking with -N
-/builds/arnout/buildroot/output/host/bin/i586-buildroot-linux-uclibc-ld: final link failed: Bad value
-/builds/arnout/buildroot/output/build/syslinux-6.03/core/Makefile:167: recipe for target 'ldlinux.elf' failed
+/builds/arnout/mikoos/output/host/bin/i586-mikoos-linux-uclibc-ld: ldlinux.elf: Not enough room for program headers, try linking with -N
+/builds/arnout/mikoos/output/host/bin/i586-mikoos-linux-uclibc-ld: final link failed: Bad value
+/builds/arnout/mikoos/output/build/syslinux-6.03/core/Makefile:167: recipe for target 'ldlinux.elf' failed
 
 Signed-off-by: Arnout Vandecappelle (Essensium/Mind) <arnout@mind.be>
 ---

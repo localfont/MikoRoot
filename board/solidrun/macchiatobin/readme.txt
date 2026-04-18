@@ -2,7 +2,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with
-the buildroot environment for the MacchiatoBin board based on the
+the mikoos environment for the MacchiatoBin board based on the
 Marvell Armada 8040 SoC. Documentation for the board hardware and
 software is available on the wiki at: http://wiki.macchiatobin.net
 

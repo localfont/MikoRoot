@@ -28,7 +28,7 @@ with an example :
 On line 7, we declare the version of the package.
 
 On line 8 and 9, we declare the name of the tarball (xz-ed tarball
-recommended) and the location of the tarball on the Web. Buildroot
+recommended) and the location of the tarball on the Web. MikoOS
 will automatically download the tarball from this location.
 
 On line 10, we declare our dependencies, so that they are built
@@ -75,7 +75,7 @@ You can also use some of the variables from the +autotools+
 +
 .Note
 If the package bundles a _rebar_ utility, but can use the generic
-  one that Buildroot provides, just say +NO+ (i.e., do not specify
+  one that MikoOS provides, just say +NO+ (i.e., do not specify
   this variable). Only set if it is mandatory to use the _rebar_
   utility bundled in this package.
 

@@ -1,9 +1,9 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== How Buildroot works
+== How MikoOS works
 
-As mentioned above, Buildroot is basically a set of Makefiles that
+As mentioned above, MikoOS is basically a set of Makefiles that
 download, configure, and compile software with the correct options. It
 also includes patches for various software packages - mainly the ones
 involved in the cross-compilation toolchain (+gcc+, +binutils+ and
@@ -19,10 +19,10 @@ parts.
   +kernel-headers+ and +uClibc+.
 
 * The +arch/+ directory contains the definitions for all the processor
-  architectures that are supported by Buildroot.
+  architectures that are supported by MikoOS.
 
 * The +package/+ directory contains the Makefiles and
-  associated files for all user-space tools and libraries that Buildroot
+  associated files for all user-space tools and libraries that MikoOS
   can compile and add to the target root filesystem. There is one
   sub-directory per package.
 
@@ -30,7 +30,7 @@ parts.
   the Linux kernel.
 
 * The +boot/+ directory contains the Makefiles and associated files for
-  the bootloaders supported by Buildroot.
+  the bootloaders supported by MikoOS.
 
 * The +system/+ directory contains support for system integration, e.g.
   the target filesystem skeleton and the selection of an init system.
@@ -58,7 +58,7 @@ configuration is done):
 * Generate the toolchain target. When an internal toolchain is used, this
   means generating the cross-compilation toolchain. When an external
   toolchain is used, this means checking the features of the external
-  toolchain and importing it into the Buildroot environment.
+  toolchain and importing it into the MikoOS environment.
 
 * Generate all the targets listed in the +TARGETS+ variable. This
   variable is filled by all the individual components'

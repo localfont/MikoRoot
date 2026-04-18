@@ -6,7 +6,7 @@ Subject: [PATCH] Remove messages in "deprecated" gcc attributes
 GCC versions up through 4.4.7 (which is used in RHEL 6) do not accept
 any argument for the deprecated attribute. GCC 4.5 and later say the
 "msg" argument is optional. We don't need the messages during
-Buildroot builds anyways.
+MikoOS builds anyways.
 
 Signed-off-by: Hollis Blanchard <hollis_blanchard@mentor.com>
 ---

@@ -1,4 +1,4 @@
-Preserve the cflags settings, because buildroot clobbers them.
+Preserve the cflags settings, because mikoos clobbers them.
 
 --- a/Makefile	2010-10-05 00:06:38.000000000 -0700
 +++ b/Makefile	2010-10-05 00:15:27.000000000 -0700

@@ -126,7 +126,7 @@ On line 14, we specify the list of dependencies this package relies
 on. These dependencies are listed in terms of lower-case package names,
 which can be packages for the target (without the +host-+
 prefix) or packages for the host (with the +host-+) prefix).
-Buildroot will ensure that all these packages are built and installed
+MikoOS will ensure that all these packages are built and installed
 'before' the current package starts its configuration.
 
 The rest of the Makefile, lines 16..29, defines what should be done
@@ -209,41 +209,41 @@ information is (assuming the package name is +libfoo+) :
 Using a branch name as +FOO_VERSION+ is not supported, because it does
 not and can not work as people would expect it should:
 +
-  1. due to local caching, Buildroot will not re-fetch the repository,
+  1. due to local caching, MikoOS will not re-fetch the repository,
      so people who expect to be able to follow the remote repository
      would be quite surprised and disappointed;
   2. because two builds can never be perfectly simultaneous, and because
      the remote repository may get new commits on the branch anytime,
-     two users, using the same Buildroot tree and building the same
+     two users, using the same MikoOS tree and building the same
      configuration, may get different source, thus rendering the build
      non reproducible, and people would be quite surprised and
      disappointed.
 
 * +LIBFOO_SOURCE+ may contain the name of the tarball of the package,
-  which Buildroot will use to download the tarball from
+  which MikoOS will use to download the tarball from
   +LIBFOO_SITE+. If +HOST_LIBFOO_SOURCE+ is not specified, it defaults
   to +LIBFOO_SOURCE+. If none are specified, then the value is assumed
   to be +libfoo-$(LIBFOO_VERSION).tar.gz+. +
   Example: +LIBFOO_SOURCE = foobar-$(LIBFOO_VERSION).tar.bz2+
 
 * +LIBFOO_PATCH+ may contain a space-separated list of patch file
-  names, that Buildroot will download and apply to the package source
-  code. If an entry contains +://+, then Buildroot will assume it is a
+  names, that MikoOS will download and apply to the package source
+  code. If an entry contains +://+, then MikoOS will assume it is a
   full URL and download the patch from this location. Otherwise,
-  Buildroot will assume that the patch should be downloaded from
+  MikoOS will assume that the patch should be downloaded from
   +LIBFOO_SITE+. If +HOST_LIBFOO_PATCH+ is not specified, it defaults
-  to +LIBFOO_PATCH+. Note that patches that are included in Buildroot
+  to +LIBFOO_PATCH+. Note that patches that are included in MikoOS
   itself use a different mechanism: all files of the form
   +*.patch+ present in the package directory inside
-  Buildroot will be applied to the package after extraction (see
+  MikoOS will be applied to the package after extraction (see
   xref:patch-policy[patching a package]). Finally, patches listed in
   the +LIBFOO_PATCH+ variable are applied _before_ the patches stored
-  in the Buildroot package directory.
+  in the MikoOS package directory.
 
 * +LIBFOO_SITE+ provides the location of the package, which can be a
   URL or a local filesystem path. HTTP, FTP and SCP are supported URL
   types for retrieving package tarballs. In these cases don't include a
-  trailing slash: it will be added by Buildroot between the directory
+  trailing slash: it will be added by MikoOS between the directory
   and the filename as appropriate. Git, Subversion, Mercurial,
   and Bazaar are supported URL types for retrieving packages directly
   from source code management systems. There is a helper function to make
@@ -275,15 +275,15 @@ not and can not work as people would expect it should:
   `git lfs fetch` or `git submodule update`).
 
 * +LIBFOO_EXTRA_DOWNLOADS+ is a space-separated list of additional
-  files that Buildroot should download. If an entry contains +://+
-  then Buildroot will assume it is a complete URL and will download
-  the file using this URL. Otherwise, Buildroot will assume the file
-  to be downloaded is located at +LIBFOO_SITE+. Buildroot will not do
+  files that MikoOS should download. If an entry contains +://+
+  then MikoOS will assume it is a complete URL and will download
+  the file using this URL. Otherwise, MikoOS will assume the file
+  to be downloaded is located at +LIBFOO_SITE+. MikoOS will not do
   anything with those additional files, except download them: it will
   be up to the package recipe to use them from +$(LIBFOO_DL_DIR)+.
 
 * +LIBFOO_SITE_METHOD+ determines the method used to fetch or copy the
-  package source code. In many cases, Buildroot guesses the method
+  package source code. In many cases, MikoOS guesses the method
   from the contents of +LIBFOO_SITE+ and setting +LIBFOO_SITE_METHOD+
   is unnecessary. When +HOST_LIBFOO_SITE_METHOD+ is not specified, it
   defaults to the value of +LIBFOO_SITE_METHOD+. +
@@ -299,7 +299,7 @@ not and can not work as people would expect it should:
      Used by default when +LIBFOO_SITE+ begins with +svn://+. When a
      +http://+ Subversion repository URL is specified in
      +LIBFOO_SITE+, one 'must' specify +LIBFOO_SITE_METHOD=svn+.
-     Buildroot performs a checkout which is preserved as a tarball in
+     MikoOS performs a checkout which is preserved as a tarball in
      the download cache; subsequent builds use the tarball instead of
      performing another checkout.
   ** +cvs+ for retrieving source code from a CVS repository.
@@ -332,7 +332,7 @@ not and can not work as people would expect it should:
      control.
   ** +local+ for a local source code directory. One should use this
      when +LIBFOO_SITE+ specifies a local directory path containing
-     the package source code. Buildroot copies the contents of the
+     the package source code. MikoOS copies the contents of the
      source directory into the package's build directory. Note that
      for +local+ packages, no patches are applied. If you need to
      still patch the source code, use +LIBFOO_POST_RSYNC_HOOKS+, see
@@ -363,7 +363,7 @@ not and can not work as people would expect it should:
 * +LIBFOO_STRIP_COMPONENTS+ is the number of leading components
   (directories) that tar must strip from file names on extraction.
   The tarball for most packages has one leading component named
-  "<pkg-name>-<pkg-version>", thus Buildroot passes
+  "<pkg-name>-<pkg-version>", thus MikoOS passes
   --strip-components=1 to tar to remove it.
   For non-standard packages that don't have this component, or
   that have more than one leading component to strip, set this
@@ -423,7 +423,7 @@ not and can not work as people would expect it should:
   listed in +LIBFOO_CONFIG_SCRIPTS+ are also removed from
   +$(TARGET_DIR)/usr/bin+ since they are not needed on the target.
 
-* +LIBFOO_DEVICES+ lists the device files to be created by Buildroot
+* +LIBFOO_DEVICES+ lists the device files to be created by MikoOS
   when using the static device table. The syntax to use is the
   makedevs one. You can find some documentation for this syntax in the
   xref:makedev-syntax[]. This variable is optional.
@@ -476,7 +476,7 @@ not and can not work as people would expect it should:
   already compiled, although theoretically it might apply to other
   packages. In such cases a separate tarball is usually available with
   the actual source code. Set +LIBFOO_ACTUAL_SOURCE_TARBALL+ to the
-  name of the actual source code archive and Buildroot will download
+  name of the actual source code archive and MikoOS will download
   it and use it when you run +make legal-info+ to collect
   legally-relevant material.  Note this file will not be downloaded
   during regular builds nor by +make source+.
@@ -490,7 +490,7 @@ not and can not work as people would expect it should:
 
 * +LIBFOO_REDISTRIBUTE+ can be set to +YES+ (default) or +NO+ to indicate if
   the package source code is allowed to be redistributed. Set it to +NO+ for
-  non-opensource packages: Buildroot will not save the source code for this
+  non-opensource packages: MikoOS will not save the source code for this
   package when collecting the +legal-info+.
 
 * +LIBFOO_FLAT_STACKSIZE+ defines the stack size of an application built into
@@ -507,16 +507,16 @@ not and can not work as people would expect it should:
   `/usr/lib/modules`, and `/usr/share`, which are automatically excluded.
 
 * +LIBFOO_IGNORE_CVES+ is a space-separated list of CVEs that tells
-  Buildroot CVE tracking tools which CVEs should be ignored for this
+  MikoOS CVE tracking tools which CVEs should be ignored for this
   package. This is typically used when the CVE is fixed by a patch in
   the package (see xref:additional-patch-documentation[]), or when the CVE for
-  some reason does not affect the Buildroot package. A Makefile comment must
+  some reason does not affect the MikoOS package. A Makefile comment must
   always precede the addition of a CVE to this variable. Example:
 +
 ----
 # 0001-fix-cve-2020-12345.patch
 LIBFOO_IGNORE_CVES += CVE-2020-12345
-# only when built with libbaz, which Buildroot doesn't support
+# only when built with libbaz, which MikoOS doesn't support
 LIBFOO_IGNORE_CVES += CVE-2020-54321
 ----
 
@@ -569,7 +569,7 @@ different steps of the build process.
 
 * +LIBFOO_EXTRACT_CMDS+ lists the actions to be performed to extract
   the package. This is generally not needed as tarballs are
-  automatically handled by Buildroot. However, if the package uses a
+  automatically handled by MikoOS. However, if the package uses a
   non-standard archive format, such as a ZIP or RAR file, or has a
   tarball with a non-standard organization, this variable allows to
   override the package infrastructure default behavior.
@@ -621,10 +621,10 @@ different steps of the build process.
   is when openrc is chosen as init system and +LIBFOO_INSTALL_INIT_OPENRC+
   has not been set, in such situation +LIBFOO_INSTALL_INIT_SYSV+ will
   be called, since openrc supports sysv init scripts.
-  When systemd is used as the init system, buildroot will automatically enable
+  When systemd is used as the init system, mikoos will automatically enable
   all services using the +systemctl preset-all+ command in the final phase of
   image building. You can add preset files to prevent a particular unit from
-  being automatically enabled by buildroot.
+  being automatically enabled by mikoos.
 
 * +LIBFOO_HELP_CMDS+ lists the actions to print the package help, which
   is included to the main +make help+ output. These commands can print
@@ -660,14 +660,14 @@ In the action definitions, you can use the following variables:
 
 * +$(LIBFOO_PKGDIR)+ contains the path to the directory containing the
   +libfoo.mk+ and +Config.in+ files. This variable is useful when it is
-  necessary to install a file bundled in Buildroot, like a runtime
+  necessary to install a file bundled in MikoOS, like a runtime
   configuration file, a splashscreen image...
 
 * +$(@D)+, which contains the directory in which the package source
   code has been uncompressed.
 
 * +$(LIBFOO_DL_DIR)+ contains the path to the directory where all the downloads
-  made by Buildroot for +libfoo+ are stored in.
+  made by MikoOS for +libfoo+ are stored in.
 
 * +$(TARGET_CC)+, +$(TARGET_LD)+, etc. to get the target
   cross-compilation utilities

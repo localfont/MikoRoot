@@ -3,9 +3,9 @@ From: Thomas Devoogdt <thomas.devoogdt@barco.com>
 Date: Mon, 12 Dec 2022 12:59:59 +0100
 Subject: [PATCH] Makefile: fix error on install
 
-ln: failed to create symbolic link '/home/thomas/Documents/buildroot/output/host/share/man/man1/unifdefall.1': File exists
+ln: failed to create symbolic link '/home/thomas/Documents/mikoos/output/host/share/man/man1/unifdefall.1': File exists
 
-Seen while trying to add this package to buildroot.org.
+Seen while trying to add this package to mikoos.org.
 
 (upstream: https://github.com/fanf2/unifdef/pull/16)
 Signed-off-by: Thomas Devoogdt <thomas.devoogdt@barco.com>

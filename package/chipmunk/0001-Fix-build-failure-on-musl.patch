@@ -10,7 +10,7 @@ Indeed, sys/sysctl.h is not available on musl so include this header
 only if __APPLE__ is defined as sysctlbyname is only used in this case.
 
 Fixes:
- - http://autobuild.buildroot.org/results/e5be2f8eb9315a9054e1c8d854dec37cbb28eed7
+ - http://autobuild.mikoos.org/results/e5be2f8eb9315a9054e1c8d854dec37cbb28eed7
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/slembcke/Chipmunk2D/pull/171]

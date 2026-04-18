@@ -22,7 +22,7 @@ class TestMawk(infra.basetest.BRTest):
         self.assertEqual(exit_code, code)
 
         # Run a basic print program
-        test_string = "Hello Buildroot"
+        test_string = "Hello MikoOS"
         cmd = "mawk 'BEGIN {print \"" + test_string + "\"; }'"
         output, exit_code = self.emulator.run(cmd)
         self.assertEqual(exit_code, 0)
@@ -79,7 +79,7 @@ class TestMawk(infra.basetest.BRTest):
         # string constant. We then check those constants are in the
         # mawk "assembler" output.
         awk_int = 12345
-        awk_str = "Buildroot"
+        awk_str = "MikoOS"
         awk_expr = f"print ($1 + {awk_int}) \"{awk_str}\";"
         awk_prg = "BEGIN { " + awk_expr + " }"
         cmd = f"mawk -W dump '{awk_prg}'"

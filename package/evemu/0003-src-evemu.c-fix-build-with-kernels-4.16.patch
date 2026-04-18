@@ -13,7 +13,7 @@ evemu.c:753:23: error: 'const struct input_event' has no member named 'time'; di
                        type
 
 Fixes:
- - http://autobuild.buildroot.org/results/487dd5056ec0a977d55b23417d5db2664dcc91fa
+ - http://autobuild.mikoos.org/results/487dd5056ec0a977d55b23417d5db2664dcc91fa
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

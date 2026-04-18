@@ -1,4 +1,4 @@
-=== Notes on using Mender on Buildroot
+=== Notes on using Mender on MikoOS
 ======================================
 
 Mender is an open source over-the-air (OTA) software updater for
@@ -22,7 +22,7 @@ understanding of how Mender works:
 
     https://docs.mender.io
 
-In Buildroot the following packages are provided:
+In MikoOS the following packages are provided:
 
 - BR2_PACKAGE_MENDER
     - This will install the client on target rootfs
@@ -40,18 +40,18 @@ To fully utilize atomic image-based deployments using the A/B update
 strategy, additional integration is required in the bootloader. This
 integration is board specific.
 
-Currently supported bootloaders are GRUB and U-boot. Buildroot provides
+Currently supported bootloaders are GRUB and U-boot. MikoOS provides
 a reference integration at board/mender/x86_64/ using the
 mender_x86_64_efi_defconfig file.
 
 Additional support and integrations are found at:
 
-    https://github.com/mendersoftware/buildroot-mender
+    https://github.com/mendersoftware/mikoos-mender
 
 Default configurations files
 ----------------------------
 
-Buildroot comes with a default configuration and there a couple of
+MikoOS comes with a default configuration and there a couple of
 files that need your attention:
 
 - /etc/mender/mender.conf
@@ -112,7 +112,7 @@ Example mender.conf options for Hosted Mender:
 Creating Mender Artifacts
 -------------------------
 
-To create Mender Artifacts based on Buildroot build output you must
+To create Mender Artifacts based on MikoOS build output you must
 include BR2_PACKAGE_HOST_MENDER_ARTIFACT in your configuration, and
 then you would typically create the Mender Artifact in a post image
 script (BR2_ROOTFS_POST_IMAGE_SCRIPT). See the generate_mender_image

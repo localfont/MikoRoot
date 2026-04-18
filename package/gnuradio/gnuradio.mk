@@ -124,7 +124,7 @@ GNURADIO_DEPENDENCIES += python3 python-pybind \
 	host-python-numpy host-python-packaging
 GNURADIO_CONF_OPTS += -DENABLE_PYTHON=ON
 # mandatory to avoid pybind11 to overwrite variables provided
-# by gnuradio and buildroot
+# by gnuradio and mikoos
 GNURADIO_CONF_OPTS += -DPYBIND11_PYTHONLIBS_OVERWRITE=OFF
 # mandatory to avoid pybind11 to force libraries extensions
 # with a name based on host architecture

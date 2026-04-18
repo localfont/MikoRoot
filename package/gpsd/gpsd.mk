@@ -177,7 +177,7 @@ GPSD_SCONS_OPTS += \
 
 GPSD_INSTALL_RULE = $(if $(BR2_PACKAGE_HAS_UDEV),udev-install,install)
 
-# When using chrony, wait for after Buildroot's chrony.service
+# When using chrony, wait for after MikoOS's chrony.service
 ifeq ($(BR2_PACKAGE_CHRONY),y)
 define GPSD_INSTALL_INIT_SYSTEMD
 	$(INSTALL) -D -m 0644 $(GPSD_PKGDIR)/br-chrony.conf \

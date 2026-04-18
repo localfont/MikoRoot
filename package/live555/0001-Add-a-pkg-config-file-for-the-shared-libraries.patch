@@ -5,7 +5,7 @@ Subject: Add a pkg-config file for the shared libraries
 This patch was downloaded from Debian
 https://sources.debian.org/src/liblivemedia/2018.08.05-1/debian/patches/0002-Add-a-pkg-config-file-for-the-shared-libraries.patch/
 
-The local/ part of PREXIX and LIBDIR was removed to fit into buildroot.
+The local/ part of PREXIX and LIBDIR was removed to fit into mikoos.
 
 A similar version of this patch is part of the vlc source repo:
 http://git.videolan.org/?p=vlc.git;a=blob;f=contrib/src/live555/add-pkgconfig-file.patch;hb=HEAD

@@ -9,5 +9,5 @@ After=local-fs-pre.target
 # another tmpfs. For tmpfs, the What is not relevant - but we use it in
 # the test to distinguish it from other tmpfses
 What=other-var-backing-store
-Where=/run/buildroot/mounts/var
+Where=/run/mikoos/mounts/var
 Type=tmpfs

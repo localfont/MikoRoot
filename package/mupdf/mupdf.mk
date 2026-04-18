@@ -22,7 +22,7 @@ MUPDF_DEPENDENCIES = \
 	zlib
 
 # Fix is in libfreeglut, but CVE applied to mupdf 1.23.9.
-# Buildroot libfreeglut is >3.4.0 then is not affected.
+# MikoOS libfreeglut is >3.4.0 then is not affected.
 MUPDF_IGNORE_CVES = \
 	CVE-2024-24258 \
 	CVE-2024-24259

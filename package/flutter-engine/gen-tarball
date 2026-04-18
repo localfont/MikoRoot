@@ -14,7 +14,7 @@ TARBALL_NAME=
 term_bold="$(tput smso 2>/dev/null || true)"
 term_reset="$(tput rmso 2>/dev/null || true)"
 
-# Print status messages in the same style Buildroot prints.
+# Print status messages in the same style MikoOS prints.
 message() {
     printf "%s>>> flutter-engine %s %s%s\n" "${term_bold}" "${VERSION}" "${1}" "${term_reset}"
 }

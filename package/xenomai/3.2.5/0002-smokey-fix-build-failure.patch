@@ -7,7 +7,7 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 This patch fixes the following building failure raised on bumping Xenomai
-to version 3.2.5 in Buildroot:
+to version 3.2.5 in MikoOS:
 
 In file included from helpers.c:29:
 ../../include/smokey/smokey.h:258:39: error: unknown type name ‘bool’

@@ -15,7 +15,7 @@ musl fixed the issue with
 https://git.musl-libc.org/cgit/musl/commit/?id=e5d2823631bbfebacf48e1a34ed28f28d7cb2570
 
 Fixes:
- - http://autobuild.buildroot.org/results/16b19198980ce9c81a618b3f6e8dc9fe28247a28
+ - http://autobuild.mikoos.org/results/16b19198980ce9c81a618b3f6e8dc9fe28247a28
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 ---

@@ -8,7 +8,7 @@ Content-Type: text/plain; charset=UTF-8
 Content-Transfer-Encoding: 8bit
 
 On gentoo /run/lock is owned by uucp group because of historical
-reasons. However uucp does not exist on buildroot by default, and
+reasons. However uucp does not exist on mikoos by default, and
 it makes more sense that 'daemon' group should own this directory.
 
 Signed-off-by: Michał Łyszczek <michal.lyszczek@bofc.pl>

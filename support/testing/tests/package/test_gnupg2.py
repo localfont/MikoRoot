@@ -25,7 +25,7 @@ class TestGnupg2(infra.basetest.BRTest):
         asc_file = plain_file + ".asc"
         sig_file = plain_file + ".sig"
         good_passphrase = "Good Passphrase"
-        gpg_userid = "br-test@buildroot"
+        gpg_userid = "br-test@mikoos"
 
         # Test the program can execute
         self.assertRunOk("gpg --version")

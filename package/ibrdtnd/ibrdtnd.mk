@@ -11,7 +11,7 @@ IBRDTND_LICENSE_FILES = COPYING
 IBRDTND_DEPENDENCIES = ibrdtn ibrcommon host-pkgconf
 
 # Disable features that don't have the necessary dependencies in
-# Buildroot
+# MikoOS
 IBRDTND_CONF_OPTS = \
 	--disable-dtndht \
 	--without-wifip2p \

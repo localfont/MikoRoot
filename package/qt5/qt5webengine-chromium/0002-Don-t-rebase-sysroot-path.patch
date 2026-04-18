@@ -7,7 +7,7 @@ Just use the actual sysroot as rebase_path will generate an invalid
 sysroot path.
 
 Fixes:
-/home/buildroot/buildroot/output/per-package/qt5webengine/host/opt/ext-toolchain/bin/../lib/gcc/aarch64-buildroot-linux-gnu/10.3.0/../../../../aarch64-buildroot-linux-gnu/bin/ld: cannot find crti.o: No such file or directory
+/home/mikoos/mikoos/output/per-package/qt5webengine/host/opt/ext-toolchain/bin/../lib/gcc/aarch64-mikoos-linux-gnu/10.3.0/../../../../aarch64-mikoos-linux-gnu/bin/ld: cannot find crti.o: No such file or directory
 
 Signed-off-by: James Hilliard <james.hilliard1@gmail.com>
 ---

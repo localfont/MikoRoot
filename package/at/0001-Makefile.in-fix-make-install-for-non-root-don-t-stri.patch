@@ -3,7 +3,7 @@ From: Peter Korsgaard <jacmet@sunsite.dk>
 Date: Fri, 23 Jul 2021 16:47:56 +0200
 Subject: [PATCH] Makefile.in: fix make install for non-root, don't strip
 
-Buildroot will ensure all files are owned by root and stripped anyway
+MikoOS will ensure all files are owned by root and stripped anyway
 (if needed) before the rootfs is created.
 
 Signed-off-by: Peter Korsgaard <jacmet@sunsite.dk>

@@ -6,7 +6,7 @@ Subject: [PATCH] Add option to make the rpath relative under a specified root
 
 Running "patchelf" with the option "--make-rpath-relative ROOTDIR" will
 modify or delete the RPATHDIRs according the following rules
-similar to Martin's patches [1] making the Buildroot toolchaing/SDK
+similar to Martin's patches [1] making the MikoOS toolchaing/SDK
 relocatable.
 
 RPATHDIR starts with "$ORIGIN":
@@ -37,7 +37,7 @@ absolute path relative to ROOTDIR will be used.
 A pull request for a similar patch [2] for mainline inclusion is
 pending.
 
-[1] http://lists.busybox.net/pipermail/buildroot/2016-April/159422.html
+[1] http://lists.busybox.net/pipermail/mikoos/2016-April/159422.html
 [2] https://github.com/NixOS/patchelf/pull/118
 
 Signed-off-by: Wolfgang Grandegger <wg@grandegger.com>

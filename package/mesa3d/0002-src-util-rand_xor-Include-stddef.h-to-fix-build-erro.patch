@@ -9,11 +9,11 @@ Content-Transfer-Encoding: 8bit
 Fixes
 
 In file included from ../src/util/rand_xor.c:29:
-output/host/x86_64-buildroot-linux-uclibc/sysroot/usr/include/sys/random.h:27:35:
+output/host/x86_64-mikoos-linux-uclibc/sysroot/usr/include/sys/random.h:27:35:
  error: unknown type name ‘size_t’
  extern int getrandom(void *__buf, size_t count, unsigned int flags)
 
-seen with gcc version 8.3.0 (Buildroot 2020.02) and uClibc.
+seen with gcc version 8.3.0 (MikoOS 2020.02) and uClibc.
 
 Upstream: https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6248
 

@@ -2,7 +2,7 @@
 # Modelled after systemd's tmp.mount
 
 [Unit]
-Description=Buildroot /var tmpfs
+Description=MikoOS /var tmpfs
 DefaultDependencies=no
 Conflicts=umount.target
 Before=local-fs.target umount.target

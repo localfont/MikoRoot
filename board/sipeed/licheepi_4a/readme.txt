@@ -1,7 +1,7 @@
 Intro
 =====
 
-This directory contains a Buildroot configuration for building a
+This directory contains a MikoOS configuration for building a
 LicheePi 4A image. For more information, see the board wiki page [1].
 
 
@@ -9,7 +9,7 @@ How to build it
 ===============
 
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
     make sipeed_licheepi_4a_defconfig
@@ -18,7 +18,7 @@ Configure Buildroot
 Build the boot and rootfs
 -------------------------
 
-Note: you will need to have access to the network, since Buildroot
+Note: you will need to have access to the network, since MikoOS
 will download the packages' sources.
 
 You may now build your rootfs with:

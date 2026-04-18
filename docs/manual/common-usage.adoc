@@ -1,7 +1,7 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== General Buildroot usage
+== General MikoOS usage
 
 include::make-tips.adoc[]
 
@@ -22,10 +22,10 @@ directory to the build-host.
 
 === Building out-of-tree
 
-As default, everything built by Buildroot is stored in the directory
-+output+ in the Buildroot tree.
+As default, everything built by MikoOS is stored in the directory
++output+ in the MikoOS tree.
 
-Buildroot also supports building out of tree with a syntax similar to
+MikoOS also supports building out of tree with a syntax similar to
 the Linux kernel. To use it, add +O=<directory>+ to the make command
 line:
 
@@ -36,23 +36,23 @@ line:
 Or:
 
 ----
- $ cd /tmp/build; make O=$PWD -C path/to/buildroot menuconfig
+ $ cd /tmp/build; make O=$PWD -C path/to/mikoos menuconfig
 ----
 
 All the output files will be located under +/tmp/build+. If the +O+
-path does not exist, Buildroot will create it.
+path does not exist, MikoOS will create it.
 
 *Note:* the +O+ path can be either an absolute or a relative path, but if it's
 passed as a relative path, it is important to note that it is interpreted
-relative to the main Buildroot source directory, *not* the current working
+relative to the main MikoOS source directory, *not* the current working
 directory.
 
-When using out-of-tree builds, the Buildroot +.config+ and temporary
+When using out-of-tree builds, the MikoOS +.config+ and temporary
 files are also stored in the output directory. This means that you can
 safely run multiple builds in parallel using the same source tree as
 long as they use unique output directories.
 
-For ease of use, Buildroot generates a Makefile wrapper in the output
+For ease of use, MikoOS generates a Makefile wrapper in the output
 directory - so after the first run, you no longer need to pass +O=<...>+
 and +-C <...>+, simply run (in the output directory):
 
@@ -64,7 +64,7 @@ and +-C <...>+, simply run (in the output directory):
 
 === Environment variables
 
-Buildroot also honors some environment variables, when they are passed
+MikoOS also honors some environment variables, when they are passed
 to +make+ or set in the environment:
 
 * +HOSTCXX+, the host C++ compiler to use
@@ -74,24 +74,24 @@ to +make+ or set in the environment:
   internal toolchain is being built.
   +
   Note that the uClibc configuration file can also be set from the
-  configuration interface, so through the Buildroot +.config+ file; this
+  configuration interface, so through the MikoOS +.config+ file; this
   is the recommended way of setting it.
   +
 * +BUSYBOX_CONFIG_FILE=<path/to/.config>+, path to
   the BusyBox configuration file.
   +
   Note that the BusyBox configuration file can also be set from the
-  configuration interface, so through the Buildroot +.config+ file; this
+  configuration interface, so through the MikoOS +.config+ file; this
   is the recommended way of setting it.
   +
 * +BR2_CCACHE_DIR+ to override the directory where
-  Buildroot stores the cached files when using ccache.
+  MikoOS stores the cached files when using ccache.
   +
 * +BR2_DL_DIR+ to override the directory in which
-  Buildroot stores/retrieves downloaded files.
+  MikoOS stores/retrieves downloaded files.
   +
-  Note that the Buildroot download directory can also be set from the
-  configuration interface, so through the Buildroot +.config+ file. See
+  Note that the MikoOS download directory can also be set from the
+  configuration interface, so through the MikoOS +.config+ file. See
   xref:download-location[] for more details on how you can set the download
   directory.
 * +BR2_GRAPH_ALT+, if set and non-empty, to use an alternate color-scheme in
@@ -161,7 +161,7 @@ when transferring them to an actual device that will be used on the target.
 
 [[package-details]]
 
-Buildroot can produce a JSON blurb that describes the set of enabled
+MikoOS can produce a JSON blurb that describes the set of enabled
 packages in the current configuration, together with their
 dependencies, licenses and other metadata. This JSON blurb is produced
 by using the +show-info+ make target:
@@ -170,7 +170,7 @@ by using the +show-info+ make target:
 make show-info
 ----
 
-Buildroot can also produce details about packages as HTML and JSON
+MikoOS can also produce details about packages as HTML and JSON
 output using the +pkg-stats+ make target. Amongst other things, these
 details include whether known CVEs (security vulnerabilities) affect
 the packages in your current configuration. It also shows if there is
@@ -182,7 +182,7 @@ make pkg-stats
 
 === Generating CycloneDX SBOM
 
-Based on the output of +show-info+ Buildroot can generate a SBOM in
+Based on the output of +show-info+ MikoOS can generate a SBOM in
 the CycloneDX format. While it doesn't offer any additional
 information, CycloneDX is a format specification that can be consumed
 by other projects.
@@ -203,7 +203,7 @@ analysis from the NVD database.
 
 ----
 make show | utils/generate-cyclonedx > sbom.cdx.json
-cat sbom.cdx.json | support/scripts/cve-check --nvd-path dl/buildroot-nvd/
+cat sbom.cdx.json | support/scripts/cve-check --nvd-path dl/mikoos-nvd/
 ----
 
 For more information about CycloneDX see https://cyclonedx.org/[].
@@ -212,15 +212,15 @@ For more information about CycloneDX see https://cyclonedx.org/[].
 
 [[graph-depends]]
 
-One of Buildroot's jobs is to know the dependencies between packages,
+One of MikoOS's jobs is to know the dependencies between packages,
 and make sure they are built in the right order. These dependencies
 can sometimes be quite complicated, and for a given system, it is
 often not easy to understand why such or such package was brought into
-the build by Buildroot.
+the build by MikoOS.
 
 In order to help understanding the dependencies, and therefore better
 understand what is the role of the different components in your
-embedded Linux system, Buildroot is capable of generating dependency
+embedded Linux system, MikoOS is capable of generating dependency
 graphs.
 
 To generate a dependency graph of the full system you have compiled,
@@ -292,7 +292,7 @@ BR2_GRAPH_DEPS_OPTS='-d 3 --no-transitive --colors=red,green,blue' make graph-de
 When the build of a system takes a long time, it is sometimes useful
 to be able to understand which packages are the longest to build, to
 see if anything can be done to speed up the build. In order to help
-such build time analysis, Buildroot collects the build time of each
+such build time analysis, MikoOS collects the build time of each
 step of each package, and allows to generate graphs from this data.
 
 To generate the build time graph after a build, run:
@@ -335,8 +335,8 @@ BR2_GRAPH_OUT=png make graph-build
 === Graphing the filesystem size contribution of packages
 
 When your target system grows, it is sometimes useful to understand
-how much each Buildroot package is contributing to the overall root
-filesystem size. To help with such an analysis, Buildroot collects
+how much each MikoOS package is contributing to the overall root
+filesystem size. To help with such an analysis, MikoOS collects
 data about files installed by each package and using this data,
 generates a graph and CSV files detailing the size contribution of
 the different packages.
@@ -388,9 +388,9 @@ The collected filesystem size data is only meaningful after a complete
 clean rebuild. Be sure to run +make clean all+ before using +make
 graph-size+.
 
-To compare the root filesystem size of two different Buildroot compilations,
+To compare the root filesystem size of two different MikoOS compilations,
 for example after adjusting the configuration or when switching to another
-Buildroot release, use the +size-stats-compare+ script. It takes two
+MikoOS release, use the +size-stats-compare+ script. It takes two
 +file-size-stats.csv+ files (produced by +make graph-size+) as input.
 Refer to the help text of this script for more details:
 
@@ -405,26 +405,26 @@ utils/size-stats-compare -h
 This section deals with a very experimental feature, which is known to
 break even in some non-unusual situations. Use at your own risk.
 
-Buildroot has always been capable of using parallel build on a per
-package basis: each package is built by Buildroot using +make -jN+ (or
+MikoOS has always been capable of using parallel build on a per
+package basis: each package is built by MikoOS using +make -jN+ (or
 the equivalent invocation for non-make-based build systems). The level
 of parallelism is by default number of CPUs + 1, but it can be
 adjusted using the +BR2_JLEVEL+ configuration option.
 
-Until 2020.02, Buildroot was however building packages in a serial
+Until 2020.02, MikoOS was however building packages in a serial
 fashion: each package was built one after the other, without
 parallelization of the build between packages. As of 2020.02,
-Buildroot has experimental support for *top-level parallel build*,
+MikoOS has experimental support for *top-level parallel build*,
 which allows some signicant build time savings by building packages
 that have no dependency relationship in parallel. This feature is
 however marked as experimental and is known not to work in some cases.
 
 In order to use top-level parallel build, one must:
 
-. Enable the option +BR2_PER_PACKAGE_DIRECTORIES+ in the Buildroot
+. Enable the option +BR2_PER_PACKAGE_DIRECTORIES+ in the MikoOS
 configuration
 
-. Use +make -jN+ when starting the Buildroot build
+. Use +make -jN+ when starting the MikoOS build
 
 Internally, the +BR2_PER_PACKAGE_DIRECTORIES+ will enable a mechanism
 called *per-package directories*, which will have the following

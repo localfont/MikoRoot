@@ -1,19 +1,19 @@
 // -*- mode:doc; -*-
 // vim: set syntax=asciidoc:
 
-== Buildroot quick start
+== MikoOS quick start
 
 *Important*: you can and should *build everything as a normal user*. There
-is no need to be root to configure and use Buildroot. By running all
+is no need to be root to configure and use MikoOS. By running all
 commands as a regular user, you protect your system against packages
 behaving badly during compilation and installation.
 
-The first step when using Buildroot is to create a configuration.
-Buildroot has a nice configuration tool similar to the one you can
+The first step when using MikoOS is to create a configuration.
+MikoOS has a nice configuration tool similar to the one you can
 find in the http://www.kernel.org/[Linux kernel] or in
 http://www.busybox.net/[BusyBox].
 
-From the buildroot directory, run
+From the mikoos directory, run
 
 ----
  $ make menuconfig
@@ -60,7 +60,7 @@ To start the build process, simply run:
  $ make
 ----
 
-By default, Buildroot does not support top-level parallel build, so
+By default, MikoOS does not support top-level parallel build, so
 running +make -jN+ is not necessary. There is however experimental
 support for top-level parallel build, see
 xref:top-level-parallel-build[].
@@ -75,7 +75,7 @@ The `make` command will generally perform the following steps:
 * build a bootloader image, if selected;
 * create a root filesystem in selected formats.
 
-Buildroot output is stored in a single directory, +output/+.
+MikoOS output is stored in a single directory, +output/+.
 This directory contains several subdirectories:
 
 * +images/+ where all the images (kernel image, bootloader and root
@@ -83,14 +83,14 @@ This directory contains several subdirectories:
   on your target system.
 
 * +build/+ where all the components are built (this includes tools
-  needed by Buildroot on the host and packages compiled for the
+  needed by MikoOS on the host and packages compiled for the
   target). This directory contains one subdirectory for each of these
   components.
 
 * +host/+ contains both the tools built for the host, and the sysroot
   of the target toolchain. The former is an installation of tools
   compiled for the host that are needed for the proper execution of
-  Buildroot, including the cross-compilation toolchain. The latter
+  MikoOS, including the cross-compilation toolchain. The latter
   is a hierarchy similar to a root filesystem hierarchy. It contains
   the headers and libraries of all user-space packages that provide
   and install libraries used by other packages. However, this
@@ -105,7 +105,7 @@ This directory contains several subdirectories:
 
 * +target/+ which contains 'almost' the complete root filesystem for
   the target: everything needed is present except the device files in
-  +/dev/+ (Buildroot can't create them because Buildroot doesn't run
+  +/dev/+ (MikoOS can't create them because MikoOS doesn't run
   as root and doesn't want to run as root). Also, it doesn't have the correct
   permissions (e.g. setuid for the busybox binary). Therefore, this directory
   *should not be used on your target*. Instead, you should use one of

@@ -5,7 +5,7 @@ Subject: Makefile: Move -pie to LDFLAGS
 
 Move -pie from LDLIBS to LDFLAGS and make LDFLAGS configurable to allow
 the user to drop it by setting their own LDFLAGS (e.g. PIE could be
-enabled or disabled by the buildsystem such as buildroot).
+enabled or disabled by the buildsystem such as mikoos).
 
 Suggested-by: Mariusz Tkaczyk <mariusz.tkaczyk@linux.intel.com>
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>

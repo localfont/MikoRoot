@@ -236,7 +236,7 @@ endif
 
 # This installs the gdbserver somewhere into the $(HOST_DIR) so that
 # it becomes an integral part of the SDK, if the toolchain generated
-# by Buildroot is later used as an external toolchain. We install it
+# by MikoOS is later used as an external toolchain. We install it
 # in debug-root/usr/bin/gdbserver so that it matches what Crosstool-NG
 # does.
 define GDB_SDK_INSTALL_GDBSERVER

@@ -57,13 +57,13 @@ Extract of /etc/default/grub:
     GRUB_CMDLINE_LINUX="console=hvc0 earlyprintk=hvc0 earlycon=hvc0 loglevel=7 fixrtc net.ifnames=0 biosdevname=0 iommu.passthrough=1"
 
 
-Uploading Buildroot Images
+Uploading MikoOS Images
 --------------------------
 
-After configuring GRUB, you can upload your Buildroot images to the
+After configuring GRUB, you can upload your MikoOS images to the
 BF3’s GRUB boot folder:
 
-    scp build_folder/images/Image BF3:/boot/vmlinuz-buildroot-xyz
+    scp build_folder/images/Image BF3:/boot/vmlinuz-mikoos-xyz
 
 Finally, run `update-grub` on the BF3 board to apply the updated GRUB settings.
 

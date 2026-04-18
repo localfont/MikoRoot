@@ -7,7 +7,7 @@ Fixes runtime error with stripped binary
 
     dlopen: /usr/lib/mjpg-streamer/input_uvc.so: undefined symbol: resolutions_help
 
-Source: http://lists.busybox.net/pipermail/buildroot/2024-August/759732.html
+Source: http://lists.busybox.net/pipermail/mikoos/2024-August/759732.html
 
 Upstream: https://github.com/jacksonliam/mjpg-streamer/pull/401
 

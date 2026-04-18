@@ -8,7 +8,7 @@ compiler try to convert int 0xc2 and 0xba to a signed char.
 This is an error since gcc6 (Wnarrowing).
 
 Fixes:
-http://autobuild.buildroot.net/results/bae/baef9888b1979d18171668a675985e3f3b45fda6
+http://autobuild.mikoos.net/results/bae/baef9888b1979d18171668a675985e3f3b45fda6
 
 Signed-off-by: Romain Naour <romain.naour@gmail.com>
 ---

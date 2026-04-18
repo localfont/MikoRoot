@@ -36,7 +36,7 @@ BR2_VERSION_FULL = (
     .strip()
 )
 
-# Set of vulnerabilities that were addressed by a patch present in buildroot
+# Set of vulnerabilities that were addressed by a patch present in mikoos
 # tree. This set is used to set the analysis of the ignored CVEs to
 # 'resolved_with_pedigree'.
 VULN_WITH_PEDIGREE = set()
@@ -309,7 +309,7 @@ def cyclonedx_dependency(ref, depends):
 
 
 def cyclonedx_vulnerabilities(show_info_dict):
-    """Create a JSON list of vulnerabilities ignored by buildroot and associate
+    """Create a JSON list of vulnerabilities ignored by mikoos and associate
     the component for which they are solved.
 
     Args:
@@ -333,7 +333,7 @@ def cyclonedx_vulnerabilities(show_info_dict):
         },
         "analysis": {
             "state": "resolved_with_pedigree" if cve in VULN_WITH_PEDIGREE else "in_triage",
-            "detail": f"The CVE '{cve}' has been marked as ignored by Buildroot"
+            "detail": f"The CVE '{cve}' has been marked as ignored by MikoOS"
         },
         "affects": [
             {"ref": bomref} for bomref in components
@@ -387,7 +387,7 @@ def br2_parse_deps(ref, show_info_dict, virtual=False) -> list:
 
 def main():
     parser = argparse.ArgumentParser(
-            description='''Create a CycloneDX SBoM for the Buildroot configuration.
+            description='''Create a CycloneDX SBoM for the MikoOS configuration.
                 Example usage: make show-info | utils/generate-cyclonedx > sbom.json
             '''
         )
@@ -397,8 +397,8 @@ def main():
                         default=sys.stdout)
     parser.add_argument("--virtual", default=False, action='store_true',
                         help="This option includes virtual packages to the CycloneDX output")
-    parser.add_argument("--project-name", type=str, default="buildroot",
-                        help="Specify the project name to use in the SBOM metadata (default:'buildroot')")
+    parser.add_argument("--project-name", type=str, default="mikoos",
+                        help="Specify the project name to use in the SBOM metadata (default:'mikoos')")
     parser.add_argument("--project-version", type=str, default=f"{BR2_VERSION_FULL}",
                         help="Specify the project version to use in the SBOM metadata (default: builroot version)")
 
@@ -430,7 +430,7 @@ def main():
                 "components": [
                     {
                         "type": "application",
-                        "name": "Buildroot generate-cyclonedx",
+                        "name": "MikoOS generate-cyclonedx",
                         "version": f"{BR2_VERSION_FULL}",
                         "licenses": [
                             {

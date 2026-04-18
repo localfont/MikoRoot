@@ -10,11 +10,11 @@ which is too large to be backported.
 It fixes:
 
 Traceback (most recent call last):
-  File "/home/thomas/buildroot/buildroot/output/build/qt5webengine-5.15.14/src/core/release/../../3rdparty/chromium/tools/grit/grit.py", line 14, in <module>
+  File "/home/thomas/mikoos/mikoos/output/build/qt5webengine-5.15.14/src/core/release/../../3rdparty/chromium/tools/grit/grit.py", line 14, in <module>
     import grit.grit_runner
-  File "/home/thomas/buildroot/buildroot/output/build/qt5webengine-5.15.14/src/3rdparty/chromium/tools/grit/grit/grit_runner.py", line 19, in <module>
+  File "/home/thomas/mikoos/mikoos/output/build/qt5webengine-5.15.14/src/3rdparty/chromium/tools/grit/grit/grit_runner.py", line 19, in <module>
     from grit import util
-  File "/home/thomas/buildroot/buildroot/output/build/qt5webengine-5.15.14/src/3rdparty/chromium/tools/grit/grit/util.py", line 21, in <module>
+  File "/home/thomas/mikoos/mikoos/output/build/qt5webengine-5.15.14/src/3rdparty/chromium/tools/grit/grit/util.py", line 21, in <module>
     from six.moves import html_entities as entities
 ModuleNotFoundError: No module named 'six.moves'
 

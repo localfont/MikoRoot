@@ -8,7 +8,7 @@ Content-Transfer-Encoding: 8bit
 
 For consistency with TF-A, U-Boot and Linux.
 
-Upstream: Not applicable. Buildroot specific.
+Upstream: Not applicable. MikoOS specific.
 Signed-off-by: Vincent Stehlé <vincent.stehle@arm.com>
 ---
  core/arch/arm/plat-vexpress/platform_config.h | 4 ++--

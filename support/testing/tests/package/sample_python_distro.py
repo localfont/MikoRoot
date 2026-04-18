@@ -1,4 +1,4 @@
 import distro
 
-assert(distro.name() == 'Buildroot')
-assert(distro.id() == 'buildroot')
+assert(distro.name() == 'MikoOS')
+assert(distro.id() == 'mikoos')

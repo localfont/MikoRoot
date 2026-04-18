@@ -5,7 +5,7 @@ chiliBoard
 Build
 =====
 
-First, configure Buildroot for your chiliBoard:
+First, configure MikoOS for your chiliBoard:
 
   make grinn_chiliboard_defconfig
 
@@ -29,7 +29,7 @@ After building you should get a tree like this:
 Create a bootable microSD card
 ==============================
 
-Buildroot prepares a bootable microSD card image "sdcard.img" in output/images/
+MikoOS prepares a bootable microSD card image "sdcard.img" in output/images/
 directory, To flash SD card just run the following command:
 
   sudo dd if=output/images/sdcard.img of=/dev/<sd_card> bs=1M

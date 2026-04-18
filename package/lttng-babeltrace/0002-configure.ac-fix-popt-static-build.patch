@@ -6,8 +6,8 @@ Subject: [PATCH] configure.ac: fix popt static build
 Fix the following popt static build failure:
 
 configure:18149: checking for poptGetContext in -lpopt
-configure:18172: /home/buildroot/autobuild/instance-2/output-1/host/bin/m68k-buildroot-linux-uclibc-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -static  -I/home/buildroot/autobuild/instance-2/output-1/host/bin/../m68k-buildroot-linux-uclibc/sysroot/usr/include/uuid  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c -lpopt  -L/home/buildroot/autobuild/instance-2/output-1/host/bin/../m68k-buildroot-linux-uclibc/sysroot/usr/lib -luuid    >&5
-/home/buildroot/autobuild/instance-2/output-1/host/lib/gcc/m68k-buildroot-linux-uclibc/10.4.0/../../../../m68k-buildroot-linux-uclibc/bin/ld: /home/buildroot/autobuild/instance-2/output-1/host/bin/../m68k-buildroot-linux-uclibc/sysroot/usr/lib/libpopt.a(poptint.o): in function `POPT_fprintf':
+configure:18172: /home/mikoos/autobuild/instance-2/output-1/host/bin/m68k-mikoos-linux-uclibc-gcc -o conftest -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -Os -g0  -static  -I/home/mikoos/autobuild/instance-2/output-1/host/bin/../m68k-mikoos-linux-uclibc/sysroot/usr/include/uuid  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -static conftest.c -lpopt  -L/home/mikoos/autobuild/instance-2/output-1/host/bin/../m68k-mikoos-linux-uclibc/sysroot/usr/lib -luuid    >&5
+/home/mikoos/autobuild/instance-2/output-1/host/lib/gcc/m68k-mikoos-linux-uclibc/10.4.0/../../../../m68k-mikoos-linux-uclibc/bin/ld: /home/mikoos/autobuild/instance-2/output-1/host/bin/../m68k-mikoos-linux-uclibc/sysroot/usr/lib/libpopt.a(poptint.o): in function `POPT_fprintf':
 poptint.c:(.text+0x28a): undefined reference to `libiconv_open'
 
 [...]
@@ -16,7 +16,7 @@ checking for poptGetContext in -lpopt... no
 configure: error: Cannot find popt.
 
 Fixes:
- - http://autobuild.buildroot.org/results/4f465fe15664b1f9df3f26c331dc550852972f2f
+ - http://autobuild.mikoos.org/results/4f465fe15664b1f9df3f26c331dc550852972f2f
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: not upstreamable as popt has been removed with

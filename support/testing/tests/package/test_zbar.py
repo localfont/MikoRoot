@@ -21,7 +21,7 @@ class TestZbar(infra.basetest.BRTest):
                            options=["-initrd", cpio_file])
         self.emulator.login()
 
-        txt_msg = "Hello Buildroot!"
+        txt_msg = "Hello MikoOS!"
         qr_img = "qr.png"
 
         # We check the program can execute.

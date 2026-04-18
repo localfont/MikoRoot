@@ -10,7 +10,7 @@ class TestSQLite(infra.basetest.BRTest):
         BR2_TARGET_ROOTFS_CPIO=y
         # BR2_TARGET_ROOTFS_TAR is not set
         """
-    db_file = "buildroot.db"
+    db_file = "mikoos.db"
     db_backup = "db_dump.sql"
 
     def run_sql_query(self, query):

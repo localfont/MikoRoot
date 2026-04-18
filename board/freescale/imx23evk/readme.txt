@@ -2,12 +2,12 @@
 Freescale i.MX23 EVK board
 **************************
 
-This file documents the Buildroot support for the Freescale i.MX23 EVK board.
+This file documents the MikoOS support for the Freescale i.MX23 EVK board.
 
 Build
 =====
 
-First, configure Buildroot for your i.MX23 EVK board:
+First, configure MikoOS for your i.MX23 EVK board:
 
   make imx23evk_defconfig
 

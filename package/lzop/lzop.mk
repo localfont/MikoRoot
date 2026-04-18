@@ -19,7 +19,7 @@ HOST_LZOP_DEPENDENCIES = host-lzo
 LZOP_LIBTOOL_PATCH = NO
 
 define LZOP_LIBTOOL_FIXUP
-	patch -i support/libtool/buildroot-libtool-v2.4.4.patch $(@D)/autoconf/ltmain.sh
+	patch -i support/libtool/mikoos-libtool-v2.4.4.patch $(@D)/autoconf/ltmain.sh
 endef
 LZOP_POST_PATCH_HOOKS += LZOP_LIBTOOL_FIXUP
 HOST_LZOP_POST_PATCH_HOOKS += LZOP_LIBTOOL_FIXUP

@@ -69,14 +69,14 @@ EXTRACTOR_PKG_DEPENDENCY.xz   = $(BR2_XZCAT_HOST_DEPENDENCY)
 EXTRACTOR_PKG_DEPENDENCY.lz   = $(BR2_LZIP_HOST_DEPENDENCY)
 EXTRACTOR_PKG_DEPENDENCY.zst  = $(BR2_ZSTD_HOST_DEPENDENCY)
 
-# extractor-pkg-dependency(filename): returns a Buildroot package
+# extractor-pkg-dependency(filename): returns a MikoOS package
 # dependency needed to extract file based on suffix
 extractor-pkg-dependency = $(EXTRACTOR_PKG_DEPENDENCY$(suffix $(1)))
 
 # extractor-system-dependency(filename): returns the name of the tool
 # needed to extract 'filename', and is meant to be used with
 # DL_TOOLS_DEPENDENCIES, in order to check that the necessary tool is
-# provided by the system Buildroot runs on.
+# provided by the system MikoOS runs on.
 #
 # $(firstword) is used here because the extractor can have arguments,
 # like ZCAT="gzip -d -c", and to check for the dependency we only want
@@ -338,7 +338,7 @@ legal-deps = \
 #
 # The --force option makes sure it doesn't fail if the source
 # directory already exists. The --auto-accept skips the license check,
-# as it is not needed in Buildroot because we have legal-info. Since
+# as it is not needed in MikoOS because we have legal-info. Since
 # there's a EULA in the binary file, we extract it in this macro, and
 # it should therefore be added to the LICENSE_FILES variable of
 # packages using this macro. Also, remember to set REDISTRIBUTE to

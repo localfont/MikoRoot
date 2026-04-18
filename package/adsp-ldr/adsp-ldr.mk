@@ -14,7 +14,7 @@ HOST_ADSP_LDR_DEPENDENCIES = host-libusb
 define HOST_ADSP_LDR_INSTALL_CMDS
 	# The U-Boot Makefile expects ldr to be prefixed by $(CROSS_COMPILE),
 	# hence the rename to $(TARGET_CROSS)ldr
-	$(INSTALL) -m 755 -D $(@D)/buildroot-build/ldr \
+	$(INSTALL) -m 755 -D $(@D)/mikoos-build/ldr \
 		$(TARGET_CROSS)ldr
 endef
 

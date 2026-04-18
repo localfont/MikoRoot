@@ -12,7 +12,7 @@ In file included from ../xsec/enc/OpenSSL/OpenSSLCryptoBase64.hpp:36:0,
                     ^~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/e908e59ec5b8e1ac505c44900dcb39527f0ec1d3
+ - http://autobuild.mikoos.org/results/e908e59ec5b8e1ac505c44900dcb39527f0ec1d3
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://issues.apache.org/jira/browse/SANTUARIO-588]

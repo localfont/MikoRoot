@@ -2,7 +2,7 @@
 Freescale i.MX8QM MEK board
 ***************************
 
-This file documents the Buildroot support for the NXP i.MX8QM MEK board.
+This file documents the MikoOS support for the NXP i.MX8QM MEK board.
 
 You will find a reference to the board on nxp.com:
 https://www.nxp.com/design/development-boards/i.mx-evaluation-and-development-boards/i.mx-8quadmax-multisensory-enablement-kit-mek:MCIMX8QM-CPU
@@ -13,7 +13,7 @@ https://www.nxp.com/document/guide/get-started-with-the-i.mx-8quadmax-mek:GS-iMX
 Build
 =====
 
-First, configure Buildroot for the i.MX8QM MEK board:
+First, configure MikoOS for the i.MX8QM MEK board:
 
 $ make freescale_imx8qmmek_defconfig
 
@@ -51,7 +51,7 @@ To determine the device associated to the SD card have a look in the
 
   cat /proc/partitions
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on a SD card. Launch the following
 command as root:
 

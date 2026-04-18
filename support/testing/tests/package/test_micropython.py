@@ -69,7 +69,7 @@ class TestMicroPython(infra.basetest.BRTest):
         self.assertRunOk("/root/mandel.py", timeout=10)
 
         # Check we can use a micropython-lib module.
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
         filename = "file.txt"
         gz_filename = f"{filename}.gz"
         self.assertRunOk(f"echo '{msg}' > {filename}")

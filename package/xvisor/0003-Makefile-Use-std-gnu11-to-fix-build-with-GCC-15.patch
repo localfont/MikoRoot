@@ -15,7 +15,7 @@ Since CFLAGS are hardcoded in the main Makefile, add '-std=gnu11' to
 Upstream: https://github.com/xvisor/xvisor/pull/200
 
 Fixes:
-https://gitlab.com/buildroot.org/buildroot/-/jobs/11042295047
+https://gitlab.com/mikoos.org/mikoos/-/jobs/11042295047
 
 Signed-off-by: Romain Naour <romain.naour@smile.fr>
 ---

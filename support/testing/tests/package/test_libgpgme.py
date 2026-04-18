@@ -22,8 +22,8 @@ class TestLibGpgme(infra.basetest.BRTest):
         self.assertRunOk("gpgme-tool --version")
 
         # Some common data for all the tests.
-        plain_data = "Hello Buildroot!"
-        gpg_userid = "br-test@buildroot"
+        plain_data = "Hello MikoOS!"
+        gpg_userid = "br-test@mikoos"
         plain_file = "reference-plain.txt"
         enc_file = "encrypted.dat"
         dec_file = "decrypted.txt"

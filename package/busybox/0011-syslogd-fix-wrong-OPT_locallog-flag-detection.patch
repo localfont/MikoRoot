@@ -11,7 +11,7 @@ is more-less unusable while no messages are logged locally.
 Signed-off-by: Andrej Valek <andrej.v@skyrain.eu>
 Upstream: https://lists.busybox.net/pipermail/busybox/2024-October/090969.html
 [Thomas: this was reported as beeing needed by Bernd Kuhls at
-https://lore.kernel.org/buildroot/pan$de0bb$35c5a64$ca9b6f21$2408ff40@ID-313208.user.individual.net/,
+https://lore.kernel.org/mikoos/pan$de0bb$35c5a64$ca9b6f21$2408ff40@ID-313208.user.individual.net/,
 but also on the Busybox mailing list at
 https://lists.busybox.net/pipermail/busybox/2023-September/090499.html]
 Signed-off-by: Thomas Petazzoni <thomas.petazzoni@bootlin.com>

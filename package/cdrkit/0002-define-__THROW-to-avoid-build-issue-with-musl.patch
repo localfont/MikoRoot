@@ -4,7 +4,7 @@ Date: Sat, 8 Aug 2015 22:58:57 +0200
 Subject: [PATCH] define __THROW to avoid build issue with musl
 
 Fixes:
-http://autobuild.buildroot.net/results/d27/d2781e70b04a207e2e9397d888032294c7285034/build-end.log
+http://autobuild.mikoos.net/results/d27/d2781e70b04a207e2e9397d888032294c7285034/build-end.log
 
 Signed-off-by: Romain Naour <romain.naour@openwide.fr>
 ---

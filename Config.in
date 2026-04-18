@@ -232,7 +232,7 @@ config BR2_DEFCONFIG_FROM_ENV
 	option env="BR2_DEFCONFIG"
 
 config BR2_DEFCONFIG
-	string "Location to save buildroot config"
+	string "Location to save mikoos config"
 	default BR2_DEFCONFIG_FROM_ENV if BR2_DEFCONFIG_FROM_ENV != ""
 	default "$(CONFIG_DIR)/defconfig"
 	help
@@ -259,7 +259,7 @@ config BR2_HOST_DIR
 	help
 	  Directory to store all the binary files that are built for the
 	  host. This includes the cross compilation toolchain when
-	  building the internal buildroot toolchain.
+	  building the internal mikoos toolchain.
 
 	  The default is $(BASE_DIR)/host
 
@@ -270,7 +270,7 @@ config BR2_PRIMARY_SITE
 	default ""
 	help
 	  Primary site to download from. If this option is set then
-	  buildroot will try to download package source first from this
+	  mikoos will try to download package source first from this
 	  site and try the default if the file is not found.
 	  Valid URIs are:
 	    - URIs recognized by $(WGET)
@@ -295,10 +295,10 @@ if !BR2_PRIMARY_SITE_ONLY
 
 config BR2_BACKUP_SITE
 	string "Backup download site"
-	default "https://sources.buildroot.net"
+	default "https://sources.mikoos.net"
 	help
 	  Backup site to download from. If this option is set then
-	  buildroot will fall back to download package sources from here
+	  mikoos will fall back to download package sources from here
 	  if the normal location fails.
 
 config BR2_KERNEL_MIRROR
@@ -372,19 +372,19 @@ config BR2_CCACHE
 	  This option will enable the use of ccache, a compiler cache.
 	  It will cache the result of previous builds to speed up future
 	  builds. By default, the cache is stored in
-	  $HOME/.buildroot-ccache.
+	  $HOME/.mikoos-ccache.
 
 	  Note that MikoOS does not try to invalidate the cache
 	  contents when the compiler changes in an incompatible way.
 	  Therefore, if you make a change to the compiler version and/or
 	  configuration, you are responsible for purging the ccache
-	  cache by removing the $HOME/.buildroot-ccache directory.
+	  cache by removing the $HOME/.mikoos-ccache directory.
 
 if BR2_CCACHE
 
 config BR2_CCACHE_DIR
 	string "Compiler cache location"
-	default "$(HOME)/.buildroot-ccache"
+	default "$(HOME)/.mikoos-ccache"
 	help
 	  Where ccache should store cached files.
 	  If the Linux shell environment has defined the BR2_CCACHE_DIR

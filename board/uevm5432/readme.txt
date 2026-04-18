@@ -1,7 +1,7 @@
 OMAP5432 uEVM
 =============
 
-This file documents the Buildroot support for the OMAP5432 uEVM[1], a
+This file documents the MikoOS support for the OMAP5432 uEVM[1], a
 single-board computer development platform based on the Texas Instruments
 OMAP5432 system on a chip (SoC).
 

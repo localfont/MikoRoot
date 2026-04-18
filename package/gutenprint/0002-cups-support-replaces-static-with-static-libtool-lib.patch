@@ -4,7 +4,7 @@ Date: Sun, 17 Aug 2014 23:43:20 +0200
 Subject: [PATCH] cups support: replaces -static with -static-libtool-libs
 
 gutenprint rely on the original behaviour of -static, but since commit
-in buildroot "support/libtool: make -static behave like -all-static" [1],
+in mikoos "support/libtool: make -static behave like -all-static" [1],
 the build of genppd is broken.
 
 genppd need to be build statically otherwise the following warning appears:
@@ -14,7 +14,7 @@ genppd need to be build statically otherwise the following warning appears:
             build incorrect PPD files or cause other problems.
             Please review the README and release notes carefully!
 
-[1] http://git.buildroot.net/buildroot/commit/?id=97703978ac870ce2b14ad144f8e082de82aa2c64
+[1] http://git.mikoos.net/mikoos/commit/?id=97703978ac870ce2b14ad144f8e082de82aa2c64
 
 Signed-off-by: Romain Naour <romain.naour@openwide.fr>
 ---

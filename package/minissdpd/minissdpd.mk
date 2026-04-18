@@ -24,7 +24,7 @@ define MINISSDPD_INSTALL_TARGET_CMDS
 endef
 
 # Use dedicated init scripts for systemV and systemd instead of using
-# minissdpd.init.d.script as it is not compatible with buildroot init system
+# minissdpd.init.d.script as it is not compatible with mikoos init system
 define MINISSDPD_INSTALL_INIT_SYSV
 	$(RM) $(TARGET_DIR)/etc/init.d/minissdpd
 	$(INSTALL) -D -m 0755 package/minissdpd/S50minissdpd \

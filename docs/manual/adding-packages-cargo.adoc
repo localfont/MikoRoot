@@ -88,11 +88,11 @@ typical packages will therefore only use a few of them.
   +cargo+ at install time.
 
 A crate can depend on other libraries from crates.io or git
-repositories, listed in its +Cargo.toml+ file. Buildroot automatically
+repositories, listed in its +Cargo.toml+ file. MikoOS automatically
 takes care of downloading such dependencies as part of the download
 step of packages that use the +cargo-package+ infrastructure. Such
 dependencies are then kept together with the package source code in
-the tarball cached in Buildroot's +DL_DIR+, and therefore the hash of
+the tarball cached in MikoOS's +DL_DIR+, and therefore the hash of
 the package's tarball doesn't only cover the source of the package
 itself, but also covers the sources of the dependencies. Thus, a change
 injected into one of the dependencies will also be discovered by the

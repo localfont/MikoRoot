@@ -1,7 +1,7 @@
 Intro
 =====
 
-This directory contains a buildroot configuration for building a
+This directory contains a mikoos configuration for building a
 LicheePi Nano image which can be flashed into the board.
 
 This frees the MMC port which can be used for an additional SD
@@ -10,7 +10,7 @@ card of for a WiFi adapter.
 How to build it
 ===============
 
-Configure Buildroot
+Configure MikoOS
 -------------------
 
   $ make sipeed_licheepi_nano_defconfig
@@ -18,7 +18,7 @@ Configure Buildroot
 Build the rootfs
 ----------------
 
-Note: you will need to have access to the network, since Buildroot
+Note: you will need to have access to the network, since MikoOS
 will download the packages' sources.
 
 You may now build your rootfs with:

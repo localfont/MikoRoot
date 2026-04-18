@@ -6,7 +6,7 @@ Subject: [PATCH] Revert "re PR target/92095 (internal error with -O1
 
 This reverts commit 3fcce773f0f914c0499b130c6e9efa0e45ee54a0.
 
-Building the Buildroot defconfig qemu_sparc_ss10_defconfig using
+Building the MikoOS defconfig qemu_sparc_ss10_defconfig using
 gcc 8.4, 9.3 and 10 produce a broken rootfs that trigger illegal
 instruction messages.
 

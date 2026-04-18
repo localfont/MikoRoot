@@ -60,7 +60,7 @@ your project can be skipped.
    directory. Create an overall +<manufacturer>.mk+ file that
    includes the +.mk+ files of all your packages. Create an overall
    +Config.in+ file that sources the +Config.in+ files of all your
-   packages. Include this +Config.in+ file from Buildroot's
+   packages. Include this +Config.in+ file from MikoOS's
    +package/Config.in+ file.
-. +make savedefconfig+ to save the buildroot configuration.
+. +make savedefconfig+ to save the mikoos configuration.
 . +cp defconfig configs/<boardname>_defconfig+

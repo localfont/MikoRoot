@@ -22,7 +22,7 @@ class TestTesseractOcr(infra.basetest.BRTest):
                            options=["-initrd", cpio_file])
         self.emulator.login()
 
-        msg = "Hello from Buildroot runtime test."
+        msg = "Hello from MikoOS runtime test."
         img_file = "image.pgm"
         txt_basename = "text"
         txt_file = f"{txt_basename}.txt"

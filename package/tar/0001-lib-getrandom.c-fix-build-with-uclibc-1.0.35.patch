@@ -9,10 +9,10 @@ https://git.savannah.gnu.org/cgit/gnulib.git/commit/?id=682cc4e678aceff32dea2a84
 
 In file included from ./sys/random.h:40,
                  from getrandom.c:22:
-/tmp/instance-0/output-1/per-package/tar/host/x86_64-buildroot-linux-uclibc/sysroot/usr/include/sys/random.h:27:35: error: unknown type name 'size_t'
+/tmp/instance-0/output-1/per-package/tar/host/x86_64-mikoos-linux-uclibc/sysroot/usr/include/sys/random.h:27:35: error: unknown type name 'size_t'
    27 | extern int getrandom(void *__buf, size_t count, unsigned int flags)
       |                                   ^~~~~~
-/tmp/instance-0/output-1/per-package/tar/host/x86_64-buildroot-linux-uclibc/sysroot/usr/include/sys/random.h:8:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
+/tmp/instance-0/output-1/per-package/tar/host/x86_64-mikoos-linux-uclibc/sysroot/usr/include/sys/random.h:8:1: note: 'size_t' is defined in header '<stddef.h>'; did you forget to '#include <stddef.h>'?
     7 | #include <features.h>
   +++ |+#include <stddef.h>
     8 | 
@@ -22,7 +22,7 @@ uclibc < 1.0.35, upstream uclibc has been patched with
 https://github.com/wbx-github/uclibc-ng/commit/00972c02c2b6e0a95d5def4a71bdfb188e091782
 
 Fixes:
- - http://autobuild.buildroot.org/results/f40e09d621ab5ba66dd97138dec174acfb7fda2a
+ - http://autobuild.mikoos.org/results/f40e09d621ab5ba66dd97138dec174acfb7fda2a
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 ---

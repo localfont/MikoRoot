@@ -7,7 +7,7 @@ Define global variables as extern in header to fix the build with gcc 10
 which default to -fno-common: https://gcc.gnu.org/gcc-10/porting_to.html
 
 Fixes:
- - http://autobuild.buildroot.org/results/55a8581f11e776439782c228441ef1c8c1243386
+ - http://autobuild.mikoos.org/results/55a8581f11e776439782c228441ef1c8c1243386
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: sent to iftop-users@lists.beasts.org]

@@ -27,7 +27,7 @@ SANITIZER_LINUX/SANITIZER_SOLARIS define depending on the platform.
 
 Fixes:
 
-armeb-buildroot-linux-gnueabi/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
+armeb-mikoos-linux-gnueabi/sysroot/usr/include/features-time64.h:26:5: error: #error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
    26 | #   error "_TIME_BITS=64 is allowed only with _FILE_OFFSET_BITS=64"
 
 Upstream: https://gcc.gnu.org/pipermail/gcc-patches/2024-July/657811.html

@@ -4,7 +4,7 @@ Date: Sat, 31 Oct 2015 12:15:24 +0100
 Subject: [PATCH] Define PTRACE_GETSIGINFO on PowerPC when not available
 
 uClibc 0.9.33.2 does not define PTRACE_GETSIGINFO in PowerPC. Even
-though Buildroot has a uClibc patch doing that, it doesn't solve the
+though MikoOS has a uClibc patch doing that, it doesn't solve the
 case of external uClibc toolchain from other sources (such as
 Crosstool-NG). Therefore, this patch modifies Valgrind to define
 PTRACE_GETSIGINFO on PowerPC to the right value, when such definition

@@ -103,7 +103,7 @@ F:	package/network-manager-openvpn/
 N:	Alex Suykov <alex.suykov@gmail.com>
 F:	package/vboot-utils/
 
-N:	Alexander Clouter <alex+buildroot@digriz.org.uk>
+N:	Alexander Clouter <alex+mikoos@digriz.org.uk>
 F:	package/odhcp6c/
 
 N:	Alexander Dahl <post@lespocky.de>
@@ -271,7 +271,7 @@ F:	support/testing/tests/init/test_systemd_selinux.py
 N:	Antony Pavlov <antonynpavlov@gmail.com>
 F:	package/lsscsi/
 
-N:	ARC Maintainers <arc-buildroot@synopsys.com>
+N:	ARC Maintainers <arc-mikoos@synopsys.com>
 F:	arch/Config.in.arc
 F:	board/synopsys/
 F:	configs/snps_arc700_axs101_defconfig
@@ -1477,7 +1477,7 @@ N:	Ibai Erkiaga <ibai.erkiaga-elorza@amd.com>
 F:	package/binutils-bare-metal/
 F:	package/gcc-bare-metal/
 F:	package/newlib-bare-metal/
-F:	toolchain/toolchain-bare-metal-buildroot/
+F:	toolchain/toolchain-bare-metal-mikoos/
 
 N:	Ilias Apalodimas <apalos@gmail.com>
 F:	package/keepalived/
@@ -2438,7 +2438,7 @@ N:	Michael Fischer <mf@go-sys.de>
 F:	package/gnuplot/
 F:	package/sdl2/
 
-N:	Michael Nosthoff <buildroot@heine.tech>
+N:	Michael Nosthoff <mikoos@heine.tech>
 F:	package/boost/
 F:	package/catch2/
 F:	package/fmt/
@@ -2530,7 +2530,7 @@ F:	package/bootgen/
 F:	package/gcc-bare-metal/
 F:	package/newlib-bare-metal/
 F:	package/xilinx-fpgautil/
-F:	toolchain/toolchain-bare-metal-buildroot/
+F:	toolchain/toolchain-bare-metal-mikoos/
 
 N:	Nicola Di Lieto <nicola.dilieto@gmail.com>
 F:	package/uacme/
@@ -3330,7 +3330,7 @@ F:	package/espflash/
 N:	Trammell Hudson <hudson@trmm.net>
 F:	package/nqptp/
 
-N:	Tudor Holton <buildroot@tudorholton.com>
+N:	Tudor Holton <mikoos@tudorholton.com>
 F:	package/openjdk/
 
 N:	Tzu-Jung Lee <roylee17@gmail.com>

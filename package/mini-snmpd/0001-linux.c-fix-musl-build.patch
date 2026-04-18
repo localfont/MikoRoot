@@ -6,21 +6,21 @@ Subject: [PATCH] linux.c: fix musl build
 Remove include on linux/if_link.h to avoid the following build failure
 with musl:
 
-In file included from /home/buildroot/autobuild/instance-2/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/linux/kernel.h:4,
-                 from /home/buildroot/autobuild/instance-2/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/linux/netlink.h:4,
-                 from /home/buildroot/autobuild/instance-2/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/linux/if_link.h:5,
+In file included from /home/mikoos/autobuild/instance-2/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/linux/kernel.h:4,
+                 from /home/mikoos/autobuild/instance-2/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/linux/netlink.h:4,
+                 from /home/mikoos/autobuild/instance-2/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/linux/if_link.h:5,
                  from linux.c:21:
-/home/buildroot/autobuild/instance-2/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/linux/sysinfo.h:7:8: error: redefinition of 'struct sysinfo'
+/home/mikoos/autobuild/instance-2/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/linux/sysinfo.h:7:8: error: redefinition of 'struct sysinfo'
  struct sysinfo {
         ^~~~~~~
 In file included from linux.c:19:
-/home/buildroot/autobuild/instance-2/output-1/host/i586-buildroot-linux-musl/sysroot/usr/include/sys/sysinfo.h:10:8: note: originally defined here
+/home/mikoos/autobuild/instance-2/output-1/host/i586-mikoos-linux-musl/sysroot/usr/include/sys/sysinfo.h:10:8: note: originally defined here
  struct sysinfo {
         ^~~~~~~
   CC       mini_snmpd-globals.o
 
 Fixes:
- - http://autobuild.buildroot.org/results/6903a0f685076b4a2c2824de6158da40e9e712d8
+ - http://autobuild.mikoos.org/results/6903a0f685076b4a2c2824de6158da40e9e712d8
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

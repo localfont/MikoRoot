@@ -9,10 +9,10 @@ Content-Transfer-Encoding: 8bit
 
 Fixes:
 
-/home/thomas/buildroot/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/ThirdParty/ANGLE/src/common/mathutil.h:575:8: error: ‘uint32_t’ does not name a type
+/home/thomas/mikoos/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/ThirdParty/ANGLE/src/common/mathutil.h:575:8: error: ‘uint32_t’ does not name a type
   575 | inline uint32_t RotL(uint32_t x, int8_t r)
       |        ^~~~~~~~
-/home/thomas/buildroot/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/ThirdParty/ANGLE/src/common/mathutil.h:19:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
+/home/thomas/mikoos/br/output-all/build/qt5webkit-5.212.0-alpha4/Source/ThirdParty/ANGLE/src/common/mathutil.h:19:1: note: ‘uint32_t’ is defined in header ‘<cstdint>’; this is probably fixable by adding ‘#include <cstdint>’
    18 | #include <stdlib.h>
   +++ |+#include <cstdint>
    19 |

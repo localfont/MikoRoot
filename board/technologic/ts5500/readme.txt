@@ -1,7 +1,7 @@
 Technologic Systems TS-5x00 SBCs
 ================================
 
-This document explains how to set up a basic Buildroot system for the
+This document explains how to set up a basic MikoOS system for the
 Technologic Systems TS-5x00 serie of x86-based Single Board Computers.
 
 TS-5x00 Single Board Computers are based on the AMD Elan520 processor. For more

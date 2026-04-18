@@ -22,7 +22,7 @@ NETOPEER2_CONF_OPTS = \
 # Set a build specific SYSREPO_SHM_PREFIX to ensure we can safely delete the
 # files. This also ensures that concurrent parallel builds will not be
 # affected mutualy.
-NETOPEER2_SYSREPO_SHM_PREFIX = sr_buildroot$(subst /,_,$(CONFIG_DIR))_netopeer2
+NETOPEER2_SYSREPO_SHM_PREFIX = sr_mikoos$(subst /,_,$(CONFIG_DIR))_netopeer2
 
 NETOPEER2_MAKE_ENV = \
 	SYSREPOCTL_EXECUTABLE=$(HOST_DIR)/bin/sysrepoctl \

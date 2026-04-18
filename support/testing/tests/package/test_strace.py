@@ -21,7 +21,7 @@ class TestStrace(infra.basetest.BRTest):
         # Check the program can execute.
         self.assertRunOk("strace --version")
 
-        test_file = "buildroot-strace-test.txt"
+        test_file = "mikoos-strace-test.txt"
         test_file_mode = "0600"
         strace_log = "strace.log"
 

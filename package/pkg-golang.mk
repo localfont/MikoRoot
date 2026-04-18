@@ -5,7 +5,7 @@
 # files for Go packages. It should be used for all packages that are written in
 # go.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 #
@@ -43,7 +43,7 @@ define inner-golang-package
 # Legacy
 ifneq ($$($(2)_INSTALL_BINS),)
 $$(error Package $(1) sets $(2)_INSTALL_BINS, which is no longer supported; \
-see the manual: https://buildroot.org/manual.html#migrating-golang-package )
+see the manual: https://mikoos.org/manual.html#migrating-golang-package )
 endif
 
 $(2)_BUILD_OPTS += \
@@ -139,8 +139,8 @@ endif
 ifeq ($(BR2_aarch64),y)
 # Go forces use of the Gold linker on aarch64 due to a bug in BFD that
 # is fixed in Binutils >= 2.41 (that includes all versions provided by
-# Buildroot). Forcing Gold will break with toolchains that don't
-# provide it (like the Buildroot toolchains), so override the flag and
+# MikoOS). Forcing Gold will break with toolchains that don't
+# provide it (like the MikoOS toolchains), so override the flag and
 # use BFD.
 # See: https://github.com/golang/go/issues/22040
 $(2)_EXTLDFLAGS += -fuse-ld=bfd

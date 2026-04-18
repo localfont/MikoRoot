@@ -9,10 +9,10 @@ and c427ed678f39fd144d784f2e970bd8c52f425e14 which reverted
 c34070e08199491fe9653617364f4aea9b9b22be:
 
 In file included from ../src/dex-uring-aio-backend.c:29:
-/home/autobuild/autobuild/instance-7/output-1/host/mips-buildroot-linux-musl/sysroot/usr/include/liburing.h:224:39: error: unknown type name 'cpu_set_t'
+/home/autobuild/autobuild/instance-7/output-1/host/mips-mikoos-linux-musl/sysroot/usr/include/liburing.h:224:39: error: unknown type name 'cpu_set_t'
   224 |                                 const cpu_set_t *mask);
       |                                       ^~~~~~~~~
-/home/autobuild/autobuild/instance-7/output-1/host/mips-buildroot-linux-musl/sysroot/usr/include/liburing.h:1212:48: error: unknown type name 'loff_t'; did you mean 'off_t'?
+/home/autobuild/autobuild/instance-7/output-1/host/mips-mikoos-linux-musl/sysroot/usr/include/liburing.h:1212:48: error: unknown type name 'loff_t'; did you mean 'off_t'?
  1212 |                                        int fd, loff_t len)
       |                                                ^~~~~~
       |                                                off_t

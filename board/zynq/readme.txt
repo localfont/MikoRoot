@@ -1,7 +1,7 @@
-This is the Buildroot support for Zynq boards.  Zynq boards are available from
+This is the MikoOS support for Zynq boards.  Zynq boards are available from
 Xilinx and some third party vendors, but the build procedure is very similar.
 
-Currently, four boards are natively supported by Buildroot:
+Currently, four boards are natively supported by MikoOS:
  - Xilinx ZC702 board (zynq_zc702_defconfig)
  - Xilinx ZC706 board (zynq_zc706_defconfig)
  - Avnet ZedBoard (zynq_zed_defconfig)
@@ -52,7 +52,7 @@ Support for other boards:
 If you want to build a system for other boards based on the same SoC
 (for ex. Digilent Zybo board), and the board is already supported by
 the upstream kernel and U-Boot, you simply need to change the
-following Buildroot options:
+following MikoOS options:
 
  - Kernel Device Tree file name (BR2_LINUX_KERNEL_INTREE_DTS_NAME)
  - U-Boot (BR2_TARGET_UBOOT_CUSTOM_MAKEOPTS="DEVICE_TREE=<dts file name>")
@@ -70,7 +70,7 @@ board/xilinx/zynq/ directory of U-Boot for natively supported ps7_init
 files. If the ps7_init files for your board are not found in U-Boot,
 you need to add them by yourself.
 
-1) Start with a defconfig supported by Buildroot (e.g. Zedboard)
+1) Start with a defconfig supported by MikoOS (e.g. Zedboard)
     make zynq_zed_defconfig
 
 2) make menuconfig

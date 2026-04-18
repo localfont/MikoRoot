@@ -1,6 +1,6 @@
 
---- Module implementing the LuaRocks "buildroot" command.
-local buildroot = {}
+--- Module implementing the LuaRocks "mikoos" command.
+local mikoos = {}
 
 local dir = require("luarocks.dir")
 local fs = require("luarocks.fs")
@@ -10,18 +10,18 @@ local search = require("luarocks.search")
 local download = require("luarocks.download")
 local fetch = require("luarocks.fetch")
 
-function buildroot.add_to_parser(parser)
-   local cmd = parser:command("buildroot", [[
-This addon generates Buildroot package files of a rock.
+function mikoos.add_to_parser(parser)
+   local cmd = parser:command("mikoos", [[
+This addon generates MikoOS package files of a rock.
 First argument is the name of a rock, the second argument is optional
-and needed when Buildroot uses another name (usually prefixed by lua-).
+and needed when MikoOS uses another name (usually prefixed by lua-).
 Files are generated with the source content of the rock and more
 especially the rockspec. So, the rock is downloaded and unpacked.
 ]], util.see_also())
-      :summary("generate buildroot package files of a rock.")
+      :summary("generate mikoos package files of a rock.")
 
    cmd:argument("rockname", "the name of a rock to be fetched and unpacked.")
-   cmd:argument("brname", "the name used by Buildroot.")
+   cmd:argument("brname", "the name used by MikoOS.")
       :args("?")
 end
 
@@ -264,7 +264,7 @@ local function generate_hash (rockspec, lcname, rock_file, licenses, digest)
    local fname = 'package/' .. lcname .. '/' .. lcname .. '.hash'
    local f = assert(io.open(fname, 'w'))
    util.printout('write ' .. fname)
-   f:write('# computed by luarocks/buildroot\n')
+   f:write('# computed by luarocks/mikoos\n')
    f:write('sha256  ' .. digest[rock_file] .. '  ' .. rock_file .. '\n')
    for i = 1, #licenses do
       local file = licenses[i]
@@ -313,9 +313,9 @@ local function generate_test (rockspec, lcname)
    f:close()
 end
 
---- Driver function for the "buildroot" command.
+--- Driver function for the "mikoos" command.
 -- @return boolean: true if successful
-function buildroot.command(args)
+function mikoos.command(args)
    local rockname = assert(args.rockname)
    local fsname = args.brname or rockname
 
@@ -411,4 +411,4 @@ function buildroot.command(args)
    return true
 end
 
-return buildroot
+return mikoos

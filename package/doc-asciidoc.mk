@@ -64,7 +64,7 @@ asciidoc-check-dependencies-$(4):
 $(1)-check-dependencies-$(4): asciidoc-check-dependencies-$(4)
 	$$(Q)$$(foreach hook,$$($(2)_CHECK_DEPENDENCIES_$$(call UPPERCASE,$(4))_HOOKS),$$(call $$(hook))$$(sep))
 
-# Include Buildroot's AsciiDoc configuration first:
+# Include MikoOS's AsciiDoc configuration first:
 #  - generic configuration,
 #  - then output-specific configuration
 ifneq ($$(wildcard $$(BR_ASCIIDOC_CONF)),)

@@ -41,7 +41,7 @@ be wrapped to fit 72 columns, where tab counts for 8, so 62 characters
 in the text itself. The help text must mention the upstream URL of the
 project after an empty line.
 
-As a convention specific to Buildroot, the ordering of the attributes
+As a convention specific to MikoOS, the ordering of the attributes
 is as follows:
 
 . The type of option: +bool+, +string+... with the prompt
@@ -108,7 +108,7 @@ The host package will then be available from the +Host utilities+ menu.
 ==== Choosing +depends on+ or +select+
 
 The +Config.in+ file of your package must also ensure that
-dependencies are enabled. Typically, Buildroot uses the following
+dependencies are enabled. Typically, MikoOS uses the following
 rules:
 
 * Use a +select+ type of dependency for dependencies on
@@ -121,7 +121,7 @@ rules:
   semantic.
 
 * Use a +depends on+ type of dependency when the user really needs to
-  be aware of the dependency. Typically, Buildroot uses this type of
+  be aware of the dependency. Typically, MikoOS uses this type of
   dependency for dependencies on target architecture, MMU support and
   toolchain options (see xref:dependencies-target-toolchain-options[]),
   or for dependencies on "big" things, such as the X.org system.
@@ -351,9 +351,9 @@ use in the comment.
 ** Dependency symbol: +!BR2_STATIC_LIBS+
 ** Comment string: +dynamic library+
 
-==== Dependencies on a Linux kernel built by buildroot
+==== Dependencies on a Linux kernel built by mikoos
 
-Some packages need a Linux kernel to be built by buildroot. These are
+Some packages need a Linux kernel to be built by mikoos. These are
 typically kernel modules or firmware. A comment should be added in the
 Config.in file to express this dependency, similar to dependencies on
 toolchain options. The general format is:
@@ -522,13 +522,13 @@ sha256  01b1f9f2c8ee648a7a596a1abe8aa4ed7899b1c9e5551bda06da6e422b04aa55  doc/CO
 ----
 
 If the +.hash+ file is present, and it contains one or more hashes for a
-downloaded file, the hash(es) computed by Buildroot (after download) must
+downloaded file, the hash(es) computed by MikoOS (after download) must
 match the hash(es) stored in the +.hash+ file. If one or more hashes do
-not match, Buildroot considers this an error, deletes the downloaded file,
+not match, MikoOS considers this an error, deletes the downloaded file,
 and aborts.
 
 If the +.hash+ file is present, but it does not contain a hash for a
-downloaded file, Buildroot considers this an error and aborts. However,
+downloaded file, MikoOS considers this an error and aborts. However,
 the downloaded file is left in the download directory since this
 typically indicates that the +.hash+ file is wrong but the downloaded
 file is probably OK.
@@ -536,13 +536,13 @@ file is probably OK.
 Hashes are currently checked for files fetched from http/ftp servers,
 Git or subversion repositories, files copied using scp and local files.
 Hashes are not checked for other version control systems (such as CVS,
-mercurial) because Buildroot currently does not generate reproducible
+mercurial) because MikoOS currently does not generate reproducible
 tarballs when source code is fetched from such version control
 systems.
 
 Additionally, for packages for which it is possible to specify a custom
 version (e.g. a custom version string, a remote tarball URL, or a VCS
-repository location and changeset), Buildroot can't carry hashes for
+repository location and changeset), MikoOS can't carry hashes for
 those. It is however possible to xref:customize-hashes[provide a list of
 extra hashes] that can cover such cases.
 
@@ -558,7 +558,7 @@ If the +.hash+ file is missing, then no check is done at all.
 === The +SNNfoo+ start script
 
 Packages that provide a system daemon usually need to be started somehow
-at boot.  Buildroot comes with support for several init systems, some
+at boot.  MikoOS comes with support for several init systems, some
 are considered tier one (see xref:init-system[]), while others are also
 available but do not have the same level of integration.  Ideally, all
 packages providing a system daemon should provide a start script for
@@ -568,8 +568,8 @@ For consistency, the start script must follow the style and composition
 as shown in the reference: +package/busybox/S01syslogd+. An annotated
 example of this style is shown below. There is no specific coding style
 for systemd unit files, but if a package comes with its own unit file,
-that is preferred over a buildroot specific one, if it is compatible
-with buildroot.
+that is preferred over a mikoos specific one, if it is compatible
+with mikoos.
 
 The name of the start script is composed of the +SNN+ and the daemon
 name.  The +NN+ is the start order number which needs to be carefully

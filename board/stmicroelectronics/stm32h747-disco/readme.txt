@@ -1,7 +1,7 @@
 STM32H747 Discovery
 ===================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the STM32H747 Discovery evaluation platform.
 
 Building
@@ -20,7 +20,7 @@ It will flash the U-Boot bootloader.
 Creating SD card
 ----------------
 
-Buildroot prepares an "sdcard.img" image in the output/images/ directory,
+MikoOS prepares an "sdcard.img" image in the output/images/ directory,
 ready to be dumped on a SD card. Launch the following command as root:
 
   dd if=output/images/sdcard.img of=/dev/<your-sd-device>

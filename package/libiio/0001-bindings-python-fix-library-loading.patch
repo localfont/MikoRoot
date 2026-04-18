@@ -5,7 +5,7 @@ Subject: [PATCH] bindings: python: fix library loading
 
 On Linux the find_library() function requires ld, gcc, objdump
 or ldconfig on the target, which might not be present on a
-buildroot system. [1]
+mikoos system. [1]
 We do not actually need this function at all, as we know the iio library
 will be referencable in the system under the name "libiio.so".
 So instead of kicking of this complicated cross-platform/cross-distro
@@ -14,11 +14,11 @@ know.
 
 [1] https://docs.python.org/3/library/ctypes.html#finding-shared-libraries
 
-Upstream: N/A, buildroot doesn't have to care about different OS's and
+Upstream: N/A, mikoos doesn't have to care about different OS's and
 distro setups, so we can just hardcode the lib name, but we cannot
 submit that upstream.
 
-Signed-off-by: Marcus Hoffmann <buildroot@bubu1.eu>
+Signed-off-by: Marcus Hoffmann <mikoos@bubu1.eu>
 ---
  bindings/python/iio.py | 2 +-
  1 file changed, 1 insertion(+), 1 deletion(-)

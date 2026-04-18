@@ -2,9 +2,9 @@ From 89648b76e35dc4657942c861ed9dbfbfe5a3df28 Mon Sep 17 00:00:00 2001
 From: Thomas De Schampheleire <thomas.de_schampheleire@nokia.com>
 Date: Fri, 5 Mar 2021 14:09:23 +0100
 Subject: [PATCH] Makefile.system: don't specify optimization level
- [buildroot-specific]
+ [mikoos-specific]
 
-Buildroot will pass an optimization level, but it is ignored because the
+MikoOS will pass an optimization level, but it is ignored because the
 openblas makefiles _append_ to the flags passed on the command-line.
 
 The CFLAGS/FFLAGS would e.g. contain '-Os -O2' in which -O2 survives.

@@ -10,7 +10,7 @@ TOOLCHAIN_EXTERNAL_ADD_TOOLCHAIN_DEPENDENCY = NO
 # So, add the musl-compat-headers package that will install those files,
 # into the staging directory:
 #   sys/queue.h:  header from NetBSD
-#   sys/cdefs.h:  minimalist header bundled in Buildroot
+#   sys/cdefs.h:  minimalist header bundled in MikoOS
 ifeq ($(BR2_TOOLCHAIN_USES_MUSL),y)
 TOOLCHAIN_EXTERNAL_DEPENDENCIES += musl-compat-headers
 endif

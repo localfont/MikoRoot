@@ -5,7 +5,7 @@
 # package .mk files for virtual packages. It should be used for all
 # virtual packages.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this virtual infrastructure requires

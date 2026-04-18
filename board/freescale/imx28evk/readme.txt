@@ -2,7 +2,7 @@
 Freescale i.MX28 EVK board
 **************************
 
-This file documents the Buildroot support for the Freescale i.MX28 EVK board.
+This file documents the MikoOS support for the Freescale i.MX28 EVK board.
 
 Read the i.MX28 Evaluation Kit Quick Start Guide [1] for an introduction to the
 board.
@@ -10,7 +10,7 @@ board.
 Build
 =====
 
-First, configure Buildroot for your i.MX28 EVK board:
+First, configure MikoOS for your i.MX28 EVK board:
 
   make imx28evk_defconfig
 

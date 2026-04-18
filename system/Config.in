@@ -37,7 +37,7 @@ if BR2_ROOTFS_SKELETON_DEFAULT
 
 config BR2_TARGET_GENERIC_HOSTNAME
 	string "System hostname"
-	default "buildroot"
+	default "mikoos"
 	help
 	  Select system hostname to be stored in /etc/hostname.
 
@@ -234,9 +234,9 @@ config BR2_INIT_SYSTEMD_VAR_OVERLAYFS
 	  Mount an overlayfs on /var, with the upper as a tmpfs.
 
 	  To use a persistent storage, provide either a mount unit or a
-	  fstab line to mount it on /run/buildroot/mounts/var, e.g.
+	  fstab line to mount it on /run/mikoos/mounts/var, e.g.
 
-	  /dev/sdc1    /run/buildroot/mounts/var    ext4    defaults
+	  /dev/sdc1    /run/mikoos/mounts/var    ext4    defaults
 
 config BR2_INIT_SYSTEMD_VAR_NONE
 	bool "do nothing"
@@ -511,7 +511,7 @@ config BR2_TARGET_GENERIC_REMOUNT_ROOTFS_RW
 	default y
 	help
 	  The root filesystem is typically mounted read-only at boot.
-	  By default, buildroot remounts it in read-write mode early
+	  By default, mikoos remounts it in read-write mode early
 	  during the boot process.
 	  Say no here if you would rather like your root filesystem to
 	  remain read-only.

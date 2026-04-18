@@ -11,7 +11,7 @@ led.c:86:42: error: assignment to 'struct cwiid_btn_message *' from incompatible
       |                                          ^
 
 Fixes:
- - http://autobuild.buildroot.org/results/a3bde74ff2137d088f4261e62930859bfe460cb9
+ - http://autobuild.mikoos.org/results/a3bde74ff2137d088f4261e62930859bfe460cb9
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/abstrakraft/cwiid/pull/47

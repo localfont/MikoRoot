@@ -82,12 +82,12 @@ HOST_GCC_COMMON_CONF_OPTS = \
 	--with-gmp=$(HOST_DIR) \
 	--with-mpc=$(HOST_DIR) \
 	--with-mpfr=$(HOST_DIR) \
-	--with-pkgversion="Buildroot $(BR2_VERSION_FULL)" \
-	--with-bugurl="https://gitlab.com/buildroot.org/buildroot/-/issues" \
+	--with-pkgversion="MikoOS $(BR2_VERSION_FULL)" \
+	--with-bugurl="https://gitlab.com/mikoos.org/mikoos/-/issues" \
 	--without-zstd
 
 ifeq ($(BR2_REPRODUCIBLE),y)
-HOST_GCC_COMMON_CONF_OPTS += --with-debug-prefix-map=$(BASE_DIR)=buildroot
+HOST_GCC_COMMON_CONF_OPTS += --with-debug-prefix-map=$(BASE_DIR)=mikoos
 endif
 
 # Don't build documentation. It takes up extra space / build time,
@@ -99,7 +99,7 @@ HOST_GCC_COMMON_MAKE_OPTS = \
 	gcc_cv_prog_makeinfo_modern=no
 
 # Target binaries and libraries which are being built as a part of GCC
-# don't use Buildroot toolchain wrapper because, instead its very own "xgcc"
+# don't use MikoOS toolchain wrapper because, instead its very own "xgcc"
 # binary is used. And so we need to explicitly propagate ALL the flags
 # directly to "xgcc" and that is done via configure-time environment
 # variables, see below setup of HOST_GCC_COMMON_CONF_ENV.
@@ -329,11 +329,11 @@ HOST_GCC_COMMON_CCACHE_HASH_FILES += $(ARCH_XTENSA_OVERLAY_FILE)
 endif
 
 # _CONF_OPTS contains some references to the absolute path of $(HOST_DIR)
-# and a reference to the Buildroot git revision (BR2_VERSION_FULL),
+# and a reference to the MikoOS git revision (BR2_VERSION_FULL),
 # so substitute those away.
 HOST_GCC_COMMON_TOOLCHAIN_WRAPPER_ARGS += -DBR_CCACHE_HASH=\"`\
 	printf '%s\n' $(subst $(HOST_DIR),@HOST_DIR@,\
-		$(subst --with-pkgversion="Buildroot $(BR2_VERSION_FULL)",,$($(PKG)_CONF_OPTS))) \
+		$(subst --with-pkgversion="MikoOS $(BR2_VERSION_FULL)",,$($(PKG)_CONF_OPTS))) \
 		| sha256sum - $(HOST_GCC_COMMON_CCACHE_HASH_FILES) \
 		| cut -c -64 | tr -d '\n'`\"
 endif # BR2_CCACHE
@@ -345,7 +345,7 @@ endif # BR2_CCACHE
 # match the *cc-* pattern. Therefore, an additional case is added for *-ar,
 # *-ranlib and *-nm.
 # According to gfortran manpage, it supports all options supported by gcc, so
-# add gfortran to the list of the program called via the Buildroot wrapper.
+# add gfortran to the list of the program called via the MikoOS wrapper.
 # Avoid that a .br_real is symlinked a second time.
 # Also create <arch>-linux-<tool> symlinks.
 define HOST_GCC_INSTALL_WRAPPER_AND_SIMPLE_SYMLINKS

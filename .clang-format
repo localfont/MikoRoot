@@ -9,7 +9,7 @@
 #   https://clang.llvm.org/docs/ClangFormatStyleOptions.html
 #
 
-# Buildroot: imported from Linux 5.15.6, with minimal modifications.
+# MikoOS: imported from Linux 5.15.6, with minimal modifications.
 #            Please note, this is not enforced at the moment. Intended
 #            as an aid when working with in-tree C files, like
 #            makedevs.c
@@ -58,7 +58,7 @@ BreakConstructorInitializersBeforeComma: false
 #BreakConstructorInitializers: BeforeComma # Unknown to clang-format-4.0
 BreakAfterJavaFieldAnnotations: false
 BreakStringLiterals: false
-ColumnLimit: 132 # Specially for Buildroot
+ColumnLimit: 132 # Specially for MikoOS
 CommentPragmas: '^ IWYU pragma:'
 #CompactNamespaces: false # Unknown to clang-format-4.0
 ConstructorInitializerAllOnOneLineOrOnePerLine: false

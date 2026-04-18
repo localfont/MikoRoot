@@ -8,20 +8,20 @@ abseil and other google tools are now subject to
 mandates gcc 7.3.1 and C++14 as minimum versions. So replace -std=c++11
 by -std=c++14 to fix following build failure:
 
-checking whether /home/buildroot/autobuild/instance-0/output-1/host/bin/sparc64-linux-g++ accepts -std=c++11
+checking whether /home/mikoos/autobuild/instance-0/output-1/host/bin/sparc64-linux-g++ accepts -std=c++11
 configure:25105: result: yes
 configure:25127: checking grpc++/grpc++.h usability
-configure:25127: /home/buildroot/autobuild/instance-0/output-1/host/bin/sparc64-linux-g++ -c -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O1 -g0 -D_FORTIFY_SOURCE=2 -std=c++11  -DNOMINMAX  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 conftest.cpp >&5
-In file included from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/absl/base/config.h:86,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/absl/base/const_init.h:25,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/absl/synchronization/mutex.h:67,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/grpcpp/impl/codegen/sync.h:32,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/grpcpp/completion_queue.h:41,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/grpcpp/channel.h:25,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/grpcpp/grpcpp.h:52,
-                 from /home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/grpc++/grpc++.h:26,
+configure:25127: /home/mikoos/autobuild/instance-0/output-1/host/bin/sparc64-linux-g++ -c -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O1 -g0 -D_FORTIFY_SOURCE=2 -std=c++11  -DNOMINMAX  -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64 conftest.cpp >&5
+In file included from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/absl/base/config.h:86,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/absl/base/const_init.h:25,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/absl/synchronization/mutex.h:67,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/grpcpp/impl/codegen/sync.h:32,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/grpcpp/completion_queue.h:41,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/grpcpp/channel.h:25,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/grpcpp/grpcpp.h:52,
+                 from /home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/grpc++/grpc++.h:26,
                  from conftest.cpp:167:
-/home/buildroot/autobuild/instance-0/output-1/host/sparc64-buildroot-linux-gnu/sysroot/usr/include/absl/base/policy_checks.h:79:2: error: #error "C++ versions less than C++14 are not supported."
+/home/mikoos/autobuild/instance-0/output-1/host/sparc64-mikoos-linux-gnu/sysroot/usr/include/absl/base/policy_checks.h:79:2: error: #error "C++ versions less than C++14 are not supported."
    79 | #error "C++ versions less than C++14 are not supported."
       |  ^~~~~
 
@@ -29,7 +29,7 @@ In file included from /home/buildroot/autobuild/instance-0/output-1/host/sparc64
 [1] https://github.com/google/oss-policies-info/blob/b842c39db88e6569dfe2cf98be434b03507cb503/foundational-cxx-support-matrix.md
 
 Fixes:
- - http://autobuild.buildroot.org/results/e2cf909ab3c356f1881fd18cfa039e87faa10d7d
+ - http://autobuild.mikoos.org/results/e2cf909ab3c356f1881fd18cfa039e87faa10d7d
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Upstream: https://github.com/collectd/collectd/commit/d355618813bb8180e460ba45a0ebd3ce5183e267

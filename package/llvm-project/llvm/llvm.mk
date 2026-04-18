@@ -120,7 +120,7 @@ LLVM_CONF_OPTS += -DLLVM_INSTALL_TOOLCHAIN_ONLY=OFF
 HOST_LLVM_CONF_OPTS += -DLLVM_APPEND_VC_REV=OFF
 LLVM_CONF_OPTS += -DLLVM_APPEND_VC_REV=OFF
 
-# No backtrace package in Buildroot.
+# No backtrace package in MikoOS.
 # https://documentation.backtrace.io
 HOST_LLVM_CONF_OPTS += -DLLVM_ENABLE_BACKTRACES=OFF
 LLVM_CONF_OPTS += -DLLVM_ENABLE_BACKTRACES=OFF
@@ -149,7 +149,7 @@ LLVM_CONF_OPTS += -DLLVM_ENABLE_ZLIB=OFF
 HOST_LLVM_CONF_OPTS += -DLLVM_ENABLE_LIBXML2=OFF
 LLVM_CONF_OPTS += -DLLVM_ENABLE_LIBXML2=OFF
 
-# Disable optional Z3Prover since there is no such package in Buildroot.
+# Disable optional Z3Prover since there is no such package in MikoOS.
 HOST_LLVM_CONF_OPTS += -DLLVM_ENABLE_Z3_SOLVER=OFF
 LLVM_CONF_OPTS += -DLLVM_ENABLE_Z3_SOLVER=OFF
 

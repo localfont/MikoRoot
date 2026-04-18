@@ -1,5 +1,5 @@
 From 42b2ede4dadcf88293e408bcdf5645995b61b148 Mon Sep 17 00:00:00 2001
-From: Michael Nosthoff <buildroot@heine.tech>
+From: Michael Nosthoff <mikoos@heine.tech>
 Date: Wed, 29 Oct 2025 16:48:20 +0100
 Subject: [PATCH] configure.ac: fix grpc build
 
@@ -8,7 +8,7 @@ Google bumped it's compiler requirements again [1], hence the c++ version needs 
 
 [1] https://github.com/google/oss-policies-info/blob/a5e3ed43d45ad615a20201cea8f7282f595555da/foundational-cxx-support-matrix.md
 
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 Upstream: https://github.com/collectd/collectd/commit/42b2ede4dadcf88293e408bcdf5645995b61b148
 ---
  configure.ac | 16 ++++++++--------

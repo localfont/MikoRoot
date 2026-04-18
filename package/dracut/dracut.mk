@@ -35,7 +35,7 @@ HOST_DRACUT_POST_INSTALL_HOOKS += HOST_DRACUT_POST_INSTALL_LIBC_LINKS_MODULE
 ifeq ($(BR2_INIT_BUSYBOX),y)
 # Dracut does not support busybox init (systemd init is assumed to work
 # out of the box, though). It provides a busybox module, that does not
-# use the same paths as buildroot, and is not meant to be used as an init
+# use the same paths as mikoos, and is not meant to be used as an init
 # system.
 # So it is simpler for users to disable the standard 'busybox' module in
 # the configuration file, and enable the "busybox-init' module instead.

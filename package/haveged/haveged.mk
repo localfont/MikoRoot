@@ -10,7 +10,7 @@ HAVEGED_LICENSE = GPL-3.0+
 HAVEGED_LICENSE_FILES = COPYING
 HAVEGED_SELINUX_MODULES = entropyd
 
-# '--disable-init' as buildroot ships its own sysv/systemd init files
+# '--disable-init' as mikoos ships its own sysv/systemd init files
 HAVEGED_CONF_OPTS = \
 	--enable-daemon \
 	--disable-diagnostic \

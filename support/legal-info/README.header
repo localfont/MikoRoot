@@ -1,15 +1,15 @@
-Most of the packages that were used by Buildroot to produce the image files,
-including Buildroot itself, have open-source licenses. It is your
+Most of the packages that were used by MikoOS to produce the image files,
+including MikoOS itself, have open-source licenses. It is your
 responsibility to comply to the requirements of these licenses.
-To make this easier for you, Buildroot collected in this directory some
+To make this easier for you, MikoOS collected in this directory some
 material you may need to get it done.
 
 This material is composed of the following items.
  * The scripts used to control compilation of the packages and the generation
-   of image files, i.e. the Buildroot sources.
+   of image files, i.e. the MikoOS sources.
    Note: this has not been saved due to technical limitations, you must
    collect it manually.
- * The Buildroot configuration file; this has been saved in buildroot.config.
+ * The MikoOS configuration file; this has been saved in mikoos.config.
  * The toolchain (cross-compiler and related tools) used to generate all the
    compiled programs.
    Note: this may have not been saved due to technical limitations, you may
@@ -21,9 +21,9 @@ This material is composed of the following items.
    named 'series' that lists the patches in the order they were
    applied. Patches are under the same license as the files that they
    modify in the original package.
-   Note: Buildroot applies additional patches to Libtool scripts of
+   Note: MikoOS applies additional patches to Libtool scripts of
    autotools-based packages. These patches can be found under
-   support/libtool in the Buildroot source and, due to technical
+   support/libtool in the MikoOS source and, due to technical
    limitations, are not saved with the package sources. You may need
    to collect them manually.
  * Two manifest files listing the configured packages and related

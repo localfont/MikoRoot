@@ -20,7 +20,7 @@ class TestLibCurl(infra.basetest.BRTest):
                            options=["-initrd", cpio_file])
         self.emulator.login()
 
-        msg = "Hello Buildroot!"
+        msg = "Hello MikoOS!"
         fname = "file.txt"
         url = f"http://localhost/{fname}"
 

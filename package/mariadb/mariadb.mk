@@ -37,13 +37,13 @@ MARIADB_CONF_OPTS += -DWITH_READLINE=ON
 MARIADB_CONF_OPTS += -DWITH_UNIT_TESTS=0
 
 # Mroonga needs libstemmer. Some work still needs to be done before it can be
-# included in buildroot. Disable it for now.
+# included in mikoos. Disable it for now.
 MARIADB_CONF_OPTS += -DWITHOUT_MROONGA=1
 
 # This value is determined automatically during straight compile by compiling
 # and running a test code. You cannot do that during cross-compile. However the
 # stack grows downward in most if not all modern systems. The only exception I
-# am aware of is PA-RISC which is not supported by buildroot. Therefore it makes
+# am aware of is PA-RISC which is not supported by mikoos. Therefore it makes
 # sense to hardcode the value. If an arch is added the stack of which grows up
 # one should expect unpredictable behavior at run time.
 MARIADB_CONF_OPTS += -DSTACK_DIRECTION=-1

@@ -27,14 +27,14 @@ $ sudo usermod -a -G dialout $(whoami)
 
 To enable the above, it is sometimes necessary to logout and login again.
 
-Buildroot Configuration
+MikoOS Configuration
 -----------------------
 
 Unlike other K210 based boards (Sipeed boards), U-Boot does not work on the
 KD233 board due to the different wiring for the SD-Card mmc controller. As such,
 the KD233 board can only be used by directly booting into Linux Kernel.
 
-buildroot can be configured to do so using the canaan_kd233_defconfig
+mikoos can be configured to do so using the canaan_kd233_defconfig
 configuration file. This configuration allows building a bootable kernel image
 with a built-in initramfs root file system (the board SD card is not used). The
 built kernel image can be flashed directly to the board ROM for direct booting.
@@ -71,7 +71,7 @@ not reboot automatically).
 The output will be similar to the following.
 
 ```
-[    0.000000] Linux version 5.17.0 (foo@bar.com) (riscv64-buildroot-linux-uclibc-gcc.br_real (Buildroot 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #2 SMP Thu Apr 21 16:40:44 JST 2022
+[    0.000000] Linux version 5.17.0 (foo@bar.com) (riscv64-mikoos-linux-uclibc-gcc.br_real (MikoOS 2022.02-560-g6a2b542a09-dirty) 10.3.0, GNU ld (GNU Binutils) 2.32) #2 SMP Thu Apr 21 16:40:44 JST 2022
 [    0.000000] Machine model: Kendryte KD233
 [    0.000000] earlycon: sifive0 at MMIO 0x0000000038000000 (options '115200n8')
 [    0.000000] printk: bootconsole [sifive0] enabled

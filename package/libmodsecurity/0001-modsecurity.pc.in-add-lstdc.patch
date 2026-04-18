@@ -6,11 +6,11 @@ Subject: [PATCH] modsecurity.pc.in: add -lstdc++
 Add -lstdc++ to Libs.Private to avoid the following static build failure
 with nginx:
 
-/home/buildroot/autobuild/instance-2/output-1/host/lib/gcc/xtensa-buildroot-linux-uclibc/10.3.0/../../../../xtensa-buildroot-linux-uclibc/bin/ld: /home/buildroot/autobuild/instance-2/output-1/host/bin/../xtensa-buildroot-linux-uclibc/sysroot/usr/lib/libmodsecurity.a(libmodsecurity_la-transaction.o): in function `std::basic_streambuf<char, std::char_traits<char> >::sbumpc() [clone .isra.0]':
+/home/mikoos/autobuild/instance-2/output-1/host/lib/gcc/xtensa-mikoos-linux-uclibc/10.3.0/../../../../xtensa-mikoos-linux-uclibc/bin/ld: /home/mikoos/autobuild/instance-2/output-1/host/bin/../xtensa-mikoos-linux-uclibc/sysroot/usr/lib/libmodsecurity.a(libmodsecurity_la-transaction.o): in function `std::basic_streambuf<char, std::char_traits<char> >::sbumpc() [clone .isra.0]':
 transaction.cc:(.text+0x40): undefined reference to `std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_dispose()'
 
 Fixes:
- - http://autobuild.buildroot.org/results/e5a9eb8448980f1c5cafe97180b7d1f48ddf02ca
+ - http://autobuild.mikoos.org/results/e5a9eb8448980f1c5cafe97180b7d1f48ddf02ca
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Signed-off-by: Frank Vanbever <frank.vanbever@mind.be>

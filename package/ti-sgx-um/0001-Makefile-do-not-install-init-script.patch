@@ -3,7 +3,7 @@ From: Carlos Santos <unixmania@gmail.com>
 Date: Sun, 10 Nov 2019 22:44:44 -0300
 Subject: [PATCH] Makefile: do not install init script
 
-Use a custom one, made for Buildroot, instead.
+Use a custom one, made for MikoOS, instead.
 
 Signed-off-by: Carlos Santos <unixmania@gmail.com>
 ---

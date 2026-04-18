@@ -12,7 +12,7 @@ import infra
 
 
 def main():
-    parser = argparse.ArgumentParser(description='Run Buildroot tests')
+    parser = argparse.ArgumentParser(description='Run MikoOS tests')
     parser.add_argument('testname', nargs='*',
                         help='list of test cases to execute')
     parser.add_argument('-l', '--list', action='store_true',

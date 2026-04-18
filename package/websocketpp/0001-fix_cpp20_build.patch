@@ -5,7 +5,7 @@ Subject: [PATCH] [core] Remove the use of simple template ids as they have
  been removed in c++20.
  https://timsong-cpp.github.io/cppwp/n4861/diff.cpp17.class#2 references #991
 
-Signed-off-by: Michael Nosthoff <buildroot@heine.tech>
+Signed-off-by: Michael Nosthoff <mikoos@heine.tech>
 Upstream: https://github.com/zaphoyd/websocketpp/commit/3197a520eb4c1e4754860441918a5930160373eb
 ---
  websocketpp/endpoint.hpp              |  2 +-

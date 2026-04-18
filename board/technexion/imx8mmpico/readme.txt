@@ -2,14 +2,14 @@
 Technexion i.MX8M Mini Pico board
 *********************************
 
-This file documents the Buildroot support for the Technexion i.MX8M
+This file documents the MikoOS support for the Technexion i.MX8M
 Mini Pico board. The Pico i.MX8M Mini system-on-module [1] is present
 in development kits like the Pico Pi i.MX8M Mini [2].
 
 Build
 =====
 
-First, configure Buildroot for the i.MX8M Mini Pico board:
+First, configure MikoOS for the i.MX8M Mini Pico board:
 
   make imx8mmpico_defconfig
 
@@ -70,7 +70,7 @@ To determine the device associated to the eMMC card have a look in the
 If your system automatically mount some device partitions, make sure
 to unmount them.
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be dumped on the eMMC. Launch the following
 command as root:
 

@@ -12,7 +12,7 @@ To build a minimal support for this board:
 $ make imxrt1050-evk_defconfig
 $ make
 
-Buildroot prepares a bootable "sdcard.img" image in the output/images/
+MikoOS prepares a bootable "sdcard.img" image in the output/images/
 directory, ready to be flashed into the SD card:
 
 $ dd if=output/images/sdcard.img of=/dev/sdX

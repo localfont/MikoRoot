@@ -2,7 +2,7 @@ Intro
 =====
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the Orangepi Zero3. With the current configuration
+mikoos environment for the Orangepi Zero3. With the current configuration
 it will bring-up the board, and allow access through the serial console.
 
 Orangepi Zero3 link:

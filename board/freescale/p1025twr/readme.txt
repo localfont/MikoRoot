@@ -2,7 +2,7 @@ The bootloader is no longer buildable in the latest Freescale/NXP tree or
 upstream.  As such, retrieve the "Image: SDK V1.2 e500v2 Binary ISO" from
 NXP downloads and follow the release notes for reflashing.
 
-For programming the kernel and rootfs created by buildroot into the flash.
+For programming the kernel and rootfs created by mikoos into the flash.
 The fast way is to tftp transfer the files via one of the network interfaces.
 Make sure your devkit has ipaddr and serverip defined to reach your tftp
 server.

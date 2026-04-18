@@ -112,7 +112,7 @@ OPENCV4_CONF_OPTS += \
 #
 # * PowerPC and VFPv3 support are turned off since their only effects
 #   are altering CFLAGS, adding '-mcpu=G3 -mtune=G5' or '-mfpu=vfpv3'
-#   to them, which is already handled by Buildroot.
+#   to them, which is already handled by MikoOS.
 # * NEON logic is needed as it is not only used to add CFLAGS, but
 #   also to enable additional NEON code.
 OPENCV4_CONF_OPTS += \
@@ -204,7 +204,7 @@ OPENCV4_CONF_OPTS += \
 	-DINSTALL_PYTHON_EXAMPLES=OFF \
 	-DINSTALL_TO_MANGLED_PATHS=OFF
 
-# Disabled features (mostly because they are not available in Buildroot)
+# Disabled features (mostly because they are not available in MikoOS)
 OPENCV4_CONF_OPTS += \
 	-DWITH_1394=OFF \
 	-DWITH_CLP=OFF \

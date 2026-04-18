@@ -11,7 +11,7 @@ Wiki: 	   https://wiki.amarulasolutions.com/bsp/sunxi/a33/Olimex-A33-Olinuxino.h
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make olimex_a33_olinuxino_defconfig
 

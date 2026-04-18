@@ -8,7 +8,7 @@ git/isobusfs/../libj1939.h:33:18: error: field has incomplete type 'struct times
    33 |         struct timespec next_send_time;
       |                         ^
 Signed-off-by: Khem Raj <raj.khem@gmail.com>
-Signed-off-by: Marcus Hoffmann <buildroot@bubu1.eu>
+Signed-off-by: Marcus Hoffmann <mikoos@bubu1.eu>
 Upstream: https://github.com/linux-can/can-utils/commit/2b8c7c5f4b71726806de0d718c4c56eeba2c7332
 ---
  libj1939.h | 1 +

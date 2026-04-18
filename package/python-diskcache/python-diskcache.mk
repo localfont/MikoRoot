@@ -12,7 +12,7 @@ PYTHON_DISKCACHE_LICENSE = Apache-2.0
 PYTHON_DISKCACHE_LICENSE_FILES = LICENSE
 
 # diskcache imports itself during the build to get its own version,
-# which doesn't work in the Buildroot context, so we inject the
+# which doesn't work in the MikoOS context, so we inject the
 # package name and version manually.
 define PYTHON_DISKCACHE_REMOVE_SELF_IMPORT
 	sed -i -e '/import diskcache/d' \

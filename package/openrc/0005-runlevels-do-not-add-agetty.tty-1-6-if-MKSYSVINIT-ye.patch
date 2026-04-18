@@ -3,7 +3,7 @@ From: Carlos Santos <unixmania@gmail.com>
 Date: Sat, 29 Feb 2020 22:41:30 -0300
 Subject: [PATCH] runlevels: do not add agetty.tty[1-6] if MKSYSVINIT=yes
 
-Buildroot starts a single getty, according to the system configuration.
+MikoOS starts a single getty, according to the system configuration.
 Also tty[1-6] may not exist (e.g. embedded devices with serial consoles
 only).
 

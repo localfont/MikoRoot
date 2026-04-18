@@ -1,13 +1,13 @@
 i.MX8MN BSH SMM S2
 ==================
 
-This tutorial describes how to use the predefined Buildroot
+This tutorial describes how to use the predefined MikoOS
 configuration for the i.MX8MN BSH SMM S2 board.
 
 Building
 --------
 
-Configure buildroot:
+Configure mikoos:
 
   $ make imx8mn_bsh_smm_s2_defconfig
 

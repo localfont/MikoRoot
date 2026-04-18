@@ -13,7 +13,7 @@ Create.c:155:35: error: 'FALLOC_FL_ZERO_RANGE' undeclared (first use in this fun
       |                                   ^~~~~~~~~~~~~~~~~~~~
 
 Fixes:
- - http://autobuild.buildroot.org/results/0e04bcdb591ca5642053e1f7e31384f06581e989
+ - http://autobuild.mikoos.org/results/0e04bcdb591ca5642053e1f7e31384f06581e989
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 Signed-off-by: Mariusz Tkaczyk <mariusz.tkaczyk@linux.intel.com>

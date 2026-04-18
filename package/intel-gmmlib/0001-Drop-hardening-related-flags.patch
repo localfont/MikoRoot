@@ -3,8 +3,8 @@ From: Bernd Kuhls <bernd.kuhls@t-online.de>
 Date: Tue, 8 Jun 2021 07:51:40 +0200
 Subject: [PATCH] Drop hardening-related flags
 
-These will be set by Buildroot depending on toolchain capabilities and
-global Buildroot options.
+These will be set by MikoOS depending on toolchain capabilities and
+global MikoOS options.
 
 Signed-off-by: Bernd Kuhls <bernd.kuhls@t-online.de>
 ---

@@ -23,7 +23,7 @@ class TestLinks(infra.basetest.BRTest):
 
         self.assertRunOk("links -version")
 
-        expected_str = "Hello Buildroot !"
+        expected_str = "Hello MikoOS !"
         html_file = "/root/file.html"
         url = f"file://{html_file}"
 

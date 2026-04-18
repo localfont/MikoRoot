@@ -5,7 +5,7 @@
 # .mk files for QMake packages. It should be used for all packages that use
 # Qmake as their build system.
 #
-# See the Buildroot documentation for details on the usage of this
+# See the MikoOS documentation for details on the usage of this
 # infrastructure
 #
 # In terms of implementation, this QMake infrastructure requires the .mk file

@@ -24,7 +24,7 @@ endef
 HOST_ANDROID_TOOLS_POST_EXTRACT_HOOKS += ANDROID_TOOLS_DEBIAN_EXTRACT
 ANDROID_TOOLS_POST_EXTRACT_HOOKS += ANDROID_TOOLS_DEBIAN_EXTRACT
 
-# Apply the Debian patches before applying the Buildroot patches
+# Apply the Debian patches before applying the MikoOS patches
 define ANDROID_TOOLS_DEBIAN_PATCH
 	$(APPLY_PATCHES) $(@D) $(@D)/debian/patches \*
 endef

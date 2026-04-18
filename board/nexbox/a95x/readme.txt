@@ -13,14 +13,14 @@ http://linux-meson.com/doku.php?id=nexbox_a95x_s905
 Both the s905 (gxbb) and s905x (gxl) variant is supported.
 
 This default configuration will allow you to start experimenting with the
-buildroot environment for the A95X.  With the current configuration it will
+mikoos environment for the A95X.  With the current configuration it will
 bring-up the board from microSD, and allow access through the serial
 console.
 
 How to build it
 ===============
 
-Configure Buildroot:
+Configure MikoOS:
 
     $ make nexbox_a95x_defconfig
 

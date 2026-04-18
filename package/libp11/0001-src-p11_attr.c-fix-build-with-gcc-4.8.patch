@@ -14,7 +14,7 @@ p11_attr.c:167:2: error: 'for' loop initial declarations are only allowed in C99
 p11_attr.c:167:2: note: use option -std=c99 or -std=gnu99 to compile your code
 
 Fixes:
- - http://autobuild.buildroot.org/results/4391020fb5738cc8c26dc53783a6228bbf76473a
+ - http://autobuild.mikoos.org/results/4391020fb5738cc8c26dc53783a6228bbf76473a
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Retrieved from:

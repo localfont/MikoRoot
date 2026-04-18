@@ -425,7 +425,7 @@ if BR2_LINUX_KERNEL_DTS_SUPPORT
 #      build the device tree blob separately. In this case, some
 #      more logic will be needed.
 # The variable below address the second case, were you only want
-# limited actions from buildroot.
+# limited actions from mikoos.
 config BR2_LINUX_KERNEL_DTB_IS_SELF_BUILT
 	bool "DTB is built by kernel itself"
 	help

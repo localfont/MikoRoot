@@ -4,14 +4,14 @@
 == Configuration of other components
 
 Before attempting to modify any of the components below, make sure you
-have already configured Buildroot itself, and have enabled the
+have already configured MikoOS itself, and have enabled the
 corresponding package.
 
 BusyBox::
 +
 If you already have a BusyBox configuration file, you can directly
-specify this file in the Buildroot configuration, using
-+BR2_PACKAGE_BUSYBOX_CONFIG+. Otherwise, Buildroot will start from a
+specify this file in the MikoOS configuration, using
++BR2_PACKAGE_BUSYBOX_CONFIG+. Otherwise, MikoOS will start from a
 default BusyBox configuration file.
 +
 To make subsequent changes to the configuration, use +make
@@ -31,11 +31,11 @@ uclibc-menuconfig+.
 Linux kernel::
 +
 If you already have a kernel configuration file, you can directly
-specify this file in the Buildroot configuration, using
+specify this file in the MikoOS configuration, using
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG+.
 +
 If you do not yet have a kernel configuration file, you can either start
-by specifying a defconfig in the Buildroot configuration, using
+by specifying a defconfig in the MikoOS configuration, using
 +BR2_LINUX_KERNEL_USE_DEFCONFIG+, or start by creating an empty file and
 specifying it as custom configuration file, using
 +BR2_LINUX_KERNEL_USE_CUSTOM_CONFIG+.

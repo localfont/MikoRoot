@@ -7,7 +7,7 @@ import infra.basetest
 class TestAudioCodecBase(infra.basetest.BRTest):
     """Common class to test an audio codec package.
 
-    This base class builds a Buildroot system image containing the
+    This base class builds a MikoOS system image containing the
     package enabled in its config, start the emulator, login to it. It
     prepares an input test WAV file containing a tone. This WAV file
     is encoded into a new output file in the native encoder format. It

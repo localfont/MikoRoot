@@ -3,7 +3,7 @@ Beagle-V Fire
 
 BeagleV Fire is a low-cost RISC-V 64-bit based platform, powered by
 Microchip's PolarFire SoC. This file describes how to use the
-pre-defined Buildroot configuration for the Beagle-V Fire board.
+pre-defined MikoOS configuration for the Beagle-V Fire board.
 
 Further information about the Beagle-V Fire can be found at
 https://docs.beagleboard.org/latest/boards/beaglev/fire/index.html.
@@ -12,7 +12,7 @@ https://docs.beagleboard.org/latest/boards/beaglev/fire/index.html.
 Building
 ========
 
-Configure Buildroot using the default board configuration:
+Configure MikoOS using the default board configuration:
 
   '$ make beaglev_fire_defconfig'
 
@@ -49,7 +49,7 @@ Once the build has finished you will have the following files:
 Flashing the image to your eMMC
 ===============================
 
-By default Buildroot builds an image suitable for the eMMC. The first partition
+By default MikoOS builds an image suitable for the eMMC. The first partition
 of this image contains a U-Boot binary, embedded in a Hart Software Services
 (HSS) payload. The second partition contains a FAT filesystem with a U-Boot env
 and an ITB file containing the kernel and the device tree. The third partition
@@ -99,7 +99,7 @@ create your custom bitstream (steps 1 - 6):
 https://docs.beagleboard.org/latest/boards/beaglev/fire/demos-and-tutorials/gateware/customize-cape-gateware-verilog.html
 
 
-  Program BeagleV-Fire With Your Custom Bitstream with Buildroot
+  Program BeagleV-Fire With Your Custom Bitstream with MikoOS
   ==============================================================
 
   After following the steps 1-6 from the above tutorial, you should now have a
@@ -113,7 +113,7 @@ https://docs.beagleboard.org/latest/boards/beaglev/fire/demos-and-tutorials/gate
   On your Linux host development computer, copy the bitstream to BeagleV-Fire
   board, replacing </path/to/your/> with the path to your BeagleV-Fire root file
   system.
-    'cp ./* /path/to/your/buildroot/board/beagleboard/beaglev_fire/rootfs-overlay/lib/firmware/'
+    'cp ./* /path/to/your/mikoos/board/beagleboard/beaglev_fire/rootfs-overlay/lib/firmware/'
 
   To apply these changes to your image, make sure to re-build it with:
     `make`

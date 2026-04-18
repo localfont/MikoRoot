@@ -8,13 +8,13 @@ library from gcc. Linking with libatomic is therefore necessary,
 otherwise the build fails with:
 
 [100%] Linking CXX executable leveldbutil
-/home/fabrice/buildroot/output/host/opt/ext-toolchain/bin/../lib/gcc/sparc-buildroot-linux-uclibc/7.4.0/../../../../sparc-buildroot-linux-uclibc/bin/ld: libleveldb.a(env_posix.cc.o): in function `leveldb::(anonymous namespace)::Limiter::Acquire()':
+/home/fabrice/mikoos/output/host/opt/ext-toolchain/bin/../lib/gcc/sparc-mikoos-linux-uclibc/7.4.0/../../../../sparc-mikoos-linux-uclibc/bin/ld: libleveldb.a(env_posix.cc.o): in function `leveldb::(anonymous namespace)::Limiter::Acquire()':
 env_posix.cc:(.text+0x124): undefined reference to `__atomic_fetch_sub_4'
 
 This is often for example the case on sparcv8 32 bit.
 
 Fixes:
- - http://autobuild.buildroot.org/results/01d5a50581ac9e9b46f40e6f9665f74897db5e6f
+ - http://autobuild.mikoos.org/results/01d5a50581ac9e9b46f40e6f9665f74897db5e6f
 
 Signed-off-by: Fabrice Fontaine <fontaine.fabrice@gmail.com>
 [Upstream status: https://github.com/google/leveldb/pull/765]
