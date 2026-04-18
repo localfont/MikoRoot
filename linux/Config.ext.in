@@ -14,7 +14,7 @@ config BR2_LINUX_KERNEL_EXT_XENOMAI
 	  Xenomai is split in two parts: a kernel part and a userspace
 	  part. Enabling this option automatically selects the Xenomai
 	  package and helps in patching the Linux kernel built by
-	  Buildroot with the Xenomai kernel part (ie Adeos/Ipipe).
+	  MikoOS with the Xenomai kernel part (ie Adeos/Ipipe).
 
 	  You can find the currently supported kernel versions by
 	  looking at the available patches in the Xenomai sources
@@ -36,7 +36,7 @@ config BR2_LINUX_KERNEL_EXT_XENOMAI_ADEOS_PATCH
 	  Examples:
 	  https://xenomai.org/downloads/ipipe/v4.x/arm/ipipe-core-4.19.33-arm-2.patch
 	  or /home/foo/ipipe-core-4.19.33-arm-2.patch
-	  Please verify that your kernel version in Buildroot matches.
+	  Please verify that your kernel version in MikoOS matches.
 
 comment "xenomai needs a uClibc or glibc toolchain w/ threads"
 	depends on BR2_PACKAGE_XENOMAI_COBALT_ARCH_SUPPORTS

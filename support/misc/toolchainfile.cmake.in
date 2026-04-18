@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# CMake toolchain file for Buildroot
+# CMake toolchain file for MikoOS
 #
 
 # In order to allow the toolchain to be relocated, we calculate the
@@ -15,7 +15,7 @@ string(REPLACE "/share/buildroot" "" RELOCATED_HOST_DIR ${CMAKE_CURRENT_LIST_DIR
 list(APPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 
 if(NOT DEFINED CMAKE_SYSTEM_NAME)
-  set(CMAKE_SYSTEM_NAME Buildroot)
+  set(CMAKE_SYSTEM_NAME MikoOS)
 endif()
 if(NOT DEFINED CMAKE_SYSTEM_VERSION)
   set(CMAKE_SYSTEM_VERSION 1)
@@ -25,15 +25,15 @@ if(NOT DEFINED CMAKE_SYSTEM_PROCESSOR)
 endif()
 
 # Set the {C,CXX}FLAGS appended by CMake depending on the build type
-# defined by Buildroot. CMake defaults these variables with -g and/or
+# defined by MikoOS. CMake defaults these variables with -g and/or
 # -O options, and they are appended at the end of the argument list,
-# so the Buildroot options are overridden. Therefore these variables
+# so the MikoOS options are overridden. Therefore these variables
 # have to be cleared, so that the options passed in CMAKE_C_FLAGS do
 # apply.
 #
 # Note:
-#   if the project forces some of these flag variables, Buildroot is
-#   screwed up and there is nothing Buildroot can do about that :(
+#   if the project forces some of these flag variables, MikoOS is
+#   screwed up and there is nothing MikoOS can do about that :(
 if(NOT DEFINED CMAKE_C_FLAGS_DEBUG)
   set(CMAKE_C_FLAGS_DEBUG "" CACHE STRING "Debug CFLAGS")
 endif()
@@ -41,29 +41,29 @@ if(NOT DEFINED CMAKE_C_FLAGS_RELEASE)
   set(CMAKE_C_FLAGS_RELEASE " -DNDEBUG" CACHE STRING "Release CFLAGS")
 endif()
 
-# Build type from the Buildroot configuration
+# Build type from the MikoOS configuration
 if(NOT DEFINED CMAKE_BUILD_TYPE)
-  set(CMAKE_BUILD_TYPE @@CMAKE_BUILD_TYPE@@ CACHE STRING "Buildroot build configuration")
+  set(CMAKE_BUILD_TYPE @@CMAKE_BUILD_TYPE@@ CACHE STRING "MikoOS build configuration")
 endif()
 
-# Buildroot defaults flags.
-# If you are using this toolchainfile.cmake file outside of Buildroot and
+# MikoOS defaults flags.
+# If you are using this toolchainfile.cmake file outside of MikoOS and
 # want to customize the compiler/linker flags, then:
 # * set them all on the cmake command line, e.g.:
 #     cmake -DCMAKE_C_FLAGS="@@TARGET_CFLAGS@@ -Dsome_custom_flag" ...
 # * and make sure the project's CMake code extends them like this if needed:
 #     set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -Dsome_definitions")
 if(NOT DEFINED CMAKE_C_FLAGS)
-  set(CMAKE_C_FLAGS "@@TARGET_CFLAGS@@" CACHE STRING "Buildroot CFLAGS")
+  set(CMAKE_C_FLAGS "@@TARGET_CFLAGS@@" CACHE STRING "MikoOS CFLAGS")
 endif()
 if(NOT DEFINED CMAKE_EXE_LINKER_FLAGS)
-  set(CMAKE_EXE_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "Buildroot LDFLAGS for executables")
+  set(CMAKE_EXE_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "MikoOS LDFLAGS for executables")
 endif()
 if(NOT DEFINED CMAKE_SHARED_LINKER_FLAGS)
-  set(CMAKE_SHARED_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "Buildroot LDFLAGS for shared libraries")
+  set(CMAKE_SHARED_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "MikoOS LDFLAGS for shared libraries")
 endif()
 if(NOT DEFINED CMAKE_MODULE_LINKER_FLAGS)
-  set(CMAKE_MODULE_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "Buildroot LDFLAGS for module libraries")
+  set(CMAKE_MODULE_LINKER_FLAGS "@@TARGET_LDFLAGS@@" CACHE STRING "MikoOS LDFLAGS for module libraries")
 endif()
 
 if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
@@ -93,7 +93,7 @@ if(NOT DEFINED CMAKE_FIND_ROOT_PATH_MODE_INCLUDE)
 endif()
 set(ENV{PKG_CONFIG_SYSROOT_DIR} "${RELOCATED_HOST_DIR}/@@STAGING_SUBDIR@@")
 
-# This toolchain file can be used both inside and outside Buildroot.
+# This toolchain file can be used both inside and outside MikoOS.
 if(NOT DEFINED CMAKE_C_COMPILER)
   set(CMAKE_C_COMPILER "${RELOCATED_HOST_DIR}/@@TARGET_CC@@")
 endif()
@@ -105,7 +105,7 @@ if(@@TOOLCHAIN_HAS_CXX@@)
     set(CMAKE_CXX_FLAGS_RELEASE " -DNDEBUG" CACHE STRING "Release CXXFLAGS")
   endif()
   if(NOT DEFINED CMAKE_CXX_FLAGS)
-    set(CMAKE_CXX_FLAGS "@@TARGET_CXXFLAGS@@" CACHE STRING "Buildroot CXXFLAGS")
+    set(CMAKE_CXX_FLAGS "@@TARGET_CXXFLAGS@@" CACHE STRING "MikoOS CXXFLAGS")
   endif()
   if(NOT DEFINED CMAKE_CXX_COMPILER)
     set(CMAKE_CXX_COMPILER "${RELOCATED_HOST_DIR}/@@TARGET_CXX@@")
@@ -119,7 +119,7 @@ if(@@TOOLCHAIN_HAS_FORTRAN@@)
     set(CMAKE_Fortran_FLAGS_RELEASE " -DNDEBUG" CACHE STRING "Release Fortran FLAGS")
   endif()
   if(NOT DEFINED CMAKE_Fortran_FLAGS)
-    set(CMAKE_Fortran_FLAGS "@@TARGET_FCFLAGS@@" CACHE STRING "Buildroot FCFLAGS")
+    set(CMAKE_Fortran_FLAGS "@@TARGET_FCFLAGS@@" CACHE STRING "MikoOS FCFLAGS")
   endif()
   if(NOT DEFINED CMAKE_Fortran_COMPILER)
     set(CMAKE_Fortran_COMPILER "${RELOCATED_HOST_DIR}/@@TARGET_FC@@")

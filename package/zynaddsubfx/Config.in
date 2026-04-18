@@ -15,7 +15,7 @@ config BR2_PACKAGE_ZYNADDSUBFX
 	  to interesting sounds that you'll boost to an amazing
 	  universe of sounds.
 
-	  Note: this Buildroot package does not include the graphical
+	  Note: this MikoOS package does not include the graphical
 	  user interface. It is meant to be executed as a headless
 	  daemon to be controlled with MIDI events or network OSC
 	  (Open Sound Control) events. OSC events can be generated

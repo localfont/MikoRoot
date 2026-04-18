@@ -697,7 +697,7 @@ if BR2_PACKAGE_HAS_LUAINTERPRETER && !BR2_STATIC_LIBS
 # lua modules are dynamically loaded, so not available on static builds
 menu "Lua libraries/modules"
 # When adding lua packages, make sure the name start with "lua". If the
-# upstream package is "luafoo", call it "luafoo" in Buildroot; if the upstream
+# upstream package is "luafoo", call it "luafoo" in MikoOS; if the upstream
 # package is "foo", call it "lua-foo". Many packages currently don't follow
 # this convention, but that's historical accident.
 	source "package/argparse/Config.in"
@@ -2683,8 +2683,8 @@ endmenu
 menu "Package managers"
 comment "-------------------------------------------------------"
 comment "Please note:                                           "
-comment "- Buildroot does *not* generate binary packages,       "
-comment "- Buildroot does *not* install any package database.   "
+comment "- MikoOS does *not* generate binary packages,       "
+comment "- MikoOS does *not* install any package database.   "
 comment "*                                                      "
 comment "It is up to you to provide those by yourself if you    "
 comment "want to use any of those package managers.             "

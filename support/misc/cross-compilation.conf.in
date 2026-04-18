@@ -1,7 +1,7 @@
-# Note: Buildroot's and Meson's terminologies differ about the meaning
+# Note: MikoOS's and Meson's terminologies differ about the meaning
 # of 'build', 'host' and 'target':
-# - Buildroot's 'host' is Meson's 'build'
-# - Buildroot's 'target' is Meson's 'host'
+# - MikoOS's 'host' is Meson's 'build'
+# - MikoOS's 'target' is Meson's 'host'
 
 [binaries]
 c = '@TARGET_CC@'

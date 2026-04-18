@@ -62,7 +62,7 @@ LIBC = musl
 else ifeq ($(BR2_TOOLCHAIN_USES_GLIBC),y)
 LIBC = gnu
 else ifeq ($(BR_BUILDING),y)
-# This happens if there is a bug in Buildroot that allows an
+# This happens if there is a bug in MikoOS that allows an
 # architecture configuration that isn't supported by any library.
 $(error No C library enabled, this is not possible.)
 endif
@@ -273,12 +273,12 @@ HOST_CXXFLAGS += $(HOST_CFLAGS)
 HOST_LDFLAGS  += -L$(HOST_DIR)/lib -Wl,-rpath,$(HOST_DIR)/lib
 
 # host-intltool should be executed with the system perl, so we save
-# the path to the system perl, before a host-perl built by Buildroot
+# the path to the system perl, before a host-perl built by MikoOS
 # might get installed into $(HOST_DIR)/bin and therefore appears
 # in our PATH. This system perl will be used as INTLTOOL_PERL.
 export PERL=$(shell which perl)
 
-# host-intltool needs libxml-parser-perl, which Buildroot installs in
+# host-intltool needs libxml-parser-perl, which MikoOS installs in
 # $(HOST_DIR)/lib/perl, so we must make sure that the system perl
 # finds this perl module by exporting the proper value for PERL5LIB.
 export PERL5LIB=$(HOST_DIR)/lib/perl

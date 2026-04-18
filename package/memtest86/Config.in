@@ -4,7 +4,7 @@ config BR2_PACKAGE_MEMTEST86
 	help
 	  Memtest86+ is a bootable standalone memory test program.
 
-	  Buildroot does not support packages with a '+' sign in their
+	  MikoOS does not support packages with a '+' sign in their
 	  name, which explains why it is named memtest86 and not
 	  memtest86+.
 

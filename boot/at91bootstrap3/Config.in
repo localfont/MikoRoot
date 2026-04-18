@@ -27,13 +27,13 @@ config BR2_TARGET_AT91BOOTSTRAP3_LATEST_VERSION_3X
 config BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_GIT
 	bool "Custom Git repository"
 	help
-	  This option allows Buildroot to get the AT91 Bootstrap 3
+	  This option allows MikoOS to get the AT91 Bootstrap 3
 	  source code from a Git repository.
 
 config BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_SVN
 	bool "Custom SVN repository"
 	help
-	  This option allows Buildroot to get the AT91 Bootstrap 3
+	  This option allows MikoOS to get the AT91 Bootstrap 3
 	  source code from a Subversion repository
 
 config BR2_TARGET_AT91BOOTSTRAP3_CUSTOM_TARBALL

@@ -9,7 +9,7 @@ minor_min="${1#*.}"
 shift
 
 # The host make program is already checked by dependencies.sh but we
-# want to check the version number even if Buildroot is able to use
+# want to check the version number even if MikoOS is able to use
 # GNU make >= 3.81 but some packages may require a more recent version.
 make="$1"
 

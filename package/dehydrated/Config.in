@@ -15,7 +15,7 @@ config BR2_PACKAGE_DEHYDRATED
 	  both ACME v1 and the new ACME v2 including support for
 	  wildcard certificates!
 
-	  To use this script in Buildroot:
+	  To use this script in MikoOS:
 	    - Create /etc/dehydrated/domains.txt
 	    - Make sure that "dehydrated -c" is called regularly, e.g.
 	      from cron.

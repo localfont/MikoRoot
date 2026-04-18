@@ -8,7 +8,7 @@ config BR2_PACKAGE_USBIP
 	  (CONFIG_USBIP_VHCI_HCD) if you want to access a remote USB
 	  device, or "Host driver" (CONFIG_USBIP_HOST) if you want
 	  to share a USB device, in your kernel configuration. The
-	  Buildroot package "hwdata" with the "usb.ids" file is also
+	  MikoOS package "hwdata" with the "usb.ids" file is also
 	  useful (but not mandatory) to list and identify USB device
 	  by name.
 

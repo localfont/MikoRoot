@@ -38,7 +38,7 @@ define RTLA_BUILD_CMDS
 endef
 
 # make rtla_install build and install by default documentation using rst2man
-# but it's not available in Buildroot and we don't want manual files in target
+# but it's not available in MikoOS and we don't want manual files in target
 # folder so let's simply install the resulting rtla binary and create symlinks
 # like Linux does in its tools/tracing/rtla/Makefile
 define RTLA_INSTALL_TARGET_CMDS

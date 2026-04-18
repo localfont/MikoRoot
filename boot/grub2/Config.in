@@ -33,7 +33,7 @@ menuconfig BR2_TARGET_GRUB2
 	  configuration file. It can be overridden using a rootfs
 	  overlay or post-build script.
 
-	  For additional notes on using Grub 2 with Buildroot, see
+	  For additional notes on using Grub 2 with MikoOS, see
 	  boot/grub2/readme.txt
 
 	  http://www.gnu.org/software/grub/

@@ -20,9 +20,9 @@ config BR2_PACKAGE_SMACK
 	  - CONFIG_SECURITY_SMACK
 	  - CONFIG_SECURITY_NETWORK
 
-	  These options will be automatically enabled by Buildroot if
+	  These options will be automatically enabled by MikoOS if
 	  it is responsible for building the kernel. Otherwise, if you
-	  are building your kernel outside of Buildroot, make sure
+	  are building your kernel outside of MikoOS, make sure
 	  these options are enabled.
 
 	  To activate SMACK, do not forget to add "security=smack" to

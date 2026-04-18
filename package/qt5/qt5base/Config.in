@@ -38,7 +38,7 @@ config BR2_PACKAGE_QT5BASE_CONFIG_FILE
 	  in the Qt sources.
 
 	  This option allows to set the path of such a configuration
-	  file, which Buildroot will give to Qt at compile time.
+	  file, which MikoOS will give to Qt at compile time.
 
 config BR2_PACKAGE_QT5BASE_EXAMPLES
 	bool "Compile and install examples (with code)"

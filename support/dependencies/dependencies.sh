@@ -231,7 +231,7 @@ fi
 if grep -q ^BR2_HOSTARCH_NEEDS_IA32_LIBS=y $BR2_CONFIG ; then
 	if test ! -f /lib/ld-linux.so.2 ; then
 		echo
-		echo "Your Buildroot configuration uses pre-built tools for the x86 architecture,"
+		echo "Your MikoOS configuration uses pre-built tools for the x86 architecture,"
 		echo "but your build machine uses the x86-64 architecture without the 32 bits compatibility"
 		echo "library."
 		echo "If you're running a Debian/Ubuntu distribution, install the libc6-i386,"
@@ -249,7 +249,7 @@ fi
 if grep -q ^BR2_HOSTARCH_NEEDS_IA32_COMPILER=y $BR2_CONFIG ; then
 	if ! echo "int main(void) {}" | gcc -m32 -x c - -o /dev/null 2>/dev/null; then
 		echo
-		echo "Your Buildroot configuration needs a compiler capable of building 32 bits binaries."
+		echo "Your MikoOS configuration needs a compiler capable of building 32 bits binaries."
 		echo "If you're running a Debian/Ubuntu distribution, install the gcc-multilib package."
 		echo "For other distributions, refer to their documentation."
 		exit 1
@@ -257,7 +257,7 @@ if grep -q ^BR2_HOSTARCH_NEEDS_IA32_COMPILER=y $BR2_CONFIG ; then
 
 	if ! echo "int main(void) {}" | g++ -m32 -x c++ - -o /dev/null 2>/dev/null; then
 		echo
-		echo "Your Buildroot configuration needs a compiler capable of building 32 bits binaries."
+		echo "Your MikoOS configuration needs a compiler capable of building 32 bits binaries."
 		echo "If you're running a Debian/Ubuntu distribution, install the g++-multilib package."
 		echo "For other distributions, refer to their documentation."
 		exit 1
@@ -267,14 +267,14 @@ fi
 if grep -q ^BR2_NEEDS_HOST_GCC_PLUGIN_SUPPORT=y $BR2_CONFIG ; then
 	if ! echo "#include <gcc-plugin.h>" | $HOSTCXX_NOCCACHE -I$($HOSTCXX_NOCCACHE -print-file-name=plugin)/include -x c++ -c - -o /dev/null ; then
 		echo
-		echo "Your Buildroot configuration needs a host compiler capable of building gcc plugins."
+		echo "Your MikoOS configuration needs a host compiler capable of building gcc plugins."
 		echo "If you're running a Debian/Ubuntu distribution, install gcc-X-plugin-dev package."
 		echo "For other distributions, refer to their documentation."
 		exit 1 ;
 	fi
 fi
 
-# Check that the Perl installation is complete enough for Buildroot.
+# Check that the Perl installation is complete enough for MikoOS.
 required_perl_modules="Data::Dumper" # Needed to build host-autoconf
 required_perl_modules="$required_perl_modules English" # Used by host-libxml-parser-perl
 required_perl_modules="$required_perl_modules ExtUtils::MakeMaker" # Used by host-libxml-parser-perl

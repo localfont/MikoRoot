@@ -23,7 +23,7 @@ config BR2_PACKAGE_GOBJECT_INTROSPECTION
 	# gobject-introspection does not require python3 to run on the
 	# target; however, because the tools run in a qemu wrapper, a
 	# cross-compiled python3 must be installed to staging. As there
-	# is no current mechanism to tell Buildroot only to install
+	# is no current mechanism to tell MikoOS only to install
 	# python to staging, then python must also be installed
 	# unconditionally to the target when building
 	# gobject-introspection.

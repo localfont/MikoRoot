@@ -8,7 +8,7 @@ version_min="$(echo ${1} | awk '{ split($1, v, "."); print v[1] v[2] }')"
 shift
 
 # We want to check the version number of the python3 interpreter even
-# if Buildroot is able to use any version but some packages may require
+# if MikoOS is able to use any version but some packages may require
 # a more recent version.
 
 for candidate in "${@}" ; do

@@ -7,7 +7,7 @@ BR_BASEDIR="$(readlink -e "${SCRIPT_DIR}/../../..")"
 # directory is in the PATH
 export PATH="${BR_BASEDIR}/output/host/usr/bin:$PATH"
 
-# Use Buildroot host spike by default, but allow the caller to
+# Use MikoOS host spike by default, but allow the caller to
 # redefine another spike binary
 : "${SPIKE:=spike}"
 

@@ -7,6 +7,6 @@ config BR2_PACKAGE_MSGPACK_C
 	  but it's faster and smaller.
 
 	  Note: this package is the C variant of msgpack-c. For the
-	  C++ variant, use the "msgpack" Buildroot package.
+	  C++ variant, use the "msgpack" MikoOS package.
 
 	  https://msgpack.org/

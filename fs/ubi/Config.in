@@ -28,7 +28,7 @@ config BR2_TARGET_ROOTFS_UBI_USE_CUSTOM_CONFIG
 	bool "Use custom config file"
 	help
 	  Select this option to use a custom ubinize configuration file,
-	  rather than the default configuration used by Buildroot (which
+	  rather than the default configuration used by MikoOS (which
 	  defines a single dynamic volume marked as auto-resize).
 	  Passing a custom ubinize configuration file allows you to
 	  create several volumes, specify volume types, etc.
@@ -38,7 +38,7 @@ config BR2_TARGET_ROOTFS_UBI_USE_CUSTOM_CONFIG
 	  So the volume defined for the root filesystem can specify the
 	  image path as:  image=BR2_ROOTFS_UBIFS_PATH
 
-	  Buildroot also replaces the string "BINARIES_DIR" with the
+	  MikoOS also replaces the string "BINARIES_DIR" with the
 	  value of $(BINARIES_DIR), so that it is possible to reference
 	  other build artefacts (e.g. to include the kernel in a UBI
 	  volume).

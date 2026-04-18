@@ -24,7 +24,7 @@ if BR2_TARGET_ROOTFS_OCI
 
 config BR2_TARGET_ROOTFS_OCI_AUTHOR
 	string "author name and/or email address"
-	default "Buildroot"
+	default "MikoOS"
 	help
 	  Name and/or email address of the person which created the
 	  image.

@@ -15,7 +15,7 @@ config BR2_PACKAGE_REFPOLICY
 	  based on the NSA example policy, but aims to accomplish many
 	  additional goals.
 
-	  The current refpolicy does not fully support Buildroot and
+	  The current refpolicy does not fully support MikoOS and
 	  needs modifications to work with the default system file
 	  layout. These changes should be added as patches to the
 	  refpolicy that modify a single SELinux policy.
@@ -45,7 +45,7 @@ config BR2_PACKAGE_REFPOLICY_UPSTREAM_VERSION
 		&& !BR2_STATIC_LIBS \
 		&& BR2_TOOLCHAIN_GCC_AT_LEAST_4_9
 	help
-	  Use the refpolicy as provided by Buildroot.
+	  Use the refpolicy as provided by MikoOS.
 
 config BR2_PACKAGE_REFPOLICY_CUSTOM_GIT
 	bool "Custom git repository"

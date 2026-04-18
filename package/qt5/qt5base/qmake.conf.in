@@ -1,7 +1,7 @@
 # Qt5 has a mechanism to support "device" profiles, so that people can
 # specify the compiler, compiler flags and so on for a specific device.
 
-# We leverage this mechanism in the Buildroot packaging of qt5 to
+# We leverage this mechanism in the MikoOS packaging of qt5 to
 # simplify cross-compilation: we have our own "device" definition, which
 # allows us to easily pass the cross-compiler paths and flags from our
 # qt5.mk.

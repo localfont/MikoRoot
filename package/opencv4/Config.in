@@ -300,7 +300,7 @@ config BR2_PACKAGE_OPENCV4_JPEG2000_WITH_JASPER
 
 	  Note: this does not use the libjasper bundled with opencv,
 	  but uses the libjasper package installed system-wide by
-	  Buildroot.
+	  MikoOS.
 
 config BR2_PACKAGE_OPENCV4_JPEG2000_WITH_OPENJPEG
 	bool "openjpeg"
@@ -310,7 +310,7 @@ config BR2_PACKAGE_OPENCV4_JPEG2000_WITH_OPENJPEG
 
 	  Note: this does not use the openjpeg bundled with opencv,
 	  but uses the openjpeg package installed system-wide by
-	  Buildroot.
+	  MikoOS.
 
 endchoice
 

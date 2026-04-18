@@ -82,9 +82,9 @@ menuconfig BR2_PACKAGE_SYSTEMD
 	  - CONFIG_TMPFS_POSIX_ACL
 	  - CONFIG_TMPFS_XATTR
 
-	  These options will be automatically enabled by Buildroot if
+	  These options will be automatically enabled by MikoOS if
 	  it is responsible for building the kernel. Otherwise, if you
-	  are building your kernel outside of Buildroot, make sure
+	  are building your kernel outside of MikoOS, make sure
 	  these options are enabled.
 
 	  Systemd also provides udev, the userspace device daemon.

@@ -5,7 +5,7 @@
 ################################################################################
 
 ifeq ($(BR2_TOOLCHAIN_BUILDROOT),y)
-TOOLCHAIN_DEPENDENCIES += toolchain-buildroot
+TOOLCHAIN_DEPENDENCIES += toolchain-mikoos
 else ifeq ($(BR2_TOOLCHAIN_EXTERNAL),y)
 TOOLCHAIN_DEPENDENCIES += toolchain-external
 endif

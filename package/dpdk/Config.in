@@ -61,7 +61,7 @@ config BR2_PACKAGE_DPDK_DRIVERS_LIST
 	  does not automatically enable its dependencies (internal or
 	  external). It is the user responsiblity to add internal dpdk
 	  dependencies in this list, and/or select the relevant
-	  Buildroot packages for external dependencies. DPDK
+	  MikoOS packages for external dependencies. DPDK
 	  configuration will fail in case of missing dependencies.
 
 config BR2_PACKAGE_DPDK_LIBS_LIST
@@ -82,7 +82,7 @@ config BR2_PACKAGE_DPDK_LIBS_LIST
 	  does not automatically enable its dependencies (internal or
 	  external). It is the user responsiblity to add internal dpdk
 	  dependencies in this list, and/or select the relevant
-	  Buildroot packages for external dependencies. DPDK
+	  MikoOS packages for external dependencies. DPDK
 	  configuration will fail in case of missing dependencies.
 
 config BR2_PACKAGE_DPDK_APPS_LIST
@@ -103,7 +103,7 @@ config BR2_PACKAGE_DPDK_APPS_LIST
 	  does not automatically enable its dependencies (internal or
 	  external). It is the user responsiblity to add internal dpdk
 	  dependencies in this list, and/or select the relevant
-	  Buildroot packages for external dependencies. DPDK
+	  MikoOS packages for external dependencies. DPDK
 	  configuration will fail in case of missing dependencies.
 
 endif

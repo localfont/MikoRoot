@@ -30,10 +30,10 @@ config BR2_PACKAGE_XENOMAI
 
 	  For those libraries to work, you need a Xenomai-enabled
 	  kernel. This is possible in two ways:
-	   - if you compile your kernel with Buildroot, you need to go
+	   - if you compile your kernel with MikoOS, you need to go
 	     to Linux Kernel -> Linux Kernel Extensions to enable the
 	     Xenomai extension.
-	   - if you compile your kernel outside of Buildroot, you need
+	   - if you compile your kernel outside of MikoOS, you need
 	     to make sure that it is Xenomai-enabled.
 
 	  Finally, if you are using a static /dev, make sure to

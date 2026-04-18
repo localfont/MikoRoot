@@ -43,7 +43,7 @@ choice
 config BR2_TOOLCHAIN_EXTERNAL_DOWNLOAD
 	bool "Toolchain to be downloaded and installed"
 	help
-	  Select this option if you want Buildroot to download and
+	  Select this option if you want MikoOS to download and
 	  install the toolchain. If you have selected a custom
 	  toolchain, specify the URL in BR2_TOOLCHAIN_EXTERNAL_URL.
 

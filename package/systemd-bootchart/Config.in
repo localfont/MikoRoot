@@ -27,9 +27,9 @@ config BR2_PACKAGE_SYSTEMD_BOOTCHART
 	  - CONFIG_SCHEDSTATS
 	  - CONFIG_SCHED_DEBUG
 
-	  These options will be automatically enabled by Buildroot if
+	  These options will be automatically enabled by MikoOS if
 	  it is responsible for building the kernel. Otherwise, if you
-	  are building your kernel outside of Buildroot, make sure
+	  are building your kernel outside of MikoOS, make sure
 	  these options are enabled.
 
 	  http://www.freedesktop.org/software/systemd/man/systemd-bootchart.html

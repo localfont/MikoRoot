@@ -19,7 +19,7 @@ config BR2_PACKAGE_LIBTEAM
 	  does have some distinct advantages over bonding. The way Team
 	  is configured differs dramatically from the way bonding is.
 
-	  If building the kernel with Buildroot, basic team support is
+	  If building the kernel with MikoOS, basic team support is
 	  automatically enabled, but you will still need to enable the
 	  modes you need, e.g. activebackup or loadbalance (e.g. with a
 	  config fragment or a custom config).

@@ -46,19 +46,19 @@ choice
 	  source form.
 
 config BR2_TOOLCHAIN_BUILDROOT
-	bool "Buildroot toolchain"
+	bool "MikoOS toolchain"
 	depends on BR2_ARCH_HAS_TOOLCHAIN_BUILDROOT
 
 config BR2_TOOLCHAIN_EXTERNAL
 	bool "External toolchain"
 	help
 	  Select if you want to use an existing cross-compiling
-	  toolchain. Buildroot can either download automatically a
+	  toolchain. MikoOS can either download automatically a
 	  toolchain, or use an already installed toolchain.
 
 endchoice
 
-source "toolchain/toolchain-buildroot/Config.in"
+source "toolchain/toolchain-mikoos/Config.in"
 source "toolchain/toolchain-external/Config.in"
 
 # Generic toolchain options
@@ -683,8 +683,8 @@ config BR2_TOOLCHAIN_HEADERS_AT_LEAST_7_0
 	select BR2_TOOLCHAIN_HEADERS_LATEST
 
 # This should be selected by the latest version, above, to indicate that
-# Buildroot does not know of more recent headers than the ones selected.
-# This allows using toolchains with headers more recent than Buildroot
+# MikoOS does not know of more recent headers than the ones selected.
+# This allows using toolchains with headers more recent than MikoOS
 # knows about, while still enforcing strict check for older headers.
 config BR2_TOOLCHAIN_HEADERS_LATEST
 	bool
@@ -942,7 +942,7 @@ config BR2_TOOLCHAIN_HAS_SYNC_8
 # However, the gcc logic in libatomic/configure.tgt does not recognize
 # "uclinux" as a valid OS part of the target tuple, and therefore it
 # does not build libatomic. The "uclinux" part of the tuple is used by
-# Buildroot when BR2_BINFMT_FLAT=y. This broken logic has only been
+# MikoOS when BR2_BINFMT_FLAT=y. This broken logic has only been
 # fixed for arm since gcc 10.1.0.
 config BR2_TOOLCHAIN_HAS_LIBATOMIC
 	bool

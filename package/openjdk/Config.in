@@ -124,7 +124,7 @@ config BR2_PACKAGE_OPENJDK_FULL_JDK
 
 	  Note:
 	  While the JDK also comes with several tools which can be used
-	  for developing java applications on a target, Buildroot does
+	  for developing java applications on a target, MikoOS does
 	  not support development on a target. Building the full JDK is
 	  supported for debugging purposes only.
 

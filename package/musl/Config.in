@@ -23,7 +23,7 @@ config BR2_PACKAGE_MUSL_ARCH_SUPPORTS
 	depends on !BR2_POWERPC_CPU_HAS_SPE # not supported, build breaks
 	depends on !(BR2_powerpc64 || BR2_powerpc64le) || BR2_POWERPC_CPU_HAS_ALTIVEC
 	# sh2 nommu is supported by musl, but we don't have support
-	# for it in Buildroot.
+	# for it in MikoOS.
 	depends on BR2_USE_MMU
 
 config BR2_PACKAGE_MUSL_SUPPORTS

@@ -14,6 +14,6 @@ config BR2_PACKAGE_VSFTPD_UTMPX
 	depends on !BR2_TOOLCHAIN_USES_MUSL
 	help
 	  Enable logging of vsftpd access to utmpx.
-	  Note that Buildroot does not generate utmpx by default.
+	  Note that MikoOS does not generate utmpx by default.
 
 endif

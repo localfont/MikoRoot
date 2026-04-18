@@ -120,7 +120,7 @@ config BR2_UCLIBC_INSTALL_UTILS
 	  You can save ~32 KiB in target space by disabling them since
 	  they're normally not needed.
 
-# Mapping from the Buildroot architecture configuration options to the
+# Mapping from the MikoOS architecture configuration options to the
 # uClibc architecture names.
 config BR2_UCLIBC_TARGET_ARCH
 	string

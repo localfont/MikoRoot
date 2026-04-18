@@ -11,7 +11,7 @@ if ! test -d "${OUTPUT_DIR}" ; then
     echo "Usage: $0 OUTPUT_DIR"
     echo ""
     echo "Arguments:"
-    echo "    OUTPUT_DIR    The Buildroot output directory."
+    echo "    OUTPUT_DIR    The MikoOS output directory."
     exit 1
 fi
 

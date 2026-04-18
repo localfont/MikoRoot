@@ -260,7 +260,7 @@ config BR2_TARGET_UBOOT_NEEDS_ATF_BL31
 	  encapsulate the BL31 part of ATF inside U-Boot. This option
 	  makes sure ATF gets built prior to U-Boot, and that the BL31
 	  variable pointing to ATF's BL31 binary, is passed during the
-	  Buildroot build.
+	  MikoOS build.
 
 choice
 	prompt "U-Boot ATF BL31 format"
@@ -282,7 +282,7 @@ config BR2_TARGET_UBOOT_NEEDS_OPTEE_TEE
 	  Some platforms (such as Rockchip) encapsulate the TEE inside
 	  U-Boot. This option makes sure optee-os gets built prior to
 	  U-Boot, and that the TEE variable pointing to OPTEE's
-	  core file, is passed during the Buildroot build.
+	  core file, is passed during the MikoOS build.
 
 choice
 	prompt "U-Boot OPTEE TEE format"
@@ -336,7 +336,7 @@ config BR2_TARGET_UBOOT_NEEDS_OPENSBI
 	  encapsulate the OpenSBI firmware image inside U-Boot.
 	  This option makes sure OpenSBI gets built prior to U-Boot,
 	  and that the OpenSBI variable pointing to OpenSBI binary,
-	  is passed during the Buildroot build.
+	  is passed during the MikoOS build.
 
 config BR2_TARGET_UBOOT_NEEDS_IMX_FIRMWARE
 	bool "U-Boot needs firmware-imx"
@@ -693,7 +693,7 @@ config BR2_TARGET_UBOOT_ZYNQMP_PM_CFG
 	help
 	  Location of a PMU configuration file.
 
-	  If not empty, Buildroot will convert the PMU configuration
+	  If not empty, MikoOS will convert the PMU configuration
 	  file into a loadable blob and pass it to U-Boot. The blob gets
 	  embedded into the U-Boot SPL and is used to configure the PMU
 	  during board initialization.

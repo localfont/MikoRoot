@@ -8,7 +8,7 @@ config BR2_PACKAGE_BCM2835
 	  on the 26 pin IDE plug on the RPi board so you can control
 	  and interface with various external devices.
 
-	  WARNING: the opinion of the Buildroot developers is that
+	  WARNING: the opinion of the MikoOS developers is that
 	  such library is a complete abomination as it entirely works
 	  around the standard Linux interfaces to access GPIOs, I2C,
 	  SPI busses or other IOs. The library directly remaps the

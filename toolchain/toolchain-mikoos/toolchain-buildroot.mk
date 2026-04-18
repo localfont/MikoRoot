@@ -1,6 +1,6 @@
 ################################################################################
 #
-# toolchain-buildroot
+# toolchain-mikoos
 #
 ################################################################################
 
@@ -15,6 +15,6 @@ TOOLCHAIN_BUILDROOT_DEPENDENCIES = gcc-final
 TOOLCHAIN_BUILDROOT_ADD_TOOLCHAIN_DEPENDENCY = NO
 
 # Not really a virtual package, but we use the virtual package infra here so
-# both the build log and build directory look nicer (toolchain-buildroot-virtual
-# instead of toolchain-buildroot-undefined)
+# both the build log and build directory look nicer (toolchain-mikoos-virtual
+# instead of toolchain-mikoos-undefined)
 $(eval $(virtual-package))

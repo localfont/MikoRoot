@@ -5,7 +5,7 @@ config BR2_PACKAGE_MAKE
 	  A tool which controls the generation of executables and other
 	  non-source files of a program from the program's source files.
 
-	  While Buildroot no longer supports building a toolchain for
+	  While MikoOS no longer supports building a toolchain for
 	  the target, we keep a make package that is for example
 	  useful to run the uClibc test suite on the target.
 

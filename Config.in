@@ -1,6 +1,6 @@
 #
 
-mainmenu "Buildroot $BR2_VERSION Configuration"
+mainmenu "MikoOS $BR2_VERSION Configuration"
 
 config BR2_HAVE_DOT_CONFIG
 	bool
@@ -374,7 +374,7 @@ config BR2_CCACHE
 	  builds. By default, the cache is stored in
 	  $HOME/.buildroot-ccache.
 
-	  Note that Buildroot does not try to invalidate the cache
+	  Note that MikoOS does not try to invalidate the cache
 	  contents when the compiler changes in an incompatible way.
 	  Therefore, if you make a change to the compiler version and/or
 	  configuration, you are responsible for purging the ccache
@@ -717,8 +717,8 @@ config BR2_PACKAGE_OVERRIDE_FILE
 	help
 	  A package override file is a short makefile that contains
 	  variable definitions of the form <pkg>_OVERRIDE_SRCDIR, which
-	  allows to tell Buildroot to use an existing directory as the
-	  source directory for a particular package. See the Buildroot
+	  allows to tell MikoOS to use an existing directory as the
+	  source directory for a particular package. See the MikoOS
 	  documentation for more details on this feature.
 
 config BR2_GLOBAL_PATCH_DIR
@@ -729,8 +729,8 @@ config BR2_GLOBAL_PATCH_DIR
 	  For a specific version <packageversion> of a specific package
 	  <packagename>, patches are looked up as follows:
 
-	  First, the default Buildroot patch set for the package is
-	  applied from the package's directory in Buildroot.
+	  First, the default MikoOS patch set for the package is
+	  applied from the package's directory in MikoOS.
 
 	  Then for every directory - <global-patch-dir> - that exists in
 	  BR2_GLOBAL_PATCH_DIR, if the directory
@@ -763,11 +763,11 @@ config BR2_DOWNLOAD_FORCE_CHECK_HASHES
 	  Say 'y' here to enforce downloads to have at least one valid
 	  hash (and of course, that all hashes be valid).
 
-	  By default, Buildroot checks hashes of all packages
+	  By default, MikoOS checks hashes of all packages
 	  downloaded, except those for which a custom version is
 	  used.
 
-	  With this option turned on, Buildroot will check hashes of
+	  With this option turned on, MikoOS will check hashes of
 	  all packages, including those that use a custom version. In
 	  order to provide hashes for such packages, place additional
 	  hash files in BR2_GLOBAL_PATCH_DIR directories.
@@ -778,7 +778,7 @@ config BR2_REPRODUCIBLE
 	depends on BR2_TOOLCHAIN_GCC_AT_LEAST_4_4
 	help
 	  This option will remove all sources of non-reproducibility
-	  from the build process. For a given Buildroot configuration,
+	  from the build process. For a given MikoOS configuration,
 	  this allows to generate exactly identical binaries from one
 	  build to the other, including on different machines.
 
@@ -794,7 +794,7 @@ config BR2_REPRODUCIBLE
 config BR2_PER_PACKAGE_DIRECTORIES
 	bool "Use per-package directories (experimental)"
 	help
-	  This option will change the build process of Buildroot
+	  This option will change the build process of MikoOS
 	  package to use per-package target and host directories.
 
 	  This is useful for two related purposes:
